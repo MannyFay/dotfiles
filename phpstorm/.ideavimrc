@@ -1,0 +1,416 @@
+" ~/ideavimrc
+
+"source ~/.vimrc
+
+"-----------------------------------------------------------------------------
+"   Auto Commands
+"-----------------------------------------------------------------------------
+
+" Automatically source .ideavimrc on safe:
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .ideavimrc source %
+augroup END
+
+" Remember last cursor position in a file:
+augroup vimrc-remember-cursor-position
+  autocmd!
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+augroup END
+
+" Wrap text in Markdown and text files:
+autocmd BufRead,BufNewFile *.md,*.txt setlocal wrap
+
+
+
+"-----------------------------------------------------------------------------
+"   Appearance
+"-----------------------------------------------------------------------------
+
+set showtabline = 1
+set smartindent
+set splitbelow
+set splitright
+set timeoutlen = 1000
+set updatetime = 250
+set undofile
+set expandtab
+set shiftwidth = 4
+set tabstop = 4
+set softtabstop = 4
+set numberwidth = 4
+set signcolumn =  yes:2
+set scrolloff = 4
+set sidescrolloff = 4
+set title
+set background = dark
+set nohidden
+" Auto write buffer if focus changes:
+set autowrite
+set autowriteall
+
+set backspace = indent,eol,start
+set undolevels = 1000
+set wildmode = longest:full,full
+set spell
+set confirm
+set iskeyword+=-
+set backupdir-=.
+" Enable mouse on all modes:
+set mouse=a
+
+set termguicolors
+set showmatch
+filetype plugin indent on
+" Syntax highlighting in case of file type:
+syntax enable
+" Disable overwriting from VI to Vim:
+set nocompatible
+" Display line numbers on the left:
+set number
+" Turn off all errorbells:
+set noerrorbells
+set belloff=all
+" Use the OS clipboard:
+set clipboard=unnamed,unnamedplus
+
+
+
+
+
+set linespace=15
+set history=1000
+set undofile
+set undodir=$HOME/vimundo/
+set undolevels=1000
+set fileformat=unix
+set autoindent
+set encoding=utf-8
+
+
+" Default is case insensitive search:
+set ignorecase
+" Change to case sensitive search if capital:
+set smartcase
+" Search while typing:
+set incsearch
+" Highlight all search results:
+set hlsearch "...must be disabled for easymotion because of marking.
+
+"-----------------------------------------------------------------------------
+"   Project Tree
+"-----------------------------------------------------------------------------
+
+"--------------------------------------
+"   NERDTree Plugin
+"--------------------------------------
+"https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+
+" Install plugin:
+Plug 'preservim/nerdtree'
+
+"-------------------
+" Commands
+"+-----+-------------------------------+-----+-------------------------------+
+"|  j  |  down                         |  k  |  up                           |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  q  |  close project pane           |  P  |  jump to root node            |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  o  |  open/close file/dir          |  go |  open/close but stay in tree  |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  s  |  open in new vertical split   |  ⌘r |  rename                       |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌘d |  delete file/dir              |  ⌘n |  new file/dir                 |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌘c |  copy file/dir                |  ⌘x |  copy file/dir                |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌘v |  paste file/dir               |  ⌥n |  copy file/dir name           |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌥p |  copy path from content root  |     |                               |
+"+-----+-------------------------------+-----+-------------------------------+
+
+" Toggle tree ( tt):
+nmap <Leader>tt :NERDTreeToggle<CR>
+" Focus tree ( ee):
+nmap <Leader>ee :NERDTreeFocus<CR>
+" Find actual file in tree ( ft):
+nmap <Leader>sf :NERDTreeFind<CR>
+" Refresh tree ( rt):
+nmap <Leader>rt :NERDTreeRefreshRoot
+
+" Collapse tree ( ct):
+" Collapse tree, keep paths to buffers ( cb):
+
+let NERDTreeMinimalUI=1
+
+" Show folding arrows:
+let NERDTreeDirArrows=1
+
+" Initial tree width:
+let g:NERDTreeWinSize=46
+
+" Show hidden files by default:
+let NERDTreeShowHidden=1
+
+" Start NERDTree if Vim starts.
+autocmd VimEnter * NERDTree | wincmd p
+
+" Open in new split but stay in tree:
+nmap go s<CR><leader>sf
+
+:hi Directory guifg=#FF0000 ctermfg=red
+"-----------------------------------------------------------------------------
+"   Search
+"-----------------------------------------------------------------------------
+"------------------------------------------------------------------------------
+"-- Keymaps
+"------------------------------------------------------------------------------
+
+" Set leader key from / to space:
+let mapleader = ' '
+
+
+" Clear search highlights ( ch):
+nmap <Leader>ch :nohl<CR>
+
+" Search everywhere ( se):
+nmap <Leader>se :action SearchEverywhere<CR>
+" Find in files ( sif):
+nmap <Leader>sif :action FindInPath<CR>
+" Redo:
+nmap U <C-r>
+nmap vb <C-v>
+
+
+"------------------------------------------------------------------------------
+"-- Window Management
+"------------------------------------------------------------------------------
+
+"-------------------------------------------------------------
+"-- Splits (Buffer)
+
+" Split buffer vertically (y-axis) ( y):
+nmap <Leader>y <C-w>v
+
+" Split buffer horizontally (x-axis) ( x):
+nmap <Leader>x <C-w>s
+
+" Go to right split ( l):
+nmap L <C-w>l
+
+" Go to left split ( h):
+nmap H <C-w>h
+
+" Go to split below ( j):
+nmap J <C-w>j
+
+" Go to split above ( k):
+nmap K <C-w>k
+
+" Equalize width and height for all splits ( es):
+nmap <Leader>es <C-w>=
+
+" Grow split vertical ( gv):
+nmap <Leader>gv :vertical resize +5<CR>
+
+" Shrink split vertical ( sv):
+nmap <Leader>sv :vertical resize +5<CR>
+
+" Grow split horizontally ( gh):
+nmap <Leader>gh :resize +5
+
+" Shrink split horizontally ( sh):
+nmap <Leader>sh :resize -5
+
+
+
+
+
+
+
+
+"--------------------------------------
+"   Easy Motion Plugin
+"--------------------------------------
+" https://github.com/easymotion/vim-easymotion
+" https://www.youtube.com/watch?v=7X0ELN_YGtE&ab_channel=BrodieRobertson
+
+" Install plugin:
+Plug 'easymotion/vim-easymotion'
+
+"-------------------
+" Commands (press <Leader><Leader>command)
+"+-----+-------------------------------+-----+-------------------------------+
+"|  j  |  jump down to line            |  k  |  jump up to line              |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  s  |  search in file               |  /  |  search forward               |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ?  |  search backward              |  w  |  forward to start of words    |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  W  |  forw. to start of words (ws) |  b  |  backward to start of words   |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  B  |  backw. to start of w. (ws)   |  e  |  forward to end of words      |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ge |  backward to end of words     |     |                               |
+"+-----+-------------------------------+-----+-------------------------------+
+
+" Forward:
+" map <Leader><Leader>/ <Plug>(easymotion-f)
+" Backward:
+" map <Leader><Leader>? <Plug>(easymotion-F)
+
+"llt<char> - search forward until character <char>
+"llT<char> - search backward until character <char>
+
+
+
+"-----------------------------------------------------------------------------
+"   Vim Surround
+"-----------------------------------------------------------------------------
+"https://github.com/tpope/vim-surround
+
+" Install plugin:
+Plug 'tpope/vim-surround'
+
+
+" Inside a surrounded element do: cs<actualSurroundChars><newSurroundChars>.
+" ds is delete surrounding
+"
+" This behavior is for all the braces the same:
+" cs<actualChar>{ : add curly braces with space.
+" cs<actualChar>} : add curly braces without char.
+"
+" cs<actualChar>t : change to tags (pass tag in command line).
+" cstt : change a surrounding tag to another tag.
+" ysiw<char> : surrounds a word with <char> (ability to add another inside).
+" ysiwt : surround with tags (pass tag in command line).
+" ds<char> : delete surrounding <char>.
+" dst : delete surrounding tags.
+" yss<char> : surround content of a line with <char>
+" VS<char> : surround content of a line with <char>, put <char> on new lines.
+"
+
+
+
+"-----------------------------------------------------------------------
+" Appearance
+"-----------------------------------------------------------------------
+
+" Keep visual mode after indent with > or <
+vmap < <gv
+vmap > >gv
+
+" Move visual blocks with J and K:
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Disable all bells:
+set noerrorbells
+set belloff=all
+set visualbell
+
+" Share IdeaVim clipboard with OS clipboard:
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+" Show line numbers to the left of split:
+set number
+"set relativenumber
+
+" Show Vim mode in status bar:
+set showmode
+
+" Show Vim commands in status bar:
+set showcmd
+
+
+
+
+
+
+
+
+
+
+
+
+" Set steps to go back:
+set undolevels=1000
+
+"-----------------------------------------------------------------------
+"-- Key Mappings
+"-----------------------------------------------------------------------
+
+
+
+" Open ~/.ideavimrc (\e):
+nnoremap \e :e ~/.ideavimrc<CR>
+
+" Source ~/.ideavimrc (\s):
+nnoremap \s :action IdeaVim.ReloadVimRc.reload<CR>
+
+
+
+
+"----------------------------------
+"-- Move Keymaps
+
+" Jump method up:
+nnoremap [[ :action MethodUp<CR>
+
+" Jump method down:
+nnoremap ]] :action MethodDown<CR>
+
+"nnoremap <leader>c :action CommentByLineComment<CR>
+
+
+
+
+"----------------------------------
+"-- Window Management Keymaps
+
+" Split buffer vertically (y-axis) ( y):
+nmap <Leader>y <C-w>v
+
+" Split buffer horizontally (x-axis) ( x):
+nmap <Leader>x <C-w>s
+
+" Go to right split ( l):
+nmap <Leader>l <C-w>l
+
+" Go to left split ( h):
+nmap <Leader>h <C-w>h
+
+" Go to split below ( j):
+nmap <Leader>j <C-w>j
+
+" Go to split above ( k):
+nmap <Leader>k <C-w>k
+
+" Equalize width and height for all splits ( es):
+nmap <Leader>es <C-w>=
+
+" Close current split ( cs):
+nmap <Leader>cs :close<CR>
+
+" Open new tab ( ot):
+nmap <Leader>ot :tabnew<CR>
+
+" Exit current tab: ( et):
+nmap <Leader>et :tabclose<CR>
+
+" Go to next tab ( nt):
+nmap <Leader>nt :tabn<CR>
+
+" Go to previous tab ( pt):
+nmap <Leader>pt :tabp<CR>
+
+
+"----------------------------------
+"-- Terminal Keymaps
+
+" Open terminal ( tb):
+nnoremap <Leader>tb :action ActivateTerminalToolWindow<CR>
+
+" Open terminal in parent folder of current file ( tp):
+nnoremap <Leader>tp :action Terminal.OpenInTerminal<CR>

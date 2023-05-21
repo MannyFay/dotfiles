@@ -1,0 +1,351 @@
+# ~/.dotfiles/zsh/.zsh_aliases
+
+
+
+#----------------------------------------------------------------------------#
+#  Explanation
+#----------------------------------------------------------------------------#
+
+# In these file are all aliases for command line tools.
+
+# Mount it in .zshrc:
+#if [ -f ~/.zsh_aliases ]; then
+#    . ~/.zsh_aliases
+#fi
+
+# Load aliases immediatly:
+# source ~/.bash_aliases
+
+
+
+#----------------------------------------------------------------------------#
+#  Docker
+#----------------------------------------------------------------------------#
+
+#-------------------------------------#
+#         Docker -> Standards         #
+#-------------------------------------#
+
+alias dlc='docker'
+# List Docker commands.
+
+
+
+#-------------------------------------#
+#          Docker -> Compose          #
+#-------------------------------------#
+
+alias dcu='docker-compose up -d'
+# Compose up.
+
+
+
+#-------------------------------------#
+#         Docker -> Containers        #
+#-------------------------------------#
+
+alias dcla='docker container ps -a -s'
+# List all containers.
+
+
+alias dcg='docker container start'
+# Start container (go).
+
+
+alias dcs='docker container stop'
+# Stop container.
+
+
+alias dcsa='docker container stop $(docker ps -a -q)'
+# Stop all containers.
+
+
+alias dcd='docker container rm -f'
+# Delete container.
+
+
+alias dcda='docker rm -f $(docker ps -a -q)'
+# Delete all containers.
+
+
+alias dcrl='docker exec -i -t'
+# Root login container.
+
+
+#-------------------------------------#
+#           Docker -> Images          #
+#-------------------------------------#
+
+alias dila='docker images -a --format'
+# List all images.
+
+
+alias did='docker rmi -f'
+# Delete an image.
+
+
+alias dida='docker rmi -f $(docker images -a -q)'
+# Delete all images.
+
+#------------------------------------------------------------INSPECT
+
+#-------------------------------------#
+#          Docker -> Networks         #
+#-------------------------------------#
+
+alias dnlc='docker network'
+# List network commands.
+
+
+alias dnla='docker network ls'
+# List all networks.
+
+
+alias dni='docker network inspect'
+# Inspect a network.
+
+
+alias dnd='docker network rm -f'
+# Delete a network.
+
+
+alias d,dan='docker network prune'
+# Delete all networks.
+
+
+
+#-------------------------------------#
+#           Docker -> Volumes         #
+#-------------------------------------#
+
+alias d,sdv='docker volume ls -q -f dangling=true'
+# Show dangling volumes (volumes without containers).
+
+
+alias d,ssofdv='du -h --max O admin:///var/lib/docker/volumes/$(docker volume ls -q -f dangling=true'
+# Show size of dangling volumes.
+
+
+
+# docker system prune -a
+# Delete all stopped.
+
+#-----------------------------------------------------------------------------
+#  Git
+#-----------------------------------------------------------------------------
+
+# Show status of repository:
+alias gs='git status'
+
+# Shortly show status of repository:
+alias gss='git status -s'
+# A  : Added (file are in staging area)
+# ?? : Untracked (unwatched file)
+# M : Changed (file is changed and in the staging area) (there is a space before M)
+# M  : Unstaged (file is not in staging area) (there is a space behind M)
+
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ah, %as, %cr) %C(bold blue)<%an>%Creset' --abbrev-commit --raw"
+# Show commit history (very pretty).
+
+alias gc='git clone'
+# Clone repository (add URL).
+alias gitlp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --raw'
+gitblp() { git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --raw "$1"; }
+
+#-------------------------------------#
+#           Git -> Branching          #
+#-------------------------------------#
+
+# Every Git Branch alias starts with gb which means git branch.
+
+alias gbsa='git branch -a'
+# 'Show All' branches inclusively remote repository branches (quit with q).
+
+alias gbsl='git branch'
+# 'Show Local' branches (quit with q).
+
+alias gbcl='git checkout'
+# 'Checkout Local' branch (add a local branch name).
+
+alias gbcr='git checkout --track'
+# 'Checkout Remote' branch (add remoteName/branchName)
+
+alias gbfnc='git checkout -b'
+# 'Fork New Checkout' branch from actual branch and checkout (add a branch name).
+# 'Fork New Checkout' branch from source branch and checkout (add a branch name and a source branch).
+
+alias gbd='git branch -D'
+# Force 'Delete' branch (add a branch name).
+
+
+#-------------------------------------#
+#           Git -> Commiting          #
+#-------------------------------------#
+
+# Every Git Commit alias starts with gc which means git commit.
+
+alias gci='git commit --allow-empty -m "Initial Commit"'
+# 'Initial' commit.
+
+alias gcc='git commit'
+# Commit 'Changes'.
+
+alias gcm='git commit -m'
+# Commit with short 'Message'.
+
+alias gcwip='git commit -m "wip"'
+# Commit with short message 'Work In Progress'.
+
+alias gccl='git commit --amend'
+# 'Change Last' commit (before push).
+
+alias gcrl='git reset --hard && git clean -df'
+# 'Revert Last' commit (before push)..
+
+
+#-------------------------------------#
+#           Git -> Comparing          #
+#-------------------------------------#
+
+# Every Git Diff alias starts with gd which means git diff.
+
+alias gdcf='git diff'
+# 'Compare Files' (add a file).
+
+
+#-------------------------------------#
+#           Git -> Dotfiles           #
+#-------------------------------------#
+
+alias gdot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# Select home directory for following Git commands.
+
+
+#-------------------------------------#
+#        Git -> Pulling/Pushing       #
+#-------------------------------------#
+
+# Every Git Pull/Push alias starts with p which means push/pull.
+
+alias gpp='git pull'
+# 'Pull' from repository.
+
+alias gpf='git fetch'
+# 'Fetch' from repository.
+
+alias gpc='git pull && git pull origin master && git push'
+# 'Push' commits.
+
+alias gptm='git push origin master'
+# Push 'To Master' branch.
+
+alias gptd='git push origin develop'
+# Push 'To Develop' branch.
+
+
+#-------------------------------------#
+#            Git -> Stashing          #
+#-------------------------------------#
+
+#alias gs='git stash'
+# Stash.
+
+#alias gps='git stash pop'
+# Pop stash.
+
+
+
+#--------------------------------------
+# Git Staging
+#--------------------------------------
+
+alias gsf='git add'
+# 'Stage File' (add file or path).
+
+alias gsuf='git rm --cached'
+# Unstage something (add file or path).
+
+alias gsp='git add -p'
+# Stage parts of file (add file).
+
+alias gsup='git reset -p'
+# Unstage parts of file (add file).
+
+alias gse='git add .'
+# Stage everything.
+
+alias gsue='git reset'
+# Unstage everything.
+
+
+#---------------------------------------------------------------------------#
+#                                  TERMINAL                                 #
+#---------------------------------------------------------------------------#
+
+# Create new file (nf):
+alias nf='touch'
+
+# Delete file (df):
+alias df='rm'
+
+# New directory (nd):
+alias tnd='mkdir'
+
+# Delete directory (dd):
+alias dd='rm -rf'
+
+# Jump back:
+alias 2cd='../..'
+alias 3cd='../../..'
+alias 4cd='../../../..'
+alias 5cd='../../../../..'
+alias 6cd='../../../../../..'
+alias 7cd='../../../../../../..'
+alias 8cd='../../../../../../../..'
+alias 9cd='../../../../../../../../..'
+
+
+#---------------------------------------------------------------------------#
+#                                  COMPOSER                                 #
+#---------------------------------------------------------------------------#
+
+
+
+#---------------------------------------------------------------------------#
+#                                  LARAVEL                                  #
+#---------------------------------------------------------------------------#
+
+#----------- Sail
+# old --> alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+#alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+# Use 'sail' instead of './vendor/bin/sail':
+alias sail='./vendor/bin/sail'
+
+alias smfs='sail migrate:fresh --seed'
+# Refresh database with project seeders.
+
+alias scda='sail composer dump-autoload'
+
+alias scu='sail composer update'
+
+
+
+
+
+alias l,lc='php artisan'
+# List commands.
+
+
+alias l,seeddb='php artisan db:seed'
+# Seed database with records.
+
+
+alias l,st='php artisan tinker'
+# Start Tinker CLI.
+
+
+# laravel clockwork browser plugin anschauen!
+# table plus sql oberfläche!
+
+
+

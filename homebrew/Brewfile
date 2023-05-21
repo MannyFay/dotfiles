@@ -1,0 +1,80 @@
+# ~/.dotfiles/homebrew/Brewfile
+
+
+
+#-----------------------------------------------------------------------------
+#- Taps
+#-----------------------------------------------------------------------------
+
+#tap homebrew/cask-fonts
+
+
+
+#-----------------------------------------------------------------------------
+#- Formulas
+#-----------------------------------------------------------------------------
+
+brew "gnupg"
+brew "pinentry-mac"
+brew "curl"
+brew "wget"
+brew "git"
+brew "tree"
+brew "grep"
+brew "neovim"
+brew "composer"
+brew "node"
+brew "node-sass"
+brew "php"
+brew "mas"
+
+
+
+#-----------------------------------------------------------------------------
+#- Casks
+#-----------------------------------------------------------------------------
+
+cask 'firefox'
+cask 'google-chrome'
+cask 'figma'
+cask 'phpstorm'
+cask 'nordpass'
+cask 'nordvpn'
+cask 'alfred'
+cask 'kitty'
+cask 'aldente'
+cask 'displaylink'
+cask 'istat-menus'
+cask 'authy'
+cask 'bartender'
+cask 'docker'
+cask 'macpass'
+cask 'iterm2'
+
+
+#-----------------------------------------------------------
+#- Quicklooks
+
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'qlimagesize'
+cask 'suspicious-package'
+cask 'apparency'
+cask 'quicklookase'
+cask 'qlvideo'
+
+
+
+#-----------------------------------------------------------------------------
+#- Mac AppStore
+#-----------------------------------------------------------------------------
+
+mas 'Caffeinated - Anti Sleep App', id: 1362171212
+mas 'Cleaner One Pro - Disk Clean', id: 1133028347
+mas 'Dato', id: 1470584107
+mas 'MonitorControl Lite', id: 1595464182
+mas 'Ad Block One: Tube Ad Blocker', id: 1491889901
+mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
+

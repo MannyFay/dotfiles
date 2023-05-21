@@ -1,0 +1,26 @@
+[color]
+    ui = auto
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore_global
+[diff]
+    tool = vimdiff
+[fetch]
+    prune = true
+[help]
+    autocorrect = 10
+[include]
+    path = ~/.gitconfig_local
+
+[pull]
+    rebase = false
+[init]
+    defaultBranch = main
+[push]
+    default = current
+[rerere]
+    enabled = true
+[commit]
+    gpgsign = true
+[user]
+	signingkey = F90DC913D781F17150533AAABEE001E32DE68D19

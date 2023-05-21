@@ -68,6 +68,10 @@ ZSH_CUSTOM="$DOTFILES/zsh"
 
 # Plugins (too many plugins slow down shell startup):
 plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  web-search
+  laravel5
   artisan
   npm
   vi-mode

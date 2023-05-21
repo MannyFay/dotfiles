@@ -27,6 +27,8 @@ brew "node"
 brew "node-sass"
 brew "php"
 brew "mas"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 
 
 
@@ -50,6 +52,7 @@ cask 'bartender'
 cask 'docker'
 cask 'macpass'
 cask 'iterm2'
+cask 'artisan'
 
 
 #-----------------------------------------------------------

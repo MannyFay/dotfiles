@@ -20,7 +20,3 @@
     default = current
 [rerere]
     enabled = true
-[commit]
-    gpgsign = true
-[user]
-	signingkey = F90DC913D781F17150533AAABEE001E32DE68D19

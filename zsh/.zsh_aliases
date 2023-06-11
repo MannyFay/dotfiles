@@ -14,7 +14,7 @@
 #fi
 
 # Load aliases immediatly:
-# source ~/.bash_aliases
+#source ~/.zsh_aliases
 
 
 

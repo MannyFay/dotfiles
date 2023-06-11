@@ -5,6 +5,9 @@
 # Path to your dotfiles:
 export DOTFILES=$HOME/.dotfiles
 
+# Remove terminal information of last login:
+printf '\33c\e[3J' -n
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -31,11 +34,11 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 7
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -53,6 +56,11 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 # There is maybe an issue with multiline commands:
 COMPLETION_WAITING_DOTS="true"
 
+
+#export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=#{HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/highlighters
+
+
+
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -64,12 +72,14 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Directory of ZSH:
-ZSH_CUSTOM="$DOTFILES/zsh"
+#ZSH_CUSTOM="$DOTFILES/zsh"
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+
 
 # Plugins (too many plugins slow down shell startup):
 plugins=(
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  #zsh-autosuggestions
+  #zsh-syntax-highlighting
   web-search
   laravel5
   artisan
@@ -81,8 +91,6 @@ plugins=(
   git
 )
 
-# Load oh-my-zsh on ZSH start up:
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -101,3 +109,16 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# Load oh-my-zsh on ZSH start up:
+source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Mount ZSH aliases file:
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+

@@ -7,7 +7,7 @@
 #-----------------------------------------------------------------------------
 
 #tap homebrew/cask-fonts
-
+tap 'burntushi/ripgrep'
 
 
 #-----------------------------------------------------------------------------
@@ -29,6 +29,10 @@ brew "php"
 brew "mas"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+brew "ripgrep"
+brew 'graphviz'
+brew 'plantuml'
+brew 'deno'
 
 
 
@@ -52,7 +56,7 @@ cask 'bartender'
 cask 'docker'
 cask 'macpass'
 cask 'iterm2'
-cask 'artisan'
+
 
 
 #-----------------------------------------------------------

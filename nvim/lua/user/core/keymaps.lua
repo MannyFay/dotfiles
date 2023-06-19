@@ -37,7 +37,7 @@ vim.keymap.set('n', 'C', 'zz', opts)
 -- Scroll up:
 vim.keymap.set('n', '<C-k>', '<C-u>', opts)
 -- Scroll down:
-vim.keymap.set('n', '<C-j>', '<C-u>', opts)
+vim.keymap.set('n', '<C-j>', '<C-e>', opts)
 -- Scroll page up:
 vim.keymap.set('n', '<C-p-u>', '<C-b>', opts)
 -- Scroll page down:
@@ -70,16 +70,16 @@ vim.keymap.set('n', 'U', '<C-r>', opts)
 vim.keymap.set('n', 'q:', ':q<CR>')
 
 -- Next completion entry:
-vim.cmd('cnoremap <Tab> <C-n>')
+--[[ vim.cmd('cnoremap <Tab> <C-n>') ]]
 
 -- Previous completion entry:
-vim.cmd('cnoremap <S-Tab> <C-p>')
+--[[ vim.cmd('cnoremap <S-Tab> <C-p>') ]]
 
 -- Cancel completion:
-vim.cmd('cnoremap <C-q> <C-e>')
+--[[ vim.cmd('cnoremap <C-q> <C-e>') ]]
 
 -- Accept completion:
-vim.cmd('cnoremap <C-Leader> <C-y>')
+--[[ vim.cmd('cnoremap <C-Leader> <C-y>') ]]
 
 
 
@@ -179,10 +179,10 @@ keymap("n", "<Leader>nt", ":tabnew<CR>", opts)
 keymap("n", "<Leader>qt", ":tabclose<CR>", opts)
 
 -- Go to next tab ( nt):
-keymap("n", "<Leader>rt", ":tabn<CR>", opts)
+keymap("n", "<Leader>tr", ":tabn<CR>", opts)
 
 -- Go to previous tab ( pt):
-keymap("n", "<Leader>lt", ":tabp<CR>", opts)
+keymap("n", "<Leader>tl", ":tabp<CR>", opts)
 
 
 

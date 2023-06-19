@@ -62,28 +62,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
 -- Redo last action:
 vim.keymap.set('n', 'U', '<C-r>', opts)
 
-
---------------------------------------------------------------
--- Command Line
-
 -- Disable typically command line typo:
 vim.keymap.set('n', 'q:', ':q<CR>')
-
--- Next completion entry:
---[[ vim.cmd('cnoremap <Tab> <C-n>') ]]
-
--- Previous completion entry:
---[[ vim.cmd('cnoremap <S-Tab> <C-p>') ]]
-
--- Cancel completion:
---[[ vim.cmd('cnoremap <C-q> <C-e>') ]]
-
--- Accept completion:
---[[ vim.cmd('cnoremap <C-Leader> <C-y>') ]]
-
-
-
-
 
 -- Stay in visual mode after indent width <:
 vim.keymap.set('v', '<', '<gv', opts)
@@ -109,8 +89,6 @@ vim.keymap.set('n', ',,', '<Esc>A,<Esc>')
 --vim.keymap.set('n', '<leader>x', ':!xdg-open %<cr><cr>')
 
 -- Move text up and down
---vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
---vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR>==gi')
 vim.keymap.set('x', '<Tab>', ":move '>+1<CR>gv-gv")
 vim.keymap.set('x', '<S-Tab>', ":move '<-2<CR>gv-gv")
 vim.keymap.set('v', '<Tab>', ":move '>+1<CR>gv=gv")

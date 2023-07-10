@@ -521,12 +521,28 @@ use({
 --[[ }) ]]
 
 -- Command line auto complete style:
-use {
+use({
   'gelguy/wilder.nvim',
   config = function()
     require('user.plugin_options.wilder')
   end,
-}
+})
+
+
+-- .env file support:
+use({
+  'ellisonleao/dotenv.nvim',
+  config = function()
+    require('user.plugin_options.dotenv')
+  end,
+})
+
+
+-- Blade syntax highligting:
+use({
+  'jwalton512/vim-blade'
+})
+
 
 if packer_bootstrap then
   packer.sync()

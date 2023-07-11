@@ -39,6 +39,8 @@ set splitright
 " Turn off all errorbells:
 set noerrorbells
 set belloff=all
+" Turn on visual bell if an error occurs:
+set visualbell
 " Activate Vim join command consistend with IntelliJ:
 set ideajoin
 " Show the matching character (like at braces):
@@ -51,10 +53,32 @@ set incsearch
 set ignorecase
 " Change to case sensitive search if capital letters are used:
 set smartcase
+" Set number of previous used commands (high numbers can consume more memory):
+set history=1000
+" Interpred normal mode mappings always on US keyboard layout:
+:set keep-english-in-normal
+" Enable full power of IntelliJ refactoring capabilities:
+set idearefactormode=visual
+" Display line numbers:
+set number
+" Start vertical scrolling by number of visible lines:
+set scrolloff=3
+" Start horizontal scrolling by number of visible columns:
+set sidescrolloff=3
+" Show command line if typing Vim commands:
+set showcmd
+" Show Vim mode in status bar:
+set showmode
+" Set maximum number of changes that can be undone:
+set undolevels=1000
+" Set time Vim waits to complete a whole key mapping sequence in milliseconds:
+set timeout=1000
+" Set time Vim waits for single key strokes in key mappings in milliseconds:
+set timeoutlen=1000
+
 
 set showtabline = 1
 set smartindent
-set timeoutlen = 1000
 set updatetime = 250
 set undofile
 set expandtab
@@ -63,8 +87,6 @@ set tabstop = 4
 set softtabstop = 4
 set numberwidth = 4
 set signcolumn =  yes:2
-set scrolloff = 4
-set sidescrolloff = 4
 set title
 set background = dark
 set nohidden
@@ -73,7 +95,6 @@ set autowrite
 set autowriteall
 
 set backspace = indent,eol,start
-set undolevels = 1000
 set wildmode = longest:full,full
 set spell
 set confirm
@@ -88,21 +109,33 @@ filetype plugin indent on
 syntax enable
 " Disable overwriting from VI to Vim:
 set nocompatible
-" Display line numbers on the left:
-set number
 
 
 
 
 
 set linespace=15
-set history=1000
 set undofile
 set undodir=$HOME/vimundo/
-set undolevels=1000
 set fileformat=unix
 set autoindent
 set encoding=utf-8
+
+"-----------------------------------------------------------------------
+" Key Mappings
+"-----------------------------------------------------------------------
+
+" Keep visual mode after indent with > or <
+vmap < <gv
+vmap > >gv
+
+" Move visual blocks with J and K in visual mode:
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+
+
+
 
 
 
@@ -306,37 +339,19 @@ Plug 'tpope/vim-surround'
 "
 
 
+" Commentary plugin:
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+set commentary
 
-"-----------------------------------------------------------------------
-" Appearance
-"-----------------------------------------------------------------------
 
-" Keep visual mode after indent with > or <
-vmap < <gv
-vmap > >gv
 
-" Move visual blocks with J and K:
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
-" Disable all bells:
-set noerrorbells
-set belloff=all
-set visualbell
 
-" Share IdeaVim clipboard with OS clipboard:
-set clipboard+=unnamed
-set clipboard+=ideaput
 
-" Show line numbers to the left of split:
-set number
-"set relativenumber
 
-" Show Vim mode in status bar:
-set showmode
 
-" Show Vim commands in status bar:
-set showcmd
+
+
 
 
 

@@ -27,10 +27,33 @@ autocmd BufRead,BufNewFile *.md,*.txt setlocal wrap
 "   Appearance
 "-----------------------------------------------------------------------------
 
+" Strictly follow Vim keybindings and commands if conflicting with IntelliJ:
+set ideastrictmode
+" Use the OS clipboard:
+set clipboard+=unnamed,unnamedplus
+set clipboard+=ideaput
+" Open new horizontal split below the actual:
+set splitbelow
+" Open new vertical split to the right of the actual:
+set splitright
+" Turn off all errorbells:
+set noerrorbells
+set belloff=all
+" Activate Vim join command consistend with IntelliJ:
+set ideajoin
+" Show the matching character (like at braces):
+set showmatch
+" Highlight all search results:
+set hlsearch "...must be disabled for easymotion because of marking.
+" Search while typing:
+set incsearch
+" Set default on case insensitive search:
+set ignorecase
+" Change to case sensitive search if capital letters are used:
+set smartcase
+
 set showtabline = 1
 set smartindent
-set splitbelow
-set splitright
 set timeoutlen = 1000
 set updatetime = 250
 set undofile
@@ -60,7 +83,6 @@ set backupdir-=.
 set mouse=a
 
 set termguicolors
-set showmatch
 filetype plugin indent on
 " Syntax highlighting in case of file type:
 syntax enable
@@ -68,11 +90,6 @@ syntax enable
 set nocompatible
 " Display line numbers on the left:
 set number
-" Turn off all errorbells:
-set noerrorbells
-set belloff=all
-" Use the OS clipboard:
-set clipboard=unnamed,unnamedplus
 
 
 
@@ -88,14 +105,6 @@ set autoindent
 set encoding=utf-8
 
 
-" Default is case insensitive search:
-set ignorecase
-" Change to case sensitive search if capital:
-set smartcase
-" Search while typing:
-set incsearch
-" Highlight all search results:
-set hlsearch "...must be disabled for easymotion because of marking.
 
 "-----------------------------------------------------------------------------
 "   Project Tree
@@ -162,6 +171,9 @@ nmap go s<CR><leader>sf
 "-----------------------------------------------------------------------------
 "   Search
 "-----------------------------------------------------------------------------
+
+
+
 "------------------------------------------------------------------------------
 "-- Keymaps
 "------------------------------------------------------------------------------
@@ -169,16 +181,19 @@ nmap go s<CR><leader>sf
 " Set leader key from / to space:
 let mapleader = ' '
 
+" Clear search highlights ( qh):
+nmap <Leader>qh :nohl<CR>
 
-" Clear search highlights ( ch):
-nmap <Leader>ch :nohl<CR>
+" Search everywhere ( ff):
+nmap <Leader>ff :action SearchEverywhere<CR>
 
-" Search everywhere ( se):
-nmap <Leader>se :action SearchEverywhere<CR>
-" Find in files ( sif):
-nmap <Leader>sif :action FindInPath<CR>
-" Redo:
+" Find in files ( ft):
+nmap <Leader>ft :action FindInPath<CR>
+
+" Redo (U):
 nmap U <C-r>
+
+" Enter visual block mode (vb):
 nmap vb <C-v>
 
 
@@ -189,22 +204,22 @@ nmap vb <C-v>
 "-------------------------------------------------------------
 "-- Splits (Buffer)
 
-" Split buffer vertically (y-axis) ( y):
-nmap <Leader>y <C-w>v
+" Split buffer vertically ( v):
+nmap <Leader>v <C-w>v
 
-" Split buffer horizontally (x-axis) ( x):
-nmap <Leader>x <C-w>s
+" Split buffer horizontally ( h):
+nmap <Leader>h <C-w>s
 
-" Go to right split ( l):
+" Go to right split (L):
 nmap L <C-w>l
 
-" Go to left split ( h):
+" Go to left split (H):
 nmap H <C-w>h
 
-" Go to split below ( j):
+" Go to split below (J):
 nmap J <C-w>j
 
-" Go to split above ( k):
+" Go to split above (K):
 nmap K <C-w>k
 
 " Equalize width and height for all splits ( es):

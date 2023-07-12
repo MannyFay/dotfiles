@@ -281,7 +281,12 @@ nmap vs s<CR><leader>sf
 " Install plugin:
 set easymotion
 
-" This commands do not work properly:
+
+"-------------------------------------------------------------
+"-- Key Mappings
+
+" The following mappings do not work properly!:
+
 " Hop to character in (multiple) buffer ( c):
 nmap <Leader>c <Plug>(easymotion-s)
 map  <Leader><Leader>f <Plug>(easymotion-bd-f)
@@ -303,14 +308,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 
 
-
-
-
-
-
-
-
-
 "-----------------------------------------------------------------------------
 "   Vim Surround
 "-----------------------------------------------------------------------------
@@ -321,23 +318,41 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 set surround
 
 
-" Inside a surrounded element do: cs<actualSurroundChars><newSurroundChars>.
-" ds is delete surrounding
-"
-" This behavior is for all the braces the same:
-" cs<actualChar>{ : add curly braces with space.
-" cs<actualChar>} : add curly braces without char.
-"
-" cs<actualChar>t : change to tags (pass tag in command line).
-" cstt : change a surrounding tag to another tag.
-" ysiw<char> : surrounds a word with <char> (ability to add another inside).
-" ysiwt : surround with tags (pass tag in command line).
-" ds<char> : delete surrounding <char>.
-" dst : delete surrounding tags.
-" yss<char> : surround content of a line with <char>
-" VS<char> : surround content of a line with <char>, put <char> on new lines.
-"
+"-------------------------------------------------------------
+"-- Key Mappings
 
+" Surround word with ():
+nnoremap (( ysiw)
+" Surround word with {}:
+nnoremap {{ ysiw}
+" Surround word with []:
+nnoremap [[ ysiw]
+" Surround word with "":
+nnoremap "" ysiw"
+" Surround word with '':
+nnoremap '' ysiw'
+" Surround word with ``:
+nnoremap `` ysiw`
+" Surround word with <>:
+nnoremap <> ysiw>
 
+" Surround marked with ():
+vnoremap (( S)
+" Surround marked with {}:
+vnoremap {{ S}
+" Surround marked with []:
+vnoremap [[ S]
+" Surround marked with "":
+vnoremap "" S"
+" Surround marked with '':
+vnoremap '' S'
+" Surround marked with ``:
+vnoremap `` S`
+" Surround marked with <>:
+vnoremap <> S>
 
+" Surround with tag:
+nnoremap swt ySSt
+" Surround marked with tag:
+vnoremap swt St
 

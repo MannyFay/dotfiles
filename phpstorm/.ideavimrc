@@ -138,8 +138,16 @@ nnoremap <Leader>jl J
 nnoremap <Leader>/ :action CommentByLineComment <CR>
 vnoremap <Leader>/ :action CommentByLineComment <CR>
 
-" Go to declaration:
-nnoremap gd :action GotoDeclaration <CR>
+
+"-------------------------------------------------------------
+"-- File Formatting
+
+" Reformat code ( rc):
+nnoremap <Leader>rc :action ReformatCode <CR>
+vnoremap <Leader>rc :action ReformatCode <CR>
+" Optimize imports ( oi):
+nnoremap <Leader>oi :action OptimizeImports <CR>
+vnoremap <Leader>oi :action OptimizeImports <CR>
 
 
 "-------------------------------------------------------------
@@ -147,30 +155,36 @@ nnoremap gd :action GotoDeclaration <CR>
 
 " Quit highlighting of search ( qh):
 nmap <Leader>qh :nohl<CR>
-" Search everywhere ( ff):
+" Find files ( ff):
 nmap <Leader>ff :action SearchEverywhere<CR>
-" Find in files ( ft):
+" Find text inside files ( ft):
 nmap <Leader>ft :action FindInPath<CR>
+vmap <leader>ft :action FindInPath<CR>
 " Show rescent files ( rf):
 nnoremap <Leader>rf :action RecentFiles <CR>
+" Find usages ( fu):
+nnoremap <Leader>fu :action FindUsages <CR>
+vnoremap <Leader>fu :action FindUsages <CR>
+" Go to declaration (gd):
+nnoremap gd :action GotoDeclaration <CR>
 
 
 "-------------------------------------------------------------
 "-- Scrolling
 
-" Scroll actual line to top:
+" Scroll actual line to top (T):
 nmap T zt
-" Scroll actual line to bottom:
+" Scroll actual line to bottom (B):
 nmap B zb
-" Scroll actual line to center:
+" Scroll actual line to center (C):
 nmap C zz
-" Scroll up:
+" Scroll up (ctrlk):
 nmap <C-k> <C-u>
-" Scroll down:
+" Scroll down (ctrlj):
 nmap <C-j> <C-e>
-" Scroll page up:
+" Scroll page up (ctrlpu):
 nmap <C-p-u> <C-b>
-" Scroll page down:
+" Scroll page down (ctrlpd):
 nmap <C-p-d> <C-f>
 
 

@@ -109,7 +109,7 @@ nmap <Leader>ff :action SearchEverywhere<CR>
 nmap <Leader>ft :action FindInPath<CR>
 
 " Show rescent files ( rf):
-nnoremap rf :action RecentFiles <CR>
+nnoremap <Leader>rf :action RecentFiles <CR>
 
 " Redo (U):
 nmap U <C-r>

@@ -75,51 +75,14 @@ set undolevels=1000
 set timeout=1000
 " Set time Vim waits for single key strokes in key mappings in milliseconds:
 set timeoutlen=1000
+" Use Vim in dialogs too:
+set ideavimsupport=dialog
+" Safe all buffers by executing ':w':
+set ideawrite=all
+" Set IdeaVim status icon to gray:
+set ideastatusicon=gray
 
 
-set showtabline = 1
-set smartindent
-set updatetime = 250
-set undofile
-set expandtab
-set shiftwidth = 4
-set tabstop = 4
-set softtabstop = 4
-set numberwidth = 4
-set signcolumn =  yes:2
-set title
-set background = dark
-set nohidden
-" Auto write buffer if focus changes:
-set autowrite
-set autowriteall
-
-set backspace = indent,eol,start
-set wildmode = longest:full,full
-set spell
-set confirm
-set iskeyword+=-
-set backupdir-=.
-" Enable mouse on all modes:
-set mouse=a
-
-set termguicolors
-filetype plugin indent on
-" Syntax highlighting in case of file type:
-syntax enable
-" Disable overwriting from VI to Vim:
-set nocompatible
-
-
-
-
-
-set linespace=15
-set undofile
-set undodir=$HOME/vimundo/
-set fileformat=unix
-set autoindent
-set encoding=utf-8
 
 "-----------------------------------------------------------------------
 " Key Mappings
@@ -133,84 +96,6 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-
-
-
-
-
-
-"-----------------------------------------------------------------------------
-"   Project Tree
-"-----------------------------------------------------------------------------
-
-"--------------------------------------
-"   NERDTree Plugin
-"--------------------------------------
-"https://github.com/JetBrains/ideavim/wiki/NERDTree-support
-
-" Install plugin:
-Plug 'preservim/nerdtree'
-
-"-------------------
-" Commands
-"+-----+-------------------------------+-----+-------------------------------+
-"|  j  |  down                         |  k  |  up                           |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  q  |  close project pane           |  P  |  jump to root node            |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  o  |  open/close file/dir          |  go |  open/close but stay in tree  |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  s  |  open in new vertical split   |  ⌘r |  rename                       |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  ⌘d |  delete file/dir              |  ⌘n |  new file/dir                 |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  ⌘c |  copy file/dir                |  ⌘x |  copy file/dir                |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  ⌘v |  paste file/dir               |  ⌥n |  copy file/dir name           |
-"+-----+-------------------------------+-----+-------------------------------+
-"|  ⌥p |  copy path from content root  |     |                               |
-"+-----+-------------------------------+-----+-------------------------------+
-
-" Toggle tree ( tt):
-nmap <Leader>tt :NERDTreeToggle<CR>
-" Focus tree ( ee):
-nmap <Leader>ee :NERDTreeFocus<CR>
-" Find actual file in tree ( ft):
-nmap <Leader>sf :NERDTreeFind<CR>
-" Refresh tree ( rt):
-nmap <Leader>rt :NERDTreeRefreshRoot
-
-" Collapse tree ( ct):
-" Collapse tree, keep paths to buffers ( cb):
-
-let NERDTreeMinimalUI=1
-
-" Show folding arrows:
-let NERDTreeDirArrows=1
-
-" Initial tree width:
-let g:NERDTreeWinSize=46
-
-" Show hidden files by default:
-let NERDTreeShowHidden=1
-
-" Start NERDTree if Vim starts.
-autocmd VimEnter * NERDTree | wincmd p
-
-" Open in new split but stay in tree:
-nmap go s<CR><leader>sf
-
-:hi Directory guifg=#FF0000 ctermfg=red
-"-----------------------------------------------------------------------------
-"   Search
-"-----------------------------------------------------------------------------
-
-
-
-"------------------------------------------------------------------------------
-"-- Keymaps
-"------------------------------------------------------------------------------
-
 " Set leader key from / to space:
 let mapleader = ' '
 
@@ -223,16 +108,22 @@ nmap <Leader>ff :action SearchEverywhere<CR>
 " Find in files ( ft):
 nmap <Leader>ft :action FindInPath<CR>
 
+" Show rescent files ( rf):
+nnoremap rf :action RecentFiles <CR>
+
 " Redo (U):
 nmap U <C-r>
 
 " Enter visual block mode (vb):
 nmap vb <C-v>
 
+" Comment/uncomment lines:
+nnoremap <Leader>/ :action CommentByLineComment <CR>
+vnoremap <Leader>/ :action CommentByLineComment <CR>
 
-"------------------------------------------------------------------------------
-"-- Window Management
-"------------------------------------------------------------------------------
+" Go to declaration:
+nnoremap gd :action GotoDeclaration <CR>
+
 
 "-------------------------------------------------------------
 "-- Splits (Buffer)
@@ -272,43 +163,102 @@ nmap <Leader>sh :resize -5
 
 
 
+"-----------------------------------------------------------------------
+"   NERDTree Plugin
+"-----------------------------------------------------------------------
 
-
-
-
-
-"--------------------------------------
-"   Easy Motion Plugin
-"--------------------------------------
-" https://github.com/easymotion/vim-easymotion
-" https://www.youtube.com/watch?v=7X0ELN_YGtE&ab_channel=BrodieRobertson
+"https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 
 " Install plugin:
-Plug 'easymotion/vim-easymotion'
+set NERDTree
 
 "-------------------
-" Commands (press <Leader><Leader>command)
+" Commands
 "+-----+-------------------------------+-----+-------------------------------+
-"|  j  |  jump down to line            |  k  |  jump up to line              |
+"|  j  |  down                         |  k  |  up                           |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  s  |  search in file               |  /  |  search forward               |
+"|  q  |  close project pane           |  P  |  jump to root node            |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  ?  |  search backward              |  w  |  forward to start of words    |
+"|  o  |  open/close file/dir          |  go |  open/close but stay in tree  |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  W  |  forw. to start of words (ws) |  b  |  backward to start of words   |
+"|  s  |  open in new vertical split   |  ⌘r |  rename                       |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  B  |  backw. to start of w. (ws)   |  e  |  forward to end of words      |
+"|  ⌘d |  delete file/dir              |  ⌘n |  new file/dir                 |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  ge |  backward to end of words     |     |                               |
+"|  ⌘c |  copy file/dir                |  ⌘x |  copy file/dir                |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌘v |  paste file/dir               |  ⌥n |  copy file/dir name           |
+"+-----+-------------------------------+-----+-------------------------------+
+"|  ⌥p |  copy path from content root  |     |                               |
 "+-----+-------------------------------+-----+-------------------------------+
 
-" Forward:
-" map <Leader><Leader>/ <Plug>(easymotion-f)
-" Backward:
-" map <Leader><Leader>? <Plug>(easymotion-F)
+" Toggle tree ( tt):
+nmap <Leader>tt :NERDTreeToggle<CR>
+" Explore tree ( et):
+nmap <Leader>et :NERDTreeFocus<CR>
+" Show actual file in tree ( sft):
+nmap <Leader>sft :NERDTreeFind<CR>
+" Refresh tree ( rt):
+nmap <Leader>rt :NERDTreeRefreshRoot
 
-"llt<char> - search forward until character <char>
-"llT<char> - search backward until character <char>
+" Collapse tree ( ct):
+" Collapse tree, keep paths to buffers ( cb):
+
+let NERDTreeMinimalUI=1
+
+" Show folding arrows:
+let NERDTreeDirArrows=1
+
+" Initial tree width:
+let g:NERDTreeWinSize=46
+
+" Show hidden files by default:
+let NERDTreeShowHidden=1
+
+" Start NERDTree if Vim starts.
+autocmd VimEnter * NERDTree | wincmd p
+
+" Open in new split but stay in tree (vs):
+nmap vs s<CR><leader>sf
+
+
+
+"-----------------------------------------------------------------------------
+"   Easy Motion Plugin (install Ace Jump plugin in IDE!)
+"-----------------------------------------------------------------------------
+
+" https://github.com/easymotion/vim-easymotion
+
+" Install plugin:
+set easymotion
+
+" This commands do not work properly:
+" Hop to character in (multiple) buffer ( c):
+nmap <Leader>c <Plug>(easymotion-s)
+map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+
+" Hop to word in (multiple) buffer ( w):
+" nmap <Leader>w <Plug>(easymotion-bd-w)
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Hop to pattern in (multiple) buffer ( p):
+nmap <Leader>p <Plug>(easymotion-jumptoanywhere)
+
+
+" Hop to a line start in (multiple) buffer ( l):
+nmap <Leader>l <Plug>(easymotion-bd-jk)
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+
+
+
+
+
+
+
 
 
 
@@ -444,3 +394,4 @@ nnoremap <Leader>tb :action ActivateTerminalToolWindow<CR>
 
 " Open terminal in parent folder of current file ( tp):
 nnoremap <Leader>tp :action Terminal.OpenInTerminal<CR>
+

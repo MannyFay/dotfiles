@@ -261,13 +261,22 @@ set NERDTree
 "+-----+-------------------------------+-----+-------------------------------+
 
 " Toggle tree ( tt):
-nmap <Leader>tt :NERDTreeToggle<CR>
+nnoremap <Leader>tt :NERDTreeToggle<CR>
 " Explore tree ( et):
-nmap <Leader>et :NERDTreeFocus<CR>
+nnoremap <Leader>et :NERDTreeFocus<CR>
 " Show actual file in tree ( sft):
-nmap <Leader>sft :NERDTreeFind<CR>
+nnoremap <Leader>sft :NERDTreeFind<CR>
 " Refresh tree ( rt):
-nmap <Leader>rt :NERDTreeRefreshRoot
+nnoremap <Leader>rt :NERDTreeRefreshRoot
+
+"These commands doesn't work:
+" Open file in actual buffer (enter):
+"nnoremap <CR> :NERDTreeMapActivateNode
+" Open file in new vertical split (v):
+"nnoremap v :NERDTreeMapOpenVSplit<CR>
+" Open file in new horizontal split (h):
+"nnoremap h :NERDTreeMapOpenSplit<CR>
+
 
 " Collapse tree ( ct):
 " Collapse tree, keep paths to buffers ( cb):
@@ -286,8 +295,6 @@ let NERDTreeShowHidden=1
 " Start NERDTree if Vim starts.
 autocmd VimEnter * NERDTree | wincmd p
 
-" Open in new split but stay in tree (vs):
-nmap vs s<CR><leader>sf
 
 
 
@@ -328,7 +335,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 
 "-----------------------------------------------------------------------------
-"   Vim Surround
+"   Vim Surround Plugin
 "-----------------------------------------------------------------------------
 
 "https://github.com/tpope/vim-surround
@@ -374,4 +381,20 @@ vnoremap <> S>
 nnoremap swt ySSt
 " Surround marked with tag:
 vnoremap swt St
+
+
+"-----------------------------------------------------------------------------
+"   Vim Commentary Plugin
+"-----------------------------------------------------------------------------
+
+" https://github.com/tpope/vim-commentary/tree/master
+
+" Install plugin:
+set commentary
+
+"-------------------------------------------------------------
+"-- Key Mappings
+
+" Comment in/out selection ( /s)
+vmap <Leader>/s gc
 

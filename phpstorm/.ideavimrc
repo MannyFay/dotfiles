@@ -314,10 +314,11 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 "-----------------------------------------------------------------------------
 "   Vim Surround
 "-----------------------------------------------------------------------------
+
 "https://github.com/tpope/vim-surround
 
 " Install plugin:
-Plug 'tpope/vim-surround'
+set surround
 
 
 " Inside a surrounded element do: cs<actualSurroundChars><newSurroundChars>.
@@ -338,109 +339,5 @@ Plug 'tpope/vim-surround'
 "
 
 
-" Commentary plugin:
-" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
-set commentary
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-" Set steps to go back:
-set undolevels=1000
-
-"-----------------------------------------------------------------------
-"-- Key Mappings
-"-----------------------------------------------------------------------
-
-
-
-" Open ~/.ideavimrc (\e):
-nnoremap \e :e ~/.ideavimrc<CR>
-
-" Source ~/.ideavimrc (\s):
-nnoremap \s :action IdeaVim.ReloadVimRc.reload<CR>
-
-
-
-
-"----------------------------------
-"-- Move Keymaps
-
-" Jump method up:
-nnoremap [[ :action MethodUp<CR>
-
-" Jump method down:
-nnoremap ]] :action MethodDown<CR>
-
-"nnoremap <leader>c :action CommentByLineComment<CR>
-
-
-
-
-"----------------------------------
-"-- Window Management Keymaps
-
-" Split buffer vertically (y-axis) ( y):
-nmap <Leader>y <C-w>v
-
-" Split buffer horizontally (x-axis) ( x):
-nmap <Leader>x <C-w>s
-
-" Go to right split ( l):
-nmap <Leader>l <C-w>l
-
-" Go to left split ( h):
-nmap <Leader>h <C-w>h
-
-" Go to split below ( j):
-nmap <Leader>j <C-w>j
-
-" Go to split above ( k):
-nmap <Leader>k <C-w>k
-
-" Equalize width and height for all splits ( es):
-nmap <Leader>es <C-w>=
-
-" Close current split ( cs):
-nmap <Leader>cs :close<CR>
-
-" Open new tab ( ot):
-nmap <Leader>ot :tabnew<CR>
-
-" Exit current tab: ( et):
-nmap <Leader>et :tabclose<CR>
-
-" Go to next tab ( nt):
-nmap <Leader>nt :tabn<CR>
-
-" Go to previous tab ( pt):
-nmap <Leader>pt :tabp<CR>
-
-
-"----------------------------------
-"-- Terminal Keymaps
-
-" Open terminal ( tb):
-nnoremap <Leader>tb :action ActivateTerminalToolWindow<CR>
-
-" Open terminal in parent folder of current file ( tp):
-nnoremap <Leader>tp :action Terminal.OpenInTerminal<CR>
 

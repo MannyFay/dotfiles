@@ -85,37 +85,54 @@ set ideastatusicon=gray
 
 
 "-----------------------------------------------------------------------
-" Key Mappings
+" Default Key Mappings
 "-----------------------------------------------------------------------
-
-" Keep visual mode after indent with > or <
-vmap < <gv
-vmap > >gv
-
-" Move visual blocks with J and K in visual mode:
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 " Set leader key from / to space:
 let mapleader = ' '
 
-" Clear search highlights ( qh):
-nmap <Leader>qh :nohl<CR>
+" When text is wrapped, move by terminal rows, not lines, unless a count is
+" provided:
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
-" Search everywhere ( ff):
-nmap <Leader>ff :action SearchEverywhere<CR>
-
-" Find in files ( ft):
-nmap <Leader>ft :action FindInPath<CR>
-
-" Show rescent files ( rf):
-nnoremap <Leader>rf :action RecentFiles <CR>
-
-" Redo (U):
+" Redo last action (U):
 nmap U <C-r>
+
+" Disable typically command line typo:
+nnoremap q: :q<CR>
+
+" Stay in visual mode after indenting with <:
+vmap < <gv
+
+" Stay in visual mode after indenting with >:
+vmap > >gv
+
+" Maintain the cursor position  when yanking a visual selection:
+vnoremap y myy`y
+vnoremap Y myY`y
+
+" Paste/replace visual selection without copying it:
+vnoremap p "_dP
+
+" If deleting one char, don't copy it to the clipboard:
+nnoremap x "_x
+
+" Insert a ; or , at the end of a line:
+nnoremap ;; <Esc>A;<Esc>
+nnoremap ,, <Esc>A,<Esc>
+
+" Move text up and down:
+xnoremap <Tab> :move '>+1<CR>gv-gv<CR>
+xnoremap <S-Tab> :move '<-2<CR>gv-gv<CR>
+vnoremap <Tab> :move '>+1<CR>gv=gv<CR>
+vnoremap <S-Tab> :move '<-2<CR>gv=gv<CR>
 
 " Enter visual block mode (vb):
 nmap vb <C-v>
+
+" Join line below with withe space:
+nnoremap <Leader>jl J
 
 " Comment/uncomment lines:
 nnoremap <Leader>/ :action CommentByLineComment <CR>
@@ -123,6 +140,38 @@ vnoremap <Leader>/ :action CommentByLineComment <CR>
 
 " Go to declaration:
 nnoremap gd :action GotoDeclaration <CR>
+
+
+"-------------------------------------------------------------
+"-- Searching
+
+" Quit highlighting of search ( qh):
+nmap <Leader>qh :nohl<CR>
+" Search everywhere ( ff):
+nmap <Leader>ff :action SearchEverywhere<CR>
+" Find in files ( ft):
+nmap <Leader>ft :action FindInPath<CR>
+" Show rescent files ( rf):
+nnoremap <Leader>rf :action RecentFiles <CR>
+
+
+"-------------------------------------------------------------
+"-- Scrolling
+
+" Scroll actual line to top:
+nmap T zt
+" Scroll actual line to bottom:
+nmap B zb
+" Scroll actual line to center:
+nmap C zz
+" Scroll up:
+nmap <C-k> <C-u>
+" Scroll down:
+nmap <C-j> <C-e>
+" Scroll page up:
+nmap <C-p-u> <C-b>
+" Scroll page down:
+nmap <C-p-d> <C-f>
 
 
 "-------------------------------------------------------------

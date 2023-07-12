@@ -1,6 +1,6 @@
 " ~/ideavimrc
 
-"source ~/.vimrc
+
 
 "-----------------------------------------------------------------------------
 "   Auto Commands
@@ -118,9 +118,12 @@ vnoremap p "_dP
 " If deleting one char, don't copy it to the clipboard:
 nnoremap x "_x
 
-" Insert a ; or , at the end of a line:
+" Insert a ; at the end of a line:
 nnoremap ;; <Esc>A;<Esc>
+" Insert a , at the end of a line:
 nnoremap ,, <Esc>A,<Esc>
+" Insert a : at the end of a line:
+nnoremap :: <Esc>A:<Esc>
 
 " Move text up and down:
 xnoremap <Tab> :move '>+1<CR>gv-gv<CR>
@@ -137,6 +140,18 @@ nnoremap <Leader>jl J
 " Comment/uncomment lines:
 nnoremap <Leader>/ :action CommentByLineComment <CR>
 vnoremap <Leader>/ :action CommentByLineComment <CR>
+
+
+"-------------------------------------------------------------
+"-- Extract Code
+
+" Intodruce variable ( iv):
+nnoremap <leader>iv :action IntroduceVariable <CR>
+" Introduce constant ( ic):
+nnoremap <leader>ic :action IntroduceConstant <CR>
+" Extract method ( em):
+nnoremap <leader>em :action ExtractMethod  <Cr>
+vnoremap <leader>em :action ExtractMethod  <Cr>
 
 
 "-------------------------------------------------------------
@@ -192,35 +207,25 @@ nmap <C-p-d> <C-f>
 "-- Splits (Buffer)
 
 " Split buffer vertically ( v):
-nmap <Leader>v <C-w>v
-
+nmap <Leader>v :action SplitVertically <CR>
 " Split buffer horizontally ( h):
 nmap <Leader>h <C-w>s
-
 " Go to right split (L):
 nmap L <C-w>l
-
 " Go to left split (H):
 nmap H <C-w>h
-
 " Go to split below (J):
 nmap J <C-w>j
-
 " Go to split above (K):
 nmap K <C-w>k
-
 " Equalize width and height for all splits ( es):
 nmap <Leader>es <C-w>=
-
 " Grow split vertical ( gv):
 nmap <Leader>gv :vertical resize +5<CR>
-
 " Shrink split vertical ( sv):
 nmap <Leader>sv :vertical resize +5<CR>
-
 " Grow split horizontally ( gh):
 nmap <Leader>gh :resize +5
-
 " Shrink split horizontally ( sh):
 nmap <Leader>sh :resize -5
 

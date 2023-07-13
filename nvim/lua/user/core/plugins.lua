@@ -304,10 +304,10 @@ use({
   end
 })
 
+
 use({
-  'glepnir/lspsaga.nvim',
-  branch = 'main',
-  event = 'LspAttach',
+  'nvimdev/lspsaga.nvim',
+  after = 'nvim-lspconfig',
   config = function()
     require('user.plugin_options.lspsaga')
   end,
@@ -520,13 +520,14 @@ use({
 --[[   'beeender/Comrade' ]]
 --[[ }) ]]
 
+
 -- Command line auto complete style:
-use({
+use {
   'gelguy/wilder.nvim',
   config = function()
     require('user.plugin_options.wilder')
   end,
-})
+}
 
 
 -- .env file support:
@@ -542,6 +543,20 @@ use({
 use({
   'jwalton512/vim-blade'
 })
+
+
+-- ChatGPT AI code generation:
+--[[ use({ ]]
+--[[   'jackMort/ChatGPT.nvim', ]]
+--[[     requires = { ]]
+--[[       'MunifTanjim/nui.nvim', ]]
+--[[       'nvim-lua/plenary.nvim', ]]
+--[[       'nvim-telescope/telescope.nvim' ]]
+--[[     }, ]]
+--[[     config = function() ]]
+--[[       require('user.plugin_options.chatgpt') ]]
+--[[     end, ]]
+--[[ }) ]]
 
 
 if packer_bootstrap then

@@ -32,9 +32,9 @@ lspsaga.setup({
     title = true,
     border = "single",
   },
-    symbol_in_winbar = {
+  symbol_in_winbar = {
     enable = true,
-    separator = "   ",
+    separator = " ",
     ignore_patterns={},
     hide_keyword = true,
     show_file = true,
@@ -52,6 +52,13 @@ vim.api.nvim_set_hl(0, "SagaExpand", { fg = "#252525", bg = "#252525" })
 vim.api.nvim_set_hl(0, "SagaCollapse", { fg = "#252525", bg = "#252525" })
 vim.api.nvim_set_hl(0, "SagaCount", { fg = "#252525", bg = "#252525" })
 vim.api.nvim_set_hl(0, "SagaBeacon", { fg = "#252525", bg = "#252525" })
+vim.api.nvim_set_hl(0, "SagaFileName", { fg = "#ababab" })
+vim.api.nvim_set_hl(0, "SagaFolderName", { fg = "#569CD6" })
+vim.api.nvim_set_hl(0, "SagaWinbarSep", { fg = "#606366" })
+
+    --[[ SagaWinbarSep = { link = 'Operator' }, ]]
+    --[[ SagaFileName = { link = 'Comment' }, ]]
+    --[[ SagaFolderName = { link = 'Comment' }, ]]
 
 -- https://github.com/nvimdev/lspsaga.nvim/blob/main/lua/lspsaga/highlight.lua
 
@@ -60,3 +67,5 @@ vim.api.nvim_set_hl(0, "SagaBeacon", { fg = "#252525", bg = "#252525" })
 
 local keymap = vim.keymap.set
 keymap('n','gd', '<cmd>Lspsaga peek_definition<CR>')
+
+

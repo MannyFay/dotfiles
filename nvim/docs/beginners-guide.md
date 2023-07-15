@@ -59,7 +59,7 @@ brew install --cask font-meslo-nerd-font
 ```
 Select the `MesloLGMDZ Nerd Font Propo` as your terminal/Neovim font.
 
-Check out, if you have [Clang](http://clang.org/) installed:
+Check out, if you have [Clang](http://clang.org/) C/C++ compiler installed:
 ```shell
 clang --version
 ```
@@ -70,6 +70,10 @@ xcode-select --install
 Install [Cmake](https://cmake.org/):
 ```
 brew install cmake
+```
+Install Deno JavaScript runtime:
+```shell
+brew install deno
 ```
 Open [Neovim](https://neovim.io/) (at this point, maybe it seems like there will go on lots of weird things - don't worry!):
 ```shell

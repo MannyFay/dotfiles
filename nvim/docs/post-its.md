@@ -29,12 +29,12 @@ If there are abbreviations you don't understand, look at the
 |:--------------|:-:|:---------------|:-------------|:-:|:--------------|:--------------|:-:|:-----|
 | `<L>` `h`     | = | hor. split     | `J`          | = | down          | `<L>` `n` `t` | = | new  |
 | `<L>` `v`     | = | vert. split    | `K`          | = | up            | `<L>` `q` `t` | = | quit |
-| `<L>` `e` `s` | = | equalize       | `L`          | = | left          | `<L>` `t` `r` | = | right|
+| `<L>` `e` `s` | = | equalize       | `H`          | = | left          | `<L>` `t` `r` | = | right|
 | `<L>` `g` `h` | = | grow hor.      | `<L>` `m`    | = | max/min       | `<L>` `t` `l` | = | left |
 | `<L>` `s` `h` | = | shrink hor.    | `Z` `Z`      | = | save, close   |
-| `<L>` `g` `v` | = | grow vert.     | `q`          | = | close         |
-| `<L>` `s` `v` | = | shrink vert    | `q` `!`      | = | force close   |
-| `L`           | = | right          | `s`          | = | save          |
+| `<L>` `g` `v` | = | grow vert.     | `:` `q`      | = | close         |
+| `<L>` `s` `v` | = | shrink vert    | `:` `q` `!`  | = | force close   |
+| `L`           | = | right          | `:` `s`      | = | save          |
 | `<L>` `t` `v` | = | terminal vert. | `<L>` `t` `h`| = | terminal hor. |
 
 <br>

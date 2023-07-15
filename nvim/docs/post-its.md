@@ -1,4 +1,4 @@
-# Neovim Commands as Post Its
+# Neovim Commands as Post-Its
 Here you can see a possible structure for Post-Its with Neovim commands.  
 I've liked to put them at the bottem frame of my screen to get them into my
 brain over time.  

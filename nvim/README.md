@@ -17,6 +17,7 @@ If you are very new on this topic, pleace read the [beginners-guide](./docs/begi
 * Ripgrep
 * Nerd Font (I use Meslo Nerd Font)
 * CMake, make, Clang
+* Deno
 
 
 ## Quick Start
@@ -47,4 +48,7 @@ If you open Neovim again, it should look a little better.
 ## Further Documentation
 * [Beginners Guide](./docs/beginners-guide.md)
 * [Neovim Commands](./docs/nvim-commands.md)
-* [Neovim Commands as Post Its](./docs/post-its.md)
+* [Neovim Commands as Post-Its](./docs/post-its.md)
+
+## Like?
+If you like that repo, you can sponsor it on my [Patreon account](https://www.patreon.com/Manny556).

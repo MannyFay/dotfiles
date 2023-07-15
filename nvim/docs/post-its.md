@@ -34,7 +34,7 @@ If there are abbreviations you don't understand, look at the
 | `<L>` `s` `h` | = | shrink hor.    | `Z` `Z`      | = | save, close   |
 | `<L>` `g` `v` | = | grow vert.     | `:` `q`      | = | close         |
 | `<L>` `s` `v` | = | shrink vert    | `:` `q` `!`  | = | force close   |
-| `L`           | = | right          | `:` `s`      | = | save          |
+| `L`           | = | right          | `:` `w`      | = | save          |
 | `<L>` `t` `v` | = | terminal vert. | `<L>` `t` `h`| = | terminal hor. |
 
 <br>
@@ -95,6 +95,7 @@ If there are abbreviations you don't understand, look at the
 | `<L>` `a` `r`  | = | align right              | `'` `'`               | = | surround with ' '      |
 | `y`            | = | yank                     | \` `                  | = | surround with \` `     |
 | `y` `y`        | = | yank line                | `<` `>`               | = | surround with < >      |
+| `D`            | = | delete till end          | `Y`                   | = | yank till end          |
 | `p`            | = | put                      | `s` `w` `t`           | = | surround with tag      |
 | `o`            | = | new line below           | `c` `s` `t`           | = | change surrounding tag |
 | `shift` `tab`  | = | move selected up         | `d` `s` `t`           | = | delete surrounding tag |

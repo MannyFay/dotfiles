@@ -132,6 +132,7 @@ To navigate around, enter `Normal Mode`.
 | Delete word:                            | `d` `i` `w`                | Regular Neovim            |
 | Delete line:                            | `d` `d`                    | Regular Neovim            |
 | Delete marked:                          | `d`                        | Regular Neovim            |
+| Delete till end of line:                | `D`                        | Regular Neovim            |
 | Undo last action:                       | `u`                        | Regular Neovim            |
 | Redo last action:                       | `U`                        | keymaps.lua               |
 | Comment out/in line(s):                 | `<Leader>` `/`             | comment.lua               |

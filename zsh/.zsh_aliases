@@ -135,7 +135,7 @@ alias d,ssofdv='du -h --max O admin:///var/lib/docker/volumes/$(docker volume ls
 #-----------------------------------------------------------------------------
 
 # Show status of repository (short version of 'git status'):
-# A  : Added (file are in staging area)
+# A  : Added (file is in index)
 # ?? : Untracked (unwatched file)
 # M  : Changed (file is changed and in the staging area) (there is a space before M)
 # M  : Unstaged (file is not in staging area) (there is a space behind M)
@@ -146,6 +146,13 @@ alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Cr
 
 # Clone repository (add URL):
 alias gc='git clone'
+
+# Pull from origin/main:
+alias gpm='git pull origin main'
+
+# Pull from origin/develop:
+alias gpd='git pull origin develop'
+
 
 
 #-----------------------------------------------------------
@@ -165,9 +172,14 @@ alias gbcl='git checkout'
 # 'Checkout Remote' branch (add remoteName/branchName):
 alias gbcr='git checkout --track'
 
-alias gbcn='git checkout -b && git commit --allow-empty -m "INITIAL COMMIT"'
-# 'Fork New Checkout' branch from actual branch and checkout (add a branch name).
-# 'Fork New Checkout' branch from source branch and checkout (add a branch name and a source branch).
+# Check out new branch (add name):
+alias gbcn='git checkout -b'
+# alias gbcn='git checkout -b && git commit --allow-empty -m "INITIAL COMMIT"'
+
+
+
+# Old Stuff:
+
 
 alias gbd='git branch -D'
 # Force 'Delete' branch (add a branch name).

@@ -1,0 +1,134 @@
+#!/usr/bin/env sh
+
+
+
+#-----------------------------------------------------------------------------
+#   Yabai Commands
+#-----------------------------------------------------------------------------
+
+# Start yabai:
+# yabai --start-service
+
+# Stop yabai:
+# yabai --stop-service
+
+# Restart yabai:
+# yabai --restart-service
+
+
+
+#-----------------------------------------------------------------------------
+#   Initial Settings
+#-----------------------------------------------------------------------------
+
+# For this to work you must configure sudo such that it will be able to run the
+# command without password.
+# See this wiki page for information:
+# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+
+
+#-----------------------------------------------------------------------------
+#   Appearance
+#-----------------------------------------------------------------------------
+
+# Documentation of the Yabai properties:
+# https://github.com/koekeishiya/yabai/blob/master/doc/yabai.asciidoc
+
+# Set the default yabai layout to bsp (binary space partitioning):
+# Other options are stack and float.
+yabai -m config layout bsp
+
+# Set new window to the right if vertical and to bottom if horizontal:
+yabai -m config window_placement second_child
+
+# Set padding around windows:
+yabai -m config top_padding 0
+yabai -m config bottom_padding 0
+yabai -m config left_padding 0
+yabai -m config right_padding 0
+yabai -m config window_gap 0
+
+# Create new window on the focused display:
+# Other options: default (macOS behavior), cursor (where the cursor is)
+yabai -m config window_origin_display focused
+
+# Move mouse always to the focused window:
+yabai -m config mouse_follows_focus on
+
+# Don't change focus if mouse is moved:
+yabai -m config focus_follows_mouse off
+
+# Set modifier for mouse actions to alt key:
+yabai -m config mouse_modifier alt
+
+# Use alt + left click + drag to move a window:
+yabai -m config mouse_action1 move
+
+# Use alt + right click + drag to resize a window:
+yabai -m config mouse_action2 resize
+
+# Whenever a window is tracked to the center of another window, swap them:
+yabai -m config mouse_drop_action swap
+
+# Keep zoom level of windows if layout changes:
+yabai -m config window_zoom_persist on
+
+# Floating windows stay always on top:
+yabai -m config window_topmost on
+
+# Don't draw window shadows:
+yabai -m config window_shadow off
+
+# Deactivate window opacity:
+yabai -m config window_opacity off
+yabai -m config window_opacity_duration 0.0
+yabai -m config active_window_opacity 0.0
+yabai -m config normal_window_opacity 0.0
+
+# Don't animate change in window dimension (frame_rate is disabled on 0.0):
+yabai -m config window_animation_duration 0.0
+#yabai -m config window_animation_frame_rate 120
+
+# Show border of windows:
+yabai -m config window_border on
+yabai -m config window_border_hidpi on
+yabai -m config window_border_blur off
+yabai -m config window_border_width 2
+yabai -m config window_border_radius 12
+yabai -m config active_window_border_color 0xFF606366
+yabai -m config normal_window_border_color 0xFF191B1C 
+# Colors in ARGB format:
+# Purple: 0xFFc064c7
+# Blue: 0xFF569cd6
+# Black: 0xFF191B1C
+# Gray_Dark: 0xFF252525
+# Gray: 0xFF606366
+
+# Set split ratio of windows on 50%:
+yabai -m config split_ratio 0.50
+
+# Split windows automatically horizontal or vertical:
+# Other options: vertical, horizontal
+yabai -m config split_type auto
+
+# Balance the windows that all have the same area:
+yabai -m config auto_balance on
+
+
+#-------------------------------------------------------------
+#-- Disabled Apps for Yabai
+
+yabai -m rule --add app="^System Settings$" manage=off
+
+
+
+
+# global settings
+# yabai -m config                                 \
+#     insert_feedback_color        0xffd75f5f     \
+
+
+

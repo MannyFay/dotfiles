@@ -110,6 +110,8 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+source ~/Code/drw/.zsh_aliases
+
 # Load oh-my-zsh on ZSH start up:
 source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -134,43 +134,38 @@ alias d,ssofdv='du -h --max O admin:///var/lib/docker/volumes/$(docker volume ls
 #  Git
 #-----------------------------------------------------------------------------
 
-# Show status of repository:
-alias gs='git status'
-
-# Shortly show status of repository:
-alias gss='git status -s'
+# Show status of repository (short version of 'git status'):
 # A  : Added (file are in staging area)
 # ?? : Untracked (unwatched file)
-# M : Changed (file is changed and in the staging area) (there is a space before M)
+# M  : Changed (file is changed and in the staging area) (there is a space before M)
 # M  : Unstaged (file is not in staging area) (there is a space behind M)
+alias gs='git status -s'
 
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ah, %as, %cr) %C(bold blue)<%an>%Creset' --abbrev-commit --raw"
-# Show commit history (very pretty).
+# Show commit history:
+alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
 
+# Clone repository (add URL):
 alias gc='git clone'
-# Clone repository (add URL).
-alias gitlp='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --raw'
-gitblp() { git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --raw "$1"; }
 
-#-------------------------------------#
-#           Git -> Branching          #
-#-------------------------------------#
 
-# Every Git Branch alias starts with gb which means git branch.
+#-----------------------------------------------------------
+#- Branches
 
+# Every Git Branch alias starts with 'gb' which means 'git branch'.
+
+# 'Show All' branches inclusively remote repository branches (quit with q):
 alias gbsa='git branch -a'
-# 'Show All' branches inclusively remote repository branches (quit with q).
 
+# 'Show Local' branches (quit with q):
 alias gbsl='git branch'
-# 'Show Local' branches (quit with q).
 
+# 'Checkout Local' branch (add a local branch name):
 alias gbcl='git checkout'
-# 'Checkout Local' branch (add a local branch name).
 
+# 'Checkout Remote' branch (add remoteName/branchName):
 alias gbcr='git checkout --track'
-# 'Checkout Remote' branch (add remoteName/branchName)
 
-alias gbfnc='git checkout -b'
+alias gbcn='git checkout -b && git commit --allow-empty -m "INITIAL COMMIT"'
 # 'Fork New Checkout' branch from actual branch and checkout (add a branch name).
 # 'Fork New Checkout' branch from source branch and checkout (add a branch name and a source branch).
 

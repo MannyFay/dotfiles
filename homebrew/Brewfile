@@ -33,7 +33,7 @@ brew "ripgrep"
 brew 'graphviz'
 brew 'plantuml'
 brew 'deno'
-
+brew 'koekeishiya/formulae/yabai'
 
 
 #-----------------------------------------------------------------------------
@@ -47,11 +47,9 @@ cask 'phpstorm'
 cask 'nordpass'
 cask 'nordvpn'
 cask 'alfred'
-cask 'kitty'
 cask 'aldente'
 cask 'displaylink'
 cask 'istat-menus'
-cask 'authy'
 cask 'bartender'
 cask 'docker'
 cask 'macpass'
@@ -84,4 +82,4 @@ mas 'Dato', id: 1470584107
 mas 'MonitorControl Lite', id: 1595464182
 mas 'Ad Block One: Tube Ad Blocker', id: 1491889901
 mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
-
+mas 'Twilio Authy',

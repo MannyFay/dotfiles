@@ -61,7 +61,7 @@ rm -rf $HOME/.skhdrc
 ln -s $DOTFILES/yabai/.skhdrc $HOME/.skhdrc
 
 yabai --restart-service
-skhdrc --restart-service
+# skhdrc --restart-service
 
 
 #-----------------------------------------------------------

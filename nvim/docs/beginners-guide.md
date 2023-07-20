@@ -37,8 +37,13 @@ Create Neovim directory on your machine if it doesn't exist yet:
 ```shell
 mkdir -p ~/.config/nvim
 ```
-Copy the lua directory and the init.lua file from [here](https://github.com/MannyFay/neovim)
+Copy (or clone with Git) the lua directory and the init.lua file from [here](https://github.com/MannyFay/neovim)
 into the nvim directory.
+
+Install Node.js:
+```shell
+brew install node
+```
 
 Install [Graphviz](https://graphviz.org/):
 ```shell
@@ -69,7 +74,7 @@ xcode-select --install
 ```
 Install [Cmake](https://cmake.org/):
 ```
-brew install cmake
+brew install make
 ```
 Install Deno JavaScript runtime:
 ```shell

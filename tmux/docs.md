@@ -2,6 +2,8 @@
 Plugins Manager:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+| Command | Function |
+|:-------:|:---------|
 | tmux new -s <session-name> | Start new tmux session with name <session-name> |
 | tmux detach | Exit tmux session |
 | tmux ls | List all created tmux sessions |

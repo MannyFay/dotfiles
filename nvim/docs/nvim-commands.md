@@ -180,6 +180,7 @@ To navigate around, enter `Normal Mode`.
 | Quit completion suggestions:            | `ctrl` `q`                 | keymaps.lua, nvim-cmp.lua |
 | Next item in completion list:           | `tab`                      | keymaps.lua, nvim-cmp.lua |
 | Previous item in completion list:       | `shift` `tab`              | keymaps.lua, nvim-cmp.lua |
+| Switch case of char/selected:           | `~`                        | Regular Neovim            |
 
 <br>
 

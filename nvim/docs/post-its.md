@@ -104,4 +104,5 @@ If there are abbreviations you don't understand, look at the
 | `ctrl` `p` `d` | = | scroll preview down      | `ctrl` `q`            | = | quit completion        |
 | `ctrl` `c`     | = | completion suggestions   | `tab`                 | = | next completion item   |
 | `ctrl` `<L>`   | = | confirm completion       | `shift` `tab`         | = | prev. completion item  |
+| `~`            | = | switch case              |                       |   |                        |
 

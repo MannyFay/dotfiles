@@ -55,7 +55,7 @@ cask 'bartender'
 cask 'docker'
 cask 'macpass'
 cask 'iterm2'
-
+cask 'karabiner-elements'
 
 
 #-----------------------------------------------------------

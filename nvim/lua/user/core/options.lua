@@ -76,10 +76,13 @@ vim.opt.numberwidth = 5
 -- Select first item in auto completion list:
 vim.opt.completeopt = { 'menu,menuone' }
 -- Don't insert current comment leader in new line:
---[[ vim.opt.formatoptions:remove({ 'r', 'o', 'n', 'l' }) ]]
-vim.opt.formatoptions:remove({ 'r', 'o', 'l' })
+vim.opt.formatoptions:remove({ 'r', 'o', 'n', 'l' })
+--[[ vim.opt.formatoptions:remove({ 'r', 'o', 'l' }) ]]
 -- Enable spell checking:
 vim.opt.spell = true
+-- Disable automatic resizing of panes:
+vim.opt.equalalways = false
+
 
 
 -- complete the longest common match, and allow tabbing the results to fully complete them:

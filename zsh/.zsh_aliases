@@ -233,6 +233,69 @@ alias cdstud='cd ~/Documents/Private/studies'
 
 
 
+#-----------------------------------------------------------------------------
+#  Laravel
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------
+#- Sail
+
+# old --> alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+#alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+# Use 'sail' instead of './vendor/bin/sail':
+alias sail='./vendor/bin/sail'
+
+# Start Sail in detached mode:
+alias sud='./vendor/bin/sail up -d'
+
+# Start Sail:
+alias su='./vendor/bin/sail up'
+
+# Stop Sail:
+alias sd='./vendor/bin/sail down'
+
+# Show artisan commands:
+alias salc='./vendor/bin/sail artisan'
+
+# Start Composer update:
+alias scu='./vendor/bin/sail composer update'
+
+
+
+
+alias smfs='sail migrate:fresh --seed'
+# Refresh database with project seeders.
+
+alias scda='sail composer dump-autoload'
+
+alias scu='sail composer update'
+
+
+
+
+
+alias l,lc='php artisan'
+# List commands.
+
+
+alias l,seeddb='php artisan db:seed'
+# Seed database with records.
+
+
+alias l,st='php artisan tinker'
+# Start Tinker CLI.
+
+
+# laravel clockwork browser plugin anschauen!
+# table plus sql oberfläche!
+
+
+
+
+
+
+
+
 
 
 #----------------------------------------------------------------------------#
@@ -346,73 +409,6 @@ alias d,ssofdv='du -h --max O admin:///var/lib/docker/volumes/$(docker volume ls
 
 # docker system prune -a
 # Delete all stopped.
-
-
-
-
-
-
-
-#---------------------------------------------------------------------------#
-#                                  TERMINAL                                 #
-#---------------------------------------------------------------------------#
-
-# Create new file (nf):
-alias nf='touch'
-
-# Delete file (df):
-alias df='rm'
-
-# New directory (nd):
-alias tnd='mkdir'
-
-# Delete directory (dd):
-alias dd='rm -rf'
-
-
-
-
-#---------------------------------------------------------------------------#
-#                                  COMPOSER                                 #
-#---------------------------------------------------------------------------#
-
-
-
-#---------------------------------------------------------------------------#
-#                                  LARAVEL                                  #
-#---------------------------------------------------------------------------#
-
-#----------- Sail
-# old --> alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-#alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-# Use 'sail' instead of './vendor/bin/sail':
-alias sail='./vendor/bin/sail'
-
-alias smfs='sail migrate:fresh --seed'
-# Refresh database with project seeders.
-
-alias scda='sail composer dump-autoload'
-
-alias scu='sail composer update'
-
-
-
-
-
-alias l,lc='php artisan'
-# List commands.
-
-
-alias l,seeddb='php artisan db:seed'
-# Seed database with records.
-
-
-alias l,st='php artisan tinker'
-# Start Tinker CLI.
-
-
-# laravel clockwork browser plugin anschauen!
-# table plus sql oberfläche!
 
 
 

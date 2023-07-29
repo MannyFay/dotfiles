@@ -111,9 +111,17 @@ Explanation by adding parts of a file to the index:
 | Jump into downloads directory: | `cddown` | cd ~/Downloads                 |
 | Jump into studies directory:   | `cdstud` | cd ~/Documents/Private/studies |
 
+<br>
 
-
-
+## Laravel
+| Function                     | Alias  | Command                           |
+|:-----------------------------|:------:|:----------------------------------|
+| Shorten down Sail command:   | `sail` | ./vendor/bin/sail                 |
+| Start Sail in detached mode: | `sud`  | ./vendor/bin/sail up -d           |
+| Start Sail:                  | `su`   | ./vendor/bin/sail up              |
+| Stop Sail:                   | `sd`   | ./vendor/bin/sail down            |
+| List Artisan commands:       | `salc` | ./vendor/bin/sail artisan         |
+| Start Composer update:       | `scu`  | ./vendor/bin/sail composer update |
 
 
 

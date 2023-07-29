@@ -144,6 +144,13 @@ alias gccl='git commit --amend'
 # Revert last commit (before push):
 alias gcrl='git reset --hard HEAD~1'
 
+# Stage all files and commit with message:
+alias giacm='git add . && git commit -m'
+
+# Stage all files and commit with WIP status:
+alias giacwip='git add . && git commit -m "WIP"'
+
+
 
 #-----------------------------------------------------------
 #- Comparing
@@ -166,6 +173,9 @@ alias gpp='git pull && git push'
 
 # Revert last push (add commit hash):
 alias gpr='git revert'
+
+# Stage all files, commit with 'WIP' status and push:
+alias ggo='git add . && git commit -m "WIP" && git pull && git push'
 
 
 #-----------------------------------------------------------

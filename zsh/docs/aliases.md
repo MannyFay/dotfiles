@@ -44,14 +44,16 @@ Explanation by adding parts of a file to the index:
 | Unstage all files in index:                 | `giua` | git restore -p       |
 
 ### Commits
-| Function                                                 | Alias   | Command                                      |
-|:---------------------------------------------------------|:--------|:---------------------------------------------|
-| Set empty, initial commit:                               | `gci`   | git commit --allow-empty -m "INITIAL COMMIT" |
-| Commit changes:                                          | `gcc`   | git commit                                   |
-| Commit with short message:                               | `gcm`   | git commit -m                                |
-| Commit with 'Work In Progress' message:                  | `gcwip` | git commit -m "WIP"                          |
-| Change last commit (file(s)/commit message) before push: | `gccl`  | git commit --amend                           |
-| Revert last commit (before push):                        | `gcrl`  | git commit --hard HEAD~1                     |
+| Function                                                     | Alias     | Command                                      |
+|:-------------------------------------------------------------|:----------|:---------------------------------------------|
+| Set empty, initial commit:                                   | `gci`     | git commit --allow-empty -m "INITIAL COMMIT" |
+| Commit changes:                                              | `gcc`     | git commit                                   |
+| Commit with short message (add message):                     | `gcm`     | git commit -m                                |
+| Commit with 'Work In Progress' message:                      | `gcwip`   | git commit -m "WIP"                          |
+| Change last commit (file(s)/commit message) before push:     | `gccl`    | git commit --amend                           |
+| Revert last commit (before push):                            | `gcrl`    | git commit --hard HEAD~1                     |
+| Stage all files and commit with short message (add message): | `giacm`   | git add . && git commit -m                   |
+| Stage all files and commit with 'Work In Progress' status:   | `giacwip` | git add . && git commit -m "WIP"             |
 
 ### Comparing
 | Function                  | Alias | Command  |
@@ -59,12 +61,13 @@ Explanation by adding parts of a file to the index:
 | Show differences in file: | `gdf` | git diff |
 
 ### Pushing/Pulling
-| Function                                              | Alias | Command              |
-|:------------------------------------------------------|:------|:---------------------|
-| Pull actual branch from remote repository:            | `gpl` | git pull             |
-| Fetch actual branch from remote repository:           | `gpf` | git fetch            |
-| Pull actual branch from remote repository, then push: | `gpp` | git pull && git push |
-| Revert last push (add commit hash):                   | `gpr` | git revert           |
+| Function                                              | Alias | Command                                                  |
+|:------------------------------------------------------|:------|:---------------------------------------------------------|
+| Pull actual branch from remote repository:            | `gpl` | git pull                                                 |
+| Fetch actual branch from remote repository:           | `gpf` | git fetch                                                |
+| Pull actual branch from remote repository, then push: | `gpp` | git pull && git push                                     |
+| Revert last push (add commit hash):                   | `gpr` | git revert                                               |
+| Stage all, commit with 'WIP' status and push:         | `ggo` | git add . && git commit -m "WIP" && git pull && git push |
 
 ### Stashing
 | Function             | Alias | Command       |

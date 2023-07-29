@@ -179,9 +179,47 @@ alias gsp='git stash pop'
 
 
 
+#-----------------------------------------------------------------------------
+#  Terminal
+#-----------------------------------------------------------------------------
 
+#-----------------------------------------------------------
+#- Moving
 
+# Jump up in directory structure:
+alias ..='cd ..'
+alias 2..='cd ../..'
+alias 3..='cd ../../..'
+alias 4..='cd ../../../..'
+alias 5..='cd ../../../../..'
+alias 6..='cd ../../../../../..'
+alias 7..='cd ../../../../../../..'
+alias 8..='cd ../../../../../../../..'
+alias 9..='cd ../../../../../../../../..'
 
+# Jump into .dotfiles directory:
+alias cd.='cd ~/.dotfiles'
+
+# Jump into GitHub directory:
+alias cdgh='cd ~/Code/github'
+
+# Jump into GitLab directory:
+alias cdgl='cd ~/Code/gitlab'
+
+# Jump into .ssh directory:
+alias cdssh='cd ~/.ssh'
+
+# Jump into desktop directory:
+alias cddesk='cd ~/Desktop'
+
+# Jump into documents directory:
+alias cddocs='cd ~/Documents'
+
+# Jump into downloads directory:
+alias cddown='cd ~/Downloads'
+
+# Jump into studies directory:
+alias cdstud='cd ~/Documents/Private/studies'
 
 
 
@@ -321,15 +359,7 @@ alias tnd='mkdir'
 # Delete directory (dd):
 alias dd='rm -rf'
 
-# Jump back:
-alias 2cd='../..'
-alias 3cd='../../..'
-alias 4cd='../../../..'
-alias 5cd='../../../../..'
-alias 6cd='../../../../../..'
-alias 7cd='../../../../../../..'
-alias 8cd='../../../../../../../..'
-alias 9cd='../../../../../../../../..'
+
 
 
 #---------------------------------------------------------------------------#

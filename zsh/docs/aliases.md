@@ -84,3 +84,48 @@ Explanation by adding parts of a file to the index:
 | Create new session (add \<session-name>):    | `tmns` | tmux new -s                   |
 | Source .tmux.conf file:                      | `tmsc` | tmux source-file ~/.tmux.conf |
 | List Tmux keys:                              | `tmlk` | tmux list-keys                |
+
+<br>
+
+## Terminal
+| Function                       | Alias    | Command                        |
+|:-------------------------------|:--------:|:-------------------------------|
+| One directory up:              | `..`     | cd ..                          |
+| Two directories up:            | `2..`    | cd ../..                       |
+| Three directories up:          | `3..`    | cd ../../..                    |
+| Four directories up:           | `4..`    | cd ../../../..                 |
+| Five directories up:           | `5..`    | cd ../../../../..              |
+| Six directories up:            | `6..`    | cd ../../../../../..           |
+| Seven directories up:          | `7..`    | cd ../../../../../../..        |
+| Eight directories up:          | `8..`    | cd ../../../../../../../..     |
+| Nine directories up:           | `9..`    | cd ../../../../../../../../..  |
+| Jump into .dotfiles directory: | `cd.`    | cd ~/.dotfiles                 |
+| Jump into GitHub directory:    | `cdgh`   | cd ~/Code/github               |
+| Jump into Gitlab directory:    | `cdgl`   | cd ~/Code/gitlab               |
+| Jump into .ssh directory:      | `cdssh`  | cd ~/.ssh                      |
+| Jump into desktop directory:   | `cddesk` | cd ~/Desktop                   |
+| Jump into documents directory: | `cddocs` | cd ~/Documents                 |
+| Jump into downloads directory: | `cddown` | cd ~/Downloads                 |
+| Jump into studies directory:   | `cdstud` | cd ~/Documents/Private/studies |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

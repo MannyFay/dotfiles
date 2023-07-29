@@ -17,6 +17,175 @@
 #source ~/.zsh_aliases
 
 
+#----------------------------------------------------------------------------#
+#  Tmux
+#----------------------------------------------------------------------------#
+
+# Start Tmux:
+alias tms='tmux'
+
+# Quit Tmux:
+alias tmq='tmux detach'
+
+# List all sessions:
+alias tml='tmux ls'
+
+# Load session <session-name>:
+alias tmls='tmux attach -t'
+
+# Create new session <session-name>:
+alias tmns='tmux new -s'
+
+# Source .tmux.conf file:
+alias tmsc='tmux source-file ~/.tmux.conf'
+
+# List keys:
+alias tmlk='tmux list-keys'
+
+
+
+#-----------------------------------------------------------------------------
+#  Git
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------
+#- Working Tree
+
+# Show status of repository (short version of 'git status'):
+# A  : Added (file is in index)
+# ?? : Untracked (unwatched file)
+# M  : Changed (file is changed and in the staging area) (there is a space before M)
+# M  : Unstaged (file is not in staging area) (there is a space behind M)
+alias gs='git status -s'
+
+# Show commit history:
+alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
+
+# Clone repository (add URL):
+alias gc='git clone'
+
+
+#-----------------------------------------------------------
+#- Branches
+
+# Pull from origin/main:
+alias gpm='git pull origin main'
+
+# Pull from origin/develop:
+alias gpd='git pull origin develop'
+
+# 'Show All' branches inclusively remote repository branches (quit with q):
+alias gbsa='git branch -a'
+
+# 'Show Local' branches (quit with q):
+alias gbsl='git branch'
+
+# 'Checkout Local' branch (add a local branch name):
+alias gbcl='git checkout'
+
+# 'Checkout Remote' branch (add remoteName/branchName):
+alias gbcr='git checkout --track'
+
+# Check out new branch (add name):
+alias gbcn='git checkout -b'
+
+# Delete branch locally (add a branch name):
+alias gbdl='git checkout develop && git branch -D'
+
+# Delete branch on remote repository (add remote branch-name):
+alias gbdr='git push --delete'
+
+
+#-----------------------------------------------------------
+#- Index
+
+# Stage file (add file or path):
+alias gisf='git add'
+
+# y (yes): Stage this hunk to be included in the next commit.
+# n (no): Do not stage this hunk; leave it as is in the working directory.
+# s (split): Split this hunk into smaller parts, allowing you to stage only specific lines or changes within the hunk.
+# e (edit): Manually edit this hunk to remove or modify lines before staging.
+# ? (help): Show the available options and their meanings.
+# Stage parts of file (add file):
+alias gisp='git add -p'
+
+# Unstage file (add file or path):
+alias giuf='git restore --staged'
+
+# Unstage parts of file (add file):
+alias giup='git restore -p'
+
+# Stage all files:
+alias gisa='git add .'
+
+# Unstage all files:
+alias giua='git restore --staged .'
+
+
+#-----------------------------------------------------------
+#- Commits
+
+# Initial commit:
+alias gci='git commit --allow-empty -m "INITIAL COMMIT"'
+
+# Commit:
+alias gcc='git commit'
+
+# Commit with message:
+alias gcm='git commit -m'
+
+# Commit with message 'Work In Progress':
+alias gcwip='git commit -m "WIP"'
+
+# Change last commit (file/commit message) before push:
+alias gccl='git commit --amend'
+
+# Revert last commit (before push):
+alias gcrl='git reset --hard HEAD~1'
+
+
+#-----------------------------------------------------------
+#- Comparing
+
+# Compare files (add file):
+alias gdf='git diff'
+
+
+#-----------------------------------------------------------
+#- Pushing/Pulling
+
+# Pull actual branch from remote repository:
+alias gpl='git pull'
+
+# Fetch actual branch from remote repository:
+alias gpf='git fetch'
+
+# Pull actual branch from remote repository, than push:
+alias gpp='git pull && git push'
+
+# Revert last push (add commit hash):
+alias gpr='git revert'
+
+
+#-----------------------------------------------------------
+#- Stashing
+
+# Stash changes:
+alias gsc='git stash'
+
+# Pop stashed changes:
+alias gsp='git stash pop'
+
+
+
+
+
+
+
+
+
+
 
 #----------------------------------------------------------------------------#
 #  Docker
@@ -130,159 +299,10 @@ alias d,ssofdv='du -h --max O admin:///var/lib/docker/volumes/$(docker volume ls
 # docker system prune -a
 # Delete all stopped.
 
-#-----------------------------------------------------------------------------
-#  Git
-#-----------------------------------------------------------------------------
-
-# Show status of repository (short version of 'git status'):
-# A  : Added (file is in index)
-# ?? : Untracked (unwatched file)
-# M  : Changed (file is changed and in the staging area) (there is a space before M)
-# M  : Unstaged (file is not in staging area) (there is a space behind M)
-alias gs='git status -s'
-
-# Show commit history:
-alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
-
-# Clone repository (add URL):
-alias gc='git clone'
-
-# Pull from origin/main:
-alias gpm='git pull origin main'
-
-# Pull from origin/develop:
-alias gpd='git pull origin develop'
 
 
 
-#-----------------------------------------------------------
-#- Branches
 
-# Every Git Branch alias starts with 'gb' which means 'git branch'.
-
-# 'Show All' branches inclusively remote repository branches (quit with q):
-alias gbsa='git branch -a'
-
-# 'Show Local' branches (quit with q):
-alias gbsl='git branch'
-
-# 'Checkout Local' branch (add a local branch name):
-alias gbcl='git checkout'
-
-# 'Checkout Remote' branch (add remoteName/branchName):
-alias gbcr='git checkout --track'
-
-# Check out new branch (add name):
-alias gbcn='git checkout -b'
-# alias gbcn='git checkout -b && git commit --allow-empty -m "INITIAL COMMIT"'
-
-
-
-# Old Stuff:
-
-
-alias gbd='git branch -D'
-# Force 'Delete' branch (add a branch name).
-
-
-#-------------------------------------#
-#           Git -> Commiting          #
-#-------------------------------------#
-
-# Every Git Commit alias starts with gc which means git commit.
-
-alias gci='git commit --allow-empty -m "Initial Commit"'
-# 'Initial' commit.
-
-alias gcc='git commit'
-# Commit 'Changes'.
-
-alias gcm='git commit -m'
-# Commit with short 'Message'.
-
-alias gcwip='git commit -m "wip"'
-# Commit with short message 'Work In Progress'.
-
-alias gccl='git commit --amend'
-# 'Change Last' commit (before push).
-
-alias gcrl='git reset --hard && git clean -df'
-# 'Revert Last' commit (before push)..
-
-
-#-------------------------------------#
-#           Git -> Comparing          #
-#-------------------------------------#
-
-# Every Git Diff alias starts with gd which means git diff.
-
-alias gdcf='git diff'
-# 'Compare Files' (add a file).
-
-
-#-------------------------------------#
-#           Git -> Dotfiles           #
-#-------------------------------------#
-
-alias gdot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-# Select home directory for following Git commands.
-
-
-#-------------------------------------#
-#        Git -> Pulling/Pushing       #
-#-------------------------------------#
-
-# Every Git Pull/Push alias starts with p which means push/pull.
-
-alias gpp='git pull'
-# 'Pull' from repository.
-
-alias gpf='git fetch'
-# 'Fetch' from repository.
-
-alias gpc='git pull && git pull origin master && git push'
-# 'Push' commits.
-
-alias gptm='git push origin master'
-# Push 'To Master' branch.
-
-alias gptd='git push origin develop'
-# Push 'To Develop' branch.
-
-
-#-------------------------------------#
-#            Git -> Stashing          #
-#-------------------------------------#
-
-#alias gs='git stash'
-# Stash.
-
-#alias gps='git stash pop'
-# Pop stash.
-
-
-
-#--------------------------------------
-# Git Staging
-#--------------------------------------
-
-alias gsf='git add'
-# 'Stage File' (add file or path).
-
-alias gsuf='git rm --cached'
-# Unstage something (add file or path).
-
-alias gsp='git add -p'
-# Stage parts of file (add file).
-
-alias gsup='git reset -p'
-# Unstage parts of file (add file).
-
-alias gse='git add .'
-# Stage everything.
-
-alias gsue='git reset'
-# Unstage everything.
 
 
 #---------------------------------------------------------------------------#

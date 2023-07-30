@@ -110,13 +110,19 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-source ~/Code/drw/.zsh_aliases
+# Load tool based alias files:
+source ~/Code/drw/devops/dotfiles/manny-fay/zsh/.zsh_aliases_drw
+source ~/.config/git/.git_aliases
+# source dockerstuff
+# source laravelstuff
+# source tmuxstuff
 
 # Load oh-my-zsh on ZSH start up:
 source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# iTerm2 shell integration:
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Mount ZSH aliases file:
@@ -124,4 +130,5 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+# Set Java runtime path:
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home

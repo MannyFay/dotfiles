@@ -8,6 +8,7 @@
 
 #tap homebrew/cask-fonts
 tap 'burntushi/ripgrep'
+tap 'homebrew/cask-versions'
 
 
 
@@ -15,27 +16,29 @@ tap 'burntushi/ripgrep'
 #- Formulas
 #-----------------------------------------------------------------------------
 
-brew "gnupg"
-brew "pinentry-mac"
-brew "curl"
-brew "wget"
-brew "git"
-brew "tree"
-brew "grep"
-brew "neovim"
-brew "tmux"
-brew "composer"
-brew "node"
-brew "node-sass"
-brew "php"
-brew "mas"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-brew "ripgrep"
-brew 'graphviz'
-brew 'plantuml'
+brew 'bat'
+brew 'composer'
+brew 'curl'
 brew 'deno'
+brew 'docker'
+brew 'git'
+brew 'gnupg'
+brew 'graphviz'
+brew 'grep'
+brew 'mas'
+brew 'neovim'
+brew 'node'
+brew 'node-sass'
+brew 'php'
+brew 'pinentry-mac'
+brew 'plantuml'
+brew 'ripgrep'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
 brew 'koekeishiya/formulae/yabai'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
 
 
@@ -43,46 +46,53 @@ brew 'koekeishiya/formulae/yabai'
 #- Casks
 #-----------------------------------------------------------------------------
 
-cask 'firefox'
-cask 'google-chrome'
-cask 'figma'
-cask 'phpstorm'
-cask 'nordpass'
-cask 'nordvpn'
-cask 'alfred'
 cask 'aldente'
-cask 'displaylink'
-cask 'istat-menus'
+cask 'alfred'
+cask 'apparency'
 cask 'bartender'
-cask 'docker'
-cask 'macpass'
+cask 'displaylink'
+cask 'figma'
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'font-meslo-lg-nerd-font'
+cask 'font-space-mono-nerd-font'
+cask 'google-chrome'
+cask 'intellij-idea-ce'
+cask 'istat-menus'
 cask 'iterm2'
 cask 'karabiner-elements'
-
-
-#-----------------------------------------------------------
-#- Quicklooks
-
+cask 'macpass'
+cask 'microsoft-edge'
+cask 'nordpass'
+cask 'nordvpn'
+cask 'opera'
+cask 'phpstorm'
+cask 'polypane'
 cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
 cask 'qlimagesize'
-cask 'suspicious-package'
-cask 'apparency'
-cask 'quicklookase'
+cask 'qlmarkdown'
+cask 'qlstephen'
 cask 'qlvideo'
+cask 'quicklook-json'
+cask 'quicklookase'
+cask 'raycast'
+cask 'suspicious-package'
 
 
 
 #-----------------------------------------------------------------------------
-#- Mac AppStore
+#- Mac App Store
 #-----------------------------------------------------------------------------
 
 mas 'Caffeinated - Anti Sleep App', id: 1362171212
 mas 'Cleaner One Pro - Disk Clean', id: 1133028347
 mas 'Dato', id: 1470584107
-mas 'MonitorControl Lite', id: 1595464182
-mas 'Ad Block One: Tube Ad Blocker', id: 1491889901
+mas 'MonitorControlLite', id: 1595464182
+mas 'Ad Block One', id: 1491889901
 mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
-mas 'Twilio Authy',
+mas 'Twilio Authy', id: 494168017
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+
+
+

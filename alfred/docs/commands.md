@@ -48,10 +48,36 @@ I've changed `clipboard` to `clip` in Alfred's clipboard history settings.
 | Mute music:                      | `mute`     |
 
 ### System
-| Function                         | Command    |
-|:---------------------------------|:----------:|
-|||
-|||
+| Function                         | Command           |
+|:---------------------------------|:-----------------:|
+| Start screen saver:              | `screensaver`     |
+| Show trash:                      | `trash`           |
+| Empty trash:                     | `emptytrash`      |
+| Log out:                         | `logout`          |
+| Sleep:                           | `sleep`           |
+| Sleep displays:                  | `sleepdisplays`   |
+| Lock:                            | `lock`            |
+| Restart:                         | `restart`         |
+| Shut down:                       | `shutdown`        |
+| Hide app:                        | `hide <app>`      |
+| Quit app:                        | `quit <app>`      |
+| Force quit:                      | `forcequit <app>` |
+| Quit all apps:                   | `quitall`         |
+| Volume up:                       | `volup`           |
+| Volume down:                     | `voldown`         |
+| Toggle mute:                     | `mute`            |
+| Eject local mounted volume:      | `eject`           |
+| Eject all local mounted volumes: | `ejectall`        |
+
+### Terminal
+| Function               | Command       |
+|:-----------------------|:-------------:|
+| Run command in iTerm2: | `> <command>` |
+
+### Previews
+| Function                  | Command |
+|:--------------------------|:-------:|
+| Quick look selected item: | `shift` |
 
 <br>
 

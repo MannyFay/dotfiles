@@ -20,14 +20,21 @@ private disk.
 ## Workflows
 Here a list where you can find workflows:
 * [Alfred Gallery](https://alfred.app)
-* []
+* [Packal](https://www.packal.org)
+* []()
+
+<br>
 
 ## Installed Workflows
+* [Alpine.js Docs](https://github.com/Fadarrizz/alfred-alpinejs-docs)
+* [Colors](https://www.packal.org/workflow/colors) M1!!!!
+* [DeepL-Translate](https://github.com/AlexanderWillner/deepl-alfred-workflow2) M1!!!!
 * [Emoji Search](https://github.com/jsumners/alfred-emoji)
 * [GitHub Repos](https://github.com/edgarjs/alfred-github-repos) (click on releases to get the workflow)
+* [Homebrew Controller](https://www.packal.org/workflow/homebrew-controller)
+* [Kill Process](https://www.packal.org/workflow/kill-process)
 * [Network](https://github.com/mrodalgaard/alfred-network-workflow)
 * [Show Network Info](https://github.com/jeppestaerk/alfred-show-network-info)
-* []()
 * []()
 * []()
 * []()

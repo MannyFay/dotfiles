@@ -81,6 +81,39 @@ I've changed `clipboard` to `clip` in Alfred's clipboard history settings.
 
 <br>
 
+## [Alpine.js Docs](https://github.com/Fadarrizz/alfred-alpinejs-docs)
+| Function                | Command       |
+|:------------------------|:-------------:|
+| Search in docs:         | `alp <query>` |
+| Quick look on result:   | `cmd`+`y`     |
+| Open result in browser: | `enter`       |
+
+<br>
+
+## [Colors](https://www.packal.org/workflow/colors) Not M1
+| Function                | Command       |
+|:------------------------|:-------------:|
+|||
+|||
+|||
+|||
+|||
+
+<br>
+
+## [DeepL-Translate](https://github.com/AlexanderWillner/deepl-alfred-workflow2) M1!!!
+| Function                          | Command           |
+|:----------------------------------|:-----------------:|
+| Translate to configured language: | `dl <text>`       |
+| Translate to English:             | `dl-to-en <text>` |
+| Translate to German:              | `dl-to-de <text>` |
+| Copy result:                      | `enter`           |
+| Show result as big screen overlay: | `cmd`+`enter`|
+
+
+
+<br>
+
 ## [Emoji Search](https://github.com/jsumners/alfred-emoji)
 | Function                                                | Command         |
 |:--------------------------------------------------------|:---------------:|
@@ -110,6 +143,20 @@ Every command works on and is for GitHub.
 | Customize pull request caches:                | `> CACHE_TTL_SEC_PR  default: <number>`  |                            |
 | Customize repository caches:                  | `> CACHE_TTL_SEC_REPO default: 86400`    |                            |
 | Login to enterprise account:                  | `gh-host <host>`                         |                            |
+
+<br>
+
+## [Homebrew Controller](https://www.packal.org/workflow/homebrew-controller)
+| Function                               | Command    |
+|:---------------------------------------|:----------:|
+
+
+<br>
+
+## [Kill Process](https://www.packal.org/workflow/kill-process)
+| Function                               | Command    |
+|:---------------------------------------|:----------:|
+
 
 <br>
 

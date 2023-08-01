@@ -81,6 +81,14 @@ I've changed `clipboard` to `clip` in Alfred's clipboard history settings.
 
 <br>
 
+## [Alfred Chrome](https://github.com/ShogunPanda/alfred-chrome)
+| Function                | Command |
+|:------------------------|:-------:|
+| Trigger workflow:       | `cr`    |
+| Open in incognito mode: | `alt`   |
+
+<br>
+
 ## [Alpine.js Docs](https://github.com/Fadarrizz/alfred-alpinejs-docs)
 | Function                | Command       |
 |:------------------------|:-------------:|
@@ -90,25 +98,45 @@ I've changed `clipboard` to `clip` in Alfred's clipboard history settings.
 
 <br>
 
-## [Colors](https://www.packal.org/workflow/colors) Not M1
-| Function                | Command       |
-|:------------------------|:-------------:|
-|||
-|||
-|||
-|||
-|||
+## [Call or Message Contact](https://github.com/c-stephens/Call-or-Message-Contact)
+| Function                  | Command                 |
+|:--------------------------|:-----------------------:|
+| Start Facetime call:      | `face <name-or-number>` |
+| Start phone call:         | `call <name-or-number>` |
+| Answer a call:            | `answer`                |
+| End a call:               | `end`                   |
+| Mute/unmute current call: | `mute`                  |
+| Open messages to send:    | `im <name-or-number>`   |
+| Write message:            | `msg <name-or-number>`  |
 
 <br>
 
-## [DeepL-Translate](https://github.com/AlexanderWillner/deepl-alfred-workflow2) M1!!!
-| Function                          | Command           |
-|:----------------------------------|:-----------------:|
-| Translate to configured language: | `dl <text>`       |
-| Translate to English:             | `dl-to-en <text>` |
-| Translate to German:              | `dl-to-de <text>` |
-| Copy result:                      | `enter`           |
-| Show result as big screen overlay: | `cmd`+`enter`|
+## [Color Converter](https://github.com/toFrankie/alfred-color-converter)
+| Function                | Command                 |
+|:------------------------|:-----------------------:|
+| Convert hex color:      | `cc #<color-code>`      |
+| Convert rgb color:      | `cc rgb(<color-code>)`  |
+| Convert rgba color:     | `cc rgba(<color-code>)` |
+| Convert color:          | `cc <color>`            |
+| Save code to clipboard: | `enter`                 |
+
+<br>
+
+## [Deep Contacts Search](https://alfred.app/workflows/alfredapp/deep-contacts-search/)
+| Function             | Command       |
+|:---------------------|:-------------:|
+| Search in contacts:  | `dc <query>`  |
+| Use wildcard search: | `dc *<query>` |
+
+<br>
+
+## [DeepL-Translate](https://github.com/m9dfukc/deepl-alfred-workflow/tree/master)
+| Function                             | Command                       |
+|:-------------------------------------|:-----------------------------:|
+| Translate to configured language(s): | `dl <text>`                   |
+| Translate to specific language(s):   | `dl <text> > <lang1> <lang2>` |
+| Copy result:                         | `enter`                       |
+| Show result as big screen overlay:   | `cmd`+`enter`|
 
 
 
@@ -202,6 +230,14 @@ Every command works on and is for GitHub.
 
 <br>
 
+## [PHP Doc Search](https://www.packal.org/workflow/php-doc-search)
+| Function                                      | Command          |
+|:----------------------------------------------|:----------------:|
+| Search PHP documentation: | `php <query>` |
+| Open result in browser: | `enter` |
+
+<br>
+
 ## [Search Notes](https://github.com/sballin/alfred-search-notes-app)
 | Function                                      | Command          |
 |:----------------------------------------------|:----------------:|
@@ -259,3 +295,20 @@ Every command works on and is for GitHub.
 <br>
 
 ## [Word Search](https://github.com/jun6lee/Alfred-WordSearch)
+| Function                            | Command       |
+|:------------------------------------|:-------------:|
+| Search for synonyms: | `syn <query>` |
+| Search for exact synonyms: | `dsyn <query>` |
+| Search for antonyms: | `ant <query>` |
+| Search for rhymes: | `rhyme <query>` |
+| Search for words that describe the \<query> | `describing <query>` |
+
+
+
+
+
+
+
+
+
+

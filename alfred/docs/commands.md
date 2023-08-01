@@ -154,9 +154,40 @@ Every command works on and is for GitHub.
 <br>
 
 ## [Kill Process](https://www.packal.org/workflow/kill-process)
-| Function                               | Command    |
-|:---------------------------------------|:----------:|
+| Function                                           | Command                     |
+|:---------------------------------------------------|:---------------------------:|
+| Kill a process:                                    | `kill <process>`            |
+| Kill all processes with the same name as selected: | `cmd`+`enter`               |
+| Filter by arguments of processes:                  | `kill <process>:<argument>` |
 
+<br>
+
+## [Laravel Docs](https://github.com/tillkruss/alfred-laravel-docs)
+| Function                         | Command      |
+|:---------------------------------|:------------:|
+| Search in Laravel documentation: | `ld <query>` |
+| Open quick preview:              | `cmd`+`y`    |
+| Open result in browser:          | `enter`      |
+
+<br>
+
+## [Lorem Ipsum](https://github.com/tillkruss/alfred-lorem-ipsum)
+| Function                              | Command                     |
+|:--------------------------------------|:---------------------------:|
+| Generate seven words:                 | `lorem words`               |
+| Generate custom number of words:      | `lorem words <number>`      |
+| Generate three sentences:             | `lorem sentences`           |
+| Generate custom number of sentences:  | `lorem sentences <number>`  |
+| Generate three paragraphs:            | `lorem paragraphs`          |
+| Generate custom number of paragraphs: | `lorem paragraphs <number>` |
+
+
+<br>
+
+## [MDN Search](https://github.com/gilbarbara/alfred-workflows/tree/main/mdn-search)
+| Function                         | Command       |
+|:---------------------------------|:-------------:|
+| Search in Mozilla documentation: | `mdn <query>` |
 
 <br>
 
@@ -171,6 +202,19 @@ Every command works on and is for GitHub.
 
 <br>
 
+## [Search Notes](https://github.com/sballin/alfred-search-notes-app)
+| Function                                      | Command          |
+|:----------------------------------------------|:----------------:|
+| Search titles or create new if none is found: | `n <query>`      |
+| Search titles and bodies:                     | `nb <query>`     |
+| Search folder names:                          | `nf <query>`     |
+| Open note/folder or create new:               | `enter`          |
+| Search for query in Notes in-app search:      | `shift`+`enter`  |
+| Copy body of note to the clipboard:           | `cmd`+`enter`    |
+| Copy link to the note to the clipboard:       | `alt`+`enter`    |
+
+<br>
+
 ## [Show Network Info](https://github.com/jeppestaerk/alfred-show-network-info)
 | Function                       | Command          |
 |:-------------------------------|:----------------:|
@@ -179,11 +223,39 @@ Every command works on and is for GitHub.
 | Open IP address in browser:    | `cmd`+`enter`    |
 | Connect to IP address via SSH: | `option`+`enter` |
 
+<br>
 
+## [Sidecar Connect](https://github.com/kovstas/alfred-sidecar)
+| Function                 | Command |
+|:-------------------------|:-------:|
+| Connect/disconnect iPad: | `sc`    |
 
+<br>
 
+## [TailwindCSSDocs](https://github.com/clnt/alfred-tailwindcss-docs/tree/master)
+| Function                                | Command       |
+|:----------------------------------------|:-------------:|
+| Search in TailwindCSS v3 documentation: | `tw <query>`  |
+| Search in TailwindCSS v2 documentation: | `tw2 <query>` |
+| Search in TailwindCSS v1 documentation: | `tw1 <query>` |
+| Search in TailwindCSS v0 documentation: | `tw0 <query>` |
 
+<br>
 
+## [True Tone Toggle](https://github.com/B3nnyL/alfred-true-tone-toggle)
+| Function                       | Command |
+|:-------------------------------|:-------:|
+| Toggle macOS true tone on/off: | `tt`    |
 
+<br>
 
-||||
+## [Urban Dictionary](https://github.com/xilopaint/alfred-urban-dictionary/releases/tag/v2.7.0)
+| Function                            | Command       |
+|:------------------------------------|:-------------:|
+| Search in dictionary:               | `ud <query>`  |
+| Show result on urbandictionary.com: | `enter`       |
+| Show selected definition on screen: | `cmd`+`enter` |
+
+<br>
+
+## [Word Search](https://github.com/jun6lee/Alfred-WordSearch)

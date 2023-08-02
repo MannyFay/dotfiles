@@ -56,7 +56,7 @@ alias tmlk='tmux list-keys'
 # ?? : Untracked (unwatched file)
 # M  : Changed (file is changed and in the staging area) (there is a space before M)
 # M  : Unstaged (file is not in staging area) (there is a space behind M)
-alias gs='git status -s'
+alias gs='git status'
 
 # Show commit history:
 alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"

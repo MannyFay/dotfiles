@@ -1,0 +1,42 @@
+# Homebrew: Check version of Homebrew
+brew -v
+
+# Homebrew: Show help documentation
+brew help
+
+# Homebrew: List all packages that can be installed
+brew search
+
+# Homebrew: Show number of packages that can be installed
+brew search \| wc -l
+
+# Homebrew: Search if a specific package is available
+brew search <package-your-searching-for>
+
+# Homebrew: Install a formulae
+brew install <name-of-the-formulae>
+
+# Homebrew: Show information of a specific formulae
+brew info <name-of-the-formulae>
+
+# Homebrew: Uninstall a specific formulae
+brew uninstall <name-of-the-formulae>
+
+# Homebrew: List installed formulaes
+brew list
+
+# Homebrew: Update (fetch new) formulaes
+brew update
+
+# Homebrew: Show outdated formulaes on machine
+brew outdated
+
+# Homebrew: Upgrade formulaes
+brew upgrade
+
+# Homebrew: Uninstall old formulaes
+brew cleanup
+
+# Homebrew: Run Homebrew diagnostic
+brew doctor
+

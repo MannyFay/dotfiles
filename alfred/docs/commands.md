@@ -111,6 +111,22 @@ I've changed `clipboard` to `clip` in Alfred's clipboard history settings.
 
 <br>
 
+## [Cheat](https://github.com/wayneyaoo/alfred-cheat)
+Create a directory to store your cheat sheets.  
+Mine you can see [here](alfred/workflows/cheat/).
+I've used something `# Git Branches: ...` for example. That's because I have
+tweaked the workflow with [this](https://github.com/wayneyaoo/alfred-cheat/issues/22)
+and I search by default with `--search`, so `-s` in my case.
+| Function                          | Command               |
+|:----------------------------------|:---------------------:|
+| Add cheats directory to workflow: | `cf <directory>`      |
+| Search for cheats:                | `cs <query>`          |
+| Search for keywords:              | `cs --search <query>` |
+| Copy command to the clipboard:    | `cmd`+`c`             |
+| Past command to active app:       | `enter`               |
+
+<br>
+
 ## [Color Converter](https://github.com/toFrankie/alfred-color-converter)
 | Function                | Command                 |
 |:------------------------|:-----------------------:|

@@ -30,7 +30,7 @@ Here a list where you can find workflows:
 * [Alpine.js Docs](https://github.com/Fadarrizz/alfred-alpinejs-docs)
 * [Color Converter](https://www.packal.org/workflow/colors)
 * [Call or Message Contact](https://github.com/c-stephens/Call-or-Message-Contact)
-* [Cheat]()
+* [Cheat](https://github.com/wayneyaoo/alfred-cheat)
 * [Deep Contacts Search](https://alfred.app/workflows/alfredapp/deep-contacts-search/)
 * [DeepL-Translate](https://github.com/m9dfukc/deepl-alfred-workflow/tree/master)
 * [Emoji Search](https://github.com/jsumners/alfred-emoji)

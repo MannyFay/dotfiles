@@ -32,8 +32,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## Panes
 | Command        | Function                 |
 |:--------------:|:-------------------------|
-| `<prefix>` `v` | Open vertical pane       |
-| `<prefix>` `h` | Open horizontal pane     |
+| `<prefix>` `y` | Open vertical pane       |
+| `<prefix>` `x` | Open horizontal pane     |
 | exit           | Close pane               |
 | `<prefix>` `h` | Go to left pane          |
 | `<prefix>` `l` | Go to right pane         |

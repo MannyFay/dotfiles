@@ -1,0 +1,115 @@
+# Tmux Session: Start Tmux
+tmux
+
+# Tmux Session: Start new Tmux session with name <session-name>
+tmux new -s <session-name>
+
+# Tmux Session: Exit Tmux
+tmux detach
+
+# Tmux Session: List all sessions (Tmux has to be started)
+tmux ls
+
+# Tmux Session: Go back into session <session-name>
+tmux attach -t <session-name>
+
+# Tmux Session: Choose a created session
+<prefix> s
+
+# Tmux Session: Navigate session list up
+k
+
+# Tmux Session: Navigate session list down
+j
+
+# Tmux Session: Open selected session
+enter
+
+# Tmux Session: Enter command mode
+<prefix> :
+
+
+# Tmux Pane: Open vertical pane
+<prefix> y
+
+# Tmux Pane: Open horizontal pane
+<prefix> x
+
+# Tmux Pane: Close pane
+exit
+
+# Tmux Pane: Go to left pane
+<prefix> h
+
+# Tmux Pane: Go to right pane
+<prefix> l
+
+# Tmux Pane: Go to pane below
+<prefix> j
+
+# Tmux Pane: Go to pane above
+<prefix> k
+
+# Tmux Pane: Maxi/Minimize pane
+<prefix> m
+
+# Tmux Window: Create new window
+<prefix> c
+
+# Tmux Window: Quit actual window
+<prefix> q
+
+# Tmux Window: Go to window <number>
+<prefix> <number>
+
+# Tmux Window: Go to next window
+<prefix> n
+
+# Tmux Window: Go to previous window
+<prefix> p
+
+# Tmux Window: Rename actual window
+<prefix> r
+
+# Tmux Window: List all windows
+<prefix> w
+
+# Tmux Window: Swap window position
+swap-window -s <start-index> -t <target-index>
+
+# Tmux Copy Mode: Start copy mode
+<prefix> c
+
+# Tmux Copy Mode: Exit copy mode
+ctrl c
+
+# Tmux Copy Mode: Scroll down
+shift j
+
+# Tmux Copy Mode: Scroll up
+shift k
+
+# Tmux Copy Mode: Go up half a page
+ctrl u
+
+# Tmux Copy Mode: Go down half a page
+ctrl d
+
+# Tmux Copy Mode: Go up a full page
+ctrl b
+
+# Tmux Copy Mode: Go down a full page
+ctrl f
+
+# Tmux Copy Mode: Enter visual mode
+v
+
+# Tmux Copy Mode: Yank
+y
+
+# Tmux Plugins: Install plugins
+<prefix> I
+
+
+
+

@@ -1,0 +1,17 @@
+# Karabiner: Tmux prefix
+Tab caps lock
+
+# Karabiner: Left option key
+Held caps lock
+
+# Karabiner: Cursor left
+Held h
+
+# Karabiner: Cursor down
+Held j
+
+# Karabiner: Cursor up
+Held k
+
+# Karabiner: Cursor right
+Held l

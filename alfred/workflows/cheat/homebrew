@@ -40,3 +40,21 @@ brew cleanup
 # Homebrew: Run Homebrew diagnostic
 brew doctor
 
+# Homebrew Cask: Show homepage of a specific cask
+brew home --cask <name-of-the-cask>
+
+# Homebrew Cask: Install a cask
+brew install --cask <cask-name>
+
+# Homebrew Cask: Uninstall a cask
+brew uninstall --cask <cask-name>
+
+# Homebrew Tap: Tap a repository (install it after tapping)
+brew tap <name-of-the-repository>
+
+# Homebrew Mas: Search for an App Store application
+mas search <app-name>
+
+
+
+

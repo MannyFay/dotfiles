@@ -10,7 +10,7 @@
 # ?? : Untracked (unwatched file)
 # M  : Changed (file is changed and in the staging area) (there is a space before M)
 # M  : Unstaged (file is not in staging area) (there is a space behind M)
-alias gs='git status -s'
+alias gs='git status'
 
 # Show commit history:
 alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
@@ -117,13 +117,13 @@ alias gdf='git diff'
 #- Pushing/Pulling
 
 # Pull actual branch from remote repository:
-alias gpl='git pull'
+alias gpl='git pull origin'
 
 # Fetch actual branch from remote repository:
-alias gpf='git fetch'
+alias gpf='git fetch origin'
 
 # Pull actual branch from remote repository, than push:
-alias gpp='git pull && git push'
+alias gpp='git pull origin && git push'
 
 # Revert last push (add commit hash):
 alias gpr='git revert'

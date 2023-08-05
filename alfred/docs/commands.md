@@ -1,7 +1,8 @@
 # Alfred Commands
 Here is a list of the commands from Alfred itself and from my installed workflows.  
 Pass in your stuff everywhere I use `<query>`.
-
+Navigate up ctrl p
+Navigate down ctrl n
 ## Alfred
 ### File Search
 | Function                         | Command         |
@@ -117,13 +118,13 @@ Mine you can see [here](alfred/workflows/cheat/).
 I've used something `# Git Branches: ...` for example. That's because I have
 tweaked the workflow with [this](https://github.com/wayneyaoo/alfred-cheat/issues/22)
 and I search by default with `--search`, so `-s` in my case.
-| Function                          | Command               |
-|:----------------------------------|:---------------------:|
-| Add cheats directory to workflow: | `cf <directory>`      |
-| Search for cheats:                | `cs <query>`          |
-| Search for keywords:              | `cs --search <query>` |
-| Copy command to the clipboard:    | `cmd`+`c`             |
-| Past command to active app:       | `enter`               |
+| Function                           | Command               |
+|:-----------------------------------|:---------------------:|
+| Add cheats directory to workflow:  | `cf <directory>`      |
+| Search for cheats:                 | `cs <query>`          |
+| Search for keywords:               | `cs --search <query>` |
+| Copy command to the clipboard:     | `cmd`+`c`             |
+| Paste command to active app:       | `enter`               |
 
 <br>
 
@@ -190,6 +191,25 @@ Every command works on and is for GitHub.
 
 <br>
 
+## [Harvest](https://github.com/andrejilderda/alfred-harvest)
+| Function                    | Command          |
+|:----------------------------|:----------------:|
+| List projects:              | `hvn`            |
+| Select:                     | `enter`          |
+| Select task:                | `enter`          |
+| List timers:                | `hvt`            |
+| Stop/restart selected task: | `enter`          |
+| Delete selected task:       | hold `alt`       |
+| List today's timers:        | `hva`            |
+| Select timer:               | `enter`          |
+| New time for a timer:       | `2.5` or `2h30m` |
+| Add time to timer:          | `+30m`           |
+| Substract time from timer:  | `-30m`           |
+| Add note to timer:          | `hvnt`           |
+| Overwrite selected note:    | hold `alt`       |
+
+
+
 ## [Homebrew Controller](https://www.packal.org/workflow/homebrew-controller)
 | Function                               | Command    |
 |:---------------------------------------|:----------:|
@@ -250,7 +270,8 @@ Every command works on and is for GitHub.
 | Function                                      | Command          |
 |:----------------------------------------------|:----------------:|
 | Search PHP documentation: | `php <query>` |
-| Open result in browser: | `enter` |
+| Open result in browser:   | `enter` |
+Not working on M1
 
 <br>
 
@@ -313,10 +334,10 @@ Every command works on and is for GitHub.
 ## [Word Search](https://github.com/jun6lee/Alfred-WordSearch)
 | Function                            | Command       |
 |:------------------------------------|:-------------:|
-| Search for synonyms: | `syn <query>` |
-| Search for exact synonyms: | `dsyn <query>` |
-| Search for antonyms: | `ant <query>` |
-| Search for rhymes: | `rhyme <query>` |
+| Search for synonyms:                         | `syn <query>` |
+| Search for exact synonyms:                   | `dsyn <query>` |
+| Search for antonyms:                         | `ant <query>` |
+| Search for rhymes:                           | `rhyme <query>` |
 | Search for words that describe the \<query> | `describing <query>` |
 
 

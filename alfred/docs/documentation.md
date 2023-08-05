@@ -35,6 +35,7 @@ Here a list where you can find workflows:
 * [DeepL-Translate](https://github.com/m9dfukc/deepl-alfred-workflow/tree/master)
 * [Emoji Search](https://github.com/jsumners/alfred-emoji)
 * [GitHub Repos](https://github.com/edgarjs/alfred-github-repos) (click on releases to get the workflow)
+* [Harvest](https://github.com/andrejilderda/alfred-harvest)
 * [Homebrew Controller](https://www.packal.org/workflow/homebrew-controller)
 * [Kill Process](https://www.packal.org/workflow/kill-process)
 * [Laravel Docs](https://github.com/tillkruss/alfred-laravel-docs)

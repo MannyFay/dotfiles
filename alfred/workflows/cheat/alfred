@@ -1,0 +1,443 @@
+# Alfred Navigation: Up
+ctrl+p
+
+# Alfred Navigation: Down
+ctrl+n
+
+# Alfred Navigation: Close
+esc
+
+# Alfred Search: Start Quick File Search mode
+space <query>
+
+# Alfred Search: Show file/directory in Finder
+find <query>
+
+# Alfred Search: Open a file
+open <query>
+
+# Alfred Search: Search for content in files
+in <query>
+
+# Alfred Search: Search for macOS tags
+tags <query>
+
+# Alfred Search: Show the previous searched path
+previous
+
+# Alfred Clipboard: View clipboard content
+clip
+
+# Alfred Clipboard: Clear clipboard history
+clear
+
+# Alfred Dictionary: Define a word
+define <query>
+
+# Alfred Dictionary: Spell a word
+spell <query>
+
+# Alfred Contact: Email a contact
+email <query>
+
+# Alfred Contact: Attach file to mail
+File Attached: <file-name>
+
+# Alfred Contact: Attach multiple files to mail
+<number> Files Attached
+
+# Alfred Music: Open Apple Music app/miniplayer
+music
+
+# Alfred Music: Play
+play
+
+# Alfred Music: Pause
+pause
+
+# Alfred Music: Next track
+next
+
+# Alfred Music: Back track
+back
+
+# Alfred Music: Previous track
+previous
+
+# Alfred Music: Random album
+random
+
+# Alfred Music: Maximize volume
+volmax
+
+# Alfred Music: Half volume
+volmid
+
+# Alfred Music: Mute music
+mute
+
+# Alfred System: Start screen saver
+screensaver
+
+# Alfred System: Show trash
+trash
+
+# Alfred System: Empty trash
+emptytrash
+
+# Alfred System: Log out
+logout
+
+# Alfred System: Sleep
+sleep
+
+# Alfred System: Sleep displays
+sleepdisplays
+
+# Alfred System: Lock
+lock
+
+# Alfred System: Restart
+restart
+
+# Alfred System: Shut down
+shutdown
+
+# Alfred System: Hide app
+hide <app>
+
+# Alfred System: Quit app
+quit <app>
+
+# Alfred System: Force quit
+forcequit <app>
+
+# Alfred System: Quit all apps
+quitall
+
+# Alfred System: Volume up
+volup
+
+# Alfred System: Volume down
+voldown
+
+# Alfred System: Toggle mute
+mute
+
+# Alfred System: Eject local mounted volume
+eject
+
+# Alfred System: Eject all local mounted volumes
+ejectall
+
+# Alfred Terminal: Run command in iTerm2
+> <command>
+
+# Alfred Preview: Quick look selected item
+shift
+
+# Alfred Chrome: Trigger workflow
+cr
+
+# Alfred Chrome: Open in incognito mode
+alt
+
+# Alfred Alpine.js: Search in docs
+alp <query>
+
+# Alfred Alpine.js: Quick look on result
+cmd + y
+
+# Alfred Alpine.js: Open result in browser
+enter
+
+# Alfred Contact: Start Facetime call
+face <name-or-number>
+
+# Alfred Contact: Start phone call
+call <name-or-number>
+
+# Alfred Contact: Answer a call
+answer
+
+# Alfred Contact: End a call
+end
+
+# Alfred Contact: Mute/unmute current call
+mute
+
+# Alfred Contact: Open messages to send
+im <name-or-number>
+
+# Alfred Contact: Write message
+msg <name-or-number>
+
+# Alfred Cheats: Add cheats directory to workflow
+cf <directory>
+
+# Alfred Cheats: Search for cheats
+cs <query>
+
+# Alfred Cheats: Search for keywords
+cs s <query>
+
+# Alfred Cheats: Copy command to the clipboard
+cmd+c
+
+# Alfred Cheats: Paste command to active app
+enter
+
+# Alfred Colors: Convert hex color
+cc \#<color-code>
+
+# Alfred Colors: Convert rgb color
+cc rgb(<color-code>)
+
+# Alfred Colors: Convert rgba color
+cc rgba(<color-code>)
+
+# Alfred Colors: Convert color
+cc <color>
+
+# Alfred Colors: Save code to clipboard
+enter
+
+# Alfred Contacts: Search in contacts
+dc <query>
+
+# Alfred Contacts: Use wildcard search
+dc *<query>
+
+# Alfred DeepL: Translate to configured language(s)
+dl <text>
+
+# Alfred DeepL: Translate to specific language(s)
+dl <text> > <lang1> <lang2>
+
+# Alfred DeepL: Copy result
+enter
+
+# Alfred DeepL: Show result as big screen overlay
+cmd+enter
+
+# Alfred Emoji: Search for emoji
+emoji <query>
+
+# Alfred Emoji: Copy selected emoji to the clipboard
+enter
+
+# Alfred Emoji: Copy the emoji code to the clipboard
+alt+enter
+
+# Alfred Emoji: Copy the UTF8 code to the clipboard
+ctrl+enter
+
+# Alfred Emoji: Copy emoji without skin tone modifier to the clipboard
+shift+enter
+
+# Alfred Emoji: Paste emoji into the active application
+cmd+return
+
+# Alfred GitHub: Authenticate your user
+gh-login <paste-your-token>
+
+# Alfred GitHub: Search globally
+gh <query>
+
+# Alfred GitHub: Search globally with specific parameters
+gh <query> <paramenter
+
+# Alfred GitHub: Search your own remote repositories
+repo <query>
+
+# Alfred GitHub: Search pull requests that you're involved in
+pr <query>
+
+# Alfred GitHub: Open your GitHub notification page
+gh-notifications
+
+# Alfred GitHub: Customize organisation caches
+> CACHE_TTL_SEC_ORG  default: <number>
+
+# Alfred GitHub: Customize pull request caches
+> CACHE_TTL_SEC_PR  default: <number>
+
+# Alfred GitHub: Customize repository caches
+> CACHE_TTL_SEC_REPO default: <number>
+
+# Alfred GitHub: Login to enterprise account
+gh-host <host>
+
+# Alfred Harvest: List projects
+hvn
+
+# Alfred Harvest: Select
+enter
+
+# Alfred Harvest: Select task
+enter
+
+# Alfred Harvest: List timers
+hvt
+
+# Alfred Harvest: Stop/restart selected task
+enter
+
+# Alfred Harvest: Delete selected task
+hold alt
+
+# Alfred Harvest: List today's timers
+hva
+
+# Alfred Harvest: Select timer
+enter
+
+# Alfred Harvest: New time for a timer
+2.5 or 2h30m
+
+# Alfred Harvest: Add time to timer
++30m
+
+# Alfred Harvest: Substract time from timer
+-30m
+
+# Alfred Harvest: Add note to timer
+hvnt
+
+# Alfred Harvest: Overwrite selected note
+hold alt
+
+# Alfred Homebrew:
+
+# Alfred Kill: Kill a process
+kill <process>
+
+# Alfred Kill: Kill all processes with the same name as selected
+cmd+enter
+
+# Alfred Kill: Filter by arguments of processes
+kill <process>:<argument>
+
+# Alfred Laravel: Search in Laravel documentation
+ld <query>
+
+# Alfred Laravel: Open quick preview
+cmd+y
+
+# Alfred Laravel: Open result in browser
+enter
+
+# Alfred Lorem: Generate seven words
+lorem words
+
+# Alfred Lorem: Generate custom number of words
+lorem words <number>
+
+# Alfred Lorem: Generate three sentences
+lorem sentences
+
+# Alfred Lorem: Generate custom number of sentences
+lorem sentences <number>
+
+# Alfred Lorem: Generate three paragraphs
+lorem paragraphs
+
+# Alfred Lorem: Generate custom number of paragraphs
+lorem paragraphs <number>
+
+# Alfred MDN: Search in Mozilla documentation
+mdn <query>
+
+# Alfred Network: Show Wi-Fi info and enable/disable it
+wifi
+
+# Alfred Network: Show ethernet info
+eth
+
+# Alfred Network: Scan for Wi-Fi hotspots
+wifilist
+
+# Alfred Network: List configured VPN and connect
+vpn
+
+# Alfred Network: List and change DNS settings
+dns
+
+# Alfred Notes: Search titles or create new if none is found
+n <query>
+
+# Alfred Notes: Search titles and bodies
+nb <query>
+
+# Alfred Notes: Search folder names
+nf <query>
+
+# Alfred Notes: Open note/folder or create new
+enter
+
+# Alfred Notes: Search for query in Notes in-app search
+shift+enter
+
+# Alfred Notes: Copy body of note to the clipboard
+cmd+enter
+
+# Alfred Notes: Copy link to the note to the clipboard
+alt+enter
+
+# Alfred Network: Start workflow
+ip4
+
+# Alfred Network: Copy value to clipboard
+enter
+
+# Alfred Network: Open IP address in browser
+cmd+enter
+
+# Alfred Network: Connect to IP address via SSH
+option+enter
+
+# Alfred SideCar: Connect/disconnect iPad
+sc
+
+# Alfred Tailwind: Search in TailwindCSS v3 documentation
+tw <query>
+
+# Alfred Tailwind: Search in TailwindCSS v2 documentation
+tw2 <query>
+
+# Alfred Tailwind: Search in TailwindCSS v1 documentation
+tw1 <query>
+
+# Alfred Tailwind: Search in TailwindCSS v0 documentation
+tw0 <query>
+
+# Alfred Tone: Toggle macOS true tone on/off
+tt
+
+# Alfred Dictionary: Search in dictionary
+ud <query>
+
+# Alfred Dictionary: Show result on urbandictionary.com
+enter
+
+# Alfred Dictionary: Show selected definition on screen
+cmd+enter
+
+# Alfred Dictionary: Search for synonyms
+syn <query>
+
+# Alfred Dictionary: Search for exact synonyms
+dsyn <query>
+
+# Alfred Dictionary: Search for antonyms
+ant <query>
+
+# Alfred Dictionary: Search for rhymes
+rhyme <query>
+
+# Alfred Dictionary: Search for words that describe the <query>
+describing <query>
+
+
+
+

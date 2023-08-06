@@ -235,15 +235,12 @@ Every command works on and is for GitHub.
 
 <br>
 
-## [Lorem Ipsum](https://github.com/tillkruss/alfred-lorem-ipsum)
-| Function                              | Command                     |
-|:--------------------------------------|:---------------------------:|
-| Generate seven words:                 | `lorem words`               |
-| Generate custom number of words:      | `lorem words <number>`      |
-| Generate three sentences:             | `lorem sentences`           |
-| Generate custom number of sentences:  | `lorem sentences <number>`  |
-| Generate three paragraphs:            | `lorem paragraphs`          |
-| Generate custom number of paragraphs: | `lorem paragraphs <number>` |
+## [Lorem ipsum](https://github.com/alexchantastic/alfred-lipsum-workflow)
+| Function                     | Command           |
+|:-----------------------------|:-----------------:|
+| Start workflow:              | `lipsum <number>` |
+| Paste in active application: | `enter`           |
+| Copy to clipboard:           | `cmd`+`c`         |
 
 
 <br>
@@ -314,6 +311,14 @@ Not working on M1
 | Search in TailwindCSS v0 documentation: | `tw0 <query>` |
 
 <br>
+
+## [Timer](https://github.com/colomolo/alfred-timer)
+| Function                       | Command |
+|:-------------------------------|:-------:|
+| Set timer: | `t <1h 5m 20s` |
+| Set pomotoro timer: | `tp`|
+| List timers: | `tl` |
+
 
 ## [True Tone Toggle](https://github.com/B3nnyL/alfred-true-tone-toggle)
 | Function                       | Command |

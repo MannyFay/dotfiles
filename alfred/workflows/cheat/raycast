@@ -1,0 +1,386 @@
+# Raycast Navigation: Open Raycast
+alt+space
+
+# Raycast Navigation: Back to previous page
+esc
+
+# Raycast Navigation: Back to main search page
+cmd+esc
+
+# Raycast Navigation: Close Raycast window
+cmd+w
+
+# Raycast Navigation: Open Raycast preferences
+cmd+,
+
+# Raycast Navigation: Navigate down
+ctrl+j
+
+# Raycast Navigation: Navigate up
+ctrl+k
+
+# Raycast Navigation: Navigate right
+ctrl+l
+
+# Raycast Navigation: Navigate left
+ctrl+h
+
+
+
+
+#----- J I R A ------------------------------------------------------------------------
+
+# Raycast Jira: View/modify issues of active sprints
+j as
+
+# Raycast Jira: Create and assign new issues
+j ci
+
+# Raycast Jira: View/modify issues of your saved filters
+j of
+
+# Raycast Jira: View and modify open issues that assigned to you
+j oi
+
+# Raycast Jira: View/modify issues that have recently been updated
+j ui
+
+# Raycast Jira: View/modify issues reported by you
+j ori
+
+# Raycast Jira: Search issues globally
+j si
+
+# Raycast Jira: View/modify issues that you watch
+j owi
+
+
+
+
+
+# Raycast Speedtest: Check performance of internet connection
+st
+
+
+
+
+
+
+
+# Raycast Color: Generate color shades
+csgs
+
+# Raycast Color: View color shades
+csvs
+
+
+
+
+
+
+
+
+#----- I C O N S ------------------------------------------------------------------------
+
+# Raycast Icon: Copy icons from Google Cloud Platform (GCP)
+igcp
+
+# Raycast Icon: Copy Favicon from a web page to the clipboard
+icf
+
+# Raycast Icon: Download Favicon from a web page
+idf
+
+# Raycast Icon: Search on Heroicons for icons
+ihi
+
+# Raycast Icon: Search on Flaticon for icons
+ifi
+
+# Raycast Icon: Search on IconPark for icons
+iip
+
+# Raycast Icon: Search on Icons8 for icons
+ii8
+
+# Raycast Icon: Search on Lucide Icons for icons
+ili
+
+# Raycast Icon: Search for icons of React framework
+irf
+
+# Raycast Icon: Search for Material Icons
+imi
+
+# Raycast Icon: Search for Raycast icons
+irc
+
+# Raycast Icon: Search on Font Awesome for icons
+ifa
+
+# Raycast Icon: Search SF Symbols
+ssfs
+
+# Raycast Icon: Search for unicode symbols
+sus
+
+
+
+#--------- I M A G E S --------------------------------------------------------------------
+
+# Raycast Image: Generate a Meme
+igm
+
+# Raycast Image: Search collections on Pexels
+ipsc
+
+# Raycast Image: Search curated photos on Pexels
+ipcp
+
+# Raycast Image: Search for photos on Pexels
+ipsp
+
+# Raycast Image: Search for videos on Pexels
+ipsv
+
+# Raycast Image: Set random walpaper from Unsplash
+iurw
+
+# Raycast Image: Show liked images on Unsplash
+iuli
+
+# Raycast Image: Search for collections on Unsplash
+iusc
+
+# Raycast Image: Search for images on Usplash
+iusi
+
+# Raycast Image: Search for GIFs
+isg
+
+# Raycast Image: Search for images on Pixabay
+ipbsi
+
+# Raycast Image: Search for videos on Pixabay
+ipbsv
+
+
+
+#--------- T A I L W I N D --------------------------------------------------------------------
+
+# Raycast TailwindCSS: Search for colors or pick them with TailwindCSS
+tw color
+
+# Raycast TailwindCSS: Convert sizes into TailwindCSS sizing system
+tw size
+
+# Raycast TailwindCSS: Search TailwndCSS utility classes
+tw class
+
+# Raycast TailwindCSS: Search TailwindCSS default color palette
+tw pal
+
+# Raycast TailwindCSS: Search TailwindCSS UI components
+tw comp
+
+# Raycast TailwindCSS: Search in TailwindCSS documentation
+tw docs
+
+
+
+#--------- C O M P O S E R --------------------------------------------------------------------
+
+# Raycast Composer: Search Composer Packagegist for PHP Packages
+c pack
+
+
+
+#--------- P H P --------------------------------------------------------------------
+
+# Raycast PHP: Find PHP date formats
+php date
+
+# Raycast PHP: Get/parse Unix timestamps
+php time
+
+# Raycast PHP: Search in PHP documentation
+php docs
+
+
+
+#--------- C S S --------------------------------------------------------------------
+
+# Raycast CSS: Calculate clamp out of pixels
+css calpx
+
+# Raycast CSS: Calculate clamp out of REM
+css calrem
+
+# Raycast CSS: Search for Open-Source CSS, SVG and Figma UI Glyphs
+css glyph
+
+# Raycast CSS: Search for Open-Source CSS, SVG and Figma UI icons
+css ic
+
+# Raycast CSS: Convert units and get closest TailwindCSS color
+css wc
+
+# Raycast CSS: 'Can I use' support for browsers
+css ciu
+
+
+
+#--------- F O N T S --------------------------------------------------------------------
+
+# Raycast Font: Search on Google Fonts
+font gf
+
+# Raycast Font: Decorate a given text with a font
+font td
+
+
+
+#--------- H T M L --------------------------------------------------------------------
+
+# Raycast HTML: Remove HTML formatting and save text to clipboard
+html r
+
+
+
+#--------- L A R A V E L --------------------------------------------------------------------
+
+# Raycast Laravel: Show sites that are currently being deployed with Forge
+lara depl
+
+# Raycast Laravel: Search/manage your Laravel Forge servers and sites
+lara serv
+
+# Raycast Laravel: Show a random tip for Laravel framework
+lara rt
+
+# Raycast Laravel: Search for tips by keyword
+lara t
+
+# Raycast Laravel: Sync all tips from remote
+lara st
+
+# Raycast Laravel: Search and view Artisan console commands
+lara ac
+
+# Raycast Laravel: Search in Laravel documentation
+lara d
+
+# Raycast Laravel: Search in Laravel Livewire documentation
+lara l
+
+# Raycast Laravel: Search in Laravel Nova documentation
+lara n
+
+
+
+#--------- G I T --------------------------------------------------------------------
+
+# Raycast Git: Create issue on GitLab
+gitl ci
+
+# Raycast Git: Create merge request on GitLab
+gitl cmr
+
+# Raycast Git: List epics on GitLab
+gitl le
+
+# Raycast Git: Display GitLab issues directly in the menu bar
+gitl di
+
+# Raycast Git: Display GitLab merge request directly in the menubar
+gitl dmr
+
+# Raycast Git: Search for groups on GitLab
+gitl og
+
+# Raycast Git: Search for your merge requests on GitLab
+gitl omr
+
+# Raycast Git: Search for your open issues on GitLab
+gitl ooi
+
+# Raycast Git: Search for your projects on GitLab
+gitl op
+
+# Raycast Git: Search for your recent commits on GitLab
+gitl orc
+
+# Raycast Git: Search for your GitLab reviews
+gitl or
+
+# Raycast Git: Search for your starred projects on GitLab
+gitl osp
+
+# Raycast Git: Search for your own todos on GitLab
+gitl otd
+
+# Raycast Git: Show recent activities on GitLab
+gitl ra
+
+# Raycast Git: Search for epics on GitLab
+gitl se
+
+# Raycast Git: Search for issues on GitLab
+gitl si
+
+# Raycast Git: Search for merge requests on GitLab
+gitl smr
+
+# Raycast Git: Search for project on GitLab
+gitl sp
+
+# Raycast Git: Search for user on GitLab
+gitl su
+
+# Raycast Git: Manage your own GitLab status
+gitl os
+
+# Raycast Git: Show own todos in menubar
+gitl otm
+
+# Raycast Git: Search for Pajamas components in GitLab design system
+gitl pc
+
+# Raycast Git: Search in GitLab documentation
+gitl doc
+
+# Raycast Git: Search in GitLab handbook
+gitl hb
+
+
+# Raycast Git: Search for the right Git emoji in specific situation
+git e
+
+
+
+
+#--------- H O M E --------------------------------------------------------------------
+
+# Raycast Home: Decrease brightness of Elgato Key Light
+h kldb
+
+# Raycast Home: Decrease color temprature of Elgato Key Light
+h kldt
+
+# Raycast Home: Increase brightness of Elgato Key Light
+h klib
+
+# Raycast Home: Increase color temprature of Elgato Key Light
+h klit
+
+# Raycast Home: Turn on/off Elgato Key Light
+h klo
+
+
+
+
+
+
+
+
+

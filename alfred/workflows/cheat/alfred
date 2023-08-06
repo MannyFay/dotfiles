@@ -327,23 +327,14 @@ cmd+y
 # Alfred Laravel: Open result in browser
 enter
 
-# Alfred Lorem: Generate seven words
-lorem words
+# Alfred Lorem: Start workflow
+lipsum <number>
 
-# Alfred Lorem: Generate custom number of words
-lorem words <number>
+# Alfred Lorem: Paste into active application
+enter
 
-# Alfred Lorem: Generate three sentences
-lorem sentences
-
-# Alfred Lorem: Generate custom number of sentences
-lorem sentences <number>
-
-# Alfred Lorem: Generate three paragraphs
-lorem paragraphs
-
-# Alfred Lorem: Generate custom number of paragraphs
-lorem paragraphs <number>
+# Alfred Lorem: Copy into clipboard
+cmd+c
 
 # Alfred MDN: Search in Mozilla documentation
 mdn <query>
@@ -438,6 +429,13 @@ rhyme <query>
 # Alfred Dictionary: Search for words that describe the <query>
 describing <query>
 
+# Alfred Timer: Set timer
+t <1h 4m 20s>
 
+# Alfred Timer: Set pomodoro timer
+tp
+
+# Alfred Timer: List timers
+tl
 
 

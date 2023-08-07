@@ -1,3 +1,35 @@
+#----- Alfred Cheat Sheet -----------------------------------------------------
+
+
+#----- Music ------------------------------------------------------------------
+
+# Alfred Music: Open Apple Music app/miniplayer
+music
+
+# Alfred Music: Play/pause
+m pp
+
+# Alfred Music: Next track
+mn
+
+# Alfred Music: Previous track
+mp
+
+# Alfred Music: Toggle shuffle
+mts
+
+# Alfred Music: Maximize volume
+mvm
+
+# Alfred Music: Half volume
+mvh
+
+
+
+
+
+
+
 # Alfred Navigation: Up
 ctrl+p
 
@@ -46,35 +78,7 @@ File Attached: <file-name>
 # Alfred Contact: Attach multiple files to mail
 <number> Files Attached
 
-# Alfred Music: Open Apple Music app/miniplayer
-music
 
-# Alfred Music: Play
-play
-
-# Alfred Music: Pause
-pause
-
-# Alfred Music: Next track
-next
-
-# Alfred Music: Back track
-back
-
-# Alfred Music: Previous track
-previous
-
-# Alfred Music: Random album
-random
-
-# Alfred Music: Maximize volume
-volmax
-
-# Alfred Music: Half volume
-volmid
-
-# Alfred Music: Mute music
-mute
 
 # Alfred System: Start screen saver
 screensaver

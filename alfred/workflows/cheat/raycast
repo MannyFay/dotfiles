@@ -1,3 +1,68 @@
+#----- Raycast Cheat Sheet ----------------------------------------------------
+
+
+#----- Music ------------------------------------------------------------------
+
+# Raycast Music: Open Apple Music app
+music
+
+# Raycast Music: Add current track to library
+matl
+
+# Raycast Music: Add current track to playlist
+matpl <playlist>
+
+# Raycast Music: Get info about currently playing track
+mgi
+
+# Raycast Music: Dislike currently playing track
+mdlt
+
+# Raycast Music: Love currently playing track
+mlt
+
+# Raycast Music: Love currently playing track and add it to library
+mlttl
+
+# Raycast Music: Play next track
+mn
+
+# Raycast Music: Search and play an album from your library
+msa <album>
+
+# Raycast Music: Search and play a track from your library
+mst <track>
+
+# Raycast Music: Play previous track
+mp
+
+# Raycast Music: Rate currently playing track
+mrt <number>
+
+# Raycast Music: Show currently playing track inside Music app
+mstil
+
+# Raycast Music: Set volume on N %
+mv <number>
+
+# Raycast Music: Start any of your playlists
+msp <playlist>
+
+# Raycast Music: play/pause
+mpp
+
+# Raycast Music: Toggle shuffle
+mts
+
+
+
+
+
+
+
+
+
+
 # Raycast Navigation: Open Raycast
 alt+space
 
@@ -451,64 +516,30 @@ c ss
 
 
 
-#----- M U S I C ------------------------------------------------------------------------
-
-# Raycast Music: Add current track to library
-m atl
-
-# Raycast Music: Add current track to playlist
-m atpl <playlist>
-
-# Raycast Music: Get info about currently playing track
-m gi
-
-# Raycast Music: Dislike currently playing track
-m dlt
-
-# Raycast Music: Love currently playing track
-m lt
-
-# Raycast Music: Love currently playing track and add it to library
-m lttl
-
-# Raycast Music: Play next track
-m n
-
-#---- Raycast Music: Pause
-#---- Raycast Music: Play
-
-# Raycast Music: Search and play an album from your library
-m sa <album>
-
-# Raycast Music: Search and play a track from your library
-m st <track>
-
-# Raycast Music: Play previous track
-m p
-
-# Raycast Music: Rate currently playing track
-m rt <number>
-
-# Raycast Music: Show currently playing track inside Music app
-m stil
-
-# Raycast Music: Set volume on N %
-m v <number>
-
-# Raycast Music: Start any of your playlists
-m sp <playlist>
-
-# Raycast Music: Toggle play/pause of current track in Music
-m pp
-
-# Raycast Music: Toggle shuffle
-m ts
-
-#----- Raycast Music: Decrease volume
-#----- Raycast Music: Increase volume
 
 
 
+#----- B R O W S E R ------------------------------------------------------------------------
+
+# Raycast Browser: Open browser profiles
+b op
+
+# Raycast Browser: Search browser bookmarks
+b sb
+
+# Raycast Browser: Search browser history
+b sh
+
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
+# Raycast Browser: 
 
 
 

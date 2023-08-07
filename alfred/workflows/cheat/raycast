@@ -55,6 +55,33 @@ j si
 j owi
 
 
+# Raycast Jira: Delete cached Jira images and reload them on next search
+j cic
+
+# Raycast Jira: Search boards by title
+j sb
+
+# Raycast Jira: Search filters by title
+j sf
+
+# Raycast Jira: Search issues by text, type and project
+j dsi
+
+# Raycast Jira: Search projects by title
+j sp
+
+# Raycast Jira: Log time against a Jira issue
+j lt
+
+# Raycast Jira: Format Markdown text into Jira markup
+j fm
+
+
+
+# Raycast Jira: 
+# Raycast Jira: 
+# Raycast Jira: 
+
 
 
 
@@ -375,6 +402,110 @@ h klit
 
 # Raycast Home: Turn on/off Elgato Key Light
 h klo
+
+
+
+
+#----- M I R O ------------------------------------------------------------------------
+
+# Raycast Miro: Create board
+m cb
+
+# Raycast Miro: Search/open board
+m sb
+
+
+
+#----- D O C K E R ------------------------------------------------------------------------
+
+# Raycast Docker: Manage Docker Compose project
+d mdc
+
+# Raycast Docker: List all Docker containers
+d lc
+
+# Raycast Docker: List installed Docker images
+d li
+
+# Raycast Docker: Manage personal access tokens on Docker Hub
+d mat
+
+# Raycast Docker: Search for extensions on Docker Hub
+d se
+
+# Raycast Docker: Search for images on Docker Hub
+d si
+
+# Raycast Docker: Search for plugins on Docker Hub
+d sp
+
+# Raycast Docker: Search for repositories on Docker Hub
+d sr
+
+
+
+#----- C A L E N D A R ------------------------------------------------------------------------
+
+# Raycast Calendar: Show your schedule
+c ss
+
+
+
+#----- M U S I C ------------------------------------------------------------------------
+
+# Raycast Music: Add current track to library
+m atl
+
+# Raycast Music: Add current track to playlist
+m atpl <playlist>
+
+# Raycast Music: Get info about currently playing track
+m gi
+
+# Raycast Music: Dislike currently playing track
+m dlt
+
+# Raycast Music: Love currently playing track
+m lt
+
+# Raycast Music: Love currently playing track and add it to library
+m lttl
+
+# Raycast Music: Play next track
+m n
+
+#---- Raycast Music: Pause
+#---- Raycast Music: Play
+
+# Raycast Music: Search and play an album from your library
+m sa <album>
+
+# Raycast Music: Search and play a track from your library
+m st <track>
+
+# Raycast Music: Play previous track
+m p
+
+# Raycast Music: Rate currently playing track
+m rt <number>
+
+# Raycast Music: Show currently playing track inside Music app
+m stil
+
+# Raycast Music: Set volume on N %
+m v <number>
+
+# Raycast Music: Start any of your playlists
+m sp <playlist>
+
+# Raycast Music: Toggle play/pause of current track in Music
+m pp
+
+# Raycast Music: Toggle shuffle
+m ts
+
+#----- Raycast Music: Decrease volume
+#----- Raycast Music: Increase volume
 
 
 

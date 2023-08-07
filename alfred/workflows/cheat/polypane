@@ -1,0 +1,96 @@
+# Polypane: Open URL in Chrome/Safari
+alt+r
+
+# Polypane: Switch from workspace view to browsers full size
+b
+
+# Polypane: Switch to horizontal workspace layout
+h
+
+# Polypane: Switch to vertical workspace layout
+v
+
+# Polypane: Switch to focus workspace layout
+f
+
+# Polypane: Go back one page
+alt+left
+
+# Polypane: Go forward one page
+alt+right
+
+# Polypane: Reload workspace
+cmd+r
+
+# Polypane: Reload CSS of workspace
+alt+r
+
+# Polypane: Hard reload of workspace
+shift+cmd+r
+
+# Polypane: Show browser history backwards
+right click on back button
+
+# Polypane: Show browser history forward
+right click on forward button
+
+# Polypane: Create panes of all given breakpoints
+cmd+b
+
+# Polypane: Create panes for edge cases of breakpoints (one main, one little smaller/bigger)
+alt+cmd+b
+
+# Polypane: Overview screenshot of all panes together
+cmd+p
+
+# Polypane: Inspect an element
+shift+cmd+c
+
+# Polypane: Open devtools panel
+F12
+
+# Polypane: Open browser extension manager
+right click on devtools symbol
+
+# Polypane: Open meta information panel (social media preview, live CSS, workspaces)
+shift+cmd+p
+
+# Polypane: Set zoom level on 100%
+double click on % number
+
+# Polypane: Open Polypane settings
+cmd+,
+
+# Polypane: Show/hide rulers
+cmd+g
+
+# Polypane: 
+# Polypane: 
+# Polypane: 
+# Polypane: 
+# Polypane: 
+# Polypane: 
+# Polypane: 
+# Polypane: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

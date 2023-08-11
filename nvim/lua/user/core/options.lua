@@ -80,8 +80,13 @@ vim.opt.formatoptions:remove({ 'r', 'o', 'n', 'l' })
 --[[ vim.opt.formatoptions:remove({ 'r', 'o', 'l' }) ]]
 -- Enable spell checking:
 vim.opt.spell = true
+-- Set languages for spell checking:
+--[[ set spellang=en,de,es,fr,cjk ]]
+-- Set spell suggestions:
+--[[ set spellsuggest=best,9 ]]
 -- Disable automatic resizing of panes:
 vim.opt.equalalways = false
+
 
 
 

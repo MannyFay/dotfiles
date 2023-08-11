@@ -1,3 +1,8 @@
+#----- Tmux Cheat Sheet ------------------------------------------------------
+
+
+#----- Sessions --------------------------------------------------------------
+
 # Tmux Session: Start Tmux
 tmux
 
@@ -28,6 +33,11 @@ enter
 # Tmux Session: Enter command mode
 <prefix> :
 
+# Tmux Session: Kill a specific session
+<prefix> :kill-session -t <session-name>
+
+
+#----- Panes -----------------------------------------------------------------
 
 # Tmux Pane: Open vertical pane
 <prefix> y
@@ -39,19 +49,23 @@ enter
 exit
 
 # Tmux Pane: Go to left pane
-<prefix> h
+<prefix> H
 
 # Tmux Pane: Go to right pane
-<prefix> l
+<prefix> L
 
 # Tmux Pane: Go to pane below
-<prefix> j
+<prefix> J
 
 # Tmux Pane: Go to pane above
-<prefix> k
+<prefix> K
 
 # Tmux Pane: Maxi/Minimize pane
 <prefix> m
+
+
+
+#----- Windows ---------------------------------------------------------------
 
 # Tmux Window: Create new window
 <prefix> c
@@ -76,6 +90,10 @@ exit
 
 # Tmux Window: Swap window position
 swap-window -s <start-index> -t <target-index>
+
+
+
+#----- Copy Mode -------------------------------------------------------------
 
 # Tmux Copy Mode: Start copy mode
 <prefix> c

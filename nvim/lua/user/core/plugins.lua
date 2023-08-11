@@ -171,6 +171,15 @@ use({
 })
 
 
+-- AI companion:
+use({
+  'github/copilot.vim',
+  config = function()
+    require('user.plugin_options.copilot')
+  end,
+})
+
+
 -- Code reformatting:
 use({
   'tommcdo/vim-lion',
@@ -576,4 +585,3 @@ vim.cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
-

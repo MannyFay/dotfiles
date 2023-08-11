@@ -19,10 +19,13 @@ end
 -- Appearance
 
 configs.setup {
+  modules = { },
   -- List of syntax highlight parsers to install:
   ensure_installed = 'all',
   -- Install packages asynchronously (applies only to 'ensure_installed'):
   sync_install = false,
+  -- Automatically install missing parsers in a buffer:
+  auto_install = true,
   -- List of syntax highlight parser to ignore:
   ignore_install = { '' },
   -- Create always a pair of brackets:

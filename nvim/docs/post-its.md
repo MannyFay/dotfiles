@@ -12,14 +12,14 @@ If there are abbreviations you don't understand, look at the
 
 |Tree               |   |              |     |   |             |         |   |              |
 |:------------------|:-:|:-------------|:----|:-:|:------------|:--------|:-:|:-------------|
-| `<L>` `t` `t`     | = | toggle tree  | `h` | = | hor. split  | `d`     | = | delete       |
+| `<L>` `t` `t`     | = | toggle tree  | `-` | = | hor. split  | `d`     | = | delete       |
 | `<L>` `e` `t`     | = | explore tree | `y` | = | yank name   | `B`     | = | bin          |
 | `<L>` `s` `f` `t` | = | show file    | `Y` | = | yank path   | `C`     | = | collapse     |
 | `q` `n`           | = | close node   | `c` | = | copy        | `E`     | = | expand       |
 | `r`               | = | rename       | `x` | = | cut         | `T` `S` | = | top sib.     |
 | `i`               | = | info         | `p` | = | paste       | `B` `S` | = | bot. sib.    |
 | `enter`           | = | open         | `P` | = | parent node | `K`     | = | previous sib.|
-| `v`               | = | vert. split  | `n` | = | new         | `J`     | = | next sib.    |
+| `|`               | = | vert. split  | `n` | = | new         | `J`     | = | next sib.    |
 
 <br>
 
@@ -27,8 +27,8 @@ If there are abbreviations you don't understand, look at the
 
 | Splits        |   |                |              |   |               | Tabs          |   |      |
 |:--------------|:-:|:---------------|:-------------|:-:|:--------------|:--------------|:-:|:-----|
-| `<L>` `h`     | = | hor. split     | `J`          | = | down          | `<L>` `n` `t` | = | new  |
-| `<L>` `v`     | = | vert. split    | `K`          | = | up            | `<L>` `q` `t` | = | quit |
+| `<L>` `-`     | = | hor. split     | `J`          | = | down          | `<L>` `n` `t` | = | new  |
+| `<L>` `|`     | = | vert. split    | `K`          | = | up            | `<L>` `q` `t` | = | quit |
 | `<L>` `e` `s` | = | equalize       | `H`          | = | left          | `<L>` `t` `r` | = | right|
 | `<L>` `g` `h` | = | grow hor.      | `<L>` `m`    | = | max/min       | `<L>` `t` `l` | = | left |
 | `<L>` `s` `h` | = | shrink hor.    | `Z` `Z`      | = | save, close   |

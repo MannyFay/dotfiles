@@ -1,0 +1,18 @@
+#----- SQL Cheat Sheet -------------------------------------------------------
+
+# SQL: Enter MariaDB
+mariadb
+
+# SQL: Exit database
+exit
+
+# SQL: Show all tables in database
+show tables;
+
+# SQL: Show all columns of a table
+SHOW COLUMNS FROM <table-name> FROM <database-name>;
+
+# SQL: 
+# SQL: 
+# SQL: 
+# SQL: 

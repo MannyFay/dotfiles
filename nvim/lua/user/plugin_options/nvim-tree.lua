@@ -55,9 +55,9 @@ local function on_attach(bufnr)
   -- Open file in actual buffer:
   vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
   -- Open file in vertical split:
-  vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+  vim.keymap.set('n', '|', api.node.open.vertical, opts('Open: Vertical Split'))
   -- Open file in horizontal split:
-  vim.keymap.set('n', 'h', api.node.open.horizontal, opts('Open: Horizontal Split'))
+  vim.keymap.set('n', '-', api.node.open.horizontal, opts('Open: Horizontal Split'))
   -- Yank name of file:
   vim.keymap.set('n', 'y', api.fs.copy.filename, opts('Copy Name'))
   -- Yank relative path of file:

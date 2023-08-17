@@ -19,9 +19,9 @@ vim.g.copilot_filetypes = {
 }
 
 -- Change the accept suggestions key:
-vim.cmd[[imap <silent><script><expr> <C-<Space> copilot#Accept("\<CR>")]]
+--[[ vim.cmd[[imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")]]
 -- Disable tab key for Copilot:
-vim.g.copilot_no_tab_map = true
+--[[ vim.g.copilot_no_tab_map = true ]]
 -- Same as above but in lua:
 --[[ vim.keymap.set.keymap('i', '<C-<Leader>', ":copilot#Accept('\\<CR>')<CR>", { silent = true }) ]]
 

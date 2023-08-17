@@ -291,6 +291,18 @@ alias l,st='php artisan tinker'
 
 
 
+#-----------------------------------------------------------------------------
+#  Docker
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------
+#- Networks
+
+# List all networks:
+alias dnla='docker network ls'
+
+# Remove a network (add id or name):
+alias dnrm='docker network rm'
 
 
 

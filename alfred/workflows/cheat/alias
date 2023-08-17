@@ -1,11 +1,71 @@
-# ZSH: Lists aliases
+#----- ZSH Aliases Cheat Sheet -----------------------------------------------
+
+
+#----- Terminal --------------------------------------------------------------
+
+# Terminal Alias: Lists aliases
 alias
 
-# ZSH: Creates alias
+# Terminal Alias: Creates alias
 alias <alias-name>='<command>'
 
-# ZSH: Removes alias
+# Terminal Alias: Removes alias
 unalias <alias-name>
+
+# Terminal Move: Jump one up in directory structure
+..
+
+# Terminal Move: Jump two up in directory structure
+2..
+
+# Terminal Move: Jump three up in directory structure
+3..
+
+# Terminal Move: Jump four up in directory structure
+4..
+
+# Terminal Move: Jump five up in directory structure
+5..
+
+# Terminal Move: Jump six up in directory structure
+6..
+
+# Terminal Move: Jump seven up in directory structure
+7..
+
+# Terminal Move: Jump eight up in directory structure
+8..
+
+# Terminal Move: Jump nine up in directory structure
+9..
+
+# Terminal Move: Jump into .dotfiles directory
+cd.
+
+# Terminal Move: Jump into GitHub directory
+cdgh
+
+# Terminal Move: Jump into GitLab directory
+cdgl
+
+# Terminal Move: Jump into .ssh directory
+cdssh
+
+# Terminal Move: Jump into desktop directory
+cddesk
+
+# Terminal Move: Jump into documents directory
+cddocs
+
+# Terminal Move: Jump into downloads directory
+cddown
+
+# Terminal Move: Jump into studies directory
+cdstud
+
+
+
+#----- Tmux ------------------------------------------------------------------
 
 # Tmux: Start Tmux
 tms
@@ -27,6 +87,10 @@ tmsc
 
 # Tmux: List Tmux keys
 tmlk
+
+
+
+#----- Git -------------------------------------------------------------------
 
 # Git: Show Git status
 gs
@@ -130,56 +194,9 @@ gsc
 # Git Stash: Pop stashed changes
 gsp
 
-# Terminal Move: Jump one up in directory structure
-..
 
-# Terminal Move: Jump two up in directory structure
-2..
 
-# Terminal Move: Jump three up in directory structure
-3..
-
-# Terminal Move: Jump four up in directory structure
-4..
-
-# Terminal Move: Jump five up in directory structure
-5..
-
-# Terminal Move: Jump six up in directory structure
-6..
-
-# Terminal Move: Jump seven up in directory structure
-7..
-
-# Terminal Move: Jump eight up in directory structure
-8..
-
-# Terminal Move: Jump nine up in directory structure
-9..
-
-# Terminal Move: Jump into .dotfiles directory
-cd.
-
-# Terminal Move: Jump into GitHub directory
-cdgh
-
-# Terminal Move: Jump into GitLab directory
-cdgl
-
-# Terminal Move: Jump into .ssh directory
-cdssh
-
-# Terminal Move: Jump into desktop directory
-cddesk
-
-# Terminal Move: Jump into documents directory
-cddocs
-
-# Terminal Move: Jump into downloads directory
-cddown
-
-# Terminal Move: Jump into studies directory
-cdstud
+#----- Laravel ---------------------------------------------------------------
 
 # Laravel Sail: Start Sail in detached mode
 sud
@@ -198,4 +215,15 @@ scu
 
 
 
+#----- Docker ----------------------------------------------------------------
 
+# Docker Alias: List all Docker networks
+dnla
+
+# Docker Alias: Remove a Docker network
+dnrm <id-or-name>
+
+# Docker Alias: 
+# Docker Alias: 
+# Docker Alias: 
+# Docker Alias: 

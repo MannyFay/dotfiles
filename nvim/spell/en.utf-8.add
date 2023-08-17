@@ -1,0 +1,15 @@
+Laravel
+MariaDB
+datetime
+PRI
+MUL
+varchar
+longtext
+timestamp
+bigint
+params
+entity
+uuid
+tinyint
+url
+entity

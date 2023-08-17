@@ -142,6 +142,7 @@ nnoremap <Leader>/ :action CommentByLineComment <CR>
 vnoremap <Leader>/ :action CommentByLineComment <CR>
 
 
+
 "-------------------------------------------------------------
 "-- Extract Code
 
@@ -175,7 +176,7 @@ nmap <Leader>ff :action SearchEverywhere<CR>
 " Find text inside files ( ft):
 nmap <Leader>ft :action FindInPath<CR>
 vmap <leader>ft :action FindInPath<CR>
-" Show rescent files ( rf):
+" Show recent files ( rf):
 nnoremap <Leader>rf :action RecentFiles <CR>
 " Find usages ( fu):
 nnoremap <Leader>fu :action FindUsages <CR>
@@ -207,9 +208,9 @@ nmap <C-p-d> <C-f>
 "-- Splits (Buffer)
 
 " Split buffer vertically ( v):
-nmap <Leader>v :action SplitVertically <CR>
+nmap <Leader>| :action SplitVertically <CR>
 " Split buffer horizontally ( h):
-nmap <Leader>h <C-w>s
+nmap <Leader>- <C-w>s
 " Go to right split (L):
 nmap L <C-w>l
 " Go to left split (H):
@@ -219,16 +220,27 @@ nmap J <C-w>j
 " Go to split above (K):
 nmap K <C-w>k
 " Equalize width and height for all splits ( es):
-nmap <Leader>es <C-w>=
+"nmap <Leader>es <C-w>=
 " Grow split vertical ( gv):
-nmap <Leader>gv :vertical resize +5<CR>
+"nmap <Leader>gv :vertical resize +5<CR>
 " Shrink split vertical ( sv):
-nmap <Leader>sv :vertical resize +5<CR>
+"nmap <Leader>sv :vertical resize +5<CR>
 " Grow split horizontally ( gh):
 nmap <Leader>gh :resize +5
 " Shrink split horizontally ( sh):
 nmap <Leader>sh :resize -5
 
+" Open terminal horizontally ( th):
+noremap <Leader>th :action ActivateTerminalToolWindow<CR>
+
+" To tab to the right: ( tr):
+noremap <Leader>tr :action NextTab
+
+" To tab to the right: ( tl):
+noremap <Leader>tl :action PreviousTab
+
+" Quit active tab ( qt):
+noremap <Leader>qt :action CloseActiveTab
 
 
 "-----------------------------------------------------------------------
@@ -253,7 +265,7 @@ set NERDTree
 "+-----+-------------------------------+-----+-------------------------------+
 "|  ⌘d |  delete file/dir              |  ⌘n |  new file/dir                 |
 "+-----+-------------------------------+-----+-------------------------------+
-"|  ⌘c |  copy file/dir                |  ⌘x |  copy file/dir                |
+"|  ⌘c |  copy file/dir                |  ⌘x |  cut file/dir                |
 "+-----+-------------------------------+-----+-------------------------------+
 "|  ⌘v |  paste file/dir               |  ⌥n |  copy file/dir name           |
 "+-----+-------------------------------+-----+-------------------------------+
@@ -262,10 +274,27 @@ set NERDTree
 
 " Toggle tree ( tt):
 nnoremap <Leader>tt :NERDTreeToggle<CR>
+
 " Explore tree ( et):
 nnoremap <Leader>et :NERDTreeFocus<CR>
+
 " Show actual file in tree ( sft):
 nnoremap <Leader>sft :NERDTreeFind<CR>
+
+" Open file in new, vertical split (|):
+let g:NERDTreeMapOpenVSplit='|'
+
+" Open file in new, horizontal split (-):
+let g:NERDTreeMapOpenSplit='-'
+
+" Close node (qn):
+let g:NERDTreeMapCloseDir='qn'
+
+" Jump to parent node (P)
+let g:NERDTreeMapJumpParent='P'
+
+
+
 " Refresh tree ( rt):
 nnoremap <Leader>rt :NERDTreeRefreshRoot
 
@@ -276,7 +305,6 @@ nnoremap <Leader>rt :NERDTreeRefreshRoot
 "nnoremap v :NERDTreeMapOpenVSplit<CR>
 " Open file in new horizontal split (h):
 "nnoremap h :NERDTreeMapOpenSplit<CR>
-
 
 " Collapse tree ( ct):
 " Collapse tree, keep paths to buffers ( cb):
@@ -397,4 +425,19 @@ set commentary
 
 " Comment in/out selection ( /s)
 vmap <Leader>/s gc
+
+
+
+"-----------------------------------------------------------------------------
+"   some actions
+"-----------------------------------------------------------------------------
+
+" Open terminal in vertical split:
+nnoremap <Leader>th :action ActivateTerminalToolWindow <CR>
+
+
+
+
+
+
 

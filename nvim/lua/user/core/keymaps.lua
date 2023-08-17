@@ -107,10 +107,10 @@ vim.keymap.set('n', '<Leader>jl', 'J', opts)
 -- Splitting
 
 -- Split buffer vertically (y-axis) ( y):
-keymap("n", "<Leader>v", ":vsplit<CR>", opts)
+keymap("n", "<Leader>|", ":vsplit<CR>", opts)
 
 -- Split buffer horizontally (x-axis) ( x):
-keymap("n", "<Leader>h", ":split<CR>", opts)
+keymap("n", "<Leader>-", ":split<CR>", opts)
 
 --------------------------------------------------------------
 -- Navigation

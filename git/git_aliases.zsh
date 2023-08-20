@@ -1,15 +1,18 @@
+# ~/.config/dotfiles/git/git_aliases.zsh
+
+
 #-----------------------------------------------------------------------------
-#  Git Aliases
+#  Git ZSH Aliases
 #-----------------------------------------------------------------------------
+
 
 #-----------------------------------------------------------
 #- Working Tree
 
-# Show status of repository (short version of 'git status'):
-# A  : Added (file is in index)
-# ?? : Untracked (unwatched file)
-# M  : Changed (file is changed and in the staging area) (there is a space before M)
-# M  : Unstaged (file is not in staging area) (there is a space behind M)
+# List Git commands:
+alias glc='git'
+
+# Show status of working tree:
 alias gs='git status'
 
 # Show commit history:
@@ -17,6 +20,13 @@ alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Cr
 
 # Clone repository (add URL):
 alias gc='git clone'
+
+# Restore all changed files:
+alias gra='git restore .'
+
+# Restore a changed file (add file):
+alias grf='git restore'
+
 
 
 #-----------------------------------------------------------
@@ -34,7 +44,7 @@ alias gbsa='git branch -a'
 # 'Show Local' branches (quit with q):
 alias gbsl='git branch'
 
-# 'Checkout Local' branch (add a local branch name):
+# 'Checkout Local' branch (add a branch name):
 alias gbcl='git checkout'
 
 # 'Checkout Remote' branch (add remoteName/branchName):
@@ -44,10 +54,11 @@ alias gbcr='git checkout --track'
 alias gbcn='git checkout -b'
 
 # Delete branch locally (add a branch name):
-alias gbdl='git checkout develop && git branch -D'
+alias gbdl='git restore . && git checkout develop && git branch -D'
 
 # Delete branch on remote repository (add remote branch-name):
 alias gbdr='git push --delete'
+
 
 
 #-----------------------------------------------------------
@@ -75,6 +86,7 @@ alias gisa='git add .'
 
 # Unstage all files:
 alias giua='git restore --staged .'
+
 
 
 #-----------------------------------------------------------
@@ -113,23 +125,29 @@ alias giacwip='git add . && git commit -m "WIP"'
 alias gdf='git diff'
 
 
+
 #-----------------------------------------------------------
 #- Pushing/Pulling
 
 # Pull actual branch from remote repository:
-alias gpl='git pull origin'
+alias gpl='git pull'
 
 # Fetch actual branch from remote repository:
-alias gpf='git fetch origin'
+alias gpf='git fetch'
 
 # Pull actual branch from remote repository, than push:
-alias gpp='git pull origin && git push'
+alias gpp='git pull && git push'
+
+# Push actual branch to remote repository:
+alias gps='git push'
 
 # Revert last push (add commit hash):
 alias gpr='git revert'
 
 # Stage all files, commit with 'WIP' status and push:
-alias ggo='git add . && git commit -m "WIP" && git pull && git push'
+# alias ggo='git add . && git commit -m "WIP" && git pull && git push'
+alias ggo='git add . && git commit -m "WIP" && git push'
+
 
 
 #-----------------------------------------------------------
@@ -140,3 +158,4 @@ alias gsc='git stash'
 
 # Pop stashed changes:
 alias gsp='git stash pop'
+

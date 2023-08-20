@@ -1,68 +1,6 @@
 #----- ZSH Aliases Cheat Sheet -----------------------------------------------
 
 
-#----- Terminal --------------------------------------------------------------
-
-# Terminal Alias: Lists aliases
-alias
-
-# Terminal Alias: Creates alias
-alias <alias-name>='<command>'
-
-# Terminal Alias: Removes alias
-unalias <alias-name>
-
-# Terminal Move: Jump one up in directory structure
-..
-
-# Terminal Move: Jump two up in directory structure
-2..
-
-# Terminal Move: Jump three up in directory structure
-3..
-
-# Terminal Move: Jump four up in directory structure
-4..
-
-# Terminal Move: Jump five up in directory structure
-5..
-
-# Terminal Move: Jump six up in directory structure
-6..
-
-# Terminal Move: Jump seven up in directory structure
-7..
-
-# Terminal Move: Jump eight up in directory structure
-8..
-
-# Terminal Move: Jump nine up in directory structure
-9..
-
-# Terminal Move: Jump into .dotfiles directory
-cd.
-
-# Terminal Move: Jump into GitHub directory
-cdgh
-
-# Terminal Move: Jump into GitLab directory
-cdgl
-
-# Terminal Move: Jump into .ssh directory
-cdssh
-
-# Terminal Move: Jump into desktop directory
-cddesk
-
-# Terminal Move: Jump into documents directory
-cddocs
-
-# Terminal Move: Jump into downloads directory
-cddown
-
-# Terminal Move: Jump into studies directory
-cdstud
-
 
 
 #----- Tmux ------------------------------------------------------------------
@@ -90,122 +28,21 @@ tmlk
 
 
 
-#----- Git -------------------------------------------------------------------
-
-# Git: Show Git status
-gs
-
-# Git: Show commit history
-gl
-
-# Git: Clone repository (add URL)
-gc
-
-# Git Branch: Pull from origin/main
-gpm
-
-# Git Branch: Pull from origin/develop
-gpd
-
-# Git Branch: Show all branches inclusively remote repository (quit with q)
-gbsa
-
-# Git Branch: Show local branches (quit with q)
-gbsl
-
-# Git Branch: Checkout local branch (add a local branch name)
-gbcl
-
-# Git Branch: Checkout remote branch (add remoteName/branchName)
-gbcr
-
-# Git Branch: Check out new branch (add name)
-gbcn
-
-# Git Branch: Delete branch locally (add a branch name)
-gbdl
-
-# Git Branch: Delete branch on remote repository (add remote branch-name)
-gbdr
-
-# Git Index: Stage file (add file or path)
-gisf
-
-# Git Index: Stage parts of file (add file)
-gisp
-
-# Git Index: Unstage file (add file or path)
-giuf
-
-# Git Index: Unstage parts of file (add file)
-giup
-
-# Git Index: Stage all files
-gisa
-
-# Git Index: Unstage all files
-giua
-
-# Git Commit: Initial commit
-gci
-
-# Git Commit: Commit
-gcc
-
-# Git Commit: Commit with message
-gcm
-
-# Git Commit: Commit with message 'Work In Progress'
-gcwip
-
-# Git Commit: Change last commit (file/commit message) before push
-gccl
-
-# Git Commit: Revert last commit (before push)
-gcrl
-
-# Git Commit: Stage all files and commit with message
-giacm
-
-# Git Commit: Stage all files and commit with WIP status
-giacwip
-
-# Git Compare: Compare files (add file)
-gdf
-
-# Git Pull/Push: Pull actual branch from remote repository
-gpl
-
-# Git Pull/Push: Fetch actual branch from remote repository
-gpf
-
-# Git Pull/Push: Pull actual branch from remote repository, than push
-gpp
-
-# Git Pull/Push: Revert last push (add commit hash)
-gpr
-
-# Git Pull/Push: Stage all files, commit with 'WIP' status and push
-ggo
-
-# Git Stash: Stash changes
-gsc
-
-# Git Stash: Pop stashed changes
-gsp
 
 
 
 #----- Laravel ---------------------------------------------------------------
 
+#----- Sail ----------------------------
+
 # Laravel Sail: Start Sail in detached mode
-sud
+sud (sail up -d)
 
 # Laravel Sail: Start Sail
-su
+su (sail up)
 
 # Laravel Sail: Stop Sail
-sd
+sd (sail down)
 
 # Laravel Sail: Show artisan commands
 salc
@@ -213,17 +50,9 @@ salc
 # Laravel Sail: Start Composer update
 scu
 
+# Laravel Sail: Publish vendor directory
+svp
 
 
-#----- Docker ----------------------------------------------------------------
 
-# Docker Alias: List all Docker networks
-dnla
 
-# Docker Alias: Remove a Docker network
-dnrm <id-or-name>
-
-# Docker Alias: 
-# Docker Alias: 
-# Docker Alias: 
-# Docker Alias: 

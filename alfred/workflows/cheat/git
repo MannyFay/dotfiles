@@ -1,0 +1,147 @@
+# ~/.config/dotfiles/alfred/workflows/cheat/git
+
+
+#-----  Git Alfred Cheat Sheet -----------------------------------------------
+
+
+#----- Working Tree --------------------
+
+# List Git commands (git)
+glc
+
+# Show Git status (git status)
+gs
+
+# Show Git commit history (git log)
+gl
+
+# Clone Git remote repository (git clone <remote-url>)
+gc
+
+# Restore all changed files in working tree watched by Git (git restore .)
+gra
+
+# Restore a changed file in working tree watched by Git (git restore <file>)
+grf
+
+
+
+#----- Branches -----------------------
+
+# Pull Git main branch from origin/main (git pull origin main)
+gpm
+
+# Pull Git develop branch from origin/develop (git pull origin develop)
+gpd
+
+# Show all Git branches inclusively remote repository (quit with q) (git branch -a)
+gbsa
+
+# Show local Git branches (quit with q) (git branch)
+gbsl
+
+# Checkout a local Git branch (git checkout <branch>)
+gbcl
+
+# Checkout a Git branch from remote repository (git checkout --track <remote/branch>)
+gbcr
+
+# Checkout a new local Git branch (git checkout -b <branch>)
+gbcn
+
+# Delete Git branch locally (git restore . && git checkout develop && git branch -D)
+gbdl
+
+# Delete Git branch on remote repository (git push --delete <remote/branch>)
+gbdr
+
+
+
+#----- Index ------------------------
+
+# Stage file watched by Git into index (git add <file(s)>)
+gisf
+
+# Stage parts of file watched by Git into index (git add -p <file>)
+gisp
+
+# Unstage file in Git index (git restore --staged <file(s)>)
+giuf
+
+# Unstage parts of file in Git index (git restore -p <file>)
+giup
+
+# Stage all changed files watched by Git to index (git add .)
+gisa
+
+# Unstage all files in Git index (git restore --staged .)
+giua
+
+
+
+#----- Commit ----------------------
+
+# Set initial Git commit (git commit --allow-empty -m "INITIAL COMMIT")
+gci
+
+# Commit all staged files in Git index (git commit)
+gcc
+
+# Commit all staged files in Git index with a short message (git commit -m <message>)
+gcm
+
+# Commit all staged files in Git index with message 'Work In Progress' (git commit -m "WIP")
+gcwip
+
+# Change last commit message in Git index or add file(s) (git commit --amend (<file>))
+gccl
+
+# Revert last commit in Git index (git reset --hard HEAD~1)
+gcrl
+
+# Stage all changed files to Git index and commit them with <message> (git add . && git commit -m <message>)
+giacm
+
+# Stage all changed files to Git index and commit them with WIP status (git add . && git commit -m "WIP")
+giacwip
+
+
+
+#----- Compare ---------------------
+
+# Compare files watched by Git (git diff <file>)
+gdf
+
+
+
+
+#----- Pushing/Pulling -------------
+
+# Pull actual Git branch from remote repository (git pull)
+gpl
+
+# Fetch actual Git branch from remote repository (git fetch)
+gpf
+
+# Pull actual Git branch from remote repository, than push (git pull && git push)
+gpp
+
+# Push actual Git branch to remote repository (git push)
+gps
+
+# Revert last push to Git remote repository (git revert <hash>)
+gpr
+
+# Stage all changed files to Git index, commit with 'WIP' status and push (git add . && git commit -m "WIP" && git push)
+ggo
+
+
+
+#----- Stash ---------------------
+
+# Stash changes on actual Git branch (git stash)
+gsc
+
+# Pop stashed changes on actual Git branch (git stash pop)
+gsp
+

@@ -1,0 +1,43 @@
+# ~/.config/dotfiles/alfred/workflows/cheat/docker
+
+
+#-----  Docker Alfred Cheat Sheet --------------------------------------------
+
+
+# List Docker commands (docker)
+dlc
+
+
+
+#----- Docker Container -------------------
+
+
+# List all Docker containers (running & stopped) (docker ps -a)
+dcla
+
+# Create new Docker container (-p = ports, --name = name, -v = volume) (docker container run <options>)
+dcc
+
+# Inspect settings of a Docker container (docker inspect <name/id>)
+dci
+
+# Display log file of a Docker container (docker logs -f <name/id>)
+dcl
+
+
+
+#----- Docker Images ----------------------
+
+# List all Docker images on disk (docker images)
+dil
+
+
+
+#----- Docker Networks --------------------
+
+# List all Docker networks (docker network ls)
+dnla
+
+# Remove a Docker network (docker network rm <name/id>)
+dnrm
+

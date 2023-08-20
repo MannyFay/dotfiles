@@ -172,13 +172,20 @@ use({
 
 
 -- AI companion:
-use({
-  'github/copilot.vim',
+--[[ use({ ]]
+--[[   'github/copilot.vim', ]]
+--[[   config = function() ]]
+--[[     require('user.plugin_options.copilot') ]]
+--[[   end, ]]
+--[[ }) ]]
+use {
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
   config = function()
-    require('user.plugin_options.copilot')
+    require("user.plugin_options.copilot")
   end,
-})
-
+}
 
 -- Code reformatting:
 use({

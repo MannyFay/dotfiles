@@ -1,0 +1,6 @@
+# ~/.config/dotfiles/git/config-files/gitlab
+
+[user]
+    name     = Manny
+    email    = mannythefay@gmail.com
+    username = MannyFay

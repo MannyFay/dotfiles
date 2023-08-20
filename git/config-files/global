@@ -1,0 +1,66 @@
+# ~/.config/dotfiles/git/config-files/global
+
+
+#-----------------------------------------------------------------------------
+#  Repository Specific Configuration
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------
+#- ~/Code/*
+
+# DRW:
+[includeIf "gitdir:~/Code/drw/*"]
+    path = ~/Code/drw/devops/dotfiles/manny-fay/git/config
+
+# GitHub configuration file:
+[includeIf "gitdir:~/Code/github/*"]
+    path = ~/.config/dotfiles/git/config-files/github
+
+# GitLab configuration file:
+[includeIf "gitdir:~/Code/gitlab/*"]
+    path = ~/.config/dotfiles/git/config-files/gitlab
+
+
+
+#-----------------------------------------------------------
+#- ~/.config/dotfiles/*
+
+# GitHub configuration file:
+[includeIf "gitdir:~/.config/dotfiles/*"]
+    path = ~/.config/dotfiles/git/config-files/github
+
+
+
+#-----------------------------------------------------------
+#- ~/Documents/Private/*
+
+# GitLab configuration file:
+[includeIf "gitdir:~/Documents/Private/*"]
+    path = ~/.config/dotfiles/git/config-files/gitlab
+
+
+
+#-----------------------------------------------------------------------------
+#  Global Git Configuration
+#-----------------------------------------------------------------------------
+
+[color]
+    ui = auto
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore
+[diff]
+    tool = vimdiff
+[fetch]
+    prune = true
+[help]
+    autocorrect = 10
+[pull]
+    rebase = false
+[init]
+    defaultBranch = main
+[push]
+    default = current
+[rerere]
+    enabled = true

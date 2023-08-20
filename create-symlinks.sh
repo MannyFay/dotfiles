@@ -3,26 +3,7 @@
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
-#-----------------------------------------------------------
-#- Git
-
-# Delete .gitconfig if there is one in ~/:
-rm -rf $HOME/.gitconfig
-# Create symlink to ~/.dotfiles/git/.gitconfig:
-ln -s $DOTFILES/git/.gitconfig $HOME/.gitconfig
-
-# Delete ~/.gitignore_global:
-rm -rf $HOME/.gitignore_global
-# Create symlink to ~/.dotfiles/git/.gitignore_global:
-ln -s $DOTFILES/git/.gitignore_global $HOME/.gitignore_global
-
-# Delete
-rm -rf $HOME/.config/git
-# Create
-mkdir $HOME/.config/git
-# symlink
-ln -s $DOTFILES/git/.git_aliases $HOME/.config/git/.git_aliases
-
+source ~/.config/dotfiles/git/create-git-symlinks.sh
 
 #-----------------------------------------------------------
 #- Karabiner

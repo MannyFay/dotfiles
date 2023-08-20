@@ -1,125 +1,210 @@
+# ~/.config/dotfiles/alfred/workflows/cheat/alfred
+
+
 #----- Alfred Cheat Sheet -----------------------------------------------------
 
 
-#----- Music ------------------------------------------------------------------
+#----- Music --------------------------
 
-# Alfred Music: Open Apple Music app/miniplayer
+# Open Apple Music app/miniplayer with Alfred.
 music
 
-# Alfred Music: Play/pause
-m pp
+# Play/pause music with Alfred.
+mpp
 
-# Alfred Music: Next track
+# Next track in Apple Music with Alfred.
 mn
 
-# Alfred Music: Previous track
+# Previous track in Apple Music with Alfred.
 mp
 
-# Alfred Music: Toggle shuffle
+# Toggle shuffle in Apple Music with Alfred.
 mts
 
-# Alfred Music: Maximize volume
+# Maximize volume in Apple Music with Alfred.
 mvm
 
-# Alfred Music: Half volume
+# Set volume of Apple Music to the half with Alfred.
 mvh
 
 
 
+#----- Alfred Controls --------------------
 
-
-
-
-# Alfred Navigation: Up
+# Navigate up in Alfreds result list.
 ctrl+p
 
-# Alfred Navigation: Down
+# Navigate down in Alfreds result list.
 ctrl+n
 
-# Alfred Navigation: Close
+# Close Alfreds search panel.
 esc
 
-# Alfred Search: Start Quick File Search mode
-space <query>
 
-# Alfred Search: Show file/directory in Finder
+
+#----- Search ----------------------------
+
+# Start Alfreds file search mode.
+space-key <query>
+
+# Show file/directory in Finder provided by Alfred.
 find <query>
 
-# Alfred Search: Open a file
+# Open a file with Alfred.
 open <query>
 
-# Alfred Search: Search for content in files
+# Search for content in files with Alfred.
 in <query>
 
-# Alfred Search: Search for macOS tags
+# Search for macOS tags with Alfred.
 tags <query>
 
-# Alfred Search: Show the previous searched path
+# Show the previous searched path by Alfred.
 previous
 
-# Alfred Clipboard: View clipboard content
+
+
+#----- Clipboard -------------------------
+
+# View clipboard content with Alfred.
 clip
 
-# Alfred Clipboard: Clear clipboard history
+# Clear clipboard history by Alfred.
 clear
 
-# Alfred Dictionary: Define a word
+
+
+#----- Dictionary ------------------------
+
+# Show a word definition by a dictionary with Alfred.
 define <query>
 
-# Alfred Dictionary: Spell a word
+# Spell a word correctly by a dictionary with Alfred.
 spell <query>
 
-# Alfred Contact: Email a contact
+# Alfred DeepL: Translate to configured language(s)
+dl <text>
+
+# Alfred DeepL: Translate to specific language(s)
+dl <text> > <lang1> <lang2>
+
+# Alfred DeepL: Copy result
+enter
+
+# Alfred DeepL: Show result as big screen overlay
+cmd+enter
+
+# Alfred Dictionary: Search in dictionary
+ud <query>
+
+# Alfred Dictionary: Show result on urbandictionary.com
+enter
+
+# Alfred Dictionary: Show selected definition on screen
+cmd+enter
+
+# Alfred Dictionary: Search for synonyms
+syn <query>
+
+# Alfred Dictionary: Search for exact synonyms
+dsyn <query>
+
+# Alfred Dictionary: Search for antonyms
+ant <query>
+
+# Alfred Dictionary: Search for rhymes
+rhyme <query>
+
+# Alfred Dictionary: Search for words that describe the <query>
+describing <query>
+
+
+
+
+
+
+#----- Contacts --------------------------
+
+# Email a contact with Alfred.
 email <query>
 
-# Alfred Contact: Attach file to mail
+# Attach a file to an email with Alfred.
 File Attached: <file-name>
 
-# Alfred Contact: Attach multiple files to mail
+# Attach multiple files to an email with Alfred.
 <number> Files Attached
 
+# Start a Facetime call with Alfred.
+face <name-or-number>
+
+# Start a phone call with Alfred.
+call <name-or-number>
+
+# Answer a call with Alfred.
+answer
+
+# End a call with Alfred.
+end
+
+# Mute/unmute current call with Alfred.
+mute
+
+# Open Messages to send message to a contact with Alfred.
+im <name-or-number>
+
+# Write message to a contact directly out of Alfred.
+msg <name-or-number>
+
+# Search everything in contacts with Alfred.
+dc <query>
+
+# Start a wildcard search in contacts with Alfred.
+dc *<query>
 
 
-# Alfred System: Start screen saver
+
+#----- System Controls --------------------
+
+# Start screen saver with Alfred.
 screensaver
 
-# Alfred System: Show trash
+# Show trash with Alfred.
 trash
 
-# Alfred System: Empty trash
+# Empty trash with Alfred.
 emptytrash
 
-# Alfred System: Log out
+# Log out of system with Alfred.
 logout
 
-# Alfred System: Sleep
+# Activate Macs sleep mode with Alfred.
 sleep
 
-# Alfred System: Sleep displays
+# Let displays sleep with Alfred.
 sleepdisplays
 
-# Alfred System: Lock
+# Lock machine with Alfred.
 lock
 
-# Alfred System: Restart
+# Restart machine with Alfred.
 restart
 
-# Alfred System: Shut down
+# Shut down machine with Alfred.
 shutdown
 
-# Alfred System: Hide app
+# Hide an app with Alfred.
 hide <app>
 
-# Alfred System: Quit app
+# Quit an app with Alfred.
 quit <app>
 
-# Alfred System: Force quit
+# Force quit an app with Alfred.
 forcequit <app>
 
-# Alfred System: Quit all apps
+# Quit all apps with Alfred.
 quitall
 
-# Alfred System: Volume up
+# Push Volume of system up with Alfred.
 volup
 
 # Alfred System: Volume down
@@ -134,6 +219,29 @@ eject
 # Alfred System: Eject all local mounted volumes
 ejectall
 
+# Alfred Kill: Kill a process
+kill <process>
+
+# Alfred Kill: Kill all processes with the same name as selected
+cmd+enter
+
+# Alfred Kill: Filter by arguments of processes
+kill <process>:<argument>
+
+# Alfred SideCar: Connect/disconnect iPad
+sc
+
+# Alfred Tone: Toggle macOS true tone on/off
+tt
+
+
+
+
+
+
+
+#----- Stuff --------------------------
+
 # Alfred Terminal: Run command in iTerm2
 > <command>
 
@@ -146,6 +254,14 @@ cr
 # Alfred Chrome: Open in incognito mode
 alt
 
+
+
+
+
+
+
+#----- Documentations --------------------------
+
 # Alfred Alpine.js: Search in docs
 alp <query>
 
@@ -154,27 +270,6 @@ cmd + y
 
 # Alfred Alpine.js: Open result in browser
 enter
-
-# Alfred Contact: Start Facetime call
-face <name-or-number>
-
-# Alfred Contact: Start phone call
-call <name-or-number>
-
-# Alfred Contact: Answer a call
-answer
-
-# Alfred Contact: End a call
-end
-
-# Alfred Contact: Mute/unmute current call
-mute
-
-# Alfred Contact: Open messages to send
-im <name-or-number>
-
-# Alfred Contact: Write message
-msg <name-or-number>
 
 # Alfred Cheats: Add cheats directory to workflow
 cf <directory>
@@ -191,6 +286,39 @@ cmd+c
 # Alfred Cheats: Paste command to active app
 enter
 
+# Alfred Laravel: Search in Laravel documentation
+ld <query>
+
+# Alfred Laravel: Open quick preview
+cmd+y
+
+# Alfred Laravel: Open result in browser
+enter
+
+# Alfred MDN: Search in Mozilla documentation
+mdn <query>
+
+# Alfred Tailwind: Search in TailwindCSS v3 documentation
+tw <query>
+
+# Alfred Tailwind: Search in TailwindCSS v2 documentation
+tw2 <query>
+
+# Alfred Tailwind: Search in TailwindCSS v1 documentation
+tw1 <query>
+
+# Alfred Tailwind: Search in TailwindCSS v0 documentation
+tw0 <query>
+
+
+
+
+
+
+
+
+#----- Stuff --------------------------
+
 # Alfred Colors: Convert hex color
 cc \#<color-code>
 
@@ -206,23 +334,8 @@ cc <color>
 # Alfred Colors: Save code to clipboard
 enter
 
-# Alfred Contacts: Search in contacts
-dc <query>
 
-# Alfred Contacts: Use wildcard search
-dc *<query>
 
-# Alfred DeepL: Translate to configured language(s)
-dl <text>
-
-# Alfred DeepL: Translate to specific language(s)
-dl <text> > <lang1> <lang2>
-
-# Alfred DeepL: Copy result
-enter
-
-# Alfred DeepL: Show result as big screen overlay
-cmd+enter
 
 # Alfred Emoji: Search for emoji
 emoji <query>
@@ -311,25 +424,9 @@ hvnt
 # Alfred Harvest: Overwrite selected note
 hold alt
 
-# Alfred Homebrew:
 
-# Alfred Kill: Kill a process
-kill <process>
 
-# Alfred Kill: Kill all processes with the same name as selected
-cmd+enter
 
-# Alfred Kill: Filter by arguments of processes
-kill <process>:<argument>
-
-# Alfred Laravel: Search in Laravel documentation
-ld <query>
-
-# Alfred Laravel: Open quick preview
-cmd+y
-
-# Alfred Laravel: Open result in browser
-enter
 
 # Alfred Lorem: Start workflow
 lipsum <number>
@@ -340,8 +437,6 @@ enter
 # Alfred Lorem: Copy into clipboard
 cmd+c
 
-# Alfred MDN: Search in Mozilla documentation
-mdn <query>
 
 # Alfred Network: Show Wi-Fi info and enable/disable it
 wifi
@@ -391,47 +486,16 @@ cmd+enter
 # Alfred Network: Connect to IP address via SSH
 option+enter
 
-# Alfred SideCar: Connect/disconnect iPad
-sc
 
-# Alfred Tailwind: Search in TailwindCSS v3 documentation
-tw <query>
 
-# Alfred Tailwind: Search in TailwindCSS v2 documentation
-tw2 <query>
 
-# Alfred Tailwind: Search in TailwindCSS v1 documentation
-tw1 <query>
 
-# Alfred Tailwind: Search in TailwindCSS v0 documentation
-tw0 <query>
 
-# Alfred Tone: Toggle macOS true tone on/off
-tt
 
-# Alfred Dictionary: Search in dictionary
-ud <query>
 
-# Alfred Dictionary: Show result on urbandictionary.com
-enter
 
-# Alfred Dictionary: Show selected definition on screen
-cmd+enter
 
-# Alfred Dictionary: Search for synonyms
-syn <query>
 
-# Alfred Dictionary: Search for exact synonyms
-dsyn <query>
-
-# Alfred Dictionary: Search for antonyms
-ant <query>
-
-# Alfred Dictionary: Search for rhymes
-rhyme <query>
-
-# Alfred Dictionary: Search for words that describe the <query>
-describing <query>
 
 # Alfred Timer: Set timer
 t <1h 4m 20s>

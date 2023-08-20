@@ -1,0 +1,26 @@
+# ~/.config/dotfiles/alfred/workflows/cheat/laravel
+
+
+# laravel cheat
+
+#----- Laravel ---------------------------------------------------------------
+
+#----- Sail ----------------------------
+
+# Laravel Sail: Start Sail in detached mode
+sud (sail up -d)
+
+# Laravel Sail: Start Sail
+su (sail up)
+
+# Laravel Sail: Stop Sail
+sd (sail down)
+
+# Laravel Sail: Show artisan commands
+salc
+
+# Laravel Sail: Start Composer update
+scu
+
+# Laravel Sail: Publish vendor directory
+svp

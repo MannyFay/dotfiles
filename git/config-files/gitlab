@@ -1,5 +1,10 @@
 # ~/.config/dotfiles/git/config-files/gitlab
 
+
+#-----------------------------------------------------------------------------
+#  GitLab Git Configuration
+#-----------------------------------------------------------------------------
+
 [user]
     name     = Manny
     email    = mannythefay@gmail.com

@@ -25,11 +25,20 @@ source ~/.config/dotfiles/docker/docker_aliases.zsh
 # Git:
 source ~/.config/dotfiles/git/git_aliases.zsh
 
+# Homebrew:
+source ~/.config/dotfiles/homebrew/homebrew_aliases.zsh
+
 # Laravel:
 source ~/.config/dotfiles/laravel/laravel_aliases.zsh
 
+# SSH:
+source ~/.config/dotfiles/ssh/ssh_aliases.zsh
+
 # Tmux:
 source ~/.config/dotfiles/tmux/tmux_aliases.zsh
+
+# Yabai:
+source ~/.config/dotfiles/yabai/yabai_aliases.zsh
 
 
 
@@ -52,7 +61,7 @@ alias 8..='cd ../../../../../../../..'
 alias 9..='cd ../../../../../../../../..'
 
 # Jump into .dotfiles directory:
-alias cd.='cd ~/.dotfiles'
+alias cd.='cd ~/.config/dotfiles'
 
 # Jump into GitHub directory:
 alias cdgh='cd ~/Code/github'

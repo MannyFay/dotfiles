@@ -14,7 +14,7 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 rm -rf $HOME/.gitconfig
 
 # Create symlink to ~/.config/dotfiles/git/config-files/global:
-ln -s $DOTFILES/git/config-files/global $HOME/.gitconfig
+ln -s ~/.config/dotfiles/git/config-files/global $HOME/.gitconfig
 
 
 
@@ -26,5 +26,5 @@ ln -s $DOTFILES/git/config-files/global $HOME/.gitconfig
 rm -rf $HOME/.gitignore
 
 # Create symlink to ~/.config/dotfiles/git/gitignore:
-ln -s $DOTFILES/git/gitignore $HOME/.gitignore
+ln -s ~/.config/dotfiles/git/gitignore $HOME/.gitignore
 

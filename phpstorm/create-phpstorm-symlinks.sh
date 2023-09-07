@@ -14,4 +14,4 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 rm -rf $HOME/.ideavimrc
 
 # Create symlink to ~/.config/dotfiles/phpstorm/.ideavimrc:
-ln -s $DOTFILES/phpstorm/.ideavimrc $HOME/.ideavimrc
+ln -s ~/.config/dotfiles/phpstorm/.ideavimrc $HOME/.ideavimrc

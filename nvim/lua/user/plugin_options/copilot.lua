@@ -36,9 +36,10 @@
 -- regular: *copilot-i_ALT-[*
 -- <M-[> <Plug>(copilot-previous)
 
---[[ vim.cmd[[higlight CopilotSuggestion guifg=#606366 ctermfg=8]]
+-- vim.cmd[[higlight CopilotSuggestion guifg=#606366 ctermfg=8]]
 
 -- alt+[ = show how many suggestions Copilot can provide.
+vim.api.nvim_set_hl(0, 'CopilotSuggestion', { fg = '#606366' })
 
 require('copilot').setup({
   panel = {
@@ -58,10 +59,10 @@ require('copilot').setup({
   },
   suggestion = {
     enabled = true,
-    auto_trigger = false,
+    auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<M-l>",
+      accept = "<right>",
       accept_word = false,
       accept_line = false,
       next = "<M-]>",
@@ -71,13 +72,18 @@ require('copilot').setup({
   },
   filetypes = {
     yaml = false,
-    markdown = false,
+    markdown = true,
     help = false,
     gitcommit = false,
     gitrebase = false,
     hgcommit = false,
     svn = false,
     cvs = false,
+    html = true,
+    css = true,
+    javascript = true,
+    typescript = true,
+    php = true,
     ["."] = false,
   },
   copilot_node_command = 'node', -- Node.js version must be > 16.x

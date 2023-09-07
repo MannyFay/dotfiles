@@ -34,7 +34,7 @@ configs.setup {
   },
   highlight = {
     -- Enable syntax highlighting:
-    enable = true,
+    enable = false,
     -- Languages where color highlighting is disabled:
     disable = { '' },
     -- If true, it slows down Neovim and doubles syntax highlighting:

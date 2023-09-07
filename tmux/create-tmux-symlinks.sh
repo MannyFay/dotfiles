@@ -14,4 +14,4 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 rm -rf $HOME/.tmux.conf
 
 # Create symlink to ~/.config/dotfiles/tmux/.tmux.conf:
-ln -s $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
+ln -s ~/.config/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf

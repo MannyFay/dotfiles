@@ -171,6 +171,22 @@ use({
 })
 
 
+-- AI companion:
+--[[ use({ ]]
+--[[   'github/copilot.vim', ]]
+--[[   config = function() ]]
+--[[     require('user.plugin_options.copilot') ]]
+--[[   end, ]]
+--[[ }) ]]
+use {
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("user.plugin_options.copilot")
+  end,
+}
+
 -- Code reformatting:
 use({
   'tommcdo/vim-lion',
@@ -187,6 +203,7 @@ use({
     'kana/vim-textobj-user'
   },
 })
+
 
 -- Automatically fix indentation when pasting code:
 --use({
@@ -317,7 +334,6 @@ use({
   }
 })
 
-
 -- Enable Language Server Protocol (LSP):
 use({
   'neovim/nvim-lspconfig',
@@ -363,37 +379,9 @@ use({
 
 
 
--- Look for a plugin called vim-scripts/ReplaceWithRegister-- Autocompletion:
--- One of these plugin gives a very cool breadcrumb on top of the buffer.
-use({
-  'hrsh7th/nvim-cmp',
-  requires = {
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    'hrsh7th/cmp-nvim-lua',
-    'jessarcher/cmp-path',
-    'onsails/lspkind-nvim',
-    'saadparwaiz1/cmp_luasnip',
-  --[[   { ]]
-  --[[     'glepnir/lspsaga.nvim', ]]
-  --[[     branch = 'main', ]]
-  --[[     event = 'lspattach', ]]
-  --[[     config = function() ]]
-  --[[       require('user.plugin_options.lspsaga') ]]
-  --[[     end, ]]
-  --[[   }, ]]
-  },
-  config = function()
-    require('user.plugin_options.nvim-cmp')
-  end,
-})
-
-
 -- Look for a plugin called vim-scripts/ReplaceWithRegister
+
+
 
 
 --[[]]
@@ -406,10 +394,57 @@ use({
 --[[ }) ]]
 
 
+
+
+
+
+
+
+
+
 -- Boost up language packs for Neovim:
 --vim.g.polyglot_disabled = { 'markdown.plugin' }
 --vim.g.polyglot_disabled = { 'autoindent' }
 use('sheerun/vim-polyglot')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -- PlantUML preview:
@@ -426,7 +461,6 @@ use({
   end,
 })
 
-
 -- Markdown preview:
 -- Install Deno: brew install deno
 use({
@@ -438,6 +472,13 @@ use({
 })
 
 
+
+
+
+
+
+
+
 -- Autosave files:
   -- https://github.com/Pocco81/auto-save.nvim
 use({
@@ -447,7 +488,6 @@ use({
   end
 })
 
-
 -- Show color highlighting for colors and color variables:
 use({
   'norcalli/nvim-colorizer.lua',
@@ -455,6 +495,7 @@ use({
     require('user.plugin_options.nvim-colorizer')
   end
 })
+
 
 
  -- Min-/Maximize buffer:
@@ -467,6 +508,7 @@ use({
     require('user.plugin_options.windows')
   end
 })
+
 
 
 -- Fast navigation:
@@ -514,12 +556,9 @@ use({
 
 
 -- Blade syntax highligting:
---[[ use({ ]]
---[[   'jwalton512/vim-blade', ]]
---[[   config = function() ]]
---[[     require('user.plugin_options.vim-blade') ]]
---[[   end, ]]
---[[ }) ]]
+use({
+  'jwalton512/vim-blade'
+})
 
 
 -- ChatGPT AI code generation:
@@ -535,16 +574,6 @@ use({
 --[[     end, ]]
 --[[ }) ]]
 
-
-
-use {
-  "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  event = "InsertEnter",
-  config = function()
-    require("user.plugin_options.copilot")
-  end,
-}
 
 if packer_bootstrap then
   packer.sync()

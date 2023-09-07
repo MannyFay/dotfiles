@@ -73,6 +73,11 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 
 cmp.setup {
+  appearance = {
+    menu = {
+      direction = 'above' -- auto or above or below
+    }
+  },
   snippet = {
     expand = function(args)
       -- Activate LuaSnip:
@@ -81,7 +86,7 @@ cmp.setup {
   },
   mapping = {
     -- Confirm auto complete selection:
-    ['<C><Leader>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Tab'] = cmp.mapping.confirm({ select = true }),
     -- Previous list item:
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     -- Next list item:

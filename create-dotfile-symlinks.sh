@@ -17,7 +17,7 @@ printf "\e[1m- - - - - !   Start to make configuration scripts executable.   ! -
 #- Git
 
 printf "\e[34mGit:\e[0m\n"
-chmod +x $DOTFILES/git/create-git-symlinks.sh
+chmod +x ~/.config/dotfiles/git/create-git-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> File create-git-symlinks.sh is executable!\n"
 else
@@ -30,7 +30,7 @@ fi
 #- Karabiner
 
 printf "\e[34mKarabiner:\e[0m\n"
-chmod +x $DOTFILES/karabiner/create-karabiner-symlinks.sh
+chmod +x ~/.config/dotfiles/karabiner/create-karabiner-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> File create-karabiner-symlinks.sh is executable!\n"
 else
@@ -43,7 +43,7 @@ fi
 #- Neovim
 
 printf "\e[34mNeovim:\e[0m\n"
-chmod +x $DOTFILES/nvim/create-nvim-symlinks.sh
+chmod +x ~/.config/dotfiles/nvim/create-nvim-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-nvim-symlinks.sh is executable!\n"
 else
@@ -56,7 +56,7 @@ fi
 #- PhpStorm
 
 printf "\e[34mPhpStorm:\e[0m\n"
-chmod +x $DOTFILES/phpstorm/create-phpstorm-symlinks.sh
+chmod +x ~/.config/dotfiles/phpstorm/create-phpstorm-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-phpstorm-symlinks.sh is executable!\n"
 else
@@ -69,7 +69,7 @@ fi
 #- SSH
 
 printf "\e[34mSSH:\e[0m\n"
-chmod +x $DOTFILES/ssh/create-ssh-symlinks.sh
+chmod +x ~/.config/dotfiles/ssh/create-ssh-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-ssh-symlinks.sh is executable!\n"
 else
@@ -82,7 +82,7 @@ fi
 #- Tmux
 
 printf "\e[34mTmux:\e[0m\n"
-chmod +x $DOTFILES/tmux/create-tmux-symlinks.sh
+chmod +x ~/.config/dotfiles/tmux/create-tmux-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-tmux-symlinks.sh is executable!\n"
 else
@@ -95,7 +95,7 @@ fi
 #- Yabai
 
 printf "\e[34mYabai:\e[0m\n"
-chmod +x $DOTFILES/yabai/create-yabai-symlinks.sh
+chmod +x ~/.config/dotfiles/yabai/create-yabai-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-yabai-symlinks.sh is executable!\n"
 else
@@ -108,7 +108,7 @@ fi
 #- ZSH
 
 printf "\e[34mZSH:\e[0m\n"
-chmod +x $DOTFILES/zsh/create-zsh-symlinks.sh
+chmod +x ~/.config/dotfiles/zsh/create-zsh-symlinks.sh
 if [ $? -eq 0 ]; then
     printf  "Status: \e[32mSucceeded\e[0m -> File create-zsh-symlinks.sh is executable!\n"
 else
@@ -132,7 +132,7 @@ printf "\e[1m- - - - - !   Start to create symlinks.   ! - - - - -\e[0m\n"
 #- Git
 
 printf "\e[34mGit:\e[0m\n"
-source $DOTFILES/git/create-git-symlinks.sh
+/bin/bash ~/.config/dotfiles//git/create-git-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> Git symlinks created!\n"
 else
@@ -145,7 +145,7 @@ fi
 #- Karabiner
 
 printf "\e[34mKarabiner:\e[0m\n"
-source ~/.config/dotfiles/karabiner/create-karabiner-symlinks.sh
+/bin/bash ~/.config/dotfiles/karabiner/create-karabiner-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> Karabiner symlinks created!\n"
 else
@@ -158,7 +158,7 @@ fi
 #- Neovim
 
 printf "\e[34mNeovim:\e[0m\n"
-source ~/.config/dotfiles/nvim/create-nvim-symlinks.sh
+/bin/bash ~/.config/dotfiles/nvim/create-nvim-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> Neovim symlinks created!\n"
 else
@@ -171,7 +171,7 @@ fi
 #- PhpStorm
 
 printf "\e[34mPhpStorm:\e[0m\n"
-source ~/.config/dotfiles/phpstorm/create-phpstorm-symlinks.sh
+/bin/bash ~/.config/dotfiles/phpstorm/create-phpstorm-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> PhpStorm symlinks created!\n"
 else
@@ -184,7 +184,7 @@ fi
 #- SSH
 
 printf "\e[34mSSH:\e[0m\n"
-source ~/.config/dotfiles/ssh/create-ssh-symlinks.sh
+/bin/bash ~/.config/dotfiles/ssh/create-ssh-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> SSH symlinks created!\n"
 else
@@ -197,7 +197,7 @@ fi
 #- Tmux
 
 printf "\e[34mTmux:\e[0m\n"
-source ~/.config/dotfiles/tmux/create-tmux-symlinks.sh
+/bin/bash ~/.config/dotfiles/tmux/create-tmux-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> Tmux symlinks created!\n"
 else
@@ -210,7 +210,7 @@ fi
 #- Yabai
 
 printf "\e[34mYabai:\e[0m\n"
-source ~/.config/dotfiles/yabai/create-yabai-symlinks.sh
+/bin/bash ~/.config/dotfiles/yabai/create-yabai-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> Yabai symlinks created!\n"
 else
@@ -223,7 +223,7 @@ fi
 #- ZSH
 
 printf "\e[34mZSH:\e[0m\n"
-source ~/.config/dotfiles/zsh/create-zsh-symlinks.sh
+/bin/bash ~/.config/dotfiles/zsh/create-zsh-symlinks.sh
 if [ $? -eq 0 ]; then
     printf "Status: \e[32mSucceeded\e[0m -> ZSH symlinks created!\n"
 else

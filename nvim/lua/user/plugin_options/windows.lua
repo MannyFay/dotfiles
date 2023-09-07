@@ -23,6 +23,7 @@ local function cmd(command)
 end
 
 vim.keymap.set('n', '<Leader><Leader>m', cmd 'WindowsMaximize')
+vim.keymap.set('n', '<Leader><Leader>=', cmd 'WindowsEqualize')
 --vim.keymap.set('n', '<C-w>_', cmd 'WindowsMaximizeVertically')
 --vim.keymap.set('n', '<C-w>|', cmd 'WindowsMaximizeHorizontally')
 --vim.keymap.set('n', '<C-w>=', cmd 'WindowsEqualize')

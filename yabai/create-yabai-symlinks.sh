@@ -14,13 +14,13 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 rm -rf $HOME/.yabairc
 
 # Create symlink to ~/.config/dotfiles/yabai/.yabairc:
-ln -s $DOTFILES/yabai/.yabairc $HOME/.yabairc
+ln -s ~/.config/dotfiles/yabai/.yabairc $HOME/.yabairc
 
 # Delete ~/.skhdrc:
 rm -rf $HOME/.skhdrc
 
 # Create symlink to ~/.config/dotfiles/yabai/.skhdrc:
-ln -s $DOTFILES/yabai/.skhdrc $HOME/.skhdrc
+ln -s ~/.config/dotfiles/yabai/.skhdrc $HOME/.skhdrc
 
 # Restart Yabai:
 yabai --restart-service

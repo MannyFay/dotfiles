@@ -14,7 +14,7 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 rm -rf $HOME/.config/karabiner/karabiner.json
 
 # Create symlink to ~/.config/dotfiles/karabiner/karabiner.json:
-ln -s $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
+ln -s ~/.config/dotfiles/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 
 
 
@@ -26,5 +26,5 @@ ln -s $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 rm -rf $HOME/.config/karabiner/assets
 
 # Create symlink to ~/.config/dotfiles/karabiner/assets:
-ln -s $DOTFILES/karabiner/assets $HOME/.config/karabiner
+ln -s ~/.config/dotfiles/karabiner/assets $HOME/.config/karabiner
 

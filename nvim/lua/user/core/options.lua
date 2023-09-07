@@ -86,7 +86,8 @@ vim.opt.spell = true
 --[[ set spellsuggest=best,9 ]]
 -- Disable automatic resizing of panes:
 vim.opt.equalalways = false
-
+-- Transparency of floating windows:
+vim.cmd('set pumblend=0')
 
 
 

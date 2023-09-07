@@ -27,7 +27,8 @@ project.setup({
   detection_methods = { 'pattern' },
   -- Patterns to detect project root directory:
   patterns = {
-    '.git',
+    '.editorconfig',
+    '.env',
     '_darcs',
     '.hg',
     '.bzr',

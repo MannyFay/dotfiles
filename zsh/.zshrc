@@ -112,7 +112,6 @@ fi
 
 # Load tool based alias files:
 source ~/Code/drw/devops/dotfiles/manny-fay/zsh/.zsh_aliases_drw
-source ~/.config/git/.git_aliases
 # source dockerstuff
 # source laravelstuff
 # source tmuxstuff

@@ -11,13 +11,13 @@
 -- Import Autopairs with a protected call:
 local autopairs_status_ok, autopairs = pcall(require, 'nvim-autopairs')
 if not autopairs_status_ok then
-  return
+  return "Error: */lua/user/plugin_options/autopairs.lua -> Autopairs plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
 
 -- Import CMP with a protected call:
 local cmp_status_ok, cmp = pcall(require, 'cmp')
 if not cmp_status_ok then
-  return
+  return "Error: */lua/user/plugin_options/autopairs.lua -> CMP plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
 
 -- Insert ( after select function, method or action:

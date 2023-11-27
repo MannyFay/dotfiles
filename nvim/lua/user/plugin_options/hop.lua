@@ -11,7 +11,7 @@
 -- Import Hop plugin with a protected call:
 local hop_status_ok, hop = pcall(require, 'hop')
 if not hop_status_ok then
-  return
+  return "Error: Hop plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
 
 
@@ -19,8 +19,7 @@ end
 -- Appearance
 
 hop.setup {
-  -- Enable Hop for multi buffer use:
-  multi_windows = true,
+  multi_windows = true,  -- Enable Hop for multi buffer use.
 }
 
 

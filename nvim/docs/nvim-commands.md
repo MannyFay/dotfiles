@@ -64,7 +64,7 @@ The most of the commands you can type numbers before, to run the command n times
 | Enter insert mode at start of line: | `I`     | Regular Neovim |
 | Enter insert mode at end of line:   | `A`     | Regular Neovim |
 | Enter visual mode:                  | `v`     | Regular Neovim |
-| Enter visual line mode:             | `V`     | Regular Neovim |
+| Enter visual line mode:             | `v` `v` | Regular Neovim |
 | Enter visual block mode:            | `v` `b` | keymaps.lua    |
 | Enter command line mode:            | `:`     | Regular Neovim |
 
@@ -199,7 +199,7 @@ To navigate around, enter `Normal Mode`.
 | Cut:                           | `x`     | nvim-tree.lua |
 | Paste:                         | `p`     | nvim-tree.lua |
 | To parent node:                | `P`     | nvim-tree.lua |
-| New:                           | `n`     | nvim-tree.lua |
+| New item:                      | `n` `i` | nvim-tree.lua |
 | Delete:                        | `d`     | nvim-tree.lua |
 | Move to bin:                   | `B`     | nvim-tree.lua |
 | Collapse all:                  | `C`     | nvim-tree.lua |
@@ -233,5 +233,4 @@ To navigate around, enter `Normal Mode`.
 | Quit tab:     | `<Leader>` `q` `t` | keymaps.lua |
 | To right tab: | `<Leader>` `t` `r` | keymaps.lua |
 | To left tab:  | `<Leader>` `t` `l` | keymaps.lua |
-
 

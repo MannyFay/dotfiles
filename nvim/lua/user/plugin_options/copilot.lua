@@ -1,91 +1,64 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/copilot.lua
-
--- https://github.com/github/copilot.vim/tree/release
-
-
-
 -------------------------------------------------------------------------------
 -- Copilot Plugin
+-- https://github.com/zbirenbaum/copilot.lua 
 -------------------------------------------------------------------------------
 
--- Disable/enable filetypes:
---[[ vim.g.copilot_filetypes = { ]]
---[[   xml = true, ]]
---[[   lua = true, ]]
---[[   php = true, ]]
---[[   html = true, ]]
-  -- Turn of all suggestions for all filetypes:
-  --[[ ['*'] = false, ]]
---[[ } ]]
 
--- Change the accept suggestions key:
---[[ vim.cmd[[imap <silent><script><expr> <C-i> copilot#Accept("\<CR>")]]
--- Disable tab key for Copilot:
---[[ vim.g.copilot_no_tab_map = true ]]
--- Same as above but in lua:
---vim.keymap.set.keymap('i', '<C-<Leader>', ":copilot#Accept('\\<CR>')<CR>", { silent = true })
+-- Import Copilot plugin with a protected call:
+local copilot_status_ok, copilot = pcall(require, 'copilot')
+if not copilot_status_ok then
+  return "Error: */lua/user/plugin_options/copilot.lua -> Copilot plugin could not be loaded. Sure you have installed it in your plugins file?"
+end
 
--- Dismiss the current suggestion:
--- <c-]> <Plug>(copilot-dismis)
 
--- Cycle to next suggestion:
--- regular: *copilot-i-ALT-]*
--- <M-]> <Plug>(copilot-next)
+------------------------------------------------------------
+-- Mason Plugin
 
--- Cycle to previous suggestion:
--- regular: *copilot-i_ALT-[*
--- <M-[> <Plug>(copilot-previous)
-
--- vim.cmd[[higlight CopilotSuggestion guifg=#606366 ctermfg=8]]
-
--- alt+[ = show how many suggestions Copilot can provide.
-vim.api.nvim_set_hl(0, 'CopilotSuggestion', { fg = '#606366' })
-
-require('copilot').setup({
+copilot.setup({
   panel = {
-    enabled = true,
+    enabled      = true,
     auto_refresh = false,
     keymap = {
-      jump_prev = "[[",
-      jump_next = "]]",
-      accept = "<CR>",
-      refresh = "gr",
-      open = "<M-CR>"
+      jump_prev = '[[',
+      jump_next = ']]',
+      accept    = '<CR>',
+      refresh   = 'gr',
+      open      = '<M-CR>'
     },
     layout = {
-      position = "bottom", -- | top | left | right
-      ratio = 0.4
+      position = 'bottom',         -- top, left, right
+      ratio    = 0.4
     },
   },
   suggestion = {
-    enabled = true,
+    enabled      = true,
     auto_trigger = true,
-    debounce = 75,
+    debounce     = 75,             -- (milliseconds)
     keymap = {
-      accept = "<right>",
+      accept      = '<right>',     -- Right arrow key to accept suggestion.
       accept_word = false,
       accept_line = false,
-      next = "<M-]>",
-      prev = "<M-[>",
-      dismiss = "<C-]>",
+      next        = '<M-]>',
+      prev        = '<M-[>',
+      dismiss     = '<C-]>',
     },
   },
   filetypes = {
-    yaml = false,
-    markdown = true,
-    help = false,
-    gitcommit = false,
-    gitrebase = false,
-    hgcommit = false,
-    svn = false,
-    cvs = false,
-    html = true,
-    css = true,
+    yaml       = false,
+    markdown   = true,
+    help       = false,
+    gitcommit  = false,
+    gitrebase  = false,
+    hgcommit   = false,
+    svn        = false,
+    cvs        = false,
+    html       = true,
+    css        = true,
     javascript = true,
     typescript = true,
-    php = true,
-    ["."] = false,
+    php        = true,
+    ['.']      = false,
   },
-  copilot_node_command = 'node', -- Node.js version must be > 16.x
+  copilot_node_command  = 'node',  -- Node.js version must be higher than 16.x.
   server_opts_overrides = {},
 })

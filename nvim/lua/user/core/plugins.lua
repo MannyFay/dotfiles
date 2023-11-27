@@ -198,13 +198,8 @@ use({
 --})
 
 
--- Show vertical indent lines for blocks:
-use({
-  'lukas-reineke/indent-blankline.nvim',
-  require = function()
-    require('user.plugin_options.indent-blankline')
-  end,
-})
+
+
 
 
 -- Split or join list-like syntax constructs (like arrays):
@@ -318,13 +313,15 @@ use({
 })
 
 
--- Enable Language Server Protocol (LSP):
+--------------------------------------------------------------
+-- Language Server Protocol (LSP):
+
 use({
-  'neovim/nvim-lspconfig',
+  'neovim/nvim-lspconfig',                  -- Language Server Protocol client.                                       -- https://github.com/neovim/nvim-lspconfig
   requires = {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'folke/lsp-colors.nvim',
+    'williamboman/mason.nvim',               -- Install and manage LSP and DAP servers, linters and formatters.       -- https://github.com/williamboman/mason.nvim
+    'williamboman/mason-lspconfig.nvim',     -- Bridge between Mason and LSP-Config to use both together.            -- https://github.com/williamboman/mason-lspconfig.nvim
+    -- 'folke/lsp-colors.nvim',  <-- deprecated
   },
   config = function()
     require('user.plugin_options.lspconfig')
@@ -332,29 +329,26 @@ use({
 })
 
 
--- Autocompletion:
--- One of these plugin gives a very cool breadcrumb on top of the buffer.
+--------------------------------------------------------------
+-- Autocompletion (Completion Management Plugin)
+
 use({
-  'hrsh7th/nvim-cmp',
+  'hrsh7th/nvim-cmp',                       -- Completion Engine                                                      -- https://github.com/hrsh7th/nvim-cmp
+  -- Plugins for enhancement:
   requires = {
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    'hrsh7th/cmp-nvim-lua',
-    'jessarcher/cmp-path',
-    'onsails/lspkind-nvim',
-    'saadparwaiz1/cmp_luasnip',
-  --[[   { ]]
-  --[[     'glepnir/lspsaga.nvim', ]]
-  --[[     branch = 'main', ]]
-  --[[     event = 'lspattach', ]]
-  --[[     config = function() ]]
-  --[[       require('user.plugin_options.lspsaga') ]]
-  --[[     end, ]]
-  --[[   }, ]]
+    'neovim/nvim-lspconfig',                -- Language Server Protocol client.                                       -- https://github.com/neovim/nvim-lspconfig
+    'hrsh7th/cmp-nvim-lsp',                 -- CMP source for Neovims built-in LSP client.                            -- https://github.com/hrsh7th/cmp-nvim-lsp
+    'hrsh7th/cmp-buffer',                   -- Get's words in buffers for completion too.                             -- https://github.com/hrsh7th/cmp-buffer
+    'jessarcher/cmp-path',                  -- Use file system paths for completion too.                              -- https://github.com/jessarcher/cmp-path
+    'hrsh7th/cmp-cmdline',                  -- Completion source for command line.                                    -- https://github.com/hrsh7th/cmp-cmdline
+
+    'L3MON4D3/LuaSnip',                     -- Snippets engine to use code snippets.                                  -- https://github.com/L3MON4D3/LuaSnip
+    'saadparwaiz1/cmp_luasnip',             -- Completion source for LuaSnip.                                         -- https://github.com/saadparwaiz1/cmp_luasnip
+
+    'rafamadriz/friendly-snippets',         -- Snippets collection for diverse programming languages.                 -- https://github.com/rafamadriz/friendly-snippets
+    'hrsh7th/cmp-nvim-lsp-signature-help',  -- CMP source to display function signatures with parameter explanation.  -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+    'hrsh7th/cmp-nvim-lua',                 -- CMP source for Neovim Lua API.                                         -- https://github.com/hrsh7th/cmp-nvim-lua
+    'onsails/lspkind-nvim',                 -- Pictograms for LSP completion items.                                   -- https://github.com/onsails/lspkind.nvim
   },
   config = function()
     require('user.plugin_options.nvim-cmp')
@@ -363,34 +357,6 @@ use({
 
 
 
--- Look for a plugin called vim-scripts/ReplaceWithRegister-- Autocompletion:
--- One of these plugin gives a very cool breadcrumb on top of the buffer.
-use({
-  'hrsh7th/nvim-cmp',
-  requires = {
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    'hrsh7th/cmp-nvim-lua',
-    'jessarcher/cmp-path',
-    'onsails/lspkind-nvim',
-    'saadparwaiz1/cmp_luasnip',
-  --[[   { ]]
-  --[[     'glepnir/lspsaga.nvim', ]]
-  --[[     branch = 'main', ]]
-  --[[     event = 'lspattach', ]]
-  --[[     config = function() ]]
-  --[[       require('user.plugin_options.lspsaga') ]]
-  --[[     end, ]]
-  --[[   }, ]]
-  },
-  config = function()
-    require('user.plugin_options.nvim-cmp')
-  end,
-})
 
 
 -- Look for a plugin called vim-scripts/ReplaceWithRegister
@@ -427,10 +393,11 @@ use({
 })
 
 
--- Markdown preview:
--- Install Deno: brew install deno
+--------------------------------------------------------------
+-- Markdown Preview (install Deno first)
+
 use({
-  'toppair/peek.nvim',
+  'toppair/peek.nvim',                     -- Markdown Preview Plugin.                                              -- https://github.com/toppair/peek.nvim
   run = 'deno task --quiet build:fast',
   config = function()
     require('user.plugin_options.peek')
@@ -438,10 +405,11 @@ use({
 })
 
 
--- Autosave files:
-  -- https://github.com/Pocco81/auto-save.nvim
+--------------------------------------------------------------
+-- Autosave files by go to normal mode or change buffer
+
 use({
-  'pocco81/auto-save.nvim',
+  'pocco81/auto-save.nvim',                                                   -- https://github.com/Pocco81/auto-save.nvim
   config = function()
     require('user.plugin_options.auto-save')
   end
@@ -522,29 +490,31 @@ use({
 --[[ }) ]]
 
 
--- ChatGPT AI code generation:
---[[ use({ ]]
---[[   'jackMort/ChatGPT.nvim', ]]
---[[     requires = { ]]
---[[       'MunifTanjim/nui.nvim', ]]
---[[       'nvim-lua/plenary.nvim', ]]
---[[       'nvim-telescope/telescope.nvim' ]]
---[[     }, ]]
---[[     config = function() ]]
---[[       require('user.plugin_options.chatgpt') ]]
---[[     end, ]]
---[[ }) ]]
 
 
+
+--------------------------------------------------------------
+-- AI Code Generation
 
 use {
-  "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  event = "InsertEnter",
+  'zbirenbaum/copilot.lua',                  -- GitHub Copilot for Neovim.                                            -- https://github.com/zbirenbaum/copilot.lua
+  cmd    = 'Copilot',
+  event  = 'InsertEnter',
   config = function()
-    require("user.plugin_options.copilot")
+    require('user.plugin_options.copilot')
   end,
 }
+
+------------------------------------------------------------
+-- Vertical indent lines for blocks
+
+use({
+  'lukas-reineke/indent-blankline.nvim',  -- https://github.com/lukas-reineke/indent-blankline.nvim
+  require = function()
+    require('user.plugin_options.indent-blankline')
+  end,
+})
+
 
 if packer_bootstrap then
   packer.sync()

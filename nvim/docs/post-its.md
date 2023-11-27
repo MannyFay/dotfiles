@@ -10,16 +10,16 @@ If there are abbreviations you don't understand, look at the
 
 ## Project Tree
 
-|Tree               |   |              |     |   |             |         |   |              |
-|:------------------|:-:|:-------------|:----|:-:|:------------|:--------|:-:|:-------------|
-| `<L>` `t` `t`     | = | toggle tree  | `-` | = | hor. split  | `d`     | = | delete       |
-| `<L>` `e` `t`     | = | explore tree | `y` | = | yank name   | `B`     | = | bin          |
-| `<L>` `s` `f` `t` | = | show file    | `Y` | = | yank path   | `C`     | = | collapse     |
-| `q` `n`           | = | close node   | `c` | = | copy        | `E`     | = | expand       |
-| `r`               | = | rename       | `x` | = | cut         | `T` `S` | = | top sib.     |
-| `i`               | = | info         | `p` | = | paste       | `B` `S` | = | bot. sib.    |
-| `enter`           | = | open         | `P` | = | parent node | `K`     | = | previous sib.|
-| `|`               | = | vert. split  | `n` | = | new         | `J`     | = | next sib.    |
+|Tree               |   |              |         |   |             |         |   |              |
+|:------------------|:-:|:-------------|:--------|:-:|:------------|:--------|:-:|:-------------|
+| `<L>` `t` `t`     | = | toggle tree  | `-`     | = | hor. split  | `d`     | = | delete       |
+| `<L>` `e` `t`     | = | explore tree | `y`     | = | yank name   | `B`     | = | bin          |
+| `<L>` `s` `f` `t` | = | show file    | `Y`     | = | yank path   | `C`     | = | collapse     |
+| `q` `n`           | = | close node   | `c`     | = | copy        | `E`     | = | expand       |
+| `r`               | = | rename       | `x`     | = | cut         | `T` `S` | = | top sib.     |
+| `i`               | = | info         | `p`     | = | paste       | `B` `S` | = | bot. sib.    |
+| `enter`           | = | open         | `P`     | = | parent node | `K`     | = | previous sib.|
+| `|`               | = | vert. split  | `n` `i` | = | new item    | `J`     | = | next sib.    |
 
 <br>
 
@@ -62,17 +62,17 @@ If there are abbreviations you don't understand, look at the
 
 ## Modes & Searching
 
-| Modes  |   |                      | Search        |   |                   |
-|:-------|:-:|----------------------|:--------------|:-:|:------------------|
-| `esc`  | = | normal               | `/`           | = | search            |
-| `i`    | = | insert before char   | `n`           | = | next              |
-| `a`    | = | insert after char    | `N`           | = | previous          |
-| `I`    | = | insert start of line | `<L>` `q` `h` | = | quit highlighting |
-| `A`    | = | insert end of line   | `<l>` `f` `f` | = | find file         |
-| `v`    | = | visual               | `<L>` `f` `t` | = | fint text         |
-| `V`    | = | visual line          | `<L>` `r` `f` | = | rescent files     |
-| `v` `b`| = | visual block         | `*`           | = | find under cursor |
-| `:`    | = | command line         |
+| Modes   |   |                      | Search        |   |                   |
+|:--------|:-:|----------------------|:--------------|:-:|:------------------|
+| `esc`   | = | normal               | `/`           | = | search            |
+| `i`     | = | insert before char   | `n`           | = | next              |
+| `a`     | = | insert after char    | `N`           | = | previous          |
+| `I`     | = | insert start of line | `<L>` `q` `h` | = | quit highlighting |
+| `A`     | = | insert end of line   | `<l>` `f` `f` | = | find file         |
+| `v`     | = | visual               | `<L>` `f` `t` | = | fint text         |
+| `v` `v` | = | visual line          | `<L>` `r` `f` | = | rescent files     |
+| `v` `b` | = | visual block         | `*`           | = | find under cursor |
+| `:`     | = | command line         |
 
 <br>
 
@@ -105,4 +105,3 @@ If there are abbreviations you don't understand, look at the
 | `ctrl` `c`     | = | completion suggestions   | `tab`                 | = | next completion item   |
 | `ctrl` `<L>`   | = | confirm completion       | `shift` `tab`         | = | prev. completion item  |
 | `~`            | = | switch case              |                       |   |                        |
-

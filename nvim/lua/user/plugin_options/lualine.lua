@@ -1,6 +1,7 @@
 -- ~/.dotfiles/nvim/lua/user/plugin_options/lualine.lua
 
 -- https://github.com/nvim-lualine/lualine.nvim
+-- Fast and easy to configure statusline plugin for Neovim.
 
 
 
@@ -11,23 +12,29 @@
 -- Import Lualine with a protected call:
 local status_ok, lualine = pcall(require, 'lualine')
 if not status_ok then
-  return
+  return "Error: */lua/user/plugin_options/lualine.lua -> Lualine plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
-
-
-------------------------------------------------------------
--- Appearance
 
 -- Hide Lualine if window is smaller than the given columns:
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
 
--- Display Git branches:
+
+------------------------------------------------------------
+-- Component Setups
+
+-- Section separator width setup:
+-- local separator = function()
+--   return ' '
+-- end
+
+
+-- Git branch component setup:
 local branch = {
   'branch',
   icons_enabled = true,
-  colored       = true,
+  colored       = false,
   icon          = '',
   padding       = {
     left  = 0,
@@ -35,70 +42,93 @@ local branch = {
   },
 }
 
--- Display errors and warnings:
-local diagnostics = {
-  'diagnostics',
-  padding = 1,
-  sources = { 'nvim_diagnostic' },
-  sections = {
-    'error',
-    'warn',
-  },
-  symbols = {
-    error = ' ',
-    warn  = ' ',
-    hint  = ' ',
-    info  = ' ',
-  },
-  colored          = false,
-  update_in_insert = false,
-  always_visible   = true,
-}
-
-local filename = {
-  'filename',
-}
-
--- Display Git diagnostics:
+-- Git diagnostics setup:
 local diff = {
   'diff',
-  colored = true,
   symbols = {
     added    = ' ',
     modified = ' ',
     removed  = ' ',
   },
-  cond = hide_in_width
+  cond             = hide_in_width,
+  colored          = false,
+  update_in_insert = true,
+  always_visible   = false,
 }
 
--- Display default indentation in file:
-local spaces = function()
-  return 'spaces: ' .. vim.api.nvim_buf_get_option(0, 'shiftwidth')
-end
+-- LSP diagnostics component setup:
+local diagnostics = {
+  'diagnostics',
+  sources = { 'nvim_diagnostic' },
+  sections = {
+    'error',
+    'warn',
+    'hint',
+    'info',
+  },
+  symbols = {
+    error = ' ',
+    warn  = ' ',
+    hint  = '',
+    info  = ' ',
+  },
+  colored          = false,
+  update_in_insert = true,
+  always_visible   = false,
+  padding = {
+    left  = 1,
+    right = 0,
+  },
+}
 
--- Display line:column of cursor:
+-- line:column of cursor component setup:
 local location = {
   'location',
-  padding = 1,
+  padding = {
+    left  = 0,
+    right = 1,
+  },
 }
 
--- Display progress bar of cursor position in file:
-local progress = function()
+-- Filename component setup:
+local filename = {
+  'filename',
+}
+
+-- File indentation level component setup:
+local fileIndentationLevel = function()
+  if vim.fn.winwidth(0) > 80 then
+    return 'SP:' .. vim.api.nvim_buf_get_option(0, 'shiftwidth')
+  else
+    return ''
+  end
+end
+
+-- File encoding component setup:
+local fileEncoding = {
+  'encoding',
+  cond = hide_in_width,
+}
+
+-- Vertical progress bar component setup:
+local progressBar = function()
   local current_line = vim.fn.line('.')
   local total_lines  = vim.fn.line('$')
-  local chars = { '󰞕󰞕', '██', '██', '▇▇', '▇▇', '▆▆', '▆▆', '▅▅', '▅▅', '▄▄', '▄▄', '▃▃', '▃▃', '▂▂', '▂▂', '▁▁', '▁▁', '󰞒󰞒', }
-  local line_ratio = current_line / total_lines
-  local index = math.ceil(line_ratio * #chars)
+  local chars        = { '󰞕󰞕', '██', '██', '▇▇', '▇▇', '▆▆', '▆▆', '▅▅', '▅▅', '▄▄', '▄▄', '▃▃', '▃▃', '▂▂', '▂▂', '▁▁', '▁▁', '󰞒󰞒', }
+  local line_ratio   = current_line / total_lines
+  local index        = math.ceil(line_ratio * #chars)
+
   return chars[index]
 end
 
-local separator = function()
-  return '   '
-end
+
+------------------------------------------------------------
+-- Appearance
 
 lualine.setup({
   options = {
     icons_enabled = true,
+    theme         = 'auto',
     component_separators = {
       left  = '',
       right = '',
@@ -115,26 +145,28 @@ lualine.setup({
     },
     always_divide_middle = true,
   },
-  sections = {
-    -- Legend:
-    -- +-------------------------------------------------+
-    -- | a | b | c                             x | y | z |
-    -- +-------------------------------------------------+
-    lualine_a = { branch, separator },
-    lualine_b = { diagnostics, separator },
-    lualine_c = { filename },
-    lualine_x = { diff, spaces, separator, 'encoding', separator },
-    -- Show line and column number of cursor:
-    lualine_y = { location, separator },
-    -- Show progress because of cursor position on the right:
-    lualine_z = { progress },
+
+  -- Sections for active buffer:
+  sections = {                                                     -- |a|b|c|  <-->  |x|y|z|
+    -- Left side:
+    lualine_a = { branch },                                        -- Actual branch name.
+    lualine_b = { diff },                                          -- LSP diagnostics.
+    lualine_c = { diagnostics },                                   -- File name with extension.
+    -- Right side:
+    lualine_x = { location },                                      -- Line:column of cursor.
+    lualine_y = { filename, fileIndentationLevel, fileEncoding },
+    lualine_z = { progressBar },                                   -- Show progress because of cursor position.
   },
-  inactive_sections = {
-    lualine_a = {},
+
+  -- Sections for inactive buffers:
+  inactive_sections = {        -- |a|b|c|  <-->  |x|y|z|
+    -- Left side:
+    lualine_a = { branch },    -- Actual branch name.
     lualine_b = {},
     lualine_c = {},
+    -- Right side:
     lualine_x = {},
-    lualine_y = {},
+    lualine_y = { filename },
     lualine_z = {},
   },
   tabline         = {},
@@ -142,4 +174,3 @@ lualine.setup({
   inactive_winbar = {},
   extensions      = {},
 })
-

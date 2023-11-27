@@ -35,8 +35,10 @@ brew 'plantuml'
 brew 'ripgrep'
 brew 'sqlite'
 brew 'tmux'
+brew 'trash'
 brew 'tree'
 brew 'wget'
+brew 'yarn'
 brew 'koekeishiya/formulae/yabai'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
@@ -97,7 +99,6 @@ mas 'Pages', id: 409201541
 mas 'duoCo StripX', id: 1498448200
 mas 'Elgato Control Center', id: 1446254313
 mas 'Govee Studio', id: 1551073370
-
 
 
 

@@ -81,7 +81,8 @@ set ideavimsupport=dialog
 set ideawrite=all
 " Set IdeaVim status icon to gray:
 set ideastatusicon=gray
-
+" Consider string-string as whole word:
+iskeyword:append -
 
 
 "-----------------------------------------------------------------------

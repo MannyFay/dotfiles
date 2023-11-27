@@ -1,0 +1,30 @@
+[*]
+charset              = utf-8
+end_of_line          = lf
+indent_size          = 4
+indent_style         = space
+insert_final_newline = false
+max_line_length      = 120
+tab_width            = 4
+
+[*.html]
+# https://google.github.io/styleguide/htmlcssguide.html
+indent_size = 2
+tab_width   = 2
+
+[*.css]
+# https://google.github.io/styleguide/htmlcssguide.html
+indent_size = 2
+tab_width   = 2
+
+[*.js]
+# https://standardjs.com/rules.html
+indent_size     = 2
+max_line_length = 80
+tab_width       = 2
+
+[*.lua]
+# http://lua-users.org/wiki/LuaStyleGuide
+indent_size     = 2
+max_line_length = 120
+tab_width       = 2

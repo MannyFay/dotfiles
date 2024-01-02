@@ -1,0 +1,11 @@
+mlocate
+tree
+bat
+ssh
+vim
+curl
+wget
+
+
+
+https://github.com/neovim/neovim/wiki/Installing-Neovim

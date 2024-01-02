@@ -43,7 +43,8 @@ vim.keymap.set('v', '>', '>gv', opts)                                   -- Stay 
 vim.keymap.set('v', 'y', 'myy`y')                                       -- Maintain the cursor position when yanking a visual selection.
 vim.keymap.set('v', 'Y', 'myY`y')                                       -- Maintain the cursor position when yanking a visual line selection.
 
-vim.keymap.set('v', 'p', '"_dP')                                        -- Paste/replace visual selection without copying it.
+vim.keymap.set('v', 'p', '"_dP')                                        -- Paste/replace without losing text.
+vim.keymap.set('n', 'Y', 'y$')                                          -- Yank to end of line.
 
 vim.keymap.set('n', 'x', '"_x')                                         -- If delete one char, don't copy it to the clipboard.
 

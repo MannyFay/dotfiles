@@ -21,6 +21,7 @@ brew 'composer'
 brew 'curl'
 brew 'deno'
 brew 'docker'
+brew 'fzf'
 brew 'git'
 brew 'gnupg'
 brew 'graphviz'
@@ -37,6 +38,7 @@ brew 'sqlite'
 brew 'tmux'
 brew 'trash'
 brew 'tree'
+brew 'vue-cli'
 brew 'wget'
 brew 'yarn'
 brew 'koekeishiya/formulae/yabai'
@@ -64,6 +66,7 @@ cask 'intellij-idea-ce'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'karabiner-elements'
+cask 'logi-options-plus'
 cask 'macpass'
 cask 'microsoft-edge'
 cask 'nordpass'
@@ -99,6 +102,3 @@ mas 'Pages', id: 409201541
 mas 'duoCo StripX', id: 1498448200
 mas 'Elgato Control Center', id: 1446254313
 mas 'Govee Studio', id: 1551073370
-
-
-

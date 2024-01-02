@@ -1,17 +1,12 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/treesitter.lua
-
--- https://github.com/nvim-treesitter/nvim-treesitter
-
-
-
 ------------------------------------------------------------------------------
 -- Treesitter Plugin
+-- https://github.com/nvim-treesitter/nvim-treesitter
 ------------------------------------------------------------------------------
 
 -- Import Treesitter with a protected call:
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
-  return
+  return "Error: */lua/user/plugin_options/treesitter.lua -> Treesitter plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
 
 
@@ -21,13 +16,13 @@ end
 configs.setup {
   modules = { },
   -- List of syntax highlight parsers to install:
-  ensure_installed = 'all',
+  ensure_installed = { '' },
   -- Install packages asynchronously (applies only to 'ensure_installed'):
   sync_install = false,
   -- Automatically install missing parsers in a buffer:
-  auto_install = true,
+  auto_install = false,
   -- List of syntax highlight parser to ignore:
-  ignore_install = { '' },
+  ignore_install = { 'all' },
   -- Create always a pair of brackets:
   autopairs = {
     enable = true,
@@ -87,4 +82,3 @@ configs.setup {
     enable = true,
   },
 }
-

@@ -15,3 +15,5 @@ rm -rf $HOME/.tmux.conf
 
 # Create symlink to ~/.config/dotfiles/tmux/.tmux.conf:
 ln -s ~/.config/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
+
+chmod +x ./tmux-sessionizer.sh

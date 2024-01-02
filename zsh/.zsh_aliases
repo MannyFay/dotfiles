@@ -87,3 +87,9 @@ alias cdstud='cd ~/Documents/Private/studies'
 # List all installed shells:
 alias shells='cat /etc/shells'
 
+
+
+
+# ----- To sort:
+alias ff="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'" # FZF with preview.
+alias fo='nvim -o `fzf`' # FZF and open in nvim.

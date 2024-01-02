@@ -35,7 +35,7 @@ ZSH_THEME_GIT_PROMPT_ADDED="${COLOR[orange]} \u25cf"
 #-----------------------------------------------------------------------------
 
 function prompt_char {
-	if [ $UID -eq 0 ]; then echo "${COLOR[red]}#%{$reset_color%}"; else echo $; fi
+    if [ $UID -eq 0 ]; then echo "${COLOR[red]}#%{$reset_color%}"; else echo $; fi
 }
 
 PROMPT='%(?, ,${COLOR[red]}FAIL%{$reset_color%}

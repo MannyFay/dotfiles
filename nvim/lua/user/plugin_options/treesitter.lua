@@ -16,7 +16,7 @@ end
 configs.setup {
   modules = { },
   -- List of syntax highlight parsers to install:
-  ensure_installed = { '' },
+  ensure_installed = { },
   -- Install packages asynchronously (applies only to 'ensure_installed'):
   sync_install = false,
   -- Automatically install missing parsers in a buffer:

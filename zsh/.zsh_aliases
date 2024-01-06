@@ -3,13 +3,13 @@
 #  Service Specific Aliases
 #------------------------------------------------------------------------------
 
-source ~/dotfiles/docker/docker_aliases.zsh       # Docker
-source ~/dotfiles/git/git_aliases.zsh             # Git
-source ~/dotfiles/homebrew/homebrew_aliases.zsh   # Homebrew
-source ~/dotfiles/laravel/laravel_aliases.zsh     # Laravel
-source ~/dotfiles/ssh/ssh_aliases.zsh             # SSH
-source ~/dotfiles/tmux/tmux_aliases.zsh           # tmux
-source ~/dotfiles/yabai/yabai_aliases.zsh         # Yabai
+source ~/dotfiles/docker/docker_aliases.zsh             # Docker
+source ~/dotfiles/git/git_aliases.zsh                   # Git
+source ~/dotfiles/macos/homebrew/homebrew_aliases.zsh   # Homebrew
+source ~/dotfiles/laravel/laravel_aliases.zsh           # Laravel
+source ~/dotfiles/ssh/ssh_aliases.zsh                   # SSH
+source ~/dotfiles/tmux/tmux_aliases.zsh                 # tmux
+source ~/dotfiles/macos/yabai/yabai_aliases.zsh         # Yabai
 
 
 
@@ -72,7 +72,7 @@ alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 
 alias o='nvim -o `fzf`'                                                                                                                    # FZF and open in nvim.
 alias e='exit'                                                                                                                             # Exit for lazy people.
 alias l='eza -al'                                                                                                                          # list all files in current directory.
-alias bat='batcat -n'                                                                                                                      # Use bat and show line numbers.
+alias show='batcat -n'                                                                                                                     # Use bat and show line numbers.
 alias vim='nvim'                                                                                                                           # Start nvim instead of vim.
 alias vi='nvim'                                                                                                                            # Start nvim instead of vi.
 alias rm='shred -n 100'                                                                                                                    # Shred files instead of deleting them (secure delete).
@@ -82,6 +82,5 @@ alias locate='mlocate -ei'                                                      
 alias which='which -a'                                                                                                                     # Show all executables, not just one.
 #alias find=''
 alias grep='grep -iv "^$'                                                                                                                  # Use the case insensitive search for grep command and don't display empty lines.
-
 
 

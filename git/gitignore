@@ -1,5 +1,3 @@
-# ~/.config/dotfiles/git/gitignore
-
 
 # ----------- Composer
 composer.lock
@@ -261,4 +259,3 @@ tags
 
 # Built Visual Studio Code Extensions
 *.vsix
-

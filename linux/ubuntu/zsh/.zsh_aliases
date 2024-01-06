@@ -1,9 +1,0 @@
-alias l='ls -al'  # list all files in current directory.
-alias rm='shred -n 100' # shred files instead of deleting them (secure delete).
-alias cat='bat -n' # Use bat instead of cat and show line numbers.
-alias update='sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt -f install -y && sudo apt clean' # update and upgrade.
-alias mac='ifconfig | grep ether | cut -d" " -f10' # Show machine's MAC address.
-alias locate='mlocate -ei' # Use mlocate instead of locate on only existing files by a case insensitive search.
-alias which='which -a' # Show all executables, not just one.
-alias find=''
-alias grep='grep -iv "^$' # Use the case insensitive search for grep command and don't display empty lines.

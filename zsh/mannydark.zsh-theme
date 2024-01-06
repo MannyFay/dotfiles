@@ -1,9 +1,4 @@
-# oh-my-zsh theme: MannyDark
-# https://github.com/MannyFay
-# License: MIT
-# Special thank's to Fino Time crew <3 for the inspiration!
-
-
+# This file has to be symlinked to ~/.oh-my-zsh/themes/
 
 #-----------------------------------------------------------------------------
 #- Color Variables

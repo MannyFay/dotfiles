@@ -1,25 +1,19 @@
 ! This is the configuration file for the behaviour and the look'n'feel of XTerm.
 ! This file have to live in the home directory (symlink works too).
 
+! If you make changes here, source this file with:
+! xrdb -load .Xresources
+
+
+
+!------------------------------------------------------------------------------
+!--- Appearance
 
 ! Enable a color supporting XTerm:
 XTerm.termName: xterm-256color
 
-! Sets the font:
-! *.font: xft:monospace:style=Bold:size=14
-XTerm*faceName: MesloLGMDZ Nerd Font Mono
-XTerm*faceSize: 9
-
-! Font size selection for the XTerm context menu:
-! Regular:
-XTerm*faceSize1: 9
-! Co-working:
-XTerm*faceSize2: 12
-! Presentation:
-XTerm*faceSize3: 16
-
-! Changes white background to black:
-!XTerm.vt100.reverseVideo: true
+! Regular terminal window size:
+!XTerm*VT100.geometry: 130x50
 
 ! Do not show a scroll bar:
 XTerm*vt100.scrollBar: false
@@ -47,12 +41,39 @@ XTerm*vt100.translations: #override \n\
 ! Set name of terminal window:
 XTerm*title: XTerm
 
+
+
+
+!------------------------------------------------------------------------------
+!--- Fonts
+
+! Set the font:
+XTerm*faceName: MesloLGMDZ Nerd Font Mono
+
+! Set the default font size:
+XTerm*faceSize: 9
+
+! Font size selection for the XTerm context menu:
+! Regular:
+XTerm*faceSize1: 9
+! Co-working:
+XTerm*faceSize2: 12
+! Presentation:
+XTerm*faceSize3: 16
+
+! Changes white background to black:
+!XTerm.vt100.reverseVideo: true
+
+
+
+
 !------------------------------------------------------------------------------
 !--- Colors - MannyDark
 
 XTerm*background: #191B1C
 XTerm*foreground: #ababab
 
+! What is this:
 ! original #86a2b0
 XTerm*colorUL: #eff0eb
 XTerm*underlineColor: #eff0eb
@@ -90,9 +111,3 @@ XTerm*color7  : #ababab
 XTerm*color15 : #606366
 
 
-
-
-
-
-! Reload XTerm configuration:
-! xrdb -load .Xresources

@@ -1,0 +1,87 @@
+
+#------------------------------------------------------------------------------
+#  Service Specific Aliases
+#------------------------------------------------------------------------------
+
+source ~/dotfiles/docker/docker_aliases.zsh       # Docker
+source ~/dotfiles/git/git_aliases.zsh             # Git
+source ~/dotfiles/homebrew/homebrew_aliases.zsh   # Homebrew
+source ~/dotfiles/laravel/laravel_aliases.zsh     # Laravel
+source ~/dotfiles/ssh/ssh_aliases.zsh             # SSH
+source ~/dotfiles/tmux/tmux_aliases.zsh           # tmux
+source ~/dotfiles/yabai/yabai_aliases.zsh         # Yabai
+
+
+
+
+#------------------------------------------------------------------------------
+#  ZSH-Aliases
+#------------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------
+#----- Moving
+
+# Jump up in directory structure:
+alias ..='cd ..'
+alias 2..='cd ../..'
+alias 3..='cd ../../..'
+alias 4..='cd ../../../..'
+alias 5..='cd ../../../../..'
+alias 6..='cd ../../../../../..'
+alias 7..='cd ../../../../../../..'
+alias 8..='cd ../../../../../../../..'
+alias 9..='cd ../../../../../../../../..'
+
+# Jump into .dotfiles directory:
+# alias cd.='cd ~/.config/dotfiles'
+
+# Jump into GitHub directory:
+# alias cdgh='cd ~/Code/github'
+
+# Jump into GitLab directory:
+# alias cdgl='cd ~/Code/gitlab'
+
+# Jump into .ssh directory:
+# alias cdssh='cd ~/.ssh'
+
+# Jump into desktop directory:
+# alias cddesk='cd ~/Desktop'
+
+# Jump into documents directory:
+# alias cddocs='cd ~/Documents'
+
+# Jump into downloads directory:
+# alias cddown='cd ~/Downloads'
+
+# Jump into studies directory:
+# alias cdstud='cd ~/Documents/Private/studies'
+
+# List all installed shells:
+alias shells='batcat /etc/shells'
+
+
+
+
+#-----------------------------------------------------------
+#----- Shell interactions
+
+# Note: Do never overwrite cat command. That leads to errors.
+
+alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"                                                       # FZF with preview.
+alias o='nvim -o `fzf`'                                                                                                                    # FZF and open in nvim.
+alias e='exit'                                                                                                                             # Exit for lazy people.
+alias l='eza -al'                                                                                                                          # list all files in current directory.
+alias bat='batcat -n'                                                                                                                      # Use bat and show line numbers.
+alias vim='nvim'                                                                                                                           # Start nvim instead of vim.
+alias vi='nvim'                                                                                                                            # Start nvim instead of vi.
+alias rm='shred -n 100'                                                                                                                    # Shred files instead of deleting them (secure delete).
+alias update='sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt -f install -y && sudo apt clean'   # Update and upgrade.
+alias mac='ifconfig | grep ether | cut -d" " -f10'                                                                                         # Show machine's MAC address.
+alias locate='mlocate -ei'                                                                                                                 # Use mlocate instead of locate on only existing files by a case insensitive search.
+alias which='which -a'                                                                                                                     # Show all executables, not just one.
+#alias find=''
+alias grep='grep -iv "^$'                                                                                                                  # Use the case insensitive search for grep command and don't display empty lines.
+
+
+

@@ -1,5 +1,4 @@
-# ~/.config/dotfiles/git/git_aliases.zsh
-
+# This file has to be sourced in ~/dotfiles/zsh/.zsh_aliases
 
 #-----------------------------------------------------------------------------
 #  Git ZSH Aliases
@@ -158,4 +157,3 @@ alias gsc='git stash'
 
 # Pop stashed changes:
 alias gsp='git stash pop'
-

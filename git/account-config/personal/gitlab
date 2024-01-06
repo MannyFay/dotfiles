@@ -1,0 +1,9 @@
+
+#-----------------------------------------------------------------------------
+#  Personal GitLab Configuration
+#-----------------------------------------------------------------------------
+
+[user]
+    name     = Manny
+    email    = mannythefay@gmail.com
+    username = MannyFay

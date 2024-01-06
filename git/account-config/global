@@ -1,0 +1,43 @@
+# This is the global Git configuration file that is symlinked to the home directory.
+
+#------------------------------------------------------------------------------
+#-----  Repository Specific Configuration
+
+# Work:
+[includeIf "gitdir:~/work/*"]
+    path = ~/dotfiles/git/account-config/work/github
+
+# GitHub configuration file:
+[includeIf "gitdir:~/personal/github/*"]
+    path = ~/dotfiles/git/account-config/github
+
+# GitLab configuration file:
+[includeIf "gitdir:~/personal/gitlab/*"]
+    path = ~/dotfiles/git/account-config/gitlab
+
+
+
+#------------------------------------------------------------------------------
+#-----  Global Git Configuration
+
+[color]
+    ui = auto
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore
+[diff]
+    tool = vimdiff
+[fetch]
+    prune = true
+[help]
+    autocorrect = 10
+[pull]
+    rebase = false
+[init]
+    defaultBranch = main
+[push]
+    default = current
+[rerere]
+    enabled = true
+[safe]
+    directory = /var/www/html

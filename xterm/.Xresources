@@ -1,0 +1,98 @@
+! This is the configuration file for the behaviour and the look'n'feel of XTerm.
+! This file have to live in the home directory (symlink works too).
+
+
+! Enable a color supporting XTerm:
+XTerm.termName: xterm-256color
+
+! Sets the font:
+! *.font: xft:monospace:style=Bold:size=14
+XTerm*faceName: MesloLGMDZ Nerd Font Mono
+XTerm*faceSize: 9
+
+! Font size selection for the XTerm context menu:
+! Regular:
+XTerm*faceSize1: 9
+! Co-working:
+XTerm*faceSize2: 12
+! Presentation:
+XTerm*faceSize3: 16
+
+! Changes white background to black:
+!XTerm.vt100.reverseVideo: true
+
+! Do not show a scroll bar:
+XTerm*vt100.scrollBar: false
+
+! Do not scroll when there is a new input:
+XTerm*scrollTtyOutput: false
+
+! Terminal history lines to be able to scroll back:
+XTerm*saveLines: 100000
+
+! Highlight text if it is selected:
+XTerm*highlightSelection: true
+
+! Remove trailing white spaces on selected text:
+XTerm*trimSelection: true
+
+! ## Keybindings ##
+XTerm*vt100.translations: #override \n\
+  Ctrl <Key>-: smaller-vt-font() \n\
+  Ctrl <Key>+: larger-vt-font() \n\
+  Ctrl <Key>0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! Set name of terminal window:
+XTerm*title: XTerm
+
+!------------------------------------------------------------------------------
+!--- Colors - MannyDark
+
+XTerm*background: #191B1C
+XTerm*foreground: #ababab
+
+! original #86a2b0
+XTerm*colorUL: #eff0eb
+XTerm*underlineColor: #eff0eb
+
+! ! black
+XTerm*color0  : #191B1C
+XTerm*color8  : #606366
+!
+! ! red
+XTerm*color1  : #FF0000
+XTerm*color9  : #FF0000
+!
+! ! green
+XTerm*color2  : #4FA544
+XTerm*color10 : #4FA544
+!
+! ! yellow
+XTerm*color3  : #E8BF6A
+XTerm*color11 : #E8BF6A
+!
+! ! blue
+XTerm*color4  : #569CD6
+XTerm*color12 : #569CD6
+!
+! ! magenta
+XTerm*color5  : #C064C7
+XTerm*color13 : #C064C7
+!
+! ! cyan
+XTerm*color6  : #45C8B0
+XTerm*color14 : #45C8B0
+!
+! ! white
+XTerm*color7  : #ababab
+XTerm*color15 : #606366
+
+
+
+
+
+
+! Reload XTerm configuration:
+! xrdb -load .Xresources

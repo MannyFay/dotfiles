@@ -110,4 +110,6 @@ XTerm*color14 : #45C8B0
 XTerm*color7  : #ababab
 XTerm*color15 : #606366
 
-
+! Color of context menu:
+XTerm*.SimpleMenu.background: #252525
+XTerm*.SimpleMenu.foreground: #ababab

@@ -11,8 +11,15 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Mod keys:
+# Mod1 = alt
+# Mod4 = win
+
 # Set mod key on Windows key:
-set $mod Mod4
+set $mod Mod1
+
+
+
 
 #------------------------------------------------------------------------------
 #----- Fonts

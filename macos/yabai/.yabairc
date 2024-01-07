@@ -1,6 +1,4 @@
-#!/usr/bin/env sh
-
-
+# This file has to be symlinked to ~.
 
 #-----------------------------------------------------------------------------
 #   Yabai Commands

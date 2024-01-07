@@ -43,3 +43,4 @@ vim.opt.spell                 = true                         -- Enable spell che
 vim.opt.equalalways           = false                        -- Disable automatic resizing of panes (does not work).
 vim.cmd('set pumblend=0')                                    -- Transparency of floating windows.
 vim.loader.enable()                                          -- Improve Neovim startup time.
+-- vim.opt.mouse = 'a'

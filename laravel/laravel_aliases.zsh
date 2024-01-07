@@ -56,4 +56,3 @@ alias l,st='php artisan tinker'
 
 # laravel clockwork browser plugin anschauen!
 # table plus sql oberfläche!
-

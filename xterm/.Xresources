@@ -53,6 +53,9 @@ XTerm*faceName: MesloLGMDZ Nerd Font Mono
 ! Set the default font size:
 XTerm*faceSize: 9
 
+! Line height:
+UXTerm*VT100.scaleHeight: 1.5
+
 ! Font size selection for the XTerm context menu:
 ! Regular:
 XTerm*faceSize1: 9

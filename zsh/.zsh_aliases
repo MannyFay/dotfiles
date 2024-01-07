@@ -75,12 +75,10 @@ alias l='eza -al'                                                               
 alias show='batcat -n'                                                                                                                     # Use bat and show line numbers.
 alias vim='nvim'                                                                                                                           # Start nvim instead of vim.
 alias vi='nvim'                                                                                                                            # Start nvim instead of vi.
-alias rm='shred -n 100'                                                                                                                    # Shred files instead of deleting them (secure delete).
+# Not working by now -> alias rm='shred -n 100'                                                                                                                    # Shred files instead of deleting them (secure delete).
 alias update='sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt -f install -y && sudo apt clean'   # Update and upgrade.
 alias mac='ifconfig | grep ether | cut -d" " -f10'                                                                                         # Show machine's MAC address.
 alias locate='mlocate -ei'                                                                                                                 # Use mlocate instead of locate on only existing files by a case insensitive search.
 alias which='which -a'                                                                                                                     # Show all executables, not just one.
 #alias find=''
 alias grep='grep -iv "^$'                                                                                                                  # Use the case insensitive search for grep command and don't display empty lines.
-
-

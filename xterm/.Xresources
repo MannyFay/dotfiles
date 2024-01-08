@@ -54,7 +54,7 @@ XTerm*faceName: MesloLGMDZ Nerd Font Mono
 XTerm*faceSize: 9
 
 ! Line height:
-UXTerm*VT100.scaleHeight: 1.5
+XTerm.vt100.scaleHeight: 1.5
 
 ! Font size selection for the XTerm context menu:
 ! Regular:
@@ -75,6 +75,8 @@ XTerm*faceSize3: 16
 
 XTerm*background: #191B1C
 XTerm*foreground: #ababab
+
+XTerm*cursorColor: #569CD6
 
 ! What is this:
 ! original #86a2b0

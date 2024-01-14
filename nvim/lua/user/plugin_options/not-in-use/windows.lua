@@ -1,4 +1,17 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/windows.lua
+-------------------------------------------------------------------------------
+-- Windows (min-/maximize buffer)
+
+-- use({
+--   'anuvyklack/windows.nvim',
+--   requires = {
+--     'anuvyklack/middleclass',
+--   },
+--   config = function()
+--     require('user.plugin_options.windows')
+--   end
+-- })
+
+
 
 -- https://github.com/anuvyklack/windows.nvim
 
@@ -31,4 +44,3 @@ vim.keymap.set('n', '<Leader><Leader>=', cmd 'WindowsEqualize')
 windows.setup{
 
 }
-

@@ -44,3 +44,5 @@ vim.opt.equalalways           = false                        -- Disable automati
 vim.cmd('set pumblend=0')                                    -- Transparency of floating windows.
 vim.loader.enable()                                          -- Improve Neovim startup time.
 -- vim.opt.mouse = 'a'
+
+-- nvim_list_uis()[0]

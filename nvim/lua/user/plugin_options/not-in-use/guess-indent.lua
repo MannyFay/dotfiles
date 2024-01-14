@@ -1,4 +1,16 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/guess-indent.lua
+-- Add this to your Packer plugins file:
+-------------------------------------------------------------------------------
+-- Guess Indent (set indentation because of the rest of a file)
+
+-- use({
+--   'nmac427/guess-indent.nvim',
+--   config = function()
+--     require('user.plugin_options.guess-indent')
+--   end
+-- })
+
+
+
 
 -- https://github.com/NMAC427/guess-indent.nvim
 -- https://github.com/Darazaki/indent-o-matic if guess indent is to slow!

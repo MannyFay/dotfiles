@@ -1,4 +1,14 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/wilder.lua
+-------------------------------------------------------------------------------
+-- Wilder (command line auto complete style)
+
+-- use {
+--   'gelguy/wilder.nvim',
+--   config = function()
+--     require('user.plugin_options.wilder')
+--   end,
+-- }
+
+
 
 -- https://github.com/gelguy/wilder.nvim
 
@@ -56,4 +66,3 @@ wilder.set_option('renderer', wilder.popupmenu_renderer({
   -- Sorting is ascending:
   reverse = 0,
 }))
-

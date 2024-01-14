@@ -1,4 +1,23 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/project.lua
+-- Add this to your Packer plugins file:
+-------------------------------------------------------------------------------
+-- Project plugin
+
+-- Automatically set the working directory to the project root:
+-- Maybe it automatically set's the root to vendor if opened! Watch it!
+-- use({
+--   'ahmedkhalf/project.nvim',
+--   requires = {
+--     'nvim-telescope/telescope.nvim',
+--   },
+--   config = function()
+--     require('user.plugin_options.project')
+--   end
+-- })
+
+
+
+
+
 
 -- https://github.com/ahmedkhalf/project.nvim
 
@@ -77,4 +96,3 @@ telescope.load_extension('projects')
 
 -- Enable Telescope projects picker:
 -- telescope.extensions.projects.projects{}
-

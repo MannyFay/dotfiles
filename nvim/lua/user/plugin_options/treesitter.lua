@@ -16,7 +16,7 @@ end
 configs.setup {
   modules = { },
   -- List of syntax highlight parsers to install:
-  ensure_installed = { },
+  ensure_installed = { 'all' },
   -- Install packages asynchronously (applies only to 'ensure_installed'):
   sync_install = false,
   -- Automatically install missing parsers in a buffer:
@@ -39,10 +39,10 @@ configs.setup {
     enable  = true,
     disable = { '' }
   },
-  context_commentstring = {
-    enable         = true,
-    enable_autocmd = false,
-  },
+  -- context_commentstring = {
+  --   enable         = true,
+  --   enable_autocmd = false,
+  -- },
   textobjects = {
     select = {
       enable    = true,
@@ -82,3 +82,7 @@ configs.setup {
     enable = true,
   },
 }
+
+require('ts_context_commentstring').setup {}
+
+vim.g.skip_ts_context_commentstring_module = true

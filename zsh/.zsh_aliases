@@ -71,7 +71,7 @@ alias shells='batcat /etc/shells'
 alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"                                                       # FZF with preview.
 alias o='nvim -o `fzf`'                                                                                                                    # FZF and open in nvim.
 alias e='exit'                                                                                                                             # Exit for lazy people.
-alias l='eza -al'                                                                                                                          # list all files in current directory.
+alias l='eza -alHiUm'                                                                                                                     # list all files in current directory.
 alias show='batcat -n'                                                                                                                     # Use bat and show line numbers.
 alias vim='nvim'                                                                                                                           # Start nvim instead of vim.
 alias vi='nvim'                                                                                                                            # Start nvim instead of vi.

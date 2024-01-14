@@ -24,4 +24,3 @@ Linux: i3wm
 macOS: Yabai
 Windows: bug.n
 
-

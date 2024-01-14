@@ -114,6 +114,12 @@ export NVM_DIR="$HOME/.nvm"
 export BROWSER="/usr/bin/google-chrome-stable"
 
 # Start tmux on shell startup:
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi
+
+# Start fuzzy search with ctrl+f:
+bindkey -s ^f "~/dotfiles/tmux/tmux-sessionizer.sh\n"
+
+# Start new XTerm instance because of correct line height:
+#~/dotfiles/xterm/start-xterm.sh

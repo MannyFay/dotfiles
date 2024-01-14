@@ -64,20 +64,69 @@ local use = packer.use
 use('wbthomason/packer.nvim')
 
 
--- Automatically set the working directory to the project root:
--- Maybe it automatically set's the root to vendor if opened! Watch it!
+
+
+
+-------------------------------------------------------------------------------
+-- Telescope Fuzzy Finder (install ripgrep first)
+
 use({
-  'ahmedkhalf/project.nvim',
+  'nvim-telescope/telescope.nvim',
   requires = {
-    'nvim-telescope/telescope.nvim',
+    'nvim-lua/plenary.nvim',                                       -- Useful lua functions used by lots of plugins:
+    'kyazdani42/nvim-web-devicons',                                -- Dev-incons set:
+    'nvim-telescope/telescope-live-grep-args.nvim',                -- Passing arguments to the grep command:
+    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },  -- Increase sorting performance of Telescope:
+    'nvim-telescope/telescope-media-files.nvim',                   -- Telescope image preview:
   },
   config = function()
-    require('user.plugin_options.project')
+    require('user.plugin_options.telescope')
   end
 })
 
 
--- Jump to the last place of editing if you open a file:
+
+-------------------------------------------------------------------------------
+-- Color Scheme (MannyDark)
+
+use({
+  'MannyFay/mannydark.nvim',
+  vim.cmd [[
+    try
+      colorscheme mannydark
+    catch /^Vim\%((\a\+)\)\=:E185/
+      colorscheme default
+      set background=dark
+    endtry
+  ]],
+})
+
+
+
+-------------------------------------------------------------------------------
+-- Treesitter Language Parser
+
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  requires = {
+    'nvim-treesitter/playground',
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    'windwp/nvim-ts-autotag',
+  },
+  config = function()
+    require('user.plugin_options.treesitter')
+  end
+})
+
+
+
+-------------------------------------------------------------------------------
+-- LastPlace (jump to the last place of editing if you open a file)
+
 use({
   'ethanholz/nvim-lastplace',
   config = function()
@@ -86,7 +135,10 @@ use({
 })
 
 
--- Easily comment stuff in and out:
+
+-------------------------------------------------------------------------------
+-- Comment (easily comment stuff in and out)
+
 use({
   'numToStr/Comment.nvim',
   config = function()
@@ -95,11 +147,10 @@ use({
 })
 
 
--- Dot repeating for plugins can maybe solved about that article:
--- https://gist.github.com/kylechui/a5c1258cd2d86755f97b10fc921315c3
 
+-------------------------------------------------------------------------------
+-- Surround
 
--- Surround a selection of chars:
 use({
   'kylechui/nvim-surround',
   -- Use * for stability. Omit to use `main` branch for the latest features:
@@ -116,19 +167,79 @@ use({
 })
 
 
--- Provide Unix commands in Neovims command line:
+
+-------------------------------------------------------------------------------
+-- Autopairs
+
 use({
-  'chrisgrieser/nvim-genghis',
-  requires = {
-    -- Autocompletion for directories:
-    'stevearc/dressing.nvim',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-omni',
-  },
+  'windwp/nvim-autopairs',
   config = function()
-    require('user.plugin_options.nvim-genghis')
+    require('user.plugin_options.autopairs')
   end
 })
+
+
+
+-------------------------------------------------------------------------------
+-- LuaLine Status Bar
+
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('user.plugin_options.lualine')
+  end
+})
+
+
+
+-------------------------------------------------------------------------------
+-- NvimTree
+
+use({
+    'nvim-tree/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+      require('user.plugin_options.nvim-tree')
+    end
+})
+
+
+
+-------------------------------------------------------------------------------
+-- Harpoon Bookmarked files
+
+use "nvim-lua/plenary.nvim"
+use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} },
+    config = function()
+      require("user.plugin_options.harpoon")
+    end
+}
+
+
+
+-------------------------------------------------------------------------------
+-- Lion (code alignment)
+
+use({
+  'tommcdo/vim-lion',
+  config = function()
+    require('user.plugin_options.lion')
+  end,
+})
+
+
+
+-- -- Provide Unix commands in Neovims command line:
+-- use({
+--   'chrisgrieser/nvim-genghis',
+--   config = function()
+--     require('user.plugin_options.nvim-genghis')
+--   end
+-- })
 
 
 -- Selection of keymappings to jump between buffers and Git conflicts:
@@ -140,44 +251,18 @@ use({
 -- })
 
 
--- Guess and set indentation because of the rest of a file:
-use({
-  'nmac427/guess-indent.nvim',
-  config = function()
-    require('user.plugin_options.guess-indent')
-  end
-})
 
 
 -- Create parent directories if file is created in a not existing directory:
-use('jessarcher/vim-heritage')
+-- use('jessarcher/vim-heritage')
 
 
 -- Mark more than one word and search for it with *:
-use('nelstrom/vim-visual-star-search')
+-- use('nelstrom/vim-visual-star-search')
 
 
--- Set color scheme:
-use({
-  'MannyFay/mannydark.nvim',
-  vim.cmd [[
-    try
-      colorscheme mannydark
-    catch /^Vim\%((\a\+)\)\=:E185/
-      colorscheme default
-      set background=dark
-    endtry
-  ]],
-})
 
 
--- Code reformatting:
-use({
-  'tommcdo/vim-lion',
-  config = function()
-    require('user.plugin_options.lion')
-  end,
-})
 
 
 -- Extra text objects for HTML attributes:
@@ -188,105 +273,18 @@ use({
   },
 })
 
--- Automatically fix indentation when pasting code:
---use({
- -- 'sickill/vim-pasta',
-  --config = function()
-    --require('user.plugin_options.vim-pasta')
-    --require('user.plugin_options.vim-pasta')
-  --end,
---})
 
 
 
 
 
 
--- Split or join list-like syntax constructs (like arrays):
-use({
-  'bennypowers/splitjoin.nvim',
-  config = function()
-    require('user.plugin_options.splitjoin')
-  end
-})
 
 
--- Autopairs, integrates with both cmp and treesitter:
-use({
-  'windwp/nvim-autopairs',
-  config = function()
-    require('user.plugin_options.autopairs')
-  end
-})
 
 
--- Status bar:
-use({
-  'nvim-lualine/lualine.nvim',
-  requires = 'kyazdani42/nvim-web-devicons',
-  config = function()
-    require('user.plugin_options.lualine')
-  end
-})
 
 
--- Project tree:
-use({
-    'nvim-tree/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('user.plugin_options.nvim-tree')
-    end
-})
-
-
--- Enable smooth scrolling to avoid hard jumps:
---[[ use({ ]]
---[[   'karb94/neoscroll.nvim', ]]
---[[   config = function() ]]
---[[     require('user.plugin_options.neoscroll') ]]
---[[   end ]]
---[[ }) ]]
-
-
--- Fuzzy Finder:
--- Run: 'brew install ripgrep' to get Telescope work.
-use({
-  'nvim-telescope/telescope.nvim',
-  requires = {
-    -- Useful lua functions used by lots of plugins:
-    'nvim-lua/plenary.nvim',
-    -- Dev-incons set:
-    'kyazdani42/nvim-web-devicons',
-    -- Passing arguments to the grep command:
-    'nvim-telescope/telescope-live-grep-args.nvim',
-    -- Increase sorting performance of Telescope:
-    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
-    -- Telescope image preview:
-    'nvim-telescope/telescope-media-files.nvim',
-  },
-  config = function()
-    require('user.plugin_options.telescope')
-  end
-})
-
-
--- Treesitter syntax highlighting:
-use({
-  'nvim-treesitter/nvim-treesitter',
-  run = function()
-    require('nvim-treesitter.install').update({ with_sync = true })
-  end,
-  requires = {
-    'nvim-treesitter/playground',
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    'windwp/nvim-ts-autotag',
-  },
-  config = function()
-    require('user.plugin_options.treesitter')
-  end
-})
 
 
 -- Git integration for buffers:
@@ -425,16 +423,6 @@ use({
 })
 
 
- -- Min-/Maximize buffer:
-use({
-  'anuvyklack/windows.nvim',
-  requires = {
-    'anuvyklack/middleclass',
-  },
-  config = function()
-    require('user.plugin_options.windows')
-  end
-})
 
 
 -- Fast navigation:
@@ -445,56 +433,19 @@ use({
   end,
 })
 
---[[ use({ ]]
---[[   'Shougo/deoplete.nvim', ]]
---[[    run = ':UpdateRemotePlugins', ]]
---[[   requires = { ]]
---[[     'roxma/nvim-yarp', ]]
---[[     'roxma/vim-hug-neovim-rpc', ]]
---[[     run = 'pip install -r requirements.txt' ]]
---[[   }, ]]
---[[   config = function() ]]
---[[     require('user.plugin_options.deoplete') ]]
---[[   end, ]]
---[[ }) ]]
---[[]]
---[[ use({ ]]
---[[   'beeender/Comrade' ]]
---[[ }) ]]
-
-
--- Command line auto complete style:
-use {
-  'gelguy/wilder.nvim',
-  config = function()
-    require('user.plugin_options.wilder')
-  end,
-}
-
-
--- .env file support:
-use({
-  'ellisonleao/dotenv.nvim',
-  config = function()
-    require('user.plugin_options.dotenv')
-  end,
-})
-
-
--- Blade syntax highligting:
---[[ use({ ]]
---[[   'jwalton512/vim-blade', ]]
---[[   config = function() ]]
---[[     require('user.plugin_options.vim-blade') ]]
---[[   end, ]]
---[[ }) ]]
 
 
 
 
 
---------------------------------------------------------------
--- AI Code Generation
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+-- Copilot (AI code generation)
 
 use {
   'zbirenbaum/copilot.lua',                  -- GitHub Copilot for Neovim.                                            -- https://github.com/zbirenbaum/copilot.lua
@@ -505,15 +456,9 @@ use {
   end,
 }
 
-------------------------------------------------------------
--- Vertical indent lines for blocks
 
-use({
-  'lukas-reineke/indent-blankline.nvim',  -- https://github.com/lukas-reineke/indent-blankline.nvim
-  require = function()
-    require('user.plugin_options.indent-blankline')
-  end,
-})
+
+
 
 
 if packer_bootstrap then
@@ -527,9 +472,9 @@ end
 ------------------------------------------------------------------------------
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file:
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]])

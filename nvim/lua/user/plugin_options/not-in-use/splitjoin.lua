@@ -1,4 +1,17 @@
--- ~/.config/nvim/lua/user/plugins/plugin_options/splitjoin.lua
+-- Cut this and add it to your Packer plugins file:
+-------------------------------------------------------------------------------
+-- SplitJoin (split or join list-like syntax constructs (like arrays))
+
+-- use({
+--   'bennypowers/splitjoin.nvim',
+--   config = function()
+--     require('user.plugin_options.splitjoin')
+--   end
+-- })
+
+
+
+
 
 -- https://github.com/bennypowers/splitjoin.nvim
 
@@ -25,4 +38,3 @@ splitjoin.setup({
     { '<Leader>so,', function() splitjoin.split() end, desc = 'Split the object under cursor' },
   },
 })
-

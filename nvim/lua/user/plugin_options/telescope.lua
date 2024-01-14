@@ -1,5 +1,3 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/telescope.lua
-
 -- https://github.com/nvim-telescope/telescope.nvim
 
 
@@ -30,7 +28,7 @@ vim.keymap.set('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_f
 vim.keymap.set('n', '<leader>ft', builtin.live_grep, {})
 
 -- Show recent files:
-vim.keymap.set('n', '<leader>rf', builtin.oldfiles, {})
+vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
 
 
 ------------------------------------------------------------
@@ -162,4 +160,3 @@ telescope.load_extension('live_grep_args')
 
 -- Load Media Files extension:
 telescope.load_extension('media_files')
-

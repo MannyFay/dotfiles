@@ -1,4 +1,16 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/vim-pasta.lua
+-- Add this to your Packer plugins file:
+-------------------------------------------------------------------------------
+-- Vim-Pasta (automatically fix indentation when pasting code)
+
+--use({
+ -- 'sickill/vim-pasta',
+  --config = function()
+    --require('user.plugin_options.vim-pasta')
+    --require('user.plugin_options.vim-pasta')
+  --end,
+--})
+
+
 
 -- https://github.com/sickill/vim-pasta
 
@@ -40,5 +52,4 @@ local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', 'p', '"_dP', opts)
 vim.api.nvim_set_keymap('x', 'p', '"_dP', opts)
 vim.api.nvim_set_keymap('v', 'p', '"_dP', opts)
-
 

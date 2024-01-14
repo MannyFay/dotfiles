@@ -1,3 +1,17 @@
+-- Add this to the Packer plugin file:
+-------------------------------------------------------------------------------
+-- Indent Blankline (vertical indent lines for blocks)
+
+-- use({
+--   'lukas-reineke/indent-blankline.nvim',  -- https://github.com/lukas-reineke/indent-blankline.nvim
+--   require = function()
+--     require('user.plugin_options.indent-blankline')
+--   end,
+-- })
+
+
+
+
 ------------------------------------------------------------------------------
 -- Indent Blankline Plugin
 -- https://github.com/lukas-reineke/indent-blankline.nvim

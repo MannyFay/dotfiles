@@ -41,6 +41,8 @@ XTerm*vt100.translations: #override \n\
 ! Set name of terminal window:
 XTerm*title: XTerm
 
+! Use system clipboard:
+XTerm*selectToClipboard: true
 
 
 
@@ -54,7 +56,8 @@ XTerm*faceName: MesloLGMDZ Nerd Font Mono
 XTerm*faceSize: 9
 
 ! Line height:
-XTerm.vt100.scaleHeight: 1.5
+XTerm*scaleHeight: 1.4
+!XTerm*vt100.scaleHeight: 1.45
 
 ! Font size selection for the XTerm context menu:
 ! Regular:
@@ -66,7 +69,7 @@ XTerm*faceSize3: 16
 
 ! Changes white background to black:
 !XTerm.vt100.reverseVideo: true
-
+root  5 Jan 19
 
 
 

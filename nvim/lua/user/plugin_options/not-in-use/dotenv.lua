@@ -1,4 +1,16 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/dotenv.lua
+-- Add this to the Packer plugin file:
+-------------------------------------------------------------------------------
+-- dotEnv (.env file support)
+
+-- use({
+--   'ellisonleao/dotenv.nvim',
+--   config = function()
+--     require('user.plugin_options.dotenv')
+--   end,
+-- })
+
+
+
 
 -- https://github.com/ellisonleao/dotenv.nvim
 

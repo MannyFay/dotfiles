@@ -1,0 +1,14 @@
+# This file has to be symlinked to /etc/systemd/system/
+# After creating the symlink, run 'sudo systemctl daemon-reload'
+# Then enable the sevice: 'sudo systemctl enable delete-xterm-start-marker.service'
+
+[Unit]
+Description=Delete .xterm-start-marker file on shutdown or reboot
+Before=shutdown.target reboot.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/rm -f /home/manny/dotfiles/xterm/.xterm-start-marker
+
+[Install]
+WantedBy=multi-user.target

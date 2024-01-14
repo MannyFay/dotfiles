@@ -1,4 +1,14 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/neoscroll.lua
+-- Add this to your Packer plugins file:
+-------------------------------------------------------------------------------
+-- NeoScroll (enable smooth scrolling to avoid hard jumps)
+
+--[[ use({ ]]
+--[[   'karb94/neoscroll.nvim', ]]
+--[[   config = function() ]]
+--[[     require('user.plugin_options.neoscroll') ]]
+--[[   end ]]
+--[[ }) ]]
+
 
 -- https://github.com/karb94/neoscroll.nvim
 
@@ -56,4 +66,3 @@ neoscroll.setup({
     -- Disable "Performance Mode" on all buffers:
     performance_mode = false,
 })
-

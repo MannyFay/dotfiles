@@ -62,6 +62,12 @@ vim.keymap.set('n', 'vb', '<C-v>', opts)                                -- Enter
 
 vim.keymap.set('n', '<Leader>jl', 'J', opts)                            -- Join line below with white space:
 
+-- to run a script directly from vim:
+-- nnoremap <leader>x :!chmod +x %<CR>
+
+
+-- Start tmux sessionizer
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/dotfiles/tmux/tmux-sessionizer.sh<CR>')
 
 ------------------------------------------------------------
 -- Scrolling
@@ -301,7 +307,7 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 
 
 ------------------------------------------------------------
--- SplitJoin Plugin
+-- SplitJoin Plugin - ACTUALLY NOT IN USE
 
 -- Join object under cursor:        <Leader>jo
 -- Split object under cursor:       <Leader>so
@@ -312,7 +318,7 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 
 -- Find file:                         <Leader>ff
 -- Find text:                         <Leader>ft
--- Recent files:                      <Leader>rf
+-- Recent files:                      <Leader>fr
 -- Exit Telescope:                    <C-q>
 -- Open file:                         <CR>
 -- Open file in horizontal split:     h
@@ -350,3 +356,12 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 -- Windows Plugin
 
 -- Max-/Minimize buffer: <Leader>m
+
+
+
+-- New:
+
+-- harpoon:
+-- <L>hm - add mark
+-- <L>fm - show marks in telescope
+-- 

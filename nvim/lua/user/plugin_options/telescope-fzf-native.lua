@@ -1,5 +1,3 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/telescope-fzf-native.lua
-
 -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
 
 

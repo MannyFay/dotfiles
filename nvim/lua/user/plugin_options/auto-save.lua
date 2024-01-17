@@ -1,3 +1,17 @@
+-- Insert this to your Packer plugins file:
+--------------------------------------------------------------
+-- Autosave files by go to normal mode or change buffer
+
+-- use({
+--   'pocco81/auto-save.nvim',                                                   -- https://github.com/Pocco81/auto-save.nvim
+--   config = function()
+--     require('user.plugin_options.auto-save')
+--   end
+-- })
+
+
+
+
 -------------------------------------------------------------------------------
 -- Auto-Save Plugin
 -- https://github.com/Pocco81/auto-save.nvim
@@ -32,11 +46,12 @@ auto_save.setup {
     local fn    = vim.fn
     local utils = require("auto-save.utils.data")
 
-    if fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
+    if fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), {"harpoon"}) then
       return true
     end
       return false
   end,
+
 
   -- Writing behavior:
   write_all_buffers = true,       -- Write all buffers when the current one meets `condition`.

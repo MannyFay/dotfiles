@@ -97,12 +97,19 @@ mason_lspconfig.setup({
     'tsserver',                        -- JavaScript/TypeScript language server.
     'volar',                           -- Vue language server.
     'yamlls',                          -- YAML language server.
-    --'blade-formatter',                 -- Laravel Blade formatter.
+    -- 'blade-formatter',                 -- Laravel Blade formatter.
     --'editorconfig-checker',            -- EditorConfig checker.
     --'nginx_language_server',           -- NGINX language server.
-    --'phpstan',                         -- PHPStan language server.
-    --'twigcs',                          -- Twig language server.
     'vimls',                           -- Vim language server.
+    -- 'twigcs',                          -- Twig language server.
+
+    -- 'phpcs',                          -- PHP CodeSniffer.
+    -- 'pint',
+    -- 'php-cs-fixer',
+    -- 'php-debug-adapter',
+    -- 'phpstan',                         -- PHPStan language server.
+    -- 'rustywind',
+
   },
 })
 
@@ -419,6 +426,16 @@ lspconfig.intelephense.setup({
     client.server_capabilities.documentRangeFormattingProvider = false
   end,
   capabilities = capabilities,
+  filetypes    = { 'php', 'blade' },
+  settings = {
+    intelephense = {
+      filetypes = { 'php', 'blade' },
+      files = {
+        associations = { '*php', '*.blade.php' },
+        maxSize = 5000000,
+      }
+    }
+  }
 })
 
 
@@ -770,6 +787,28 @@ lspconfig.yamlls.setup({
 --   on_attach    = on_attach,
 --   capabilities = capabilities,
 --   filetypes    = { 'nginx' },
+-- })
+
+
+
+-------------------------------------------------------------------------------
+-- PHPCS Language Server
+
+
+-- lspconfig.phpstan.setup({
+--   on_attach    = on_attach,
+--   capabilities = capabilities,
+--   filetypes    = { 'php' },
+-- })
+
+-- local lsp = require 'lspconfig'
+
+-- vim.tbl_deep_extend('keep', lsp, {
+-- 	lsp_name = {
+-- 		cmd = { 'command' },
+-- 		filetypes = 'filetype',
+-- 		name = 'lsp_name',
+-- 	}
 -- })
 
 

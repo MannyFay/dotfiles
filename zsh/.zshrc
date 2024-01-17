@@ -110,6 +110,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loads nvm.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # Loads nvm bash_completion.
 
+# Set path to Composer:
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 # Set Google Chrome as default browser:
 export BROWSER="/usr/bin/google-chrome-stable"
 

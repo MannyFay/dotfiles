@@ -4,7 +4,7 @@
 #-----  Repository Specific Configuration
 
 # Work:
-[includeIf "gitdir:~/work/*"]
+[includeIf "gitdir:~/work/vds/*"]
     path = ~/dotfiles/git/account-config/work/github
 
 # GitHub configuration file:

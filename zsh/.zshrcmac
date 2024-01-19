@@ -1,9 +1,9 @@
 # Set language environment:
-export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-# Path to dotfiles:
-export DOTFILES=$HOME/dotfiles
+# Path to your dotfiles:
+export DOTFILES=$HOME/.dotfiles
 
 # Remove terminal information of last login:
 printf '\33c\e[3J' -n
@@ -53,7 +53,6 @@ zstyle ':omz:update' frequency 7
 # There is maybe an issue with multiline commands:
 COMPLETION_WAITING_DOTS="true"
 
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -68,12 +67,11 @@ HIST_STAMPS="yyyy-mm-dd"
 #ZSH_CUSTOM="$DOTFILES/zsh"
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
-
 # Plugins (too many plugins slow down shell startup):
 # Maybe worth: web-search, laravel5, artisan, composer, docker, docker-compose
 plugins=(
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  #zsh-autosuggestions
+  #zsh-syntax-highlighting
   npm
   vi-mode
   git
@@ -94,8 +92,10 @@ export VISUAL='nvim'
 
 # Load oh-my-zsh on ZSH start up:
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Load zsh-aliases file:
+# Load tool based alias files:
 source ~/dotfiles/zsh/.zsh_aliases
 
 # Set Java runtime path:
@@ -114,7 +114,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 # Set Google Chrome as default browser:
-export BROWSER="/usr/bin/google-chrome-stable"
+export BROWSER="$HOME/Applications/Google Chrome.app"
 
 # Start tmux on shell startup:
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
@@ -122,7 +122,21 @@ export BROWSER="/usr/bin/google-chrome-stable"
 # fi
 
 # Start fuzzy search with ctrl+f:
-bindkey -s ^f "~/dotfiles/tmux/tmux-sessionizer.sh\n"
+bindkey -s ^f "$HOME/dotfiles/tmux/tmux-sessionizer.sh\n"
 
-# Start new XTerm instance because of correct line height:
-#~/dotfiles/xterm/start-xterm.sh
+# Set the path to use GNU version of command line tools:
+PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+
+
+
+# iTerm2 shell integration:
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+
+
+
+
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

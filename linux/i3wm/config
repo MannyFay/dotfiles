@@ -16,7 +16,7 @@
 # Mod4 = win
 
 # Set mod key on Windows key:
-set $mod Mod1
+set $mod Mod4
 
 
 

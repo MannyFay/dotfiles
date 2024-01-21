@@ -127,16 +127,4 @@ bindkey -s ^f "$HOME/dotfiles/tmux/tmux-sessionizer.sh\n"
 # Set the path to use GNU version of command line tools:
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
-
-
-# iTerm2 shell integration:
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-
-
-
-
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

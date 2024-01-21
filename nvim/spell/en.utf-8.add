@@ -98,3 +98,12 @@ DejaVu
 byndsym
 bindsym
 yabairc
+rsa
+github
+env
+dest
+dirname
+src
+fileglob
+ansible
+Dockerfile

@@ -1,10 +1,5 @@
-# ~/.dotfiles/homebrew/Brewfile
-
-
-
-#-----------------------------------------------------------------------------
-#- Taps
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Taps
 
 #tap homebrew/cask-fonts
 tap 'burntushi/ripgrep'
@@ -12,15 +7,16 @@ tap 'homebrew/cask-versions'
 
 
 
-#-----------------------------------------------------------------------------
-#- Formulas
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Formulas
 
+brew 'ansible'
 brew 'bat'
 brew 'composer'
 brew 'curl'
 brew 'deno'
 brew 'docker'
+brew 'eza'
 brew 'fzf'
 brew 'git'
 brew 'gnupg'
@@ -47,10 +43,10 @@ brew 'zsh-syntax-highlighting'
 
 
 
-#-----------------------------------------------------------------------------
-#- Casks
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Casks
 
+cask 'alacritty'
 cask 'aldente'
 cask 'alfred'
 cask 'apparency'
@@ -64,7 +60,6 @@ cask 'font-space-mono-nerd-font'
 cask 'google-chrome'
 cask 'intellij-idea-ce'
 cask 'istat-menus'
-cask 'iterm2'
 cask 'karabiner-elements'
 cask 'logi-options-plus'
 cask 'macpass'
@@ -86,19 +81,14 @@ cask 'suspicious-package'
 
 
 
-#-----------------------------------------------------------------------------
-#- Mac App Store
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Mac App Store
 
-mas 'Caffeinated - Anti Sleep App', id: 1362171212
-mas 'Cleaner One Pro - Disk Clean', id: 1133028347
-mas 'Dato', id: 1470584107
-mas 'MonitorControlLite', id: 1595464182
-mas 'Ad Block One', id: 1491889901
+mas 'Caffeinated - Anti Sleep App',   id: 1362171212
+mas 'Cleaner One Pro - Disk Clean',   id: 1133028347
+mas 'Dato',                           id: 1470584107
+mas 'MonitorControlLite',             id: 1595464182
+mas 'Ad Block One',                   id: 1491889901
 mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
-mas 'Twilio Authy', id: 494168017
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'duoCo StripX', id: 1498448200
-mas 'Elgato Control Center', id: 1446254313
-mas 'Govee Studio', id: 1551073370
+mas 'Numbers',                        id: 409203825
+mas 'Pages',                          id: 409201541

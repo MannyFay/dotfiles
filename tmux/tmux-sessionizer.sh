@@ -3,7 +3,6 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    # selected=$(find ~/work/builds ~/projects ~/ ~/work ~/personal ~/personal/yt -mindepth 1 -maxdepth 1 -type d | fzf)
     selected=$(find ~ ~/personal/github ~/work/vds ~/work/vds/github -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 

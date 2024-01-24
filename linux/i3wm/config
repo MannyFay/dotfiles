@@ -199,7 +199,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 
 
-exec --no-startup-id /snap/bin/nordpass              # Start NordPass.
+# exec --no-startup-id /snap/bin/nordpass              # Start NordPass.
 # exec --no-startup-id /usr/bin/google-chrome-stable   # Start Chrome.
 # exec --no-startup-id /usr/bin/polypane               # Start Polypane.
 exec --no-startup-id /usr/bin/alacritty                  # Start XTerm.
@@ -254,6 +254,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
 
 

@@ -53,10 +53,10 @@ alias gbcr='git checkout --track'
 alias gbcn='git checkout -b'
 
 # Delete branch locally (add a branch name):
-alias gbdl='git restore . && git checkout develop && git branch -D'
+alias gbdl='git checkout main && git branch -D'
 
 # Delete branch on remote repository (add remote branch-name):
-alias gbdr='git push --delete'
+alias gbdr='git push --delete origin'
 
 
 

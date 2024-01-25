@@ -1,16 +1,12 @@
-# ~/.config/dotfiles/laravel/laravel_aliases.zsh
+#------------------------------------------------------------------------------
+#----- Laravel ZSH Aliases
+#------------------------------------------------------------------------------
 
+#------------------------------------------------------------------------------
+#----- Sail
 
-#-----------------------------------------------------------------------------
-#  Laravel ZSH Aliases
-#-----------------------------------------------------------------------------
+alias sail='./vendor/bin/sail'  # Use 'sail' instead of './vendor/bin/sail'.
 
-
-#-----------------------------------------------------------
-#- Sail
-
-# Use 'sail' instead of './vendor/bin/sail':
-alias sail='./vendor/bin/sail'
 
 # Start Sail in detached mode:
 alias sud='./vendor/bin/sail up -d'
@@ -23,6 +19,9 @@ alias sd='./vendor/bin/sail down'
 
 # Show artisan commands:
 alias salc='./vendor/bin/sail artisan'
+
+#------------------------------------------------------------------------------
+#----- Sail Composer
 
 # Start Composer update:
 alias scu='./vendor/bin/sail composer update'
@@ -38,6 +37,12 @@ alias scda='sail composer dump-autoload'
 
 alias scu='sail composer update'
 
+
+#------------------------------------------------------------------------------
+#----- Sail Artisan
+
+alias samctrl='sail artisan make:controller'
+alias samview='sail artisan make:view'
 
 
 

@@ -37,6 +37,7 @@ local highlight = {
 local hooks = require('ibl.hooks')
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
   vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#252525' })
+  vim.api.nvim_set_hl(0, 'hl-IblScope', { fg = '#606366' })
 end)
 
 indent_blankline.setup({
@@ -45,7 +46,7 @@ indent_blankline.setup({
     highlight = highlight,
   },
   scope = {
-    enabled = false,  -- 'true': Highlight only the intended indentation and the current scope by an underline.
+    enabled = true,  -- 'true': Highlight only the intended indentation and the current scope by an underline.
   },
   exclude = {
     filetypes = {
@@ -74,4 +75,4 @@ indent_blankline.setup({
     },
   },
 })
-vim.cmd[[autocmd VimEnter,BufNewFile,BufRead * source %]] -- not working
+--vim.cmd[[autocmd VimEnter,BufNewFile,BufRead * source %]] -- not working

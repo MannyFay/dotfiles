@@ -68,7 +68,7 @@ use({
   'nvim-telescope/telescope.nvim',
   requires = {
     'nvim-lua/plenary.nvim',                                       -- Useful lua functions used by lots of plugins:
-    'kyazdani42/nvim-web-devicons',                                -- Dev-incons set:
+    'kyazdani42/nvim-web-devicons',                                -- Dev-icons set:
     'nvim-telescope/telescope-live-grep-args.nvim',                -- Passing arguments to the grep command:
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },  -- Increase sorting performance of Telescope:
     'nvim-telescope/telescope-media-files.nvim',                   -- Telescope image preview:
@@ -437,7 +437,12 @@ use {
 }
 
 
-
+use({
+  'lukas-reineke/indent-blankline.nvim',
+  config = function()
+    require('user.plugin_options.indent-blankline')
+  end,
+})
 
 
 

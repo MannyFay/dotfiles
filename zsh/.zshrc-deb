@@ -126,5 +126,5 @@ export BROWSER="/usr/bin/google-chrome-stable"
 # Start fuzzy search with ctrl+f:
 bindkey -s ^f "~/dotfiles/tmux/tmux-sessionizer.sh\n"
 
-# Add Alacritty Terminal Emulator:
-export PATH="$HOME/.cargo/bin:$PATH"
+# Source Rust:
+# . "$HOME/.cargo/env"

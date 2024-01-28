@@ -1,19 +1,21 @@
-# This is the global Git configuration file that is symlinked to the home directory.
-
 #------------------------------------------------------------------------------
 #-----  Repository Specific Configuration
 
-# Work:
-[includeIf "gitdir:~/work/vds/*"]
-    path = ~/dotfiles/git/account-config/work/github
-
-# GitHub configuration file:
+# Personal GitHub:
 [includeIf "gitdir:~/personal/github/*"]
     path = ~/dotfiles/git/account-config/github
 
-# GitLab configuration file:
+# Personal GitLab:
 [includeIf "gitdir:~/personal/gitlab/*"]
     path = ~/dotfiles/git/account-config/gitlab
+
+# Work VdS GitHub:
+[includeIf "gitdir:~/work/vds/github/*"]
+    path = ~/dotfiles/git/account-config/work/github
+
+# Work fitcrew GitLab:
+[includeIf "gitdir:~/work/fitcrew/gitlab/*"]
+    path = ~/dotfiles/git/account-config/work/gitlab
 
 
 

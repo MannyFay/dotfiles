@@ -365,3 +365,7 @@ JRE
 jre
 ppa
 ondrej
+toml
+gitconfig
+conf
+EOF

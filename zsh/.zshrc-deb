@@ -125,4 +125,4 @@ export BROWSER="/usr/bin/google-chrome-stable"
 bindkey -s ^f "~/dotfiles/tmux/tmux-sessionizer.sh\n"
 
 # Source Rust:
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"

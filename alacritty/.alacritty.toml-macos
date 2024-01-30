@@ -93,7 +93,7 @@ y                         = 6                        # Vertical letter positioni
 
 [font.offset]
 x                         = 0                        # Letter spacing
-y                         = 12                       # Line height
+y                         = 10                       # Line height
 
 
 

@@ -13,11 +13,9 @@ source ~/dotfiles/macos/yabai/yabai_aliases.zsh         # Yabai
 
 
 
-
 #------------------------------------------------------------------------------
 #  ZSH-Aliases
 #------------------------------------------------------------------------------
-
 
 #-----------------------------------------------------------
 #----- Moving
@@ -33,34 +31,8 @@ alias 7..='cd ../../../../../../..'
 alias 8..='cd ../../../../../../../..'
 alias 9..='cd ../../../../../../../../..'
 
-# Jump into .dotfiles directory:
-# alias cd.='cd ~/.config/dotfiles'
-
-# Jump into GitHub directory:
-# alias cdgh='cd ~/Code/github'
-
-# Jump into GitLab directory:
-# alias cdgl='cd ~/Code/gitlab'
-
-# Jump into .ssh directory:
-# alias cdssh='cd ~/.ssh'
-
-# Jump into desktop directory:
-# alias cddesk='cd ~/Desktop'
-
-# Jump into documents directory:
-# alias cddocs='cd ~/Documents'
-
-# Jump into downloads directory:
-# alias cddown='cd ~/Downloads'
-
-# Jump into studies directory:
-# alias cdstud='cd ~/Documents/Private/studies'
-
 # List all installed shells:
 alias shells='batcat /etc/shells'
-
-
 
 
 #-----------------------------------------------------------

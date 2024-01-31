@@ -27,7 +27,7 @@ end
 -- Appearance
 
 
-vim.opt.completeopt = 'menu,menuone,noselect'                   -- Enable completion popup, complete if there is only one, don't jump in menu.
+vim.opt.completeopt = 'menu,menuone,noselect'                   -- Enable completion pop-up, complete if there is only one, don't jump in menu.
 
 require('luasnip/loaders/from_vscode').lazy_load()              -- Load snippet engine from VSCode with Friendly Snippets plugin.
 
@@ -58,7 +58,7 @@ cmp.setup {
     ['<C-Tab']  = cmp.mapping.confirm({ select = true }),       -- Confirm auto complete selection.
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),               -- To previous list item.
     ['<Tab>']   = cmp.mapping.select_next_item(),               -- To next list item.
-    ['<C-q>']   = cmp.mapping.abort(),                          -- Quit suggestion popup.
+    ['<C-q>']   = cmp.mapping.abort(),                          -- Quit suggestion pop-up.
     ['<C-j>']   = cmp.mapping.scroll_docs(4),                   -- Scroll down in docs.
     ['<C-k>']   = cmp.mapping.scroll_docs(-4),                  -- Scroll up in docs.
     ['<C-c>']   = cmp.mapping.complete(),                       -- Show completion suggestions.

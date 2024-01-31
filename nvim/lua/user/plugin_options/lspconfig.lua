@@ -63,7 +63,6 @@ mason_lspconfig.setup({
     'docker_compose_language_service', -- Docker Compose Language Server.
     'dockerls',                        -- Docker language server.
     'emmet_ls',                        -- Emmet HTML completion server.  -- emmet-language-server
-    --'golangci_lint_ls',                -- Go language server.
     'gradle_ls',                       -- Gradle language server.
     'grammarly',                       -- Grammarly spell checker server.
     'graphql',                         -- GraphQL language server.
@@ -73,7 +72,6 @@ mason_lspconfig.setup({
     'intelephense',                    -- PHP language server.
     'jdtls',                           -- Java language server.
     'jsonls',                          -- JSON language server.
-    --'jsonnet_ls',                      -- Jsonnet language server.
     'kotlin_language_server',          -- Kotlin language server.
     'lemminx',                         -- XML language server.
     'ltex',                            -- LaTeX language server.
@@ -83,6 +81,7 @@ mason_lspconfig.setup({
     'matlab_ls',                       -- MATLAB language server.
     --'pest_ls',                         -- Pest PHP testing framework language server.
     'powershell_es',                   -- PowerShell language server.
+    'prismals',                        -- Prisma language server.
     'pyright',                         -- Python language server.
     --'r_language_server',               -- R language server.
     --'ruby_ls',                         -- Ruby language server.
@@ -97,19 +96,16 @@ mason_lspconfig.setup({
     'tsserver',                        -- JavaScript/TypeScript language server.
     'volar',                           -- Vue language server.
     'yamlls',                          -- YAML language server.
-    -- 'blade-formatter',                 -- Laravel Blade formatter.
+    'blade-formatter',                 -- Laravel Blade formatter.
     --'editorconfig-checker',            -- EditorConfig checker.
     --'nginx_language_server',           -- NGINX language server.
     'vimls',                           -- Vim language server.
     -- 'twigcs',                          -- Twig language server.
-
-    -- 'phpcs',                          -- PHP CodeSniffer.
+    'phpcs',                           -- PHP CodeSniffer.
     -- 'pint',
-    -- 'php-cs-fixer',
+    'php-cs-fixer',
     -- 'php-debug-adapter',
     -- 'phpstan',                         -- PHPStan language server.
-    -- 'rustywind',
-
   },
 })
 
@@ -174,77 +170,85 @@ end
 -- Language Servers
 -------------------------------------------------------------------------------
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Angular Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#angularls
 
-lspconfig.angularls.setup({
-  on_attach    = on_attach,
+lspconfig['angularls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Ansible Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ansiblels
 
-lspconfig.ansiblels.setup({
-  on_attach    = on_attach,
+lspconfig['ansiblels'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Arduino Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#arduino_language_server
 
-lspconfig.arduino_language_server.setup({
-  on_attach    = on_attach,
+lspconfig['arduino_language_server'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Azure Pipelines Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#azure_pipelines_ls
 
-lspconfig.azure_pipelines_ls.setup({
-  on_attach    = on_attach,
+lspconfig['azure_pipelines_ls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Bash Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls
 
-lspconfig.bashls.setup({
-  on_attach    = on_attach,
+lspconfig['bashls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- C, C++, Objective-C Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
 
-lspconfig.clangd.setup({
-  on_attach    = on_attach,
+lspconfig['clangd'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- CMake Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cmake
 
-lspconfig.cmake.setup({
-  on_attach    = on_attach,
+lspconfig['cmake'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- C# Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#csharp_ls
 
@@ -254,24 +258,27 @@ lspconfig.cmake.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- CSS Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls
 
-lspconfig.cssls.setup({
-  on_attach    = on_attach,
+lspconfig['cssls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Cucumber Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cucumber_language_server
 
-lspconfig.cucumber_language_server.setup({
-  on_attach    = on_attach,
+lspconfig['cucumber_language_server'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
+
 
 
 ------------------------------------------------------------
@@ -284,105 +291,106 @@ lspconfig.cucumber_language_server.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Deno Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#denols
 
-lspconfig.denols.setup({
-  on_attach    = on_attach,
+lspconfig['denols'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Diagnostics Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#diagnosticls
 
-lspconfig.diagnosticls.setup({
-  on_attach    = on_attach,
+lspconfig['diagnosticls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Docker Compose Language Service
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#docker_compose_language_service
 
-lspconfig.docker_compose_language_service.setup({
+lspconfig['docker_compose_language_service'].setup({
   on_attach    = on_attach,
   capabilities = capabilities,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Docker Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#dockerls
 
-lspconfig.dockerls.setup({
-  on_attach    = on_attach,
+lspconfig['dockerls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Ember.JS Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ember
 
-lspconfig.ember.setup({
-  on_attach    = on_attach,
+lspconfig['ember'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
 
-------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Emmet Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_ls
 
-lspconfig.emmet_ls.setup({
-  on_attach    = on_attach,
+lspconfig['emmet_ls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'svelte' },
 })
 
 
-------------------------------------------------------------
--- Go Language Server
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#golangci_lint_ls
 
--- lspconfig.golangci_lint_ls.setup({
---   on_attach    = on_attach,
---   capabilities = capabilities,
--- })
-
-
-------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Gradle Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gradle_ls
 
-lspconfig.gradle_ls.setup({
-  on_attach    = on_attach,
+lspconfig['gradle_ls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Grammarly Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#grammarly
 
-lspconfig.grammarly.setup({
-  on_attach    = on_attach,
+lspconfig['grammarly'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- GraphQL Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#graphql
 
-lspconfig.graphql.setup({
-  on_attach    = on_attach,
+lspconfig['graphql'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
+  filetypes    = { 'graphql', 'gql', 'svelte', 'typescriptreact', 'javascriptreact' },
 })
+
 
 
 ------------------------------------------------------------
@@ -395,31 +403,34 @@ lspconfig.graphql.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- HTML Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html
 
-lspconfig.html.setup({
-  on_attach    = on_attach,
+lspconfig['html'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- HTMX Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#htmx
 
--- lspconfig.htmx.setup({
---   on_attach    = on_attach,
---   capabilities = capabilities,
--- })
+lspconfig['htmx'].setup({
+  capabilities = capabilities,
+  on_attach    = on_attach,
+})
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- PHP Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#intelephense
 
-lspconfig.intelephense.setup({
+lspconfig['intelephense'].setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     client.server_capabilities.documentFormattingProvider      = false
@@ -439,73 +450,69 @@ lspconfig.intelephense.setup({
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Java Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jdtls
 
-lspconfig.jdtls.setup({
-  on_attach    = on_attach,
+lspconfig['jdtls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- JSON Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
 
-lspconfig.jsonls.setup({
-  on_attach    = on_attach,
+lspconfig['jsonls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
--- Jsonnet Language Server
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonnet_ls
 
--- lspconfig.jsonnet_ls.setup({
---   on_attach    = on_attach,
---   capabilities = capabilities,
--- })
-
-
-------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Kotlin Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#kotlin_language_server
 
-lspconfig.kotlin_language_server.setup({
-  on_attach    = on_attach,
+lspconfig['kotlin_language_server'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- XML Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lemminx
 
-lspconfig.lemminx.setup({
-  on_attach    = on_attach,
+lspconfig['lemminx'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- LaTeX Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ltex
 
-lspconfig.ltex.setup({
-  on_attach    = on_attach,
+lspconfig['ltex'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Lua Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
 
-lspconfig.lua_ls.setup({
-  on_attach = on_attach,
+lspconfig['lua_ls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   settings = {
     Lua = {
       runtime = {
@@ -515,7 +522,11 @@ lspconfig.lua_ls.setup({
         globals = {'vim'},                                  -- Get the language server to recognize the 'vim' global.
       },
       workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),  -- Make the server aware of Neovim runtime files.
+        -- Make the server aware of Neovim runtime files.
+        library = {
+          [vim.fn.expand('$VIMRUNTIME/lua')]   = true,
+          [vim.fn.stdpath('config') .. '/lua'] = true,
+        },
       },
       telemetry = {
         enable = false,                                     -- Do not send telemetry data containing a randomized but unique identifier.
@@ -523,6 +534,7 @@ lspconfig.lua_ls.setup({
     },
   },
 })
+
 
 
 ------------------------------------------------------------
@@ -535,26 +547,29 @@ lspconfig.lua_ls.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Markdown Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman
 
-lspconfig.marksman.setup({
-  on_attach    = on_attach,
+lspconfig['marksman'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'markdown', 'pandoc.markdown', 'md', 'markdown.mdx' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- MATLAB Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#matlab_ls
 
-lspconfig.matlab_ls.setup({
-  on_attach    = on_attach,
+lspconfig['matlab_ls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'matlab' },
 })
+
 
 
 ------------------------------------------------------------
@@ -591,29 +606,43 @@ lspconfig.matlab_ls.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- PowerShell Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#powershell_es
 
-lspconfig.powershell_es.setup({
-  on_attach    = on_attach,
+lspconfig['powershell_es'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'ps1', 'psm1', 'psd1' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+-- Prisma ORM Language Server
+--
+
+lspconfig['prismals'].setup({
+  on_attach    = on_attach,
+  capabilities = capabilities,
+})
+
+
+
+-------------------------------------------------------------------------------
 -- Python Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
 
-lspconfig.pyright.setup({
-  on_attach    = on_attach,
+lspconfig['pyright'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'python' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- R Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#r_language_server
 
@@ -635,15 +664,17 @@ lspconfig.pyright.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Rust Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 
-lspconfig.rust_analyzer.setup({
-  on_attach    = on_attach,
+lspconfig['rust_analyzer'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'rust' },
 })
+
 
 
 ------------------------------------------------------------
@@ -657,115 +688,135 @@ lspconfig.rust_analyzer.setup({
 -- })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Spectral OpenAPI Linter
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#spectral
 
-lspconfig.spectral.setup({
-  on_attach    = on_attach,
+lspconfig['spectral'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'yaml', 'json', 'yml' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- SQL Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sqlls
 
-lspconfig.sqlls.setup({
-  on_attach    = on_attach,
+lspconfig['sqlls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'sql', 'mysql' },
  })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Svelte Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#svelte
 
-lspconfig.svelte.setup({
-  on_attach    = on_attach,
+lspconfig['svelte'].setup({
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      pattern = { "*.js", "*.ts" },
+      callback = function(ctx)
+        if client.name == "svelte" then
+          client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+        end
+      end,
+    })
+  end,
   filetypes    = { 'svelte' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Tailwind CSS Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss
 
-lspconfig.tailwindcss.setup({
-  on_attach    = on_attach,
+lspconfig['tailwindcss'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'aspnetcorerazor', 'astro', 'astro-markdown', 'blade', 'clojure', 'django-html', 'htmldjango', 'edge', 'eelixir', 'elixir', 'ejs', 'erb', 'eruby', 'gohtml', 'gohtmltmpl', 'haml', 'handlebars', 'hbs', 'html', 'html-eex', 'heex', 'jade', 'leaf', 'liquid', 'markdown', 'mdx', 'mustache', 'njk', 'nunjucks', 'php', 'razor', 'slim', 'twig', 'css', 'less', 'postcss', 'sass', 'scss', 'stylus', 'sugarss', 'javascript', 'javascriptreact', 'reason', 'rescript', 'typescript', 'typescriptreact', 'vue', 'svelte' }
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- TOML Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#taplo
 
-lspconfig.taplo.setup({
-  on_attach    = on_attach,
+lspconfig['taplo'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'toml' },
   --root_pattern('*.toml', '.git'),
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Terraform Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#terraformls
 
-lspconfig.terraformls.setup({
-  on_attach    = on_attach,
+lspconfig['terraformls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'terraform', 'tf', 'terraform-vars' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- TypeScript, JavaScript Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
 
-lspconfig.tsserver.setup({
-  on_attach    = on_attach,
+lspconfig['tsserver'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- Vue Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar
 
-lspconfig.volar.setup({
-  on_attach    = on_attach,
+lspconfig['volar'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
 })
 
 
-------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 -- YAML Language Server
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls
 
-lspconfig.yamlls.setup({
-  on_attach    = on_attach,
+lspconfig['yamlls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'yaml', 'yml', 'yaml.docker-compose' },
 })
+
 
 
 ------------------------------------------------------------
 -- Laravel Blade Language Server
 -- https://github.com/shufo/blade-formatter
 
--- lspconfig['blade-formatter'].setup({
---   on_attach    = on_attach,
---   capabilities = capabilities,
---   filetypes    = { 'blade.php' },
--- })
+lspconfig['blade-formatter'].setup({
+  on_attach    = on_attach,
+  capabilities = capabilities,
+  filetypes    = { 'blade.php' },
+})
 
 
 ------------------------------------------------------------
@@ -794,6 +845,17 @@ lspconfig.yamlls.setup({
 -------------------------------------------------------------------------------
 -- PHPCS Language Server
 
+lspconfig['phpcs'].setup({
+  capabilities = capabilities,
+  on_attach    = on_attach,
+  filetypes    = { 'php' },
+})
+
+lspconfig['php-cs-fixer'].setup({
+  capabilities = capabilities,
+  on_attach    = on_attach,
+  filetypes    = { 'php' },
+})
 
 -- lspconfig.phpstan.setup({
 --   on_attach    = on_attach,
@@ -834,12 +896,12 @@ lspconfig.yamlls.setup({
 -- })
 
 
-------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Vim Language Server
 -- https://github.com/iamcco/vim-language-server
 
-lspconfig.vimls.setup({
-  on_attach    = on_attach,
+lspconfig['vimls'].setup({
   capabilities = capabilities,
+  on_attach    = on_attach,
   filetypes    = { 'vim' },
 })

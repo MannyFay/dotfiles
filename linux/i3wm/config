@@ -107,7 +107,7 @@ bindsym $super+0 workspace number $ws10
 #----- Key Mappings
 
 # Kill focused window:
-bindsym $super+w kill
+bindsym $ctrl+w kill
 # start dmenu (a program launcher):
 bindsym $super+d exec --no-startup-id dmenu_run
 

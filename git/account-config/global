@@ -9,6 +9,14 @@
 [includeIf "gitdir:~/personal/gitlab/*"]
     path = ~/dotfiles/git/account-config/gitlab
 
+# dotfiles:
+[includeIf "gitdir:~/dotfiles/*"]
+    path = ~/dotfiles/git/account-config/github
+
+# ansible:
+[includeIf "gitdir:~/ansible/*"]
+    path = ~/dotfiles/git/account-config/github
+
 # Work VdS GitHub:
 [includeIf "gitdir:~/work/vds/github/*"]
     path = ~/dotfiles/git/account-config/work/github

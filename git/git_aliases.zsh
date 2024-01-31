@@ -112,8 +112,11 @@ alias gcrl='git reset --hard HEAD~1'
 # Stage all files and commit with message:
 alias giacm='git add . && git commit -m'
 
-# Stage all files and commit with WIP status:
+# Stage all files and commit with 'WIP':
 alias giacwip='git add . && git commit -m "WIP"'
+
+# Stage all files and commit with 'Update':
+alias gupdate='git add . && git commit -m "Update"'
 
 
 

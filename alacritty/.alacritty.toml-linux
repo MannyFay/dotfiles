@@ -89,11 +89,11 @@ size                      = 9.5                       # Font size.
 
 [font.glyph_offset]
 x                         = 0
-y                         = 4                        # Vertical letter positioning in a line.
+y                         = 3                        # Vertical letter positioning in a line.
 
 [font.offset]
 x                         = 0                        # Letter spacing
-y                         = 8                       # Line height
+y                         = 6                       # Line height
 
 
 

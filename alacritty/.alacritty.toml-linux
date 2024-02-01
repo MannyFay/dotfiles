@@ -85,15 +85,15 @@ style                     = "Regular"
 
 [font]
 builtin_box_drawing       = true
-size                      = 9.5                       # Font size.
+size                      = 10                       # Font size.
 
 [font.glyph_offset]
 x                         = 0
-y                         = 3                        # Vertical letter positioning in a line.
+y                         = 4                        # Vertical letter positioning in a line.
 
 [font.offset]
 x                         = 0                        # Letter spacing
-y                         = 6                       # Line height
+y                         = 8                       # Line height
 
 
 

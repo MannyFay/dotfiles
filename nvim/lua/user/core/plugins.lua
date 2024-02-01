@@ -33,7 +33,7 @@ end
 -- Reset Packer before customization below:
 packer.reset()
 
--- Have Packer use a popup window:
+-- Have Packer use a pop up window:
 packer.init {
   compile_path = vim.fn.stdpath('data') .. '/site/plugin/packer_compiled.lua',
   display = {
@@ -443,6 +443,49 @@ use({
     require('user.plugin_options.indent-blankline')
   end,
 })
+
+
+
+-------------------------------------------------------------------------------
+-- Rust Tools
+
+-- Install:
+-- rustup component add rustfmt
+-- https://github.com/rust-lang/rustfmt
+
+use({
+  'simrat39/rust-tools.nvim',
+  requires = {
+    'neovim/nvim-lspconfig',
+    -- Debugging:
+    'nvim-lua/plenary.nvim',
+    'mfussenegger/nvim-dap',
+  },
+  config = function()
+    require('user.plugin_options.rust-tools')
+  end,
+})
+
+
+
+-------------------------------------------------------------------------------
+-- Laravel
+
+use({
+  'adalessa/laravel.nvim',
+  requires = {
+    'nvim-telescope/telescope.nvim',
+    'tpope/vim-dotenv',
+    'MunifTanjim/nui.nvim',
+    'nvimtools/none-ls.nvim',
+  },
+  config = function()
+    require('user.plugin_options.laravel')
+  end,
+})
+
+
+
 
 
 

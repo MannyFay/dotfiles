@@ -1,11 +1,6 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/lspsaga.lua
-
--- https://github.com/nvimdev/lspsaga.nvim
-
-
-
 ------------------------------------------------------------------------------
 -- LSP Saga Plugin
+-- https://github.com/nvimdev/lspsaga.nvim
 ------------------------------------------------------------------------------
 
 -- Import LSP Saga plugin with a protected call:
@@ -26,21 +21,32 @@ lspsaga.setup({
   },
   -- use enter to open file with definition preview
   definition = {
+    width = 0.6,
+    height = 0.5,
     edit = "<CR>",
   },
-  ui = {
-    title = true,
-    border = "single",
-  },
+  -- ui = {
+  --   title = true,
+  --   border = "single",
+  -- },
   symbol_in_winbar = {
-    enable = true,
-    separator = " ",
-    ignore_patterns={},
-    hide_keyword = true,
-    show_file = true,
-    folder_level = 5,
-    respect_root = true,
-    color_mode = true,
+    enable          = true,
+    separator       = " ",
+    ignore_patterns = {},
+    hide_keyword    = true,
+    show_file       = true,
+    folder_level    = 5,
+    -- respect_root = true,
+    color_mode      = true,
+    delay           = 300,
+  },
+  callhierarchy = {
+    layout = 'float'  -- Options: 'normal', 'float'
+  },
+  code_action = {
+    num_shortcut     = true,
+    show_server_name = false,
+    extend_gitsigns  = false,
   },
 })
 
@@ -67,5 +73,3 @@ vim.api.nvim_set_hl(0, "SagaWinbarSep", { fg = "#606366" })
 
 local keymap = vim.keymap.set
 keymap('n','gd', '<cmd>Lspsaga peek_definition<CR>')
-
-

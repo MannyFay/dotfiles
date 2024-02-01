@@ -45,6 +45,11 @@ mason.setup({
 -- Mason LSP-Config Plugin
 -- https://github.com/williamboman/mason-lspconfig.nvim
 
+-- Install with MasonInstall command:
+-- 'blade-formatter',                 -- Laravel Blade formatter.
+--  'phpcs',                           -- PHP CodeSniffer.
+--  'php-cs-fixer',
+
 mason_lspconfig.setup({
   automatic_installation = true,       -- All servers set up via LSP-Config will be installed automatically.
   ensure_installed = {
@@ -96,14 +101,13 @@ mason_lspconfig.setup({
     'tsserver',                        -- JavaScript/TypeScript language server.
     'volar',                           -- Vue language server.
     'yamlls',                          -- YAML language server.
-    'blade-formatter',                 -- Laravel Blade formatter.
+    
     --'editorconfig-checker',            -- EditorConfig checker.
     --'nginx_language_server',           -- NGINX language server.
     'vimls',                           -- Vim language server.
     -- 'twigcs',                          -- Twig language server.
-    'phpcs',                           -- PHP CodeSniffer.
+   
     -- 'pint',
-    'php-cs-fixer',
     -- 'php-debug-adapter',
     -- 'phpstan',                         -- PHPStan language server.
   },
@@ -812,11 +816,11 @@ lspconfig['yamlls'].setup({
 -- Laravel Blade Language Server
 -- https://github.com/shufo/blade-formatter
 
-lspconfig['blade-formatter'].setup({
-  on_attach    = on_attach,
-  capabilities = capabilities,
-  filetypes    = { 'blade.php' },
-})
+-- lspconfig['blade-formatter'].setup({
+--   on_attach    = on_attach,
+--   capabilities = capabilities,
+--   filetypes    = { 'blade.php' },
+-- })
 
 
 ------------------------------------------------------------
@@ -845,17 +849,17 @@ lspconfig['blade-formatter'].setup({
 -------------------------------------------------------------------------------
 -- PHPCS Language Server
 
-lspconfig['phpcs'].setup({
-  capabilities = capabilities,
-  on_attach    = on_attach,
-  filetypes    = { 'php' },
-})
+-- lspconfig['phpcs'].setup({
+--   capabilities = capabilities,
+--   on_attach    = on_attach,
+--   filetypes    = { 'php' },
+-- })
 
-lspconfig['php-cs-fixer'].setup({
-  capabilities = capabilities,
-  on_attach    = on_attach,
-  filetypes    = { 'php' },
-})
+-- lspconfig['php-cs-fixer'].setup({
+--   capabilities = capabilities,
+--   on_attach    = on_attach,
+--   filetypes    = { 'php' },
+-- })
 
 -- lspconfig.phpstan.setup({
 --   on_attach    = on_attach,

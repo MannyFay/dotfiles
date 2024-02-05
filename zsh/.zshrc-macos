@@ -131,6 +131,8 @@ export BROWSER="$HOME/Applications/Google Chrome.app"
 # Start fuzzy search with ctrl+f:
 bindkey -s ^f "$HOME/dotfiles/tmux/tmux-sessionizer.sh\n"
 
+alias gitalizer='$HOME/personal/github/gitalizer/crawl.sh\n'
+
 # Set the path to use GNU version of command line tools:
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 

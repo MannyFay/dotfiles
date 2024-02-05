@@ -15,6 +15,12 @@ if not mason_lspconfig_status_ok then
   return "Error: */lua/user/plugin_options/lspconfig.lua -> Mason-LSP-Config plugin could not be loaded. Sure you have installed it in your plugins file?"
 end
 
+-- -- Import Mason Tool Installer plugin safely:
+-- local mason_tool_installer_status_ok, mason_tool_installer = pcall(require, 'mason-tool-installer')
+-- if not mason_tool_installer_status_ok then
+--   return "Error: */lua/user/plugin_options/lspconfig.lua -> Mason-LSP-Config plugin could not be loaded. Sure you have installed it in your plugins file?"
+-- end
+
 -- Import LSP Config plugin safely:
 local lspconfig_status_ok, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_status_ok then
@@ -101,19 +107,26 @@ mason_lspconfig.setup({
     'tsserver',                        -- JavaScript/TypeScript language server.
     'volar',                           -- Vue language server.
     'yamlls',                          -- YAML language server.
-    
     --'editorconfig-checker',            -- EditorConfig checker.
     --'nginx_language_server',           -- NGINX language server.
     'vimls',                           -- Vim language server.
     -- 'twigcs',                          -- Twig language server.
-   
     -- 'pint',
     -- 'php-debug-adapter',
     -- 'phpstan',                         -- PHPStan language server.
   },
 })
 
-
+-- mason_tool_installer.setup({
+--   ensure_installed = {
+--     'blade-formatter',                 -- Laravel Blade formatter.
+--     'phpcs',                           -- PHP CodeSniffer.
+--     'php-cs-fixer',
+--     'prettier',
+--     'stylua',
+--     'eslint',
+--   },
+-- })
 
 
 

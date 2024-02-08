@@ -47,6 +47,8 @@ indent_blankline.setup({
   },
   scope = {
     enabled = true,  -- 'true': Highlight only the intended indentation and the current scope by an underline.
+    show_start = false,
+    show_end = false,
   },
   exclude = {
     filetypes = {
@@ -75,4 +77,3 @@ indent_blankline.setup({
     },
   },
 })
---vim.cmd[[autocmd VimEnter,BufNewFile,BufRead * source %]] -- not working

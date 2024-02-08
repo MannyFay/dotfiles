@@ -15,16 +15,11 @@ end
 
 configs.setup {
   modules = { },
-  -- List of syntax highlight parsers to install:
-  ensure_installed = { 'all' },
-  -- Install packages asynchronously (applies only to 'ensure_installed'):
-  sync_install = false,
-  -- Automatically install missing parsers in a buffer:
-  auto_install = false,
-  -- List of syntax highlight parser to ignore:
-  ignore_install = { 'all' },
-  -- Create always a pair of brackets:
-  autopairs = {
+  ensure_installed = { 'all' },                 -- List of syntax highlight parsers to install:
+  sync_install = false,                       -- Install packages asynchronously (applies only to 'ensure_installed'):
+  auto_install = false,                       -- Automatically install missing parsers in a buffer:
+  ignore_install = { 'all' },                 -- List of syntax highlight parser to ignore:
+  autopairs = {                               -- Create always a pair of brackets:
     enable = true,
   },
   highlight = {

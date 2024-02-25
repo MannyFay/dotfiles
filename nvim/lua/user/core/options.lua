@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------
 
 vim.opt.number                = true                         -- Show line numbers.
-vim.opt.relativenumber        = false                        -- Show relative line numbers.
+vim.opt.relativenumber        = true                         -- Show relative line numbers.
 vim.opt.tabstop               = 4                            -- Spaces for indentation.
 --vim.opt.softtabstop         = 4
 vim.opt.shiftwidth            = 4                            -- Max spaces for for level of indentation.
@@ -43,5 +43,5 @@ vim.opt.spell                 = true                         -- Enable spell che
 vim.opt.equalalways           = false                        -- Disable automatic resizing of panes (does not work).
 vim.cmd('set pumblend=0')                                    -- Transparency of floating windows.
 vim.loader.enable()                                          -- Improve Neovim startup time.
-vim.opt.mouse = 'a'
+vim.opt.mouse = 'a'                                          -- Enable mouse support.
 -- nvim_list_uis()[0]

@@ -141,3 +141,6 @@ PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
 # Source Rust:
 . "$HOME/.cargo/env"
+
+# Set terminal emulator:
+export TERM="alacritty"

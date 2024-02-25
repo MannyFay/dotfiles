@@ -1,12 +1,7 @@
--- ~/.dotfiles/nvim/lua/user/plugin_options/nvim-tree.lua
-
--- https://github.com/nvim-tree/nvim-tree.lua
-
-
-
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Nvim-Tree Plugin
-------------------------------------------------------------------------------
+-- https://github.com/nvim-tree/nvim-tree.lua
+-------------------------------------------------------------------------------
 
 -- Import Nvim-Tree plugin with a protected call:
 local nvim_tree_status_ok, nvim_tree = pcall(require, 'nvim-tree')
@@ -126,8 +121,8 @@ nvim_tree.setup {
     debounce_delay              = 15,        -- (default) Idle milliseconds for refreshing (increase there are graphics issues).
     side                        = 'left',    -- Position of NvimTree.
     preserve_window_proportions = false,     -- true: Keep window size proportional to the size of the tree.
-    number                      = false,     -- true: Show line numbers in tree.
-    relativenumber              = false,     -- true: Show relative line numbers in tree.
+    number                      = true,      -- true: Show line numbers in tree.
+    relativenumber              = true,      -- true: Show relative line numbers in tree.
     signcolumn                  = 'yes',     -- Provide a column for signs.
     width = {
       min     = 46,                          -- Minimum width of NvimTree.
@@ -164,7 +159,7 @@ nvim_tree.setup {
     highlight_bookmarks    = 'none',         -- Tree highlighting for bookmarks (options: 'icon', 'name', 'all', 'none').
     highlight_clipboard    = 'none',         -- Tree highlighting for clipboard items (options: 'icon', 'name', 'all', 'none').
     indent_markers = {
-      enable        = false,                 -- true: Show indent markers when folders are open.
+      enable        = true,                 -- true: Show indent markers when folders are open.
       inline_arrows = true,                  -- true: Display indent markers in the same column as the arrows.
       icons = {
         corner = '└',

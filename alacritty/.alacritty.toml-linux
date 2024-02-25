@@ -6,7 +6,7 @@ live_config_reload        = true
 [bell]
 animation                 = "EaseOutExpo"
 duration                  = 0                    # 0 = disabled.
-color                     = "#ff0000"
+color                     = "#FF0000"
 command                   = "None"
 
 [cursor]
@@ -106,9 +106,9 @@ draw_bold_text_with_bright_colors = false
 
 [colors.primary]
 background        = "#191B1C"
-foreground        = "#ababab"
-bright_foreground = "#ababab"
-dim_foreground    = "#ababab"
+foreground        = "#ABABAB"
+bright_foreground = "#ABABAB"
+dim_foreground    = "#ABABAB"
 
 [colors.cursor]
 cursor = "#569CD6"
@@ -119,31 +119,31 @@ cursor = "#569CD6"
 text   = "#191B1C"
 
 [colors.search.matches]
-background = "#ed3276"
+background = "#ED3276"
 foreground = "#191B1C"
 
 [colors.search.focused_match]
-background = "#ed3276"
+background = "#ED3276"
 foreground = "#191B1C"
 
 [colors.hints.start]
 background = "#4FA544"
-foreground = "#ed3276"
+foreground = "#ED3276"
 
 [colors.hints.end]
 background = "#4FA544"
-foreground = "#ed3276"
+foreground = "#ED3276"
 
 [colors.line_indicator]
-background = "#ed3276"
+background = "#ED3276"
 foreground = "#4FA544"
 
 [colors.footer_bar]
-background = "#ed3276"
+background = "#ED3276"
 foreground = "#4FA544"
 
 [colors.selection]
-background = "#ababab"
+background = "#ABABAB"
 text       = "#191B1C"
 
 [colors.normal]
@@ -154,7 +154,7 @@ yellow  = "#E8BF6A"
 blue    = "#569CD6"
 magenta = "#C064C7"
 cyan    = "#45C8B0"
-white   = "#ababab"
+white   = "#ABABAB"
 
 [colors.bright]
 black   = "#606366"
@@ -164,7 +164,7 @@ yellow  = "#E8BF6A"
 blue    = "#569CD6"
 magenta = "#C064C7"
 cyan    = "#45C8B0"
-white   = "#ababab"
+white   = "#ABABAB"
 
 [colors.dim]
 black   = "#191B1C"
@@ -174,7 +174,7 @@ yellow  = "#E8BF6A"
 blue    = "#569CD6"
 magenta = "#C064C7"
 cyan    = "#45C8B0"
-white   = "#ababab"
+white   = "#ABABAB"
 
 
 

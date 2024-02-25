@@ -73,7 +73,7 @@ cmp.setup {
 
   -- Completion behavior:
   completion = {
-    keyword_length = 2,                                         -- Minimal number of characters to trigger completion.
+    keyword_length = 1,                                         -- Minimal number of characters to trigger completion.
   },
 
   -- Appearance:

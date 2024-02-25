@@ -29,6 +29,8 @@ vim.g.mapleader      = ' '                                              -- Set <
 vim.g.maplocalleader = ' '                                              -- Set <Leader> to space per buffer (standard is \).
 
 vim.keymap.set('n', '<leader>qh', ':nohlsearch<CR>', opts)              -- Quit highlighting of search.
+vim.keymap.set('n', 'n',          'nzzzv',           opts)              -- Center the screen after jumping to the next match.
+vim.keymap.set('n', 'N',          'Nzzzv',           opts)              -- Center the screen after jumping to the previous match.
 
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })  -- When text is wrapped, move by terminal rows, not lines up, unless a count is provided.
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })  -- When text is wrapped, move by terminal rows, not lines down, unless a count is provided.
@@ -72,20 +74,22 @@ vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/dotfiles/tmux/tmux-sessio
 ------------------------------------------------------------
 -- Scrolling
 
-vim.keymap.set('n', 'T',       'zt',    opts)  -- Scroll actual line to top.
-vim.keymap.set('n', 'B',       'zb',    opts)  -- Scroll actual line to bottom.
-vim.keymap.set('n', 'C',       'zz',    opts)  -- Scroll actual line to center.
-vim.keymap.set('n', '<C-k>',   '<C-u>', opts)  -- Scroll up.
-vim.keymap.set('n', '<C-j>',   '<C-e>', opts)  -- Scroll down.
-vim.keymap.set('n', '<C-p-u>', '<C-b>', opts)  -- Scroll page up.
-vim.keymap.set('n', '<C-p-d>', '<C-f>', opts)  -- Scroll page down.
+-- vim.keymap.set('n', 'T',       'zt',    opts)  -- Scroll actual line to top.
+vim.keymap.set('n', 'B',       'zb',      opts)  -- Scroll actual line to bottom.
+vim.keymap.set('n', 'C',       'zz',      opts)  -- Scroll actual line to center.
+vim.keymap.set('n', '<C-k>',   '<C-u>',   opts)  -- Scroll up.
+vim.keymap.set('n', '<C-j>',   '<C-e>',   opts)  -- Scroll down.
+vim.keymap.set('n', '<C-p-u>', '<C-b>',   opts)  -- Scroll page up.
+vim.keymap.set('n', '<C-p-d>', '<C-f>',   opts)  -- Scroll page down.
+vim.keymap.set('n', '<C-u>',   '<C-u>zz', opts)  -- Scroll half page up and center.
+vim.keymap.set('n', '<C-d>',   '<C-d>zz', opts)  -- Scroll half page down and center.
 
 
 --------------------------------------------------------------
 -- Splitting
 
 keymap('n', '<Leader>\\|', ':vsplit<CR>', opts)  -- Split buffer vertically (y-axis) ( y).
-keymap('n', '<Leader>-', ':split<CR>',  opts)  -- Split buffer horizontally (x-axis) ( x).
+keymap('n', '<Leader>-',   ':split<CR>',  opts)  -- Split buffer horizontally (x-axis) ( x).
 
 
 --------------------------------------------------------------
@@ -100,7 +104,7 @@ keymap('n', 'K', '<C-w>k', opts)  -- Go to split above (K).
 --------------------------------------------------------------
 -- Resizing
 
-keymap('n', '<Leader>es', '<C-w>=', opts)                   -- Equalize width and height for all splits ( es).
+keymap('n', '<Leader>es', '<C-w>=',                  opts)  -- Equalize width and height for all splits ( es).
 keymap('n', '<Leader>gv', ':vertical resize +5<CR>', opts)  -- Grow split vertical ( gv).
 keymap('n', '<Leader>sv', ':vertical resize -5<CR>', opts)  -- Shrink split vertical ( sv).
 keymap('n', '<Leader>gh', ':resize +5<CR>',          opts)  -- Grow split horizontally ( gh).
@@ -127,16 +131,19 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 -- The key mappings are defined in the plugin file itself.
 
 
+
 ------------------------------------------------------------
 -- Auto Save Plugin
 
 -- No key mappings defined.
 
 
+
 ------------------------------------------------------------
 -- Auto Pairs Plugin
 
 -- No key mappings defined.
+
 
 
 ------------------------------------------------------------
@@ -156,16 +163,19 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
   -- Add comment at the end of line: <Nop>
 
 
+
 ------------------------------------------------------------
 -- Git Signs Plugin
 
 -- No key mappings defined.
 
 
+
 ------------------------------------------------------------
 -- Guess Indent Plugin
 
 -- No key mappings defined.
+
 
 
 ------------------------------------------------------------
@@ -177,10 +187,12 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 -- Hop to start of line (multiple) buffer:         <Leader>l
 
 
+
 ------------------------------------------------------------
 -- Indent Blank Line Plugin
 
 -- No key mappings defined.
+
 
 
 ------------------------------------------------------------
@@ -188,6 +200,7 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 
 -- Align on the left of the alignment character:  <Leader>al
 -- Align on the right of the alignment character: <Leader>ar
+
 
 
 ------------------------------------------------------------

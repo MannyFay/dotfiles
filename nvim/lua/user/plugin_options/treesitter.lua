@@ -1,7 +1,7 @@
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- Treesitter Plugin
 -- https://github.com/nvim-treesitter/nvim-treesitter
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 -- Import Treesitter with a protected call:
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
@@ -14,12 +14,12 @@ end
 -- Appearance
 
 configs.setup {
-  modules = { },
-  ensure_installed = { 'all' },                 -- List of syntax highlight parsers to install:
-  sync_install = false,                       -- Install packages asynchronously (applies only to 'ensure_installed'):
-  auto_install = false,                       -- Automatically install missing parsers in a buffer:
-  ignore_install = { 'all' },                 -- List of syntax highlight parser to ignore:
-  autopairs = {                               -- Create always a pair of brackets:
+  modules          = { },
+  ensure_installed = { 'all' },  -- List of syntax highlight parsers to install.
+  sync_install     = false,      -- Install packages asynchronously (applies only to 'ensure_installed').
+  auto_install     = false,      -- Automatically install missing parsers in a buffer.
+  ignore_install   = { 'all' },  -- List of syntax highlight parser to ignore.
+  autopairs = {                  -- Create always a pair of brackets.
     enable = true,
   },
   highlight = {
@@ -74,7 +74,11 @@ configs.setup {
   },
   -- Autotag extension for auto close and auto rename tags:
   autotag = {
-    enable = true,
+    enable                = true,
+    enable_rename         = true,
+    enable_close          = true,
+    enable_close_on_slash = true,
+    filetypes             = { "html" , "xml", "php", "blade" },
   },
 }
 

@@ -128,3 +128,6 @@ bindkey -s ^f "~/dotfiles/tmux/tmux-sessionizer.sh\n"
 
 # Source Rust:
 . "$HOME/.cargo/env"
+
+# Set terminal emulator:
+export TERM="alacritty"

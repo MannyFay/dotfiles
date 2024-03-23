@@ -1,0 +1,65 @@
+# Device - Enter German º (degree) symbol.
+(LR-1 RI1<-+1)
+
+# Device - Enter German § (paragraph) symbol.
+(LR-1 RI1<-)
+
+# Device - Enter German Ä umlaut.
+(LR-1 RI+1)
+
+# Device - Enter German ä umlaut.
+(LR-1 RI)
+
+# Device - Enter German Ö umlaut.
+(LR-1 RM+1)
+
+# Device - Enter German ö umlaut.
+(LP-1 RM)
+
+# Device - Enter German Ü umlaut.
+(LR-1 RR+1)
+
+# Device - Enter German ü umlaut.
+(LR-1 RR)
+
+# Device - Enter German ß (sharp S).
+(LR-1 RP)
+
+# Device - Enter German € (Euro) symbol.
+(LR-1 RP+1)
+
+# Device - Show desktop overview.
+ctrl up
+
+# OS - Cut.
+cmd x (LI1->-1)x
+
+# OS - Copy.
+cmd c (RI1<-+1)
+
+# OS - Redo.
+cmd shift z (RI+1)
+
+# OS - Paste.
+cmd v (RR-1)
+
+# OS - Undo.
+cmd z (RP-1)
+
+# OS - Up arrow.
+(LR RI)
+
+# OS - Down arrow.
+(LR RI-1)
+
+# OS - Right arrow.
+(LR RM)
+
+# OS - Left arrow.
+(LR RM-1)
+
+# OS - Open file.
+cmd o
+
+# OS - Area screenshot.
+cmd shift 4 (LP-1 RTL)

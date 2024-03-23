@@ -486,6 +486,19 @@ use({
 
 
 
+-------------------------------------------------------------------------------
+-- Obsidian
+
+use({
+  'epwalsh/obsidian.nvim',
+  tag = '*',  -- recommended, use latest release instead of latest commit
+  requires = {
+    'nvim-lua/plenary.nvim',
+  },
+  config = function()
+    require('user.plugin_options.obsidian')
+  end,
+})
 
 
 

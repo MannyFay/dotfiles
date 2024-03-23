@@ -1,0 +1,472 @@
+# Nvim - Leader key.
+<space>
+
+# Nvim - Scroll line to bottom of screen.
+zb
+
+# Nvim - Scroll line to center of screen.
+zz
+
+# Nvim - Scroll line to top of screen.
+zt
+
+# Nvim - Scroll half page up.
+<C>u
+
+# Nvim - Scroll half page down.
+<C>d
+
+# Nvim - Toggle file tree.
+<L>tt
+
+# Nvim - Explore file tree.
+<L>et
+
+# Nvim - Show file in file tree.
+<L>sft
+
+# Nvim - Split buffer horizontally.
+<L>-
+
+# Nvim - Split buffer vertically.
+<L>|
+
+# Nvim - Equalize size of all buffers.
+<L>=
+
+# Nvim - Grow buffer horizontally.
+<L>gh
+
+# Nvim - Shrink buffer horizontally.
+<L>sh
+
+# Nvim - Grow buffer vertically.
+<L>gv
+
+# Nvim - Shrink buffer vertically.
+<L>sv
+
+# Nvim - Jump to the right buffer.
+L
+
+# Nvim - Jump to the buffer below.
+J
+
+# Nvim - Jump to the buffer above.
+K
+
+# Nvim - Jump to the left buffer.
+H
+
+# Nvim - Maximize buffer.
+<L>m
+
+# Nvim - Save and close buffer.
+ZZ
+
+# Nvim - Close buffer without saving.
+:q
+
+# Nvim - Force close buffer without saving.
+:q!
+
+# Nvim - To last line, first char.
+G
+
+# Nvim - Jump to first line on first char.
+gg
+
+# Nvim - Up.
+k
+
+# Nvim - Left.
+h
+
+# Nvim - Right.
+l
+
+# Nvim - Down.
+j
+
+# Jump to next word on first char.
+w
+
+# Jump to end of line.
+$
+
+
+
+
+
+
+
+
+#-------------------------------------
+
+# Tree: Close node
+q n
+
+# Tree: Rename file/directory
+r
+
+# Tree: Show file info
+i
+
+# Tree: Open file/directory
+enter
+
+# Nvim Tree: Open in vertical split
+v
+
+# Nvim Tree: Open in horizontal split
+h
+
+# Nvim Tree: Yank name of file/directory
+y
+
+# Nvim Tree: Yank path of file/directory
+Y
+
+# Nvim Tree: Copy file/directory
+c
+
+# Nvim Tree: Cut file/directory
+x
+
+# Nvim Tree: Paste
+p
+
+# Nvim Tree: Go to parent node
+P
+
+# Nvim Tree: New file/directory
+n
+
+# Nvim Tree: Delete file/directory
+d
+
+# Nvim Tree: Move file/directory into bin
+B
+
+# Nvim Tree: Collapse node
+C
+
+# Nvim Tree: Expand node
+E
+
+# Nvim Tree: To the top sibling
+T S
+
+# Nvim Tree: To the bottom sibling
+B S
+
+# Nvim Tree: To previous sibling
+K
+
+# Nvim Tree: To next sibling
+J
+
+
+# Nvim Splits: Open Terminal in vertical split
+<L> t v
+
+
+# Nvim Splits: Save split
+: w
+
+# Nvim Splits: Open Terminal in horizontal split
+<L> t h
+
+# Nvim Tabs: New tab
+<L> n t
+
+# Nvim Tabs: Quit tab
+<L> q t
+
+# Nvim Tabs: To right tab
+<L> t r
+
+# Nvim Tabs: To left tab
+<L> t l
+
+# Nvim Navigation: Down
+j
+
+
+
+# Nvim Navigation: Jump to line
+: <num>
+
+# Nvim Navigation: Scroll down
+ctrl j
+
+# Nvim Navigation: Page down
+ctrl p d
+
+
+
+
+
+
+
+
+# Nvim Navigation: Scroll up
+ctrl k
+
+# Nvim Navigation: Page up
+ctrl p u
+
+
+# Nvim Navigation: To previous word, first char
+b
+
+# Nvim Navigation: To start of line
+0
+
+# Nvim Navigation: To matching bracket
+%
+
+# Nvim Navigation: To first char in line
+^
+
+# Nvim Navigation: Hoo to char
+<L> c
+
+# Nvim Navigation: Hop to pattern
+<L> p
+
+
+
+
+# Nvim Navigation: To last char of line
+g _
+
+# Nvim Navigation: Hop to word
+<L> w
+
+# Nvim Navigation: Hop to line
+<L> l
+
+# Enter normal mode.
+esc
+
+# Enter insert mode before character.
+i
+
+# Enter insert mode after character.
+a
+
+# Enter insert mode at start of line before first character.
+I
+
+# Enter insert at end of line after last character.
+A
+
+# Enter visual mode.
+v
+
+# Nvim Mode: Visual line mode
+vv
+
+# Nvim Mode: Visual block mode
+v b
+
+# Nvim Mode: Command line mode
+:
+
+# Search: Forward search
+/
+
+# Search: Backward search
+?
+
+# Search: Next occurrence of search results
+n
+
+# Search: Previous occurrence of search results
+N
+
+# Search: Quit highlighting
+<L>qh
+
+# Search: Find file
+<l>ff
+
+# Search: Find text in files
+<L>ft
+
+# Search: Show recent files
+<L>rf
+
+# Search: Find char/selected under cursor
+*
+
+# Edit: Delete char
+x
+
+# Delete word under cursor
+diw
+
+# Delete till end of word
+de
+
+# Delete line
+dd
+
+# Delete selection
+d
+
+# Edit: Undo
+u
+
+# Edit: Redo
+U
+
+# Edit: Indent line
+>>
+
+# Edit: Re-indent line
+>>
+
+# Set line to correct indentation
+==
+
+# Reformat indentation of whole file
+<L><L>==
+
+# Comment in/out line
+<L>/
+
+# Comment in/out selection
+<L>/s
+
+# Join next line
+<L>jl
+
+# Nvim Edit: Join object
+<L> j o
+
+# Nvim Edit: Split object
+<L> s o
+
+# Nvim Edit: Align left
+<L> a l
+
+# Nvim Edit: Align right
+<L> a r
+
+# Nvim Edit: Yank
+y
+
+# Nvim Edit: Yank line
+y y
+
+# Nvim Edit: Delete till end of line
+D
+
+# Nvim Edit: Put
+p
+
+# Nvim Edit: New line below
+o
+
+# Nvim Edit: Move selected up
+shift tab
+
+# Nvim Edit: Move selected down
+tab
+
+# Nvim Edit: Scroll preview up
+ctrl p u
+
+# Nvim Edit: Scroll preview down
+ctrl p d
+
+# Nvim Edit: Show completion suggestions
+ctrl c
+
+# Nvim Edit: Confirm completion
+ctrl <L>
+
+# Nvim Edit: Switch case of character or selection.
+~
+
+# Open Markdown preview in browser.
+<L>mdo
+
+# Quit Markdown preview in browser.
+<L>mdq
+
+# Open PlantUML preview in browser.
+<L>umlo
+
+# Save PlantUML file as .png file.
+<L>umls
+
+# Add a word to spelling file.
+:spe <word>
+
+# Add ; to end of line.
+;;
+
+# Add , to end of line.
+,,
+
+# Add : to end of line.
+::
+
+# Repeat last command.
+.
+
+# Surround word or selection with ( ).
+((
+
+# Surround word or selection with { }.
+{{
+
+# Surround word or selection with [ ].
+[[
+
+# Surround word or selection with " ".
+""
+
+# Surround word or selection with ' '.
+''
+
+# Surround word or selection with ` `.
+``
+
+# Surround word or selection with < >.
+<>
+
+# Yank (copy) till end of line.
+Y
+
+# Surround word or selection with a tag.
+swt
+
+# Change surrounding tag.
+cst
+
+# Delete surrounding tag.
+dst
+
+# Delete surroundings.
+ds<closing-sign>
+
+# Change surrounding characters.
+cs<old-sign><new-sign>
+
+# Quit auto completion.
+<C>q
+
+# Next auto completion item.
+tab
+
+# Previous auto completion item.
+<S>tab
+
+# Confirm Copilot suggestion.
+->
+
+:wa

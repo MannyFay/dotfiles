@@ -23,6 +23,7 @@ brew 'gnupg'
 brew 'graphviz'
 brew 'grep'
 brew 'mas'
+brew 'MonitorControl'
 brew 'neovim'
 #brew 'node'
 brew 'node-sass'
@@ -30,6 +31,7 @@ brew 'nvm'
 brew 'php'
 brew 'pinentry-mac'
 brew 'plantuml'
+brew 'pngpaste'
 brew 'ripgrep'
 brew 'sqlite'
 brew 'tmux'
@@ -59,7 +61,6 @@ cask 'firefox-developer-edition'
 cask 'font-meslo-lg-nerd-font'
 cask 'font-space-mono-nerd-font'
 cask 'google-chrome'
-cask 'intellij-idea-ce'
 cask 'istat-menus'
 cask 'karabiner-elements'
 cask 'logi-options-plus'
@@ -87,7 +88,6 @@ cask 'suspicious-package'
 mas 'Caffeinated - Anti Sleep App',   id: 1362171212
 mas 'Cleaner One Pro - Disk Clean',   id: 1133028347
 mas 'Dato',                           id: 1470584107
-mas 'MonitorControlLite',             id: 1595464182
 mas 'Ad Block One',                   id: 1491889901
 mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
 mas 'Numbers',                        id: 409203825

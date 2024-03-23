@@ -1,19 +1,87 @@
-# ~/.config/dotfiles/alfred/workflows/cheat/tmux
+# Tmux - Start Tmux.
+tmux
+
+# Tmux - Exit Tmux.
+tmux detach (LM RP RLedge)
+
+# Tmux - Kill window.
+<p>& (RM LL)
+
+# Tmux - Prefix.
+ctrt + b
+
+# Tmux - New window.
+<p>c (LM RL)
+
+# Tmux - Name session.
+<p>$ (RM LT2)
+
+# Tmux - Name window.
+<p>, (LM RT2)
+
+# Tmux - Push window to the left.
+ctrl shift <- (RM LT3)
+
+# Tmux - Push window to the right.
+ctrl shift -> (LM RT3)
+
+# Tmux - Jump to window 1.
+<p>1 (RM LP+1)
+
+# Tmux - Jump to window 2.
+<p>2 (RM LR+1)
+
+# Tmux - Jump to window 3.
+<p>3 (RM LM+1)
+
+# Tmux - Jump to window 4.
+<p>4 (RM LI+1)
+
+# Tmux - Jump to window 5.
+<p>5 (RM LI+1->)
+
+# Tmux - Jump to window 6.
+<p>6 (LM RI+1<-)
+
+# Tmux - Jump to window 7.
+<p>7 (LM RI+1)
+
+# Tmux - Jump to window 8.
+<p>8 (LM RM+1)
+
+# Tmux - Jump to window 9.
+<p>9 (LM RR+1)
+
+# Tmux - Jump to window 10.
+<p>0 (LM RP+1)
+
+# Tmux - FZF.
+fzf (LM RT1) (RM LT1)
+
+# Tmux - Enter command mode.
+<p>: (RM LI-1->)
+
+# Tmux - Start copy mode.
+<p>[ (RM LI->)
+
+# Tmux - Exit copy mode.
+ctrl c (LI2->)
+
+# Tmux - Reload Tmux configuration.
+<p>r (LM RI-TE)
 
 
-#----- Tmux Cheat Sheet ------------------------------------------------------
+
+
+
 
 
 #----- Sessions --------------------------------------------------------------
 
-# Tmux Session: Start Tmux
-tmux
 
 # Tmux Session: Start new Tmux session with name <session-name>
 tmux new -s <session-name>
 
-# Tmux Session: Exit Tmux
-tmux detach
 
 # Tmux Session: List all sessions (Tmux has to be started)
 tmux ls
@@ -33,8 +101,6 @@ j
 # Tmux Session: Open selected session
 enter
 
-# Tmux Session: Enter command mode
-<prefix> :
 
 # Tmux Session: Kill a specific session
 <prefix> :kill-session -t <session-name>
@@ -98,11 +164,6 @@ swap-window -s <start-index> -t <target-index>
 
 #----- Copy Mode -------------------------------------------------------------
 
-# Tmux Copy Mode: Start copy mode
-<prefix> c
-
-# Tmux Copy Mode: Exit copy mode
-ctrl c
 
 # Tmux Copy Mode: Scroll down
 shift j

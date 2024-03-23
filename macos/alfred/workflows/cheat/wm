@@ -1,0 +1,89 @@
+# WM - Restart yabai.
+yabai --restart-service
+
+# WM - Quit yabai.
+yabai --stop-service
+
+# WM - Start yabai.
+yabai --start-service
+
+# WM - Toggle fullscreen.
+alt + shift + f
+
+# WM - Jump to the left window.
+alt + cmd + h (LP RI-1)
+
+# WM - Jump to the window below.
+alt + cmd + j (LP RM-1)
+
+# WM - Jump to the window above.
+alt + cmd + k (LP RR-1)
+
+# WM - Jump to the right window.
+alt + cmd + l (LP RI-1)
+
+# WM - Swap window to the left.
+cmd + shift + h (RP LT2)
+
+# WM - Swap window down.
+cmd + shift + j (RP LT3)
+
+# WM - Swap window up.
+cmd + shift + k (LP RT3)
+
+# WM - Swap window to the right.
+cmd + shift + l (LP RT2)
+
+# WM - Grow window horizontally.
+alt + shift + h (LP RI1<-)
+
+# WM - Shrink window vertically.
+alt + shift + j (LP RI)
+
+# WM - Grow window vertically.
+alt + shift + k (LP RM)
+
+# WM - Shrink window horizontally.
+alt + shift + l (LP RR)
+
+# WM - Kill window.
+ctrl + w (LTRC)
+
+# WM - Jump to space 1.
+ctrl + alt + cmd + 1 (RP LP+1)
+
+# WM - Jump to space 2.
+ctrl + alt + cmd + 2 (RP LR+1)
+
+# WM - Jump to space 3.
+ctrl + alt + cmd + 3 (RP LM+1)
+
+# WM - Jump to space 4.
+ctrl + alt + cmd + 4 (RP LI+1)
+
+# WM - Jump to space 5.
+ctrl + alt + cmd + 5 (RP RI+1->)
+
+# WM - Jump to space 6.
+ctrl + alt + cmd + 6 (LP RI+1<-)
+
+# WM - Jump to space 7.
+ctrl + alt + cmd + 7 (LP RI+1)
+
+# WM - Jump to space 8.
+ctrl + alt + cmd + 8 (LP RM+1)
+
+# WM - Jump to space 9.
+ctrl + alt + cmd + 9 (LP RR+1)
+
+# WM - Jump to space 10.
+ctrl + alt + cmd + 0 (LP RP+1)
+
+# WM - Jump to left space.
+ctrl + <- (LT3)
+
+# WM - Jump to right space.
+ctrl + -> (RT3)
+
+# WM - Minimize window.
+cmd m (RP LP top Ledge)

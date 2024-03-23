@@ -1,33 +1,38 @@
-# ~/.config/dotfiles/alfred/workflows/cheat/alfred
+# Open Alacritty.
+al
+
+# Open Google Chrome.
+gc
+
+# Open Firefox.
+ff
+
+# Open Safari.
+as
 
 
-#----- Alfred Cheat Sheet -----------------------------------------------------
+# Open Messages.
+mg
+
+# Open PolyPane.
+pp
+
+# Open System Preferences.
+ss
+
+# Open NordPass.
+np
+
+# Open OBSBOT.
+cam
 
 
-#----- Music --------------------------
 
-# Open Apple Music app/miniplayer with Alfred.
-music
+# Open Edge.
+me
 
-# Play/pause music with Alfred.
-mpp
-
-# Next track in Apple Music with Alfred.
-mn
-
-# Previous track in Apple Music with Alfred.
-mp
-
-# Toggle shuffle in Apple Music with Alfred.
-mts
-
-# Maximize volume in Apple Music with Alfred.
-mvm
-
-# Set volume of Apple Music to the half with Alfred.
-mvh
-
-
+# Show current date and time.
+now
 
 #----- Alfred Controls --------------------
 
@@ -163,10 +168,7 @@ dc *<query>
 
 
 
-#----- System Controls --------------------
 
-# Start screen saver with Alfred.
-screensaver
 
 # Show trash with Alfred.
 trash
@@ -174,23 +176,6 @@ trash
 # Empty trash with Alfred.
 emptytrash
 
-# Log out of system with Alfred.
-logout
-
-# Activate Macs sleep mode with Alfred.
-sleep
-
-# Let displays sleep with Alfred.
-sleepdisplays
-
-# Lock machine with Alfred.
-lock
-
-# Restart machine with Alfred.
-restart
-
-# Shut down machine with Alfred.
-shutdown
 
 # Hide an app with Alfred.
 hide <app>
@@ -204,14 +189,6 @@ forcequit <app>
 # Quit all apps with Alfred.
 quitall
 
-# Push Volume of system up with Alfred.
-volup
-
-# Alfred System: Volume down
-voldown
-
-# Alfred System: Toggle mute
-mute
 
 # Alfred System: Eject local mounted volume
 eject
@@ -231,8 +208,6 @@ kill <process>:<argument>
 # Alfred SideCar: Connect/disconnect iPad
 sc
 
-# Alfred Tone: Toggle macOS true tone on/off
-tt
 
 
 

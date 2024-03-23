@@ -76,9 +76,9 @@ telescope.setup {
         -- Open file in active buffer:
         ['<CR>'] = actions.select_default,
         -- Open file in new horizontal split:
-        ['h'] = actions.select_horizontal,
+        ['-'] = actions.select_horizontal,
         -- Open file in new vertical split:
-        ['v'] = actions.select_vertical,
+        ['|'] = actions.select_vertical,
         -- Navigate down:
         ['j'] = actions.move_selection_next,
         -- Navigate up:

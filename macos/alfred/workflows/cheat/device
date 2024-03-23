@@ -1,0 +1,34 @@
+# Device - Start screen saver.
+screensaver
+
+# Device - Log out of system.
+logout
+
+# Device - Activate sleep mode.
+sleep
+
+# Device - Activate display sleep.
+sleepdisplays
+
+# Device - Lock device.
+lock (LP-1 RP-RLedge)
+
+# Device - Restart device.
+restart
+
+# Device - Shut down device.
+shutdown
+
+# Device - Toggle Do Not Disturb mode.
+(LP-1 RI-LTedge)
+
+# Device - Toggle keyboard layer indicator LEDs.
+(LP-1 RI-RTedge)
+
+# Device - Toggle keyboard layer RGB LEDs.
+(LP-1 RP-2)
+
+# Device - Switch keyboard language.
+fn-key ctrl-space (LP-1 RI1<-)
+
+

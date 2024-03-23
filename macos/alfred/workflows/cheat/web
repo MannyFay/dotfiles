@@ -1,0 +1,92 @@
+# Web - Kill tab/pop-up.
+cmd w (LTL)
+
+# Web - Search on site.
+cmd f (LT1)
+
+# Web - Stop page loading.
+esc
+
+# Web - Load previous page.
+cmd <- (LT2)
+
+# Web - Load next page.
+cmi -> (RT2)
+
+# Web - Previous tab.
+alt cmd <- (LT3)
+
+# Web - Next tab.
+alt cmd -> (RT3)
+
+# Web - Jump into address bar.
+cmd l (RT1)
+
+# Web - Jump to tab 1.
+cmd 1 (RI1<- LP+1)
+
+# Web - Jump to tab 2.
+cmd 2 (RI1<- LR+1)
+
+# Web - Jump to tab 3.
+cmd 3 (RI1<- LM+1)
+
+# Web - Jump to tab 4.
+cmd 4 (RI1<- LI+1)
+
+# Web - Jump to tab 5.
+cmd 5 (RI1<- LI+1->)
+
+# Web - Jump to tab 6.
+cmd 6 (LI1-> RI+1<-)
+
+# Web - Jump to tab 7.
+cmd 7 (LI1-> RI+1)
+
+# Web - Jump to tab 8.
+cmd 8 (LI1-> RM+1)
+
+# Web - Jump to last tab.
+cmd 9 (LI1-> RR+1)
+
+# Web - Scroll one page down.
+space (LI1-> RI2<-)
+
+# Web - Scroll one page up.
+shift space (LI1-> RI2<-+1)
+
+# Web - Quit.
+cmd q (LI-> RP low Redge)
+
+# Web - New tab.
+cmd t (LI-> RTL)
+
+# Web - Open Developer Tools.
+alt cmd i (RI<- LI)
+
+# Web - Open JavaScript Console.
+alt cmd J (RI<- LM)
+
+# Web - Display HTML code.
+alt cmd u (RI<- LR)
+
+# Web - Reload page.
+cmd r (RI<- LI+1->2)
+
+# Web - Reload page and ignore cache.
+cmd shift r (RI<- LI R top edge)
+
+# Web - Next occurrence of find bar search.
+cmd g (LI-> RI)
+
+# Web - Previous occurrence of find bar search.
+cmd shift g (LI-> RM)
+
+# Web - Zoom in.
+cmd + (LI-> RR)
+
+# Web - Zoom out.
+cmd - (LI-> RP)
+
+# Web - Reset zoom level to default.
+cmd 0 (LI-> RP->)

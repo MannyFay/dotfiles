@@ -39,8 +39,9 @@ vim.keymap.set('n', 'U', '<C-r>', opts)                                 -- Redo 
 
 vim.keymap.set('n', 'q:', ':q<CR>')                                     -- Disable typical command line typo.
 
-vim.keymap.set('v', '<', '<gv', opts)                                   -- Stay in visual mode after indent width <.
-vim.keymap.set('v', '>', '>gv', opts)                                   -- Stay in visual mode after indent width >.
+vim.keymap.set('v', '<<', '<gv', opts)                                   -- Stay in visual mode after indent width <<.
+vim.keymap.set('v', '>>', '>gv', opts)                                   -- Stay in visual mode after indent width >>.
+vim.keymap.set('n', '<Leader><Leader>==', 'ggvvG=', opts)                -- Auto indent the whole file.
 
 vim.keymap.set('v', 'y', 'myy`y')                                       -- Maintain the cursor position when yanking a visual selection.
 vim.keymap.set('v', 'Y', 'myY`y')                                       -- Maintain the cursor position when yanking a visual line selection.
@@ -75,8 +76,8 @@ vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/dotfiles/tmux/tmux-sessio
 -- Scrolling
 
 -- vim.keymap.set('n', 'T',       'zt',    opts)  -- Scroll actual line to top.
-vim.keymap.set('n', 'B',       'zb',      opts)  -- Scroll actual line to bottom.
-vim.keymap.set('n', 'C',       'zz',      opts)  -- Scroll actual line to center.
+-- vim.keymap.set('n', 'B',       'zb',      opts)  -- Scroll actual line to bottom.
+-- vim.keymap.set('n', 'C',       'zz',      opts)  -- Scroll actual line to center.
 vim.keymap.set('n', '<C-k>',   '<C-u>',   opts)  -- Scroll up.
 vim.keymap.set('n', '<C-j>',   '<C-e>',   opts)  -- Scroll down.
 vim.keymap.set('n', '<C-p-u>', '<C-b>',   opts)  -- Scroll page up.
@@ -104,17 +105,18 @@ keymap('n', 'K', '<C-w>k', opts)  -- Go to split above (K).
 --------------------------------------------------------------
 -- Resizing
 
-keymap('n', '<Leader>es', '<C-w>=',                  opts)  -- Equalize width and height for all splits ( es).
-keymap('n', '<Leader>gv', ':vertical resize +5<CR>', opts)  -- Grow split vertical ( gv).
-keymap('n', '<Leader>sv', ':vertical resize -5<CR>', opts)  -- Shrink split vertical ( sv).
-keymap('n', '<Leader>gh', ':resize +5<CR>',          opts)  -- Grow split horizontally ( gh).
-keymap('n', '<Leader>sh', ':resize -5<CR>',          opts)  -- Shrink split horizontally ( sh).
-keymap('n', '<Leader>th', ':split term://zsh<CR>i',  opts)  -- Open terminal in horizontal buffer below ( tb).
+keymap('n', '<Leader>=', '<C-w>=',                  opts)  -- Equalize width and height for all splits ( es).
+keymap('n', '<Leader>m',  '<C-w>|',                   opts)  -- Maximize buffer horizontally ( m).
+keymap('n', '<Leader>gv', ':vertical resize +20<CR>', opts)  -- Grow split vertical ( gv).
+keymap('n', '<Leader>sv', ':vertical resize -20<CR>', opts)  -- Shrink split vertical ( sv).
+keymap('n', '<Leader>gh', ':resize +20<CR>',          opts)  -- Grow split horizontally ( gh).
+keymap('n', '<Leader>sh', ':resize -20<CR>',          opts)  -- Shrink split horizontally ( sh).
 
 
 --------------------------------------------------------------
 -- Terminal
 
+keymap('n', '<Leader>th', ':split term://zsh<CR>i',  opts)  -- Open terminal in horizontal buffer below ( tb).
 keymap('n', '<Leader>tv', ':vsplit term://zsh<CR>i', opts)  -- Open terminal in vertical buffer to the next ( tn).
 keymap('n', '<Leader>nt', ':tabnew<CR>',             opts)  -- Open new tab ( ot).
 keymap('n', '<Leader>qt', ':tabclose<CR>',           opts)  -- Exit current tab: ( et).
@@ -377,4 +379,4 @@ keymap('n', '<Leader>tl', ':tabp<CR>',               opts)  -- Go to previous ta
 -- harpoon:
 -- <L>hm - add mark
 -- <L>fm - show marks in telescope
--- 
+--

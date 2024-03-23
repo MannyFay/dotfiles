@@ -1,0 +1,35 @@
+# Sound - Open Apple Music.
+am
+
+# Sound - Play/pause.
+mpp (LP-1 RI)
+
+# Sound - Next track.
+mn (LP-1 RR)
+
+# Sound - Previous track.
+mp (LP-1 RR-1)
+
+# Sound - Toggle shuffle in Apple Music.
+mts
+
+# Sound - Maximize volume in Apple Music.
+mvm
+
+# Sound - Set volume of Apple Music to the half.
+mvh
+
+# Sound - Increase volume.
+(LP-1 RM)
+
+# Sound - Decrease volume.
+(LP-1 RM-1)
+
+# Sound - Push Volume of system up with Alfred.
+volup
+
+# Alfred System: Volume down
+voldown
+
+# Alfred System: Toggle mute
+mute

@@ -1,0 +1,8 @@
+# Screen - Increase brightness.
+(LP-1 RP)
+
+# Screen - Decrease brightness.
+(LP-1 RP-1)
+
+# Screen - Toggle true tone.
+tt

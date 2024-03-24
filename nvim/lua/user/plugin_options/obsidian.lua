@@ -21,6 +21,9 @@ obsidian.setup({
       path = "/Volumes/Users/manny/Library/Mobile Documents/iCloud~md~obsidian/Documents/notebook",
     },
   },
+  ui = {
+    enable = false,
+  },
   -- daily_notes = {
     -- Optional, if you keep daily notes in a separate directory.
     -- folder = "notes/dailies",

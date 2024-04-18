@@ -447,6 +447,23 @@ use({
 
 
 -------------------------------------------------------------------------------
+-- Copilot Chat
+
+use {
+  'CopilotC-Nvim/CopilotChat.nvim',
+  branch = 'canary',
+  requires = {
+    'zbirenbaum/copilot.lua',
+    'nvim-lua/plenary.nvim',
+  },
+  config = function()
+    require('user.plugin_options.copilot-chat')
+  end,
+}
+
+
+
+-------------------------------------------------------------------------------
 -- Rust Tools
 
 -- Install:

@@ -66,6 +66,7 @@ cask 'karabiner-elements'
 cask 'logi-options-plus'
 cask 'macpass'
 cask 'microsoft-edge'
+cask 'microsoft-teams'
 cask 'nordpass'
 cask 'nordvpn'
 cask 'opera'
@@ -85,10 +86,13 @@ cask 'suspicious-package'
 #------------------------------------------------------------------------------
 #----- Mac App Store
 
-mas 'Caffeinated - Anti Sleep App',   id: 1362171212
 mas 'Cleaner One Pro - Disk Clean',   id: 1133028347
 mas 'Dato',                           id: 1470584107
 mas 'Ad Block One',                   id: 1491889901
-mas 'PDF Expert – Lesen, bearbeiten', id: 1055273043
 mas 'Numbers',                        id: 409203825
 mas 'Pages',                          id: 409201541
+mas 'Theine',                         id: 955848755
+mas 'Keystroke Pro',                  id: 1572206224
+mas 'Cursor Pro',                     id: 1447043133
+mas 'Mirror Magnet',                  id: 1563698880
+mas 'Presentify - Screen Annotation', id: 1507246666

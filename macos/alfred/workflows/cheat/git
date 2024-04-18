@@ -1,29 +1,20 @@
-# ~/.config/dotfiles/alfred/workflows/cheat/git
-
-
-#-----  Git Alfred Cheat Sheet -----------------------------------------------
-
-
-#----- Working Tree --------------------
-
-# List Git commands (git)
+# List commands (git)
 glc
 
-# Show Git status (git status)
+# Show status in worktree (git status)
 gs
 
-# Show Git commit history (git log)
-gl
-
-# Clone Git remote repository (git clone <remote-url>)
+# Clone remote repository (git clone <remote-url>)
 gc
 
-# Restore all changed files in working tree watched by Git (git restore .)
+# Restore all changed files in working tree (git restore .)
 gra
 
-# Restore a changed file in working tree watched by Git (git restore <file>)
+# Restore a changed file in working tree (git restore <file>)
 grf
 
+# Show commit history (git log)
+gl
 
 
 #----- Branches -----------------------
@@ -37,7 +28,7 @@ gpd
 # Show all Git branches inclusively remote repository (quit with q) (git branch -a)
 gbsa
 
-# Show local Git branches (quit with q) (git branch)
+# Show local branches (quit with q) (git branch)
 gbsl
 
 # Checkout a local Git branch (git checkout <branch>)
@@ -59,10 +50,10 @@ gbdr
 
 #----- Index ------------------------
 
-# Stage file watched by Git into index (git add <file(s)>)
+# Stage file(s) into index (git add <file(s)>)
 gisf
 
-# Stage parts of file watched by Git into index (git add -p <file>)
+# Stage parts of file into index (git add -p <file>)
 gisp
 
 # Unstage file in Git index (git restore --staged <file(s)>)
@@ -71,7 +62,7 @@ giuf
 # Unstage parts of file in Git index (git restore -p <file>)
 giup
 
-# Stage all changed files watched by Git to index (git add .)
+# Stage all changed files to index (git add .)
 gisa
 
 # Unstage all files in Git index (git restore --staged .)
@@ -81,29 +72,32 @@ giua
 
 #----- Commit ----------------------
 
-# Set initial Git commit (git commit --allow-empty -m "INITIAL COMMIT")
+# Set initial commit (git commit --allow-empty -m "INITIAL COMMIT")
 gci
 
-# Commit all staged files in Git index (git commit)
+# Commit all staged files in index (git commit)
 gcc
 
-# Commit all staged files in Git index with a short message (git commit -m <message>)
+# Commit all staged files in index with a short message (git commit -m <message>)
 gcm
 
-# Commit all staged files in Git index with message 'Work In Progress' (git commit -m "WIP")
+# Commit all staged files in index with message 'Work In Progress' (git commit -m "WIP")
 gcwip
 
-# Change last commit message in Git index or add file(s) (git commit --amend (<file>))
+# Change last commit message in index or add file(s) (git commit --amend (<file>))
 gccl
 
-# Revert last commit in Git index (git reset --hard HEAD~1)
+# Revert last commit in index (git reset --hard HEAD~1)
 gcrl
 
-# Stage all changed files to Git index and commit them with <message> (git add . && git commit -m <message>)
-giacm
+# Stage all changed files and commit them with <message> (git add . && git commit -m <message>)
+gisacm
 
-# Stage all changed files to Git index and commit them with WIP status (git add . && git commit -m "WIP")
-giacwip
+# Stage all changed files and commit them with WIP status (git add . && git commit -m "WIP")
+gisacwip
+
+# Stage all changed and commit them with 'Update' (git add . && git commit -m "Update")
+gisacupdate
 
 
 

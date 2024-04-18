@@ -1,20 +1,21 @@
-# ~/.config/dotfiles/alfred/workflows/cheat/laravel
+# Laravel Sail - Sail command (./vendor/bin/sail)
+sail
+
+# Laravel Sail - Start Sail in detached mode (./vendor/bin/sail up -d)
+sud
+
+# Laravel Sail - Start Sail (./vendor/bin/sail up)
+su
+
+# Laravel Sail - Stop Sail (./vendor/bin/sail down)
+sd
+
+# Laravel Sail - Run tests (.vendor/bin/sail test)
+st
 
 
-# laravel cheat
 
-#----- Laravel ---------------------------------------------------------------
 
-#----- Sail ----------------------------
-
-# Laravel Sail: Start Sail in detached mode
-sud (sail up -d)
-
-# Laravel Sail: Start Sail
-su (sail up)
-
-# Laravel Sail: Stop Sail
-sd (sail down)
 
 # Laravel Sail: Show artisan commands
 salc

@@ -1,31 +1,22 @@
-# This file has to be sourced in ~/dotfiles/zsh/.zsh_aliases
+# This file has to be sourced in .zsh_aliases file:
+# source ~/dotfiles/git/git_aliases.zsh                   # Git
 
-#-----------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
 #  Git ZSH Aliases
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 
 
-#-----------------------------------------------------------
-#- Working Tree
+#------------------------------------------------------------------------------
+#----- Working Tree
 
-# List Git commands:
-alias glc='git'
-
-# Show status of working tree:
-alias gs='git status'
-
+alias glc='git'            # List Git commands.
+alias gs='git status'      # Show status of working tree.
+alias gc='git clone'       # Clone repository (add URL).
+alias gra='git restore .'  # Restore all changed files.
+alias grf='git restore'    # Restore a changed file (add file).
 # Show commit history:
 alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
-
-# Clone repository (add URL):
-alias gc='git clone'
-
-# Restore all changed files:
-alias gra='git restore .'
-
-# Restore a changed file (add file):
-alias grf='git restore'
-
 
 
 #-----------------------------------------------------------
@@ -60,63 +51,35 @@ alias gbdr='git push --delete origin'
 
 
 
-#-----------------------------------------------------------
-#- Index
+#------------------------------------------------------------------------------
+#----- Index
 
-# Stage file (add file or path):
-alias gisf='git add'
-
+alias gisf='git add'                 # Stage file (add file or path).
+alias gisp='git add -p'              # Stage parts of file (add file):
 # y (yes): Stage this hunk to be included in the next commit.
 # n (no): Do not stage this hunk; leave it as is in the working directory.
 # s (split): Split this hunk into smaller parts, allowing you to stage only specific lines or changes within the hunk.
 # e (edit): Manually edit this hunk to remove or modify lines before staging.
 # ? (help): Show the available options and their meanings.
-# Stage parts of file (add file):
-alias gisp='git add -p'
-
-# Unstage file (add file or path):
-alias giuf='git restore --staged'
-
-# Unstage parts of file (add file):
-alias giup='git restore -p'
-
-# Stage all files:
-alias gisa='git add .'
-
-# Unstage all files:
-alias giua='git restore --staged .'
+alias gisa='git add .'               # Stage all files.
+alias giuf='git restore --staged'    # Unstage file (add file or path).
+alias giup='git restore -p'          # Unstage parts of file (add file).
+alias giua='git restore --staged .'  # Unstage all files.
 
 
 
-#-----------------------------------------------------------
-#- Commits
+#------------------------------------------------------------------------------
+#----- Commits
 
-# Initial commit:
-alias gci='git commit --allow-empty -m "INITIAL COMMIT"'
-
-# Commit:
-alias gcc='git commit'
-
-# Commit with message:
-alias gcm='git commit -m'
-
-# Commit with message 'Work In Progress':
-alias gcwip='git commit -m "WIP"'
-
-# Change last commit (file/commit message) before push:
-alias gccl='git commit --amend'
-
-# Revert last commit (before push):
-alias gcrl='git reset --hard HEAD~1'
-
-# Stage all files and commit with message:
-alias giacm='git add . && git commit -m'
-
-# Stage all files and commit with 'WIP':
-alias giacwip='git add . && git commit -m "WIP"'
-
-# Stage all files and commit with 'Update':
-alias gupdate='git add . && git commit -m "Update"'
+alias gci='git commit --allow-empty -m "Initial commit"'  # Initial commit.
+alias gcc='git commit'                                    # Commit.
+alias gcm='git commit -m'                                 # Commit with message.
+alias gcwip='git commit -m "WIP"'                         # Commit with message 'Work In Progress'.
+alias gccl='git commit --amend'                           # Change last commit (file/commit message) before push.
+alias gcrl='git reset --hard HEAD~1'                      # Revert last commit (before push).
+alias gisacm='git add . && git commit -m'                 # Stage all files and commit with message.
+alias gisacwip='git add . && git commit -m "WIP"'         # Stage all files and commit with 'WIP'.
+alias gisacupdate='git add . && git commit -m "Update"'   # Stage all files and commit with 'Update'.
 
 
 

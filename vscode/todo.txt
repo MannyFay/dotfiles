@@ -1,0 +1,3 @@
+Symlink the settings.json file to the correct location..
+Mac:
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json

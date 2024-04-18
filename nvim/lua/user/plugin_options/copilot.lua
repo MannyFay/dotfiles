@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 -- Copilot Plugin
--- https://github.com/zbirenbaum/copilot.lua 
+-- https://github.com/zbirenbaum/copilot.lua
 -------------------------------------------------------------------------------
 
 
@@ -12,7 +12,7 @@ end
 
 
 ------------------------------------------------------------
--- Mason Plugin
+-- Copilot Plugin
 
 copilot.setup({
   panel = {
@@ -44,7 +44,7 @@ copilot.setup({
     },
   },
   filetypes = {
-    yaml       = false,
+    yaml       = true,
     markdown   = true,
     help       = false,
     gitcommit  = false,

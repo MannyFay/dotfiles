@@ -1,192 +1,110 @@
 {
-  "editor": {
-    "accessibilitySupport": "off",
-    "cursorBlinking": "solid",
-    "cursorWidth": 2,
-    "renderWhitespace": "trailing",
-    "lineHeight": 2,
-    "rulers": [80,120,150],
-    "tabSize": 2,
-    "wordWrap": "on",
-    "lineNumbers": "on",
-    "codeLens": false,
-    "minimap": {
-      "enabled": false
-    },
-    "folding": "false"
+  //--------------------------------------------------------------------------------
+  // Editor Settings
 
+  "files.autoSave": "afterDelay",               // When to auto save files.
+  "files.autoSaveDelay": 1000,                  // Milliseconds to wait before auto saving.
+  "editor.accessibilitySupport": "off",         // Don't use accessibility features VS Code.
+  "editor.renderWhitespace": "trailing",        // Show trailing whitespace.
+  "editor.lineHeight": 2,                       // Line height in editor.
+  "editor.rulers": [80,120,150],                // Vertical character guides.
+  "editor.tabSize": 2,                          // Number of spaces per tab.
+  "editor.wordWrap": "on",                      // Wrap words automatically.
+  "editor.minimap": {                           // Don't show minimap at right corner.
+    "enabled": false
   },
-"editor.bracketPairColorization.enabled": false,
-  "editor.fontSize": 12,
-  "editor.fontWeight": "500",
-  "editor.fontLigatures": false,
-  "terminal.integrated.fontSize": 12,
-  "terminal.integrated.fontWeight": "400",
-  "terminal.integrated.fontWeightBold": "400",
-  "editor.fontFamily": "MesloLGMDZ Nerd Font",
-  "terminal.integrated.fontFamily": "MesloLGMDZ Nerd Font",
+  "editor.lineNumbers": "relative",             // Show relative line numbers.
+  "folding": "false",                           // Disable code folding.
+  "files.insertFinalNewline": true,             // Insert an empty line at the bottom of files.
+  "files.trimTrailingWhitespace": true,         // Trim trailing whitespace after auto save.
 
-  "editor.tokenColorCustomizations": {
+
+  // Cursor Settings:
+  "editor.cursorBlinking": "solid",             // No blinking cursor.
+  "editor.cursorWidth": 2,                      // Width in px of the cursor in editor.
+  "terminal.integrated.cursorWidth": 2,         // Width in px of the cursor in terminal.
+  "editor.cursorSurroundingLines": 3,           // Number of cursor surrounding lines (scroll off).
+  "editor.cursorStyle": "line",                 // Cursor style.
+  "terminal.integrated.cursorBlinking": false,  // No blinking cursor in terminal.
+
+  // Font Settings:
+  "editor.fontSize": 12,                        // Editor font size.
+  "terminal.integrated.fontSize": 12,           // Terminal font size.
+  "debug.console.fontSize": 12,                 // Debug console font size.
+  "chat.editor.fontSize": 12,                   // Chat font size.
+  "markdown.preview.fontSize": 12,              // Markdown preview font size.
+  "editor.fontFamily": "MesloLGMDZ Nerd Font",  // Font family.
+  "fontWeight": "400",                          // Global font weight.
+  "fontLigatures": false,                       // Disable ligatures.
+
+
+
+
+
+  //--------------------------------------------------------------------------------
+  //--- Language Defaults
+
+  // Tailwind CSS:
+  "tailwindCSS.rootFontSize": 16,  // Root font size in px like browser default.
+
+
+
+
+  //--------------------------------------------------------------------------------
+  // Color Theme
+  "workbench.colorTheme": "Default Dark+",                // Set color theme.
+  "workbench.preferredDarkColorTheme": "Default Dark+",   // Set color theme for dark mode.
+  "editor.bracketPairColorization.enabled": false,        // Disable rainbow colored brackets.
+  "editor.tokenColorCustomizations": {                    // Language defaults.
     "comments": "#FF0000",
     "strings": "#CE9178",
     "keywords": "#569CD6",
     "numbers": "#A5C25C",
     "functions": "#E8BF6A",
     "variables": "#C064C7",
-    "types": "#45C8B0",
-    "textMateRules": [
-      {
-        "scope": [
-          "punctuation.definition.tag.begin.html",
-          "punctuation.definition.tag.end.html"
-        ],
-        "settings": {
-          "foreground": "#606366"
-        }
-      }, {
-        "scope": [
-          "punctuation.definition.comment.begin.blade",
-          "punctuation.definition.comment.end.blade",
-          "comment.block.blade"
-        ],
-        "settings": {
-          "foreground": "#FF0000"
-        }
-      },
-      {
-        "scope": ["entity.other.attribute-name.html"],
-        "settings": {
-          "foreground": "#45C8B0"
-        }
+    "types": "#45C8B0"
+  },
+  "textMateRules": [
+    { // HTML
+      "scope": [
+        "punctuation.definition.tag.begin.html",  // Tag begin bracket.
+        "punctuation.definition.tag.end.html"     // Tag end bracket.
+      ],
+      "settings": {
+        "foreground": "#606366"
       }
-    ]
-  },
+    }, { // Blade
+      "scope": [
+        "punctuation.definition.comment.begin.blade",
+        "punctuation.definition.comment.end.blade",
+        "comment.block.blade"
+      ],
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    }, {
+      "scope": [
+        "entity.other.attribute-name.html"
+      ],
+      "settings": {
+        "foreground": "#45C8B0"
+      }
+    }
+  ],
 
-  "files": {
-    "trimTrailingWhitespace": true,
-    "insertFinalNewline": true,
-    "autoSave": "afterDelay"
-  },
-  "workbench.colorTheme": "Default Dark Modern",
-  "extensions.experimental.affinity": {
+
+
+  //--------------------------------------------------------------------------------
+  //--- Extensions:
+
+  "extensions.autoCheckUpdates": true,    // Automatically check for updates.
+  "extensions.autoUpdate": true,          // Automatically update extensions.
+
+  // Neovim Extension:
+  "extensions.experimental.affinity": {  // Improve performance of extension.
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.startupEditor": "none",
-  "workbench.settings.applyToAllProfiles": [
-    "editor.lineHeight"
-  ],
-  "workbench.colorCustomizations": {
-    "editor.foreground": "#ABABAB",
-    "editorRuler.foreground": "#252525",
-    "editorCursor.foreground": "#569CD6",
-    "editorCursor.background": "#191B1C",
-    "terminalCursor.foreground": "#569CD6",
-    "terminalCursor.background": "#191B1C",
-    "editor.selectionBackground": "#606366",
-    "activityBar.background": "#191B1C",
-    "activityBar.foreground": "#569CD6",
-    "activityBar.border": "#191B1C",
-    "activityBarBadge.background": "#569CD6",
-    "activityBarBadge.foreground": "#191B1C",
-    "activityBar.dropBackground": "#4FA544",
-
-    "sideBar.background": "#191B1C",
-    "sideBar.foreground": "#ABABAB",
-    "sideBar.border": "#252525",
-    "sideBar.dropBackground": "#ED3276",
-    "sideBarTitle.foreground": "#191B1C",
-    "sideBarSectionHeader.background": "#252525",
-    "sideBarSectionHeader.foreground": "#569CD6",
-
-    "tab.hoverBackground": "#191B1C",
-    "tab.activeBackground": "#191B1C",
-    "tab.activeForeground": "#569CD6",
-    "tab.inactiveBackground": "#191B1C",
-    "tab.inactiveForeground": "#606366",
-    "tab.border": "#252525",
-    "editorGroupHeader.tabsBackground": "#191B1C",
-    "editorGroupHeader.tabsBorder": "#252525",
-    "tab.hoverBorder": "#191B1C",
-    "tab.activeBorder": "#252525",
-    "editorGroup.background": "#569CD6",
-    "editorGroup.border": "#4FA544",
-    "editorGroup.dropBackground": "#E8BF6A",
-    "editorGroupHeader.noTabsBackground": "#ED3276",
-    "tab.unfocusedActiveBorder": "#4FA544",
-    "tab.unfocusedActiveForeground": "#FF0000",
-    "tab.unfocusedInactiveForeground": "#DCDCAA",
-    "tab.unfocusedHoverBackground": "#287BDE",
-    "tab.unfocusedHoverBorder": "#E8BF6A",
-
-    "editorIndentGuide.background1": "#252525",
-    "editorIndentGuide.background2": "#252525",
-    "editorIndentGuide.background3": "#252525",
-    "editorIndentGuide.background4": "#252525",
-    "editorIndentGuide.background5": "#252525",
-    "editorIndentGuide.background6": "#252525",
-    "editorIndentGuide.activeBackground1": "#606366",
-    "editorIndentGuide.activeBackground2": "#606366",
-    "editorIndentGuide.activeBackground3": "#606366",
-    "editorIndentGuide.activeBackground4": "#606366",
-    "editorIndentGuide.activeBackground5": "#606366",
-    "editorIndentGuide.activeBackground6": "#606366",
-
-    "editor.lineHighlightBorder": "#191B1C",
-    "editor.lineHighlightBackground": "#252525",
-
-    "titleBar.activeBackground": "#191B1C",
-    "titleBar.inactiveBackground": "#191B1C",
 
 
-
-    "terminal.foreground": "#ebdbb2",
-    "panel.background": "#191B1C",
-    "terminal.background": "#191B1C",
-    "editor.background": "#191B1C",
-    "tab.activeBorderTop": "#3c3836",
-    "statusBar.background": "#191B1C",
-
-
-    "quickInputList.focusBackground": "#000000",
-    "editorLineNumber.activeForeground": "#ABABAB",
-    "editorLineNumber.foreground": "#606366",
-    "editorLineNumber.background": "#191B1C",
-    "editor.selectionHighlightBackground": "#3c3836",
-    "editor.selectionHighlightBorder": "#3c3836",
-    "editor.findMatchBackground": "#3c3836",
-    "editor.findMatchHighlightBackground": "#3c3836",
-    "editor.findMatchBorder": "#3c3836",
-    "editor.findMatchHighlightBorder": "#3c3836",
-    "editor.findRangeHighlightBackground": "#3c3836",
-    "editor.findRangeHighlightBorder": "#3c3836",
-    "editor.hoverHighlightBackground": "#3c3836",
-    "editor.hoverHighlightBorder": "#3c3836",
-    "editor.wordHighlightBackground": "#3c3836",
-    "editor.wordHighlightBorder": "#3c3836",
-    "editor.wordHighlightStrongBackground": "#3c3836",
-    "editor.wordHighlightStrongBorder": "#3c3836",
-    "editorBracketMatch.background": "#3c3836",
-    "editorBracketMatch.border": "#3c3836",
-    "editorCodeLens.foreground": "#3c3836",
-    "editorError.foreground": "#3c3836",
-    "editorError.border": "#3c3836",
-    "editorWarning.foreground": "#3c3836",
-    "editorWarning.border": "#3c3836",
-    "editorInfo.foreground": "#3c3836",
-    "editorInfo.border": "#3c3836",
-    "editorGutter.background": "#191B1C",
-    "editorGutter.modifiedBackground": "#3c3836",
-    "editorGutter.addedBackground": "#3c3836",
-    "editorGutter.deletedBackground": "#3c3836",
-    "editorOverviewRuler.border": "#3c3836",
-    "editorOverviewRuler.findMatchForeground": "#3c3836",
-    "editorActiveLine": "#ED3276"
-
-  },
-  "editor.colorDecorators": false,
-
-  "vim": {
-    "neovimPath": "/opt/homebrew/bin/nvim",
-    "useSystemClipboard": true
-  }
 }
+

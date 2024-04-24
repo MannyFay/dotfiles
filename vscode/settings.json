@@ -17,6 +17,7 @@
   "folding": "false",                           // Disable code folding.
   "files.insertFinalNewline": true,             // Insert an empty line at the bottom of files.
   "files.trimTrailingWhitespace": true,         // Trim trailing whitespace after auto save.
+  "editor.occurrencesHighlight": "off",         // Don't highlight other occurrences of word under cursor.
 
   // Project Tree:
   "workbench.tree.indent": 12,                  // Indentation in px.
@@ -225,6 +226,28 @@
   "extensions.experimental.affinity": {  // Improve performance of extension.
     "asvetliakov.vscode-neovim": 1
   },
+  "vim": {
+    "neovimPath": "/opt/homebrew/bin/nvim",
+    "useSystemClipboard": true
+  },
+
+  // Material Icon Theme:
+  "a-file-icon-vscode.arrowTheme": "material",
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  "a-file-icon-vscode.activeIconPacks": [
+    "angular",
+    "rails"
+  ],
+  "a-file-icon-vscode.folderColor": "#569CD6",
+  "a-file-icon-vscode.foldersAssociations": {},
+  "a-file-icon-vscode.folderTheme": "classic",
+  "a-file-icon-vscode.languagesAssociations": {},
+  "a-file-icon-vscode.opacity": 1,
+  "a-file-icon-vscode.saturation": 1,
+  "a-file-icon-vscode.showReloadMessage": true,
+  "a-file-icon-vscode.showUpdateMessage": false,
+  "a-file-icon-vscode.showWelcomeMessage": true,
 
 
 }

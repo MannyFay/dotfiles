@@ -139,6 +139,19 @@
     "editorIndentGuide.activeBackground4": "#606366",
     "editorIndentGuide.activeBackground5": "#606366",
     "editorIndentGuide.activeBackground6": "#606366",
+    "editorLineNumber.foreground": "#606366",          // Line numbers.
+    "editorLineNumber.activeForeground": "#ABABAB",    // Active line number.
+    "editorLineNumber.dimmedForeground": "#CE9178",
+    "editor.lineHighlightBackground": "#252525",       // Background of cursor line.
+    "editor.lineHighlightBorder": "#252525",           // Border of cursor line.
+    "editorCursor.background": "#191B1C",
+    "editorCursor.foreground": "#569CD6",
+    "editorMultiCursor.primary.foreground": "#569CD6",
+    "editorMultiCursor.primary.background": "#191B1C",
+    "editorMultiCursor.secondary.foreground": "#C064C7",
+    "editorMultiCursor.secondarybackground": "#287BDE",
+    "editorRuler.foreground": "#252525",               // Vertical character guide lines.
+
 
     "contrastActiveBorder": "#191B1C",  // Border of active elements.
     "contrastBorder": "#191B1C",        // Border of editor partial areas.
@@ -177,6 +190,61 @@
     "scrollbarSlider.hoverBackground": "#191B1C",     // Slider, if hovered on vertical scrollbars.
     "editorOverviewRuler.border": "#191B1C",          // Border of vertical scrollbars.
     "editorOverviewRuler.background": "#191B1C",      // Background of vertical scrollbars.
+
+    // Project Tree:
+    "sideBar.background": "#191B1C",
+    "sideBar.foreground": "#ABABAB",
+    "sideBar.border": "#252525",
+    "sideBar.dropBackground": "#E8BF6A",
+    "sideBarTitle.foreground": "#191B1C",
+    "sideBarSectionHeader.background": "#252525",
+    "sideBarSectionHeader.foreground": "#569CD6",
+    "sideBarSectionHeader.border": "#191B1C",
+    "sideBarActivityBarTop.border": "#C064C7",
+    "tree.indentGuidesStroke": "#252525",
+    "tree.inactiveIndentGuidesStroke": "#252525",
+    "tree.tableColumnsBorder": "#ED3276",
+    "tree.tableOddRowsBackground": "#A5C25C",
+
+    // Tabs:
+    "tab.activeBackground": "#191B1C",
+    "tab.unfocusedActiveBackground": "#191B1C",
+    "tab.activeForeground": "#569CD6",
+    "tab.border": "#191B1C",
+    "tab.activeBorder": "#191B1C",
+    "tab.dragAndDropBorder": "#191B1C",
+    "tab.unfocusedActiveBorder": "#191B1C",
+    "tab.activeBorderTop": "#191B1C",
+    "tab.unfocusedActiveBorderTop": "#191B1C",
+    "tab.lastPinnedBorder": "#252525",
+    "tab.inactiveBackground": "#191B1C",
+    "tab.unfocusedInactiveBackground": "#191B1C",
+    "tab.inactiveForeground": "#606366",
+    "tab.unfocusedActiveForeground": "#569CD6",
+    "tab.unfocusedInactiveForeground": "#606366",
+    "tab.hoverBackground": "#191B1C",
+    "tab.unfocusedHoverBackground": "#191B1C",
+    "tab.hoverForeground": "#569CD6",
+    "tab.unfocusedHoverForeground": "#569CD6",
+    "tab.hoverBorder": "#191B1C",
+    "tab.unfocusedHoverBorder": "#191B1C",
+    "tab.activeModifiedBorder": "#191B1C",
+    "tab.inactiveModifiedBorder": "#191B1C",
+    "tab.unfocusedActiveModifiedBorder": "#191B1C",
+    "tab.unfocusedInactiveModifiedBorder": "#191B1C",
+
+    // Tab bar:
+    "editorGroup.border": "#252525",
+    "editorGroup.dropBackground": "#252525",
+    "editorGroup.emptyBackground": "#45C8B0",
+    "editorGroup.focusedEmptyBorder": "#DCDCAA",
+    "editorGroup.dropIntoPromptForeground": "#ABABAB",
+    "editorGroup.dropIntoPromptBackground": "#252525",
+    "editorGroup.dropIntoPromptBorder": "#252525",
+    "editorGroupHeader.noTabsBackground": "#191B1C",
+    "editorGroupHeader.tabsBackground": "#191B1C",
+    "editorGroupHeader.tabsBorder": "#191B1C",
+    "editorGroupHeader.border": "#191B1C",
 
     // ????
     "list.activeSelectionBackground": "#252525",

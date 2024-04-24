@@ -18,6 +18,9 @@
   "files.insertFinalNewline": true,             // Insert an empty line at the bottom of files.
   "files.trimTrailingWhitespace": true,         // Trim trailing whitespace after auto save.
 
+  // Project Tree:
+  "workbench.tree.indent": 12,                  // Indentation in px.
+  "workbench.tree.renderIndentGuides": "always",  // Always show indent guides.
 
   // Cursor Settings:
   "editor.cursorBlinking": "solid",             // No blinking cursor.
@@ -55,6 +58,7 @@
   "workbench.colorTheme": "Default Dark+",                // Set color theme.
   "workbench.preferredDarkColorTheme": "Default Dark+",   // Set color theme for dark mode.
   "editor.bracketPairColorization.enabled": false,        // Disable rainbow colored brackets.
+  "editor.colorDecorators": false,                        // Disable color squares in front of color code.
   "editor.tokenColorCustomizations": {                    // Language defaults.
     "comments": "#FF0000",
     "strings": "#CE9178",
@@ -91,6 +95,75 @@
       }
     }
   ],
+  "workbench.colorCustomizations": {
+    // Editor:
+    "editor.background": "#191B1C",     // Background of editor.
+    "editor.foreground": "#ABABAB",     // Foreground of editor.
+
+
+
+    "contrastActiveBorder": "#191B1C",  // Border of active elements.
+    "contrastBorder": "#191B1C",        // Border of editor partial areas.
+    "focusBorder": "#191B1C",           // Border of focused elements.
+
+    "disabledForeground": "#606366",
+    "descriptionForeground": "#ABABAB",
+
+    "errorForeground": "#FF0000",       // Error messages??
+
+    "icon.foreground": "#606366",       // Icons like tree arrows, settings buttons, etc.
+
+    // Scrollbars:
+    "scrollbar.shadow": "#606366",                  // Shadow of horizontal sticky bars on top.
+    "scrollbarSlider.activeBackground": "#191B1C",  // Slider, if clicked on vertical scrollbars.
+    "scrollbarSlider.background": "#191B1C",        // Slider on vertical scrollbars.
+    "scrollbarSlider.hoverBackground": "#191B1C",   // Slider, if hovered on vertical scrollbars.
+    "editorOverviewRuler.border": "#191B1C",        // Border of vertical scrollbars.
+    "editorOverviewRuler.background": "#191B1C",    // Background of vertical scrollbars.
+
+    // Status Line:
+    "statusBar.background": "#191B1C",
+    "statusBar.foreground": "#606366",
+    "statusBar.border": "#191B1C",
+    "statusBar.debuggingBackground": "#191B1C",
+    "statusBar.debuggingForeground": "#569CD6",
+    "statusBar.debuggingBorder": "#191B1C",
+    "statusBar.noFolderForeground": "#ABABAB",
+    "statusBar.noFolderBackground": "#191B1C",
+    "statusBar.noFolderBorder": "#191B1C",
+    "statusBar.focusBorder": "#569CD6",
+    "statusBarItem.activeBackground": "#191B1C",
+    "statusBarItem.hoverForeground": "#569CD6",
+    "statusBarItem.hoverBackground": "#191B1C",
+    "statusBarItem.prominentForeground": "#569CD6",
+    "statusBarItem.prominentBackground": "#191B1C",
+    "statusBarItem.prominentHoverForeground": "#569CD6",
+    "statusBarItem.prominentHoverBackground": "#191B1C",
+    "statusBarItem.remoteBackground": "#191B1C",
+    "statusBarItem.remoteForeground": "#606366",
+    "statusBarItem.remoteHoverBackground": "#191B1C",
+    "statusBarItem.remoteHoverForeground": "#569CD6",
+    "statusBarItem.errorBackground": "#E8BF6A",
+    "statusBarItem.errorForeground": "#ED3276",
+    "statusBarItem.errorHoverBackground": "#4FA544",
+    "statusBarItem.errorHoverForeground": "#E8BF6A",
+    "statusBarItem.warningBackground": "#CE9178",
+    "statusBarItem.warningForeground": "#ED3276",
+    "statusBarItem.warningHoverBackground": "#287BDE",
+    "statusBarItem.warningHoverForeground": "#C064C7",
+    "statusBarItem.compactHoverBackground": "#191B1C",
+    "statusBarItem.focusBorder": "#C064C7",
+    "statusBarItem.offlineBackground": "#ED3276",
+    "statusBarItem.offlineForeground": "#E8BF6A",
+    "statusBarItem.offlineHoverForeground": "#4FA544",
+    "statusBarItem.offlineHoverBackground": "#569CD6",
+
+
+
+
+
+
+  },
 
 
 
@@ -107,4 +180,5 @@
 
 
 }
+
 

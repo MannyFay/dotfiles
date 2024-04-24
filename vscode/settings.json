@@ -124,10 +124,21 @@
     "breadcrumbPicker.background": "#252525",
 
     // Editor:
-    "editor.background": "#191B1C",     // Background of editor.
-    "editor.foreground": "#ABABAB",     // Foreground of editor.
-
-
+    "editor.background": "#191B1C",           // Background of editor.
+    "editor.foreground": "#ABABAB",           // Foreground of editor.
+    "editor.selectionBackground": "#606366",  // Background of selected text.
+    "editorIndentGuide.background1": "#252525",
+    "editorIndentGuide.background2": "#252525",
+    "editorIndentGuide.background3": "#252525",
+    "editorIndentGuide.background4": "#252525",
+    "editorIndentGuide.background5": "#252525",
+    "editorIndentGuide.background6": "#252525",
+    "editorIndentGuide.activeBackground1": "#606366",
+    "editorIndentGuide.activeBackground2": "#606366",
+    "editorIndentGuide.activeBackground3": "#606366",
+    "editorIndentGuide.activeBackground4": "#606366",
+    "editorIndentGuide.activeBackground5": "#606366",
+    "editorIndentGuide.activeBackground6": "#606366",
 
     "contrastActiveBorder": "#191B1C",  // Border of active elements.
     "contrastBorder": "#191B1C",        // Border of editor partial areas.
@@ -140,14 +151,76 @@
 
     // Window:
     "icon.foreground": "#606366",       // Icons like tree arrows, settings buttons, etc.
+    "button.background": "#191B1C",
+    "button.foreground": "#569CD6",
+    "button.border": "#569CD6",
+    "button.separator": "#191B1C",
+    "button.hoverBackground": "#191B1C",
+    "button.secondaryForeground": "#569CD6",
+    "button.secondaryBackground": "#191B1C",
+    "button.secondaryHoverBackground": "#ED3276",
+    "toolbar.hoverBackground": "#191B1C",          // Hover background of tool icons.
+    "toolbar.hoverOutline": "#191B1C",             // Hover outline of tool icons.
+    "toolbar.activeBackground": "#191B1C",         // Background if tool icon is clicked.
+    "badge.foreground": "#191B1C",
+    "badge.background": "#606366",
+    "progressBar.background": "#569CD6",
 
     // Scrollbars:
-    "scrollbar.shadow": "#606366",                  // Shadow of horizontal sticky bars on top.
-    "scrollbarSlider.activeBackground": "#191B1C",  // Slider, if clicked on vertical scrollbars.
-    "scrollbarSlider.background": "#191B1C",        // Slider on vertical scrollbars.
-    "scrollbarSlider.hoverBackground": "#191B1C",   // Slider, if hovered on vertical scrollbars.
-    "editorOverviewRuler.border": "#191B1C",        // Border of vertical scrollbars.
-    "editorOverviewRuler.background": "#191B1C",    // Background of vertical scrollbars.
+    "scrollbar.shadow": "#606366",                    // Shadow of horizontal sticky bars on top.
+    "editorStickyScroll.background": "#252525",       // Background of sticky scrollbars on top.
+    "editorStickyScroll.border": "#252525",           // Border of sticky scrollbars on top.
+    "editorStickyScroll.shadow": "#252525",           // Shadow of sticky scrollbars on top.
+    "editorStickyScrollHover.background": "#191B1C",  // Hover background of sticky scrollbars on top.
+    "scrollbarSlider.activeBackground": "#191B1C",    // Slider, if clicked on vertical scrollbars.
+    "scrollbarSlider.background": "#191B1C",          // Slider on vertical scrollbars.
+    "scrollbarSlider.hoverBackground": "#191B1C",     // Slider, if hovered on vertical scrollbars.
+    "editorOverviewRuler.border": "#191B1C",          // Border of vertical scrollbars.
+    "editorOverviewRuler.background": "#191B1C",      // Background of vertical scrollbars.
+
+    // ????
+    "list.activeSelectionBackground": "#252525",
+    "list.activeSelectionForeground": "#ABABAB",
+    "list.activeSelectionIconForeground": "#287BDE",
+    "list.dropBackground": "#252525",
+    "list.focusBackground": "#191B1C",
+    "list.focusForeground": "#569CD6",
+    "list.focusHighlightForeground": "#A5C25C",
+    "list.focusOutline": "#191B1C",
+    "list.focusAndSelectionOutline": "#252525",
+    "list.highlightForeground": "#287BDE",
+    "list.hoverBackground": "#191B1C",
+    "list.hoverForeground": "#ABABAB",
+    "list.inactiveSelectionBackground": "#252525",
+    "list.inactiveSelectionForeground": "#569CD6",
+    "list.inactiveSelectionIconForeground": "#569CD6",
+    "list.inactiveFocusBackground": "#252525",
+    "list.inactiveFocusOutline": "#252525",
+    "list.invalidItemForeground": "#287BDE",
+    "list.errorForeground": "#4FA544",
+    "list.warningForeground": "#CE9178",
+    "list.filterMatchBackground": "#287BDE",
+    "list.filterMatchBorder": "",
+    "list.deemphasizedForeground": "",
+    "list.dropBetweenBackground": "",
+
+    // Activity Bar (very left, vertical bar with icons):
+    "activityBar.background": "#191B1C",
+    "activityBar.dropBorder": "#569CD6",
+    "activityBar.foreground": "#569CD6",
+    "activityBar.inactiveForeground": "#606366",
+    "activityBar.border": "#191B1C",
+    "activityBar.activeBorder": "#191B1C",
+    "activityBar.activeBackground": "#191B1C",
+    "activityBar.activeFocusBorder": "#191B1C",
+    "activityBarBadge.background": "#606366",
+    "activityBarBadge.foreground": "#191B1C",
+    "activityBarTop.foreground": "#ED3276",
+    "activityBarTop.activeBorder": "#E8BF6A",
+    "activityBarTop.inactiveForeground": "#45C8B0",
+    "activityBarTop.dropBorder": "#C064C7",
+    "activityBarTop.background": "#ABABAB",
+    "activityBarTop.activeBackground": "#45C8B0",
 
     // Status Line:
     "statusBar.background": "#191B1C",
@@ -209,6 +282,15 @@
     "settings.sashBorder": "#191B1C",
     "settings.settingsHeaderHoverForeground": "#569CD6",
 
+    // VS Code Welcome Page:
+    "welcomePage.background": "#191B1C",
+    "welcomePage.progress.background": "#252525",
+    "welcomePage.progress.foreground": "#569CD6",
+    "welcomePage.tileBackground": "#252525",
+    "welcomePage.tileHoverBackground": "#252525",
+    "welcomePage.tileBorder": "#252525",
+    "walkThrough.embeddedEditorBackground": "#4FA544",
+    "walkthrough.stepTitle.foreground": "#CE9178",
 
 
 
@@ -227,9 +309,19 @@
     "asvetliakov.vscode-neovim": 1
   },
   "vim": {
-    "neovimPath": "/opt/homebrew/bin/nvim",
+    "neovimPath": "/opt/homebrew/bin/nvim",  // Path to Nvim executable (macOS).
     "useSystemClipboard": true
   },
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",  // Path to Nvims init.lua file (macOS).
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "/", "/"],
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    }
+  ],
+
 
   // Material Icon Theme:
   "a-file-icon-vscode.arrowTheme": "material",

@@ -96,6 +96,32 @@
     }
   ],
   "workbench.colorCustomizations": {
+
+    // Title Bar (very top of window):
+    "titleBar.activeBackground": "#191B1C",
+    "titleBar.activeForeground": "#606366",
+    "titleBar.inactiveBackground": "#191B1C",
+    "titleBar.inactiveForeground": "#606366",
+    "titleBar.border": "#191B1C",
+
+    // Search bar and it's menu in title bar:
+    "commandCenter.foreground": "#606366",        // Foreground of search bar.
+    "commandCenter.activeForeground": "#569CD6",  // Foreground of search bar on hover.
+    "commandCenter.background": "#252525",        // Background of search bar.
+    "commandCenter.activeBackground": "#252525",
+    "commandCenter.border": "#252525",
+    "commandCenter.inactiveForeground": "",
+    "commandCenter.inactiveBorder": "#252525",
+    "commandCenter.activeBorder": "#252525",
+    "commandCenter.debuggingBackground": "#287BDE",
+
+    // Bread Crumbs (under title or tab bar):
+    "breadcrumb.foreground": "#606366",
+    "breadcrumb.background": "#252525",
+    "breadcrumb.focusForeground": "#569CD6",
+    "breadcrumb.activeSelectionForeground": "#569CD6",
+    "breadcrumbPicker.background": "#252525",
+
     // Editor:
     "editor.background": "#191B1C",     // Background of editor.
     "editor.foreground": "#ABABAB",     // Foreground of editor.
@@ -111,6 +137,7 @@
 
     "errorForeground": "#FF0000",       // Error messages??
 
+    // Window:
     "icon.foreground": "#606366",       // Icons like tree arrows, settings buttons, etc.
 
     // Scrollbars:
@@ -158,7 +185,28 @@
     "statusBarItem.offlineHoverForeground": "#4FA544",
     "statusBarItem.offlineHoverBackground": "#569CD6",
 
-
+    // Settings Window:
+    "settings.headerForeground": "#ABABAB",
+    "settings.modifiedItemIndicator": "#191B1C",
+    "settings.dropdownBackground": "#252525",
+    "settings.dropdownForeground": "#569CD6",
+    "settings.dropdownBorder": "#252525",
+    "settings.dropdownListBorder": "#252525",
+    "settings.checkboxBackground": "#252525",
+    "settings.checkboxForeground": "#569CD6",
+    "settings.checkboxBorder": "#252525",
+    "settings.rowHoverBackground": "#191B1C",
+    "settings.textInputBackground": "#252525",
+    "settings.textInputForeground": "#569CD6",
+    "settings.textInputBorder": "#252525",
+    "settings.numberInputBackground": "#252525",
+    "settings.numberInputForeground": "#569CD6",
+    "settings.numberInputBorder": "#252525",
+    "settings.focusedRowBackground": "#191B1C",
+    "settings.focusedRowBorder": "#191B1C",
+    "settings.headerBorder": "#191B1C",
+    "settings.sashBorder": "#191B1C",
+    "settings.settingsHeaderHoverForeground": "#569CD6",
 
 
 

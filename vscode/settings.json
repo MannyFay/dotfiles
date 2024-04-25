@@ -373,22 +373,84 @@
   "extensions.autoUpdate": true,          // Automatically update extensions.
 
   // Neovim Extension:
-  "extensions.experimental.affinity": {  // Improve performance of extension.
-    "asvetliakov.vscode-neovim": 1
-  },
+  //"extensions.experimental.affinity": {  // Improve performance of extension.
+   // "asvetliakov.vscode-neovim": 1
+  //},
   "vim": {
     "neovimPath": "/opt/homebrew/bin/nvim",  // Path to Nvim executable (macOS).
     "useSystemClipboard": true
   },
   "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",  // Path to Nvims init.lua file (macOS).
 
+  // Vim Extension:
+  "extensions.experimental.affinity": {  // Improve performance of extension.
+    "vscodevim.vim": 1
+  },
+  "vim.leader": "<space>",    // Set <Leader> to space globally (standard is \).
+  "vim.useSystemClipboard": true,  // Use clipboard of OS.
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "/", "/"],
+      "before": ["<leader>", "/"],                // Use <Leader>/ to comment line.
       "commands": ["editor.action.commentLine"],
       "silent": true
+    }, {
+      "before": ["v", "v"],                      // Use vv to select whole line.
+      "after": ["V"],
+      "silent": true
+    }, {
+      "before": ["<Esc>"],                      // Use esc to quit highlight search.
+      "after": [":nohlsearch<CR>"],
+      "silent": true
+    }, {
+      "before": ["n"],                      // Center the screen after jumping to the next match.
+      "after": ["n", "z", "z", "z", "v"],
+      "silent": true
+    }, {
+      "before": ["N"],                      // Center the screen after jumping to the previous match.
+      "after": ["N", "z", "z", "z", "v"],
+      "silent": true
+    }, {
+      "before": ["U"],                      // Redo last action.
+      "after": ["<C-r>"],
+      "silent": true
+    }, {
+      "before": ["<", "<"],                      // Stay in visual mode after indent width <<.
+      "after": ["<", "g", "v"],
+      "silent": true
+    }, {
+      "before": [">", ">"],                      // Stay in visual mode after indent width >>.
+      "after": [">", "g", "v"],
+      "silent": true
+    }, {
+      "before": ["Y"],                      // Yank to end of line.
+      "after": ["y", "$"],
+      "silent": true
+    }, {
+      "before": ["v", "b"],                      // Use vb for visual block mode.
+      "after": ["<C-v>"],
+      "silent": true
+    }, {
+      "before": [",", ","],                      // Insert a , at the end of line.
+      "after": ["<Esc>", "A", ",", "<Esc>"],
+      "silent": true
+    }, {
+      "before": [":", ":"],                      // Insert a : at the end of line.
+      "after": ["<Esc>", "A", ":", "<Esc>"],
+      "silent": true
     }
+
+
+
+
+
+    //{
+     // "before": ["x"],                      // If delete one char, don't copy it to the clipboard.
+     // "after": ['"_x'],
+     // "silent": true
+    //}
   ],
+
+// vim.keymap.set('n', 'x', '"_x')                                         -- If delete one char, don't copy it to the clipboard.
 
 
   // Material Icon Theme:
@@ -410,6 +472,19 @@
   "a-file-icon-vscode.showWelcomeMessage": true,
 
 
-}
+  // Copilot:
+  "github.copilot.editor.enableAutoCompletions": true,  // Automatically show inline completions.
 
+  // Blade Formatter:
+  "bladeFormatter.format.indentSize": 2,  // Indent size for Blade files.
+
+  // Prettier+:
+  "editor.defaultFormatter": "svipas.prettier-plus",  // Set Prettier+ as default formatter.
+  "editor.formatOnPaste": true,                       // Format code on paste.
+  "editor.formatOnSave": true,
+  "blade.format.enable": true,                         // Format Blade files
+  "bladeFormatter.format.enabled": true,
+  "css.format.enable": true,
+  "css.format.maxPreserveNewLines": 1
+}
 

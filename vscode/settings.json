@@ -238,7 +238,7 @@
     // Tab bar:
     "editorGroup.border": "#252525",
     "editorGroup.dropBackground": "#252525",
-    "editorGroup.emptyBackground": "#45C8B0",
+    "editorGroup.emptyBackground": "#191B1C",
     "editorGroup.focusedEmptyBorder": "#DCDCAA",
     "editorGroup.dropIntoPromptForeground": "#ABABAB",
     "editorGroup.dropIntoPromptBackground": "#252525",

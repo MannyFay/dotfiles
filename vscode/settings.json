@@ -203,8 +203,10 @@
     "sideBarActivityBarTop.border": "#C064C7",
     "tree.indentGuidesStroke": "#252525",
     "tree.inactiveIndentGuidesStroke": "#252525",
-    "tree.tableColumnsBorder": "#ED3276",
-    "tree.tableOddRowsBackground": "#A5C25C",
+
+    // Tables in VS Code app (like Keyboard Shortcuts table):
+    "tree.tableColumnsBorder": "#606366",
+    "tree.tableOddRowsBackground": "#252525",
 
     // Tabs:
     "tab.activeBackground": "#191B1C",
@@ -437,6 +439,19 @@
       "before": [":", ":"],                      // Insert a : at the end of line.
       "after": ["<Esc>", "A", ":", "<Esc>"],
       "silent": true
+    }, {
+      "before": ["<leader>", "j", "l"],                      // Join line below with white space.
+      "after": ["J"],
+      "silent": true
+    }, {
+      "before": ["<leader>", "e", "t"],               // Explore file tree.
+      "commands": ["workbench.view.explorer"],
+      "silent": true
+    }, {
+      "before": ["<leader>", "t", "h"],               // Open terminal in horizontal split.
+      "commands": ["workbench.action.terminal.focus"],
+      "silent": true
+
     }
 
 

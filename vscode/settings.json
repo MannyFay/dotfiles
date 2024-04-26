@@ -473,6 +473,18 @@
       "before": ["<", "<"],  // Unindent current line.
       "commands": ["editor.action.reindentlines"],
       "silent": true
+    }, {
+      "before": ["<leader>", "h", "m"],  // Harpoon - set mark.
+      "commands": ["vscode-harpoon.addEditor"],
+      "silent": true
+    }, {
+      "before": ["<leader>", "h", "l"],  // Harpoon - show list.
+      "commands": ["vscode-harpoon.editorQuickPick"],
+      "silent": true
+    }, {
+      "before": ["<leader>", "f", "f"],  // Find files.
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
     },
     //{
      // "before": ["x"],                      // If delete one char, don't copy it to the clipboard.

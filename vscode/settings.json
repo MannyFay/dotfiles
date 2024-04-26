@@ -18,6 +18,7 @@
   "files.insertFinalNewline": true,             // Insert an empty line at the bottom of files.
   "files.trimTrailingWhitespace": true,         // Trim trailing whitespace after auto save.
   "editor.occurrencesHighlight": "off",         // Don't highlight other occurrences of word under cursor.
+  "workbench.editor.showTabs": "none",      // Don't use tabs.
 
   // Project Tree:
   "workbench.tree.indent": 12,                  // Indentation in px.
@@ -56,6 +57,7 @@
 
   //--------------------------------------------------------------------------------
   // Color Theme
+
   "workbench.colorTheme": "Default Dark+",                // Set color theme.
   "workbench.preferredDarkColorTheme": "Default Dark+",   // Set color theme for dark mode.
   "editor.bracketPairColorization.enabled": false,        // Disable rainbow colored brackets.
@@ -451,13 +453,27 @@
       "before": ["<leader>", "t", "h"],               // Open terminal in horizontal split.
       "commands": ["workbench.action.terminal.focus"],
       "silent": true
-
-    }
-
-
-
-
-
+    }, {
+      "before": ["|"],               // Open file in vertical split. -> not working
+      "commands": ["explorer.openToSide"],
+      "silent": true
+    }, {
+      "before": ["L"],               // Jump to right split.
+      "commands": ["workbench.action.focusRightGroup"],
+      "silent": true
+    }, {
+      "before": ["H"],               // Jump to left split.
+      "commands": ["workbench.action.focusLeftGroup"],
+      "silent": true
+    }, {
+      "before": [">", ">"],   // Indent current line.
+      "commands": ["editor.action.indentLines"],
+      "silent": true
+    }, {
+      "before": ["<", "<"],  // Unindent current line.
+      "commands": ["editor.action.reindentlines"],
+      "silent": true
+    },
     //{
      // "before": ["x"],                      // If delete one char, don't copy it to the clipboard.
      // "after": ['"_x'],
@@ -466,7 +482,22 @@
   ],
 
 // vim.keymap.set('n', 'x', '"_x')                                         -- If delete one char, don't copy it to the clipboard.
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [ ">>" ],                  // Indent selected lines.
+      "commands": [ "editor.action.indentLines" ],
+      "silent": true
+    }, {
+      "before": [ "<<" ],                       // Unindent selected lines.
+      "commands": [ "editor.action.reindentlines" ],
+      "silent": true
+    }, {
+      "before": ["<leader>", "/"],                // Use <Leader>/ to comment line.
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    },
 
+  ]
 
   // Material Icon Theme:
   "a-file-icon-vscode.arrowTheme": "material",

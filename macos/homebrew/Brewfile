@@ -80,6 +80,7 @@ cask 'quicklook-json'
 cask 'quicklookase'
 cask 'raycast'
 cask 'suspicious-package'
+cask 'visual-studio-code'
 
 
 

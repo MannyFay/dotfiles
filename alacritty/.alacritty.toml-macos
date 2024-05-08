@@ -73,15 +73,15 @@ style                     = "Regular"
 
 [font.bold]
 family                    = "MesloLGMDZ Nerd Font"
-style                     = "Regular"
+style                     = "Bold"
 
 [font.italic]
 family                    = "MesloLGMDZ Nerd Font"
-style                     = "Regular"
+style                     = "Italic"
 
 [font.bold_italic]
 family                    = "MesloLGMDZ Nerd Font"
-style                     = "Regular"
+style                     = "Bold Italic"
 
 [font]
 builtin_box_drawing       = true

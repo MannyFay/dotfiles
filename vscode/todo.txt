@@ -1,3 +1,12 @@
 Symlink the settings.json file to the correct location..
 Mac:
 ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+Symlink the keybindings.json file to the correct location..
+Mac:
+ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
+
+Mac Setting for faster key repeat (Restart mac after this):
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1

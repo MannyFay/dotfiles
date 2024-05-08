@@ -1,0 +1,1634 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------ HTML
+
+--- htmlCssStyleComment xxx links to Comment
+--- htmlScriptTag  xxx links to htmlTag
+--- htmlEventSQ    xxx links to htmlEvent
+--- htmlEventDQ    xxx links to htmlEvent
+--- htmlStyleArg   xxx links to htmlString
+--- htmlStatement  xxx links to Statement
+htmlHead       xxx links to PreProc
+htmlError      xxx links to Error
+--- htmlSpecialChar xxx links to Special
+htmlString     xxx links to String
+htmlValue      xxx links to String
+--- htmlTagN       xxx cleared
+htmlTagError   xxx links to htmlError
+--- htmlEndTag     xxx links to Identifier
+--- htmlArg        xxx links to Type
+htmlEvent      xxx links to javaScript
+htmlCssDefinition xxx links to Special
+--- htmlTag        xxx links to Function
+--- htmlTagName    xxx links to htmlStatement
+htmlSpecialTagName xxx links to Exception
+htmlCommentError xxx links to htmlError
+htmlComment    xxx links to Comment
+htmlCommentNested xxx links to htmlError
+htmlPreStmt    xxx links to PreProc
+htmlPreError   xxx links to Error
+htmlPreAttr    xxx links to String
+htmlPreProc    xxx links to PreProc
+htmlPreProcAttrError xxx links to Error
+htmlPreProcAttrName xxx links to PreProc
+--- htmlLink       xxx links to Underlined
+htmlStrike     xxx cleared
+htmlBoldUnderline xxx cleared
+htmlBoldItalic xxx cleared
+htmlBold       xxx cleared
+htmlBoldUnderlineItalic xxx cleared
+htmlBoldItalicUnderline xxx links to htmlBoldUnderlineItalic
+htmlUnderlineBold xxx links to htmlBoldUnderline
+htmlUnderlineItalic xxx cleared
+htmlUnderline  xxx cleared
+htmlUnderlineBoldItalic xxx links to htmlBoldUnderlineItalic
+htmlUnderlineItalicBold xxx links to htmlBoldUnderlineItalic
+htmlItalicBold xxx links to htmlBoldItalic
+htmlItalicUnderline xxx links to htmlUnderlineItalic
+htmlItalic     xxx cleared
+htmlItalicBoldUnderline xxx links to htmlBoldUnderlineItalic
+htmlItalicUnderlineBold xxx links to htmlBoldUnderlineItalic
+htmlLeadingSpace xxx links to NONE
+--- htmlH1         xxx links to Title
+htmlH2         xxx links to htmlH1
+htmlH3         xxx links to htmlH2
+htmlH4         xxx links to htmlH3
+htmlH5         xxx links to htmlH4
+htmlH6         xxx links to htmlH5
+--- htmlTitle      xxx links to Title
+htmlHead       xxx links to PreProc
+htmlCssStyleComment xxx links to Comment
+htmlScriptTag  xxx links to htmlTag
+htmlEventSQ    xxx links to htmlEvent
+htmlEventDQ    xxx links to htmlEvent
+htmlString     xxx links to String
+htmlValue      xxx links to String
+htmlTagN       xxx cleared
+htmlTagError   xxx links to htmlError
+
+htmlArg        xxx links to Type
+htmlEvent      xxx links to javaScript
+htmlCssDefinition xxx links to Special
+htmlTag        xxx links to Function
+htmlTagName    xxx links to htmlStatement
+htmlSpecialTagName xxx links to Exception
+htmlCommentError xxx links to htmlError
+htmlComment    xxx links to Comment
+htmlCommentNested xxx links to htmlError
+htmlPreStmt    xxx links to PreProc
+htmlPreError   xxx links to Error
+htmlPreAttr    xxx links to String
+htmlPreProc    xxx links to PreProc
+htmlPreProcAttrError xxx links to Error
+htmlPreProcAttrName xxx links to PreProc
+htmlLink       xxx links to Underlined
+javaScript     xxx links to Special
+htmlStrike     xxx cleared
+htmlBoldUnderline xxx cleared
+htmlBoldItalic xxx cleared
+htmlBold       xxx cleared
+htmlBoldUnderlineItalic xxx cleared
+htmlBoldItalicUnderline xxx links to htmlBoldUnderlineItalic
+htmlUnderlineBold xxx links to htmlBoldUnderline
+htmlUnderlineItalic xxx cleared
+htmlUnderline  xxx cleared
+htmlUnderlineBoldItalic xxx links to htmlBoldUnderlineItalic
+htmlUnderlineItalicBold xxx links to htmlBoldUnderlineItalic
+htmlItalicBold xxx links to htmlBoldItalic
+htmlItalicUnderline xxx links to htmlUnderlineItalic
+htmlItalic     xxx cleared
+htmlItalicBoldUnderline xxx links to htmlBoldUnderlineItalic
+htmlItalicUnderlineBold xxx links to htmlBoldUnderlineItalic
+htmlLeadingSpace xxx links to NONE
+
+
+
+
+
+
+------------ JavaScript
+
+javaScriptCommentTodo xxx links to Todo
+javaScriptLineComment xxx links to Comment
+javaScriptCommentSkip xxx cleared
+javaScriptComment xxx links to Comment
+javaScriptSpecial xxx links to Special
+javaScriptStringD xxx links to String
+javaScriptStringS xxx links to String
+javaScriptEmbed xxx links to Special
+javaScriptStringT xxx links to String
+javaScriptSpecialCharacter xxx links to javaScriptSpecial
+javaScriptNumber xxx links to javaScriptValue
+javaScriptRegexpString xxx links to String
+javaScriptConditional xxx links to Conditional
+javaScriptRepeat xxx links to Repeat
+javaScriptBranch xxx links to Conditional
+javaScriptOperator xxx links to Operator
+javaScriptType xxx links to Type
+javaScriptStatement xxx links to Statement
+javaScriptBoolean xxx links to Boolean
+javaScriptNull xxx links to Keyword
+javaScriptIdentifier xxx links to Identifier
+javaScriptLabel xxx links to Label
+javaScriptException xxx links to Exception
+javaScriptMessage xxx links to Keyword
+javaScriptGlobal xxx links to Keyword
+javaScriptMember xxx links to Keyword
+javaScriptDeprecated xxx links to Exception
+javaScriptReserved xxx links to Keyword
+javaScriptFunction xxx links to Function
+javaScriptBraces xxx links to Function
+javaScriptParens xxx cleared
+javaScriptCharacter xxx links to Character
+javaScriptValue xxx cleared
+javaScriptError xxx links to Error
+javaScrParenError xxx links to javaScriptError
+javaScriptDebug xxx links to Debug
+javaScriptConstant xxx links to Label
+javaScriptExpression xxx links to javaScript
+
+
+
+
+
+
+
+
+------------ Vim
+
+vimTodo        xxx links to Todo
+--- vimCommand     xxx links to Statement
+vimStdPlugin   xxx cleared
+---- vimOption      xxx links to PreProc
+vimErrSetting  xxx links to vimError
+vimAutoEvent   xxx links to Type
+vimGroup       xxx links to Type
+vimHLGroup     xxx links to vimGroup
+vimFuncName    xxx links to Function
+vimGlobal      xxx cleared
+vimSubst       xxx links to vimCommand
+vimComment     xxx links to Comment
+vim9Comment    xxx links to Comment
+--- vimNumber      xxx links to Number
+vimAddress     xxx links to vimMark
+vimAutoCmd     xxx links to vimCommand
+vimEcho        xxx cleared
+vimIsCommand   xxx cleared
+vimExtCmd      xxx cleared
+vimFilter      xxx cleared
+vimLet         xxx links to vimCommand
+vimMap         xxx links to vimCommand
+vimMark        xxx links to Number
+vimSet         xxx cleared
+vimSyntax      xxx links to vimCommand
+vimUserCmd     xxx cleared
+vimCmdSep      xxx cleared
+--- vimVar         xxx links to Identifier
+vimFBVar       xxx links to vimVar
+vimInsert      xxx links to vimString
+vimBehaveModel xxx links to vimBehave
+vimBehaveError xxx links to vimError
+vimBehave      xxx links to vimCommand
+vimFTCmd       xxx links to vimCommand
+vimFTOption    xxx links to vimSynType
+vimFTError     xxx links to vimError
+vimFiletype    xxx cleared
+vimAugroup     xxx cleared
+vimExecute     xxx cleared
+vimNotFunc     xxx links to vimCommand
+vimFunction    xxx cleared
+vimFunctionError xxx links to vimError
+vimLineComment xxx links to vimComment
+vimSpecFile    xxx links to Identifier
+vimOper        xxx links to Operator
+vimOperParen   xxx cleared
+vimString      xxx links to String
+vimRegister    xxx links to SpecialChar
+vimCmplxRepeat xxx links to SpecialChar
+vimRegion      xxx cleared
+vimSynLine     xxx cleared
+vimNotation    xxx links to Special
+vimCtrlChar    xxx links to SpecialChar
+vimFuncVar     xxx links to Identifier
+vimContinue    xxx links to Special
+vimSetEqual    xxx cleared
+vimAugroupKey  xxx links to vimCommand
+vimAugroupError xxx links to vimError
+vimEnvvar      xxx links to PreProc
+vimFunc        xxx links to vimError
+vimType        xxx links to Type
+vimParenSep    xxx links to Delimiter
+vimoperStar    xxx links to vimOper
+vimSep         xxx links to Delimiter
+vimOperError   xxx links to Error
+vimFuncKey     xxx links to vimCommand
+vimFuncSID     xxx links to Special
+vimAbb         xxx links to vimCommand
+vimEchoHL      xxx links to vimCommand
+vimHighlight   xxx links to vimCommand
+vimLetHereDoc  xxx links to vimString
+vimNorm        xxx links to vimCommand
+vimSearch      xxx links to vimString
+vimUnmap       xxx links to vimMap
+vimUserCommand xxx links to vimCommand
+vimFuncBody    xxx cleared
+vimFuncBlank   xxx cleared
+vimPattern     xxx links to Type
+vimSpecFileMod xxx links to vimSpecFile
+vimEscapeBrace xxx cleared
+vimSetString   xxx links to vimString
+vimSubstRep    xxx cleared
+vimSubstRange  xxx cleared
+vimUserAttrb   xxx links to vimSpecial
+vimUserAttrbError xxx links to Error
+vimComFilter   xxx cleared
+vimUserAttrbKey xxx links to vimOption
+vimUserAttrbCmplt xxx links to vimSpecial
+vimUserCmdError xxx links to Error
+vimUserAttrbCmpltFunc xxx links to Special
+vimCommentString xxx links to vimString
+vimPatSepErr   xxx links to vimError
+vimPatSep      xxx links to SpecialChar
+vimPatSepZ     xxx links to vimPatSep
+vimPatSepZone  xxx links to vimString
+vimPatSepR     xxx links to vimPatSep
+vimPatRegion   xxx cleared
+vimNotPatSep   xxx links to vimString
+vimStringEnd   xxx links to vimString
+vimStringCont  xxx links to vimString
+vimSubstTwoBS  xxx links to vimString
+vimSubstSubstr xxx links to SpecialChar
+vimCollection  xxx cleared
+vimSubstPat    xxx cleared
+vimSubst1      xxx links to vimSubst
+vimSubst2      xxx cleared
+vimSubstDelim  xxx links to Delimiter
+vimSubstRep4   xxx cleared
+vimSubstFlagErr xxx links to vimError
+vimCollClass   xxx cleared
+vimCollClassErr xxx links to vimError
+vimSubstFlags  xxx links to Special
+vimMarkNumber  xxx links to vimNumber
+vimPlainMark   xxx links to vimMark
+vimRange       xxx cleared
+vimPlainRegister xxx links to vimRegister
+vimSetMod      xxx links to vimOption
+vimSetSep      xxx links to Statement
+vimLetHereDocStart xxx links to Special
+vimLetHereDocStop xxx links to Special
+vimMapMod      xxx links to vimBracket
+vimMapLhs      xxx cleared
+vimAutoCmdSpace xxx cleared
+vimAutoEventList xxx cleared
+vimAutoCmdSfxList xxx cleared
+vimAutoCmdMod  xxx links to Special
+vimEchoHLNone  xxx links to vimGroup
+vimMapBang     xxx links to vimCommand
+vimMapRhs      xxx cleared
+vimMapModKey   xxx links to vimFuncSID
+vimMapModErr   xxx links to vimError
+vimMapRhsExtend xxx cleared
+vimMenuBang    xxx cleared
+vimMenuPriority xxx cleared
+vimMenuName    xxx links to PreProc
+vimMenuMod     xxx links to vimMapMod
+vimMenuNameMore xxx links to vimMenuName
+vimMenuMap     xxx cleared
+vimMenuRhs     xxx cleared
+vimBracket     xxx links to Delimiter
+vimUserFunc    xxx links to Normal
+vimUsrCmd      xxx cleared
+vimElseIfErr   xxx links to Error
+vimBufnrWarn   xxx links to vimWarn
+vimNormCmds    xxx cleared
+vimGroupSpecial xxx links to Special
+vimGroupList   xxx cleared
+vimSynError    xxx links to Error
+vimSynContains xxx links to vimSynOption
+vimSynKeyContainedin xxx links to vimSynContains
+vimSynNextgroup xxx links to vimSynOption
+vimSynType     xxx links to vimSpecial
+vimAuSyntax    xxx cleared
+vimSynCase     xxx links to Type
+vimSynCaseError xxx links to vimError
+vimClusterName xxx cleared
+vimGroupName   xxx links to vimGroup
+vimGroupAdd    xxx links to vimSynOption
+vimGroupRem    xxx links to vimSynOption
+vimIskList     xxx cleared
+vimIskSep      xxx links to Delimiter
+vimSynKeyOpt   xxx links to vimSynOption
+vimSynKeyRegion xxx cleared
+vimMtchComment xxx links to vimComment
+vimSynMtchOpt  xxx links to vimSynOption
+vimSynRegPat   xxx links to vimString
+vimSynMatchRegion xxx cleared
+vimSynMtchCchar xxx cleared
+vimSynMtchGroup xxx cleared
+vimSynPatRange xxx links to vimString
+vimSynNotPatRange xxx links to vimSynRegPat
+vimSynRegOpt   xxx links to vimSynOption
+vimSynReg      xxx links to Type
+vimSynMtchGrp  xxx links to vimSynOption
+vimSynRegion   xxx cleared
+vimSynPatMod   xxx cleared
+vimSyncC       xxx links to Type
+vimSyncLines   xxx cleared
+vimSyncMatch   xxx cleared
+vimSyncError   xxx links to Error
+vimSyncLinebreak xxx cleared
+vimSyncLinecont xxx cleared
+vimSyncRegion  xxx cleared
+vimSyncGroupName xxx links to vimGroupName
+vimSyncKey     xxx links to Type
+vimSyncGroup   xxx links to vimGroupName
+vimSyncNone    xxx links to Type
+vimHiLink      xxx cleared
+vimHiClear     xxx links to vimHighlight
+vimHiKeyList   xxx cleared
+vimHiCtermError xxx links to vimError
+vimHiBang      xxx cleared
+vimHiGroup     xxx links to vimGroupName
+vimHiAttrib    xxx links to PreProc
+vimFgBgAttrib  xxx links to vimHiAttrib
+vimHiAttribList xxx links to vimError
+vimHiCtermColor xxx cleared
+vimHiFontname  xxx cleared
+vimHiGuiFontname xxx cleared
+vimHiGuiRgb    xxx links to vimNumber
+vimHiTerm      xxx links to Type
+vimHiCTerm     xxx links to vimHiTerm
+vimHiStartStop xxx links to vimHiTerm
+vimHiCtermFgBg xxx links to vimHiTerm
+vimHiCtermul   xxx links to vimHiTerm
+vimHiGui       xxx links to vimHiTerm
+vimHiGuiFont   xxx links to vimHiTerm
+vimHiGuiFgBg   xxx links to vimHiTerm
+vimHiKeyError  xxx links to vimError
+vimHiTermcap   xxx cleared
+vimHiNmbr      xxx links to Number
+vimCommentTitle xxx links to PreProc
+vim9LineComment xxx links to vimComment
+vimCommentTitleLeader xxx cleared
+vimSearchDelim xxx links to Statement
+vimLuaRegion   xxx cleared
+vimEmbedError  xxx links to vimError
+vimAugroupSyncA xxx cleared
+vimError       xxx links to Error
+vimKeyCodeError xxx links to vimError
+vimWarn        xxx links to WarningMsg
+vimAuHighlight xxx links to vimHighlight
+vimAutoCmdOpt  xxx links to vimOption
+vimAutoSet     xxx links to vimCommand
+vimCondHL      xxx links to vimCommand
+vimElseif      xxx links to vimCondHL
+vimFold        xxx links to Folded
+vimSynOption   xxx links to Special
+vimHLMod       xxx links to PreProc
+vimKeyCode     xxx links to vimSpecFile
+vimKeyword     xxx links to Statement
+vimSpecial     xxx links to Type
+vimStatement   xxx links to Statement
+
+
+
+
+
+
+
+
+
+luaTodo        xxx links to Todo
+luaComment     xxx links to Comment
+luaInnerComment xxx cleared
+luaParenError  xxx links to Error
+luaSpecial     xxx links to SpecialChar
+luaIfThen      xxx cleared
+luaElseifThen  xxx cleared
+luaElse        xxx links to Conditional
+luaThenEnd     xxx cleared
+luaBlock       xxx cleared
+luaLoopBlock   xxx cleared
+luaIn          xxx links to Operator
+luaStatement   xxx links to Statement
+luaParen       xxx cleared
+luaTable       xxx links to Structure
+luaBraceError  xxx links to Error
+luaTableBlock  xxx cleared
+luaError       xxx links to Error
+luaFunction    xxx links to Function
+luaFunctionBlock xxx cleared
+luaCond        xxx links to Conditional
+luaRepeat      xxx links to Repeat
+luaLabel       xxx links to Label
+luaOperator    xxx links to Operator
+luaConstant    xxx links to Constant
+luaString2     xxx links to String
+luaString      xxx links to String
+luaNumber      xxx links to Number
+luaFunc        xxx links to Identifier
+luaFor         xxx links to Repeat
+vimScriptDelim xxx links to Comment
+vimPerlRegion  xxx cleared
+podCmdText     xxx links to String
+podCommand     xxx links to Statement
+podOverIndent  xxx links to Number
+podForKeywd    xxx links to Identifier
+podFormat      xxx links to Identifier
+podVerbatimLine xxx links to PreProc
+podSpecial     xxx links to Identifier
+podEscape      xxx links to String
+podEscape2     xxx links to Number
+podBoldItalic  xxx cleared
+podBoldOpen    xxx cleared
+podBoldAlternativeDelimOpen xxx cleared
+podItalicBold  xxx cleared
+podItalicOpen  xxx cleared
+podItalicAlternativeDelimOpen xxx cleared
+podNoSpaceOpen xxx cleared
+podNoSpaceAlternativeDelimOpen xxx cleared
+podIndexOpen   xxx cleared
+podIndexAlternativeDelimOpen xxx cleared
+podBold        xxx cleared
+podBoldAlternativeDelim xxx cleared
+podItalic      xxx cleared
+podItalicAlternativeDelim xxx cleared
+perlTodo       xxx links to Todo
+perlPOD        xxx cleared
+perlBraces     xxx cleared
+perlConditional xxx links to Conditional
+perlElseIfError xxx links to Error
+perlRepeat     xxx links to Repeat
+perlOperator   xxx links to Operator
+perlFakeGroup  xxx cleared
+perlControl    xxx links to PreProc
+perlStatementStorage xxx links to perlStatement
+perlStatementControl xxx links to perlStatement
+perlStatementScalar xxx links to perlStatement
+perlStatementRegexp xxx links to perlStatement
+perlStatementNumeric xxx links to perlStatement
+perlStatementList xxx links to perlStatement
+perlStatementHash xxx links to perlStatement
+perlStatementIOfunc xxx links to perlStatement
+perlFiledescStatementNocomma xxx cleared
+perlStatementFiledesc xxx links to perlStatement
+perlFiledescStatementComma xxx cleared
+perlStatementVector xxx links to perlStatement
+perlStatementFiles xxx links to perlStatement
+perlStatementFlow xxx links to perlStatement
+perlStatementInclude xxx links to perlStatement
+perlStatementProc xxx links to perlStatement
+perlStatementSocket xxx links to perlStatement
+perlStatementIPC xxx links to perlStatement
+perlStatementNetwork xxx links to perlStatement
+perlStatementPword xxx links to perlStatement
+perlStatementTime xxx links to perlStatement
+perlStatementMisc xxx links to perlStatement
+perlStatementIndirObj xxx links to perlStatement
+perlStatementIndirObjWrap xxx cleared
+perlLabel      xxx links to Label
+perlVarPlain   xxx links to perlIdentifier
+perlVarNotInMatches xxx links to perlIdentifier
+perlVarSlash   xxx links to perlIdentifier
+perlPackageRef xxx links to perlType
+perlVarMember  xxx cleared
+perlVarSimpleMember xxx links to perlIdentifier
+perlMethod     xxx links to perlIdentifier
+perlPostDeref  xxx links to perlIdentifier
+perlVarPlain2  xxx links to perlIdentifier
+perlFunctionName xxx links to perlIdentifier
+perlVarBlock   xxx cleared
+perlVarBlock2  xxx cleared
+perlShellCommand xxx links to perlString
+perlFloat      xxx links to Float
+perlNumber     xxx links to Number
+perlStringUnexpanded xxx links to perlString
+perlString     xxx links to String
+perlQQ         xxx links to perlString
+perlArrow      xxx links to perlIdentifier
+perlVarSimpleMemberName xxx links to perlString
+perlPackageConst xxx cleared
+perlFiledescRead xxx links to perlIdentifier
+perlFiledescStatement xxx links to perlIdentifier
+perlSpecialString xxx links to perlSpecial
+NONE           xxx cleared
+perlSpecialStringU2 xxx links to perlString
+perlSpecialStringU xxx links to perlSpecial
+perlSpecialMatch xxx links to perlSpecial
+perlNotEmptyLine xxx links to Error
+perlMatchStartEnd xxx links to perlStatement
+perlVStringV   xxx links to perlStringStartEnd
+perlParensSQ   xxx links to perlString
+perlBracketsSQ xxx links to perlString
+perlBracesSQ   xxx links to perlString
+perlAnglesSQ   xxx links to perlString
+perlParensDQ   xxx links to perlString
+perlBracketsDQ xxx links to perlString
+perlBracesDQ   xxx links to perlString
+perlAnglesDQ   xxx links to perlString
+perlMatch      xxx links to perlString
+perlSubstitutionGQQ xxx links to perlString
+perlSubstitutionSQ xxx links to perlString
+perlTranslationGQ xxx links to perlString
+perlStringStartEnd xxx links to perlString
+perlComment    xxx links to Comment
+perlHereDocStart xxx cleared
+perlHereDoc    xxx links to perlString
+perlAutoload   xxx cleared
+perlStatementPackage xxx links to perlStatement
+perlPackageDecl xxx links to perlType
+perlSubError   xxx links to Error
+perlSubAttributesCont xxx links to perlSubAttributes
+perlSubAttributes xxx links to PreProc
+perlSubPrototypeError xxx links to Error
+perlSubPrototype xxx links to Type
+perlSignature  xxx links to Type
+perlSubName    xxx links to Function
+perlFunction   xxx links to Keyword
+perlSharpBang  xxx links to PreProc
+perlFormatName xxx links to perlIdentifier
+perlFormatField xxx links to perlString
+perlFormat     xxx cleared
+perlDATA       xxx links to perlComment
+perlInclude    xxx links to Include
+perlSpecial    xxx links to Special
+perlCharacter  xxx links to Character
+perlType       xxx links to Type
+perlIdentifier xxx links to Identifier
+perlStatement  xxx links to Statement
+perlList       xxx links to perlStatement
+perlMisc       xxx links to perlStatement
+perlStorageClass xxx links to perlType
+perlFunctionPRef xxx links to perlType
+perlSpecialAscii xxx links to perlSpecial
+perlSpecialDollar xxx links to perlSpecial
+perlSync       xxx cleared
+perlSyncPOD    xxx cleared
+vimRubyRegion  xxx cleared
+rubyConditional xxx links to Conditional
+rubyModuleName xxx links to rubyConstant
+rubyClassName  xxx links to rubyConstant
+rubySymbolDelimiter xxx links to rubySymbol
+rubyParentheses xxx cleared
+rubyEnglishBooleanOperator xxx links to rubyOperator
+rubyBlockParameterList xxx cleared
+rubyInterpolationDelimiter xxx links to Delimiter
+rubyInterpolation xxx cleared
+rubyInstanceVariable xxx links to rubyIdentifier
+rubyClassVariable xxx links to rubyIdentifier
+rubyStringEscape xxx links to Special
+rubyBackslashEscape xxx links to rubyStringEscape
+rubyQuoteEscape xxx links to rubyStringEscape
+rubySpaceEscape xxx links to rubyStringEscape
+rubyParenthesisEscape xxx links to rubyStringEscape
+rubyCurlyBraceEscape xxx links to rubyStringEscape
+rubyAngleBracketEscape xxx links to rubyStringEscape
+rubySquareBracketEscape xxx links to rubyStringEscape
+rubyNestedParentheses xxx cleared
+rubyNestedCurlyBraces xxx cleared
+rubyNestedAngleBrackets xxx cleared
+rubyNestedSquareBrackets xxx cleared
+rubyRegexpSpecial xxx links to Special
+rubyRegexpComment xxx links to Comment
+rubyRegexpParens xxx cleared
+rubyRegexpCharClass xxx links to rubyRegexpSpecial
+rubyRegexpBrackets xxx cleared
+rubyRegexpEscape xxx links to rubyRegexpSpecial
+rubyRegexpIntersection xxx links to rubyRegexpSpecial
+rubyRegexpQuantifier xxx links to rubyRegexpSpecial
+rubyRegexpAnchor xxx links to rubyRegexpSpecial
+rubyRegexpDot  xxx links to rubyRegexpCharClass
+rubyInteger    xxx links to Number
+rubyFloat      xxx links to Float
+rubyConstant   xxx links to Type
+rubyGlobalVariable xxx links to rubyIdentifier
+rubySymbol     xxx links to Constant
+rubyCapitalizedMethod xxx cleared
+rubyPredefinedVariable xxx links to rubyPredefinedIdentifier
+rubyPredefinedConstant xxx links to rubyPredefinedIdentifier
+rubyGlobalVariableError xxx links to rubyError
+rubyRegexpDelimiter xxx links to rubyStringDelimiter
+rubyRegexp     xxx links to rubyString
+rubyPercentRegexpDelimiter xxx links to rubyRegexpDelimiter
+rubyCharacter  xxx links to Character
+rubyStringDelimiter xxx links to Delimiter
+rubyString     xxx links to String
+rubyAtEscape   xxx links to rubyStringEscape
+rubyPercentStringDelimiter xxx links to rubyStringDelimiter
+rubyPercentSymbolDelimiter xxx links to rubySymbolDelimiter
+rubyCaretEscape xxx links to rubyStringEscape
+rubyUnderscoreEscape xxx links to rubyStringEscape
+rubyBackQuoteEscape xxx links to rubyStringEscape
+rubyBangEscape xxx links to rubyStringEscape
+rubyDoubleQuoteEscape xxx links to rubyStringEscape
+rubyHashEscape xxx links to rubyStringEscape
+rubyDollarEscape xxx links to rubyStringEscape
+rubyPercentEscape xxx links to rubyStringEscape
+rubyAmpersandEscape xxx links to rubyStringEscape
+rubyAsterixEscape xxx links to rubyStringEscape
+rubyPlusEscape xxx links to rubyStringEscape
+rubyCommaEscape xxx links to rubyStringEscape
+rubyDashEscape xxx links to rubyStringEscape
+rubyPeriodEscape xxx links to rubyStringEscape
+rubyForwardSlashEscape xxx links to rubyStringEscape
+rubyColonEscape xxx links to rubyStringEscape
+rubySemicolonEscape xxx links to rubyStringEscape
+rubyBarEscape  xxx links to rubyStringEscape
+rubyEqualsEscape xxx links to rubyStringEscape
+rubyTildeEscape xxx links to rubyStringEscape
+rubyQuestionMarkEscape xxx links to rubyStringEscape
+rubyHeredocDelimiter xxx links to rubyStringDelimiter
+rubyHeredocStart xxx cleared
+rubyAliasDeclaration2 xxx cleared
+rubyAliasDeclaration xxx cleared
+rubyBoolean    xxx links to Boolean
+rubyPseudoVariable xxx links to Constant
+rubyMethodDeclaration xxx cleared
+rubyScopeOperator xxx cleared
+rubySuperClassOperator xxx cleared
+rubyClassDeclaration xxx cleared
+rubyModuleDeclaration xxx cleared
+rubyMethodName xxx links to rubyFunction
+rubyControl    xxx links to Statement
+rubyKeyword    xxx links to Keyword
+rubyBeginEnd   xxx links to Statement
+rubyDefine     xxx links to Define
+rubyEigenClassOperator xxx cleared
+rubyClass      xxx links to rubyDefine
+rubyModule     xxx links to rubyDefine
+rubyMethodBlock xxx cleared
+rubyClassBlock xxx cleared
+rubyModuleBlock xxx cleared
+rubyLineContinuation xxx cleared
+rubyConditionalModifier xxx links to rubyConditional
+rubyRepeatModifier xxx links to rubyRepeat
+rubyRescueModifier xxx links to rubyExceptionHandler
+rubyDoBlock    xxx cleared
+rubyCurlyBlockDelimiter xxx cleared
+rubyCurlyBlock xxx cleared
+rubyArrayDelimiter xxx cleared
+rubyArrayLiteral xxx cleared
+rubyBlockExpression xxx cleared
+rubyCaseExpression xxx cleared
+rubyConditionalExpression xxx cleared
+rubyExceptionHandler xxx links to rubyConditional
+rubyExceptionHandler2 xxx links to rubyDefine
+rubyRepeat     xxx links to Repeat
+rubyOptionalDo xxx links to rubyRepeat
+rubyOptionalDoLine xxx cleared
+rubyRepeatExpression xxx cleared
+rubyAccess     xxx links to rubyMacro
+rubyAttribute  xxx links to rubyMacro
+rubyEval       xxx links to Statement
+rubyException  xxx links to Exception
+rubyInclude    xxx links to Include
+rubyMacro      xxx links to Macro
+rubySharpBang  xxx links to PreProc
+rubyTodo       xxx links to Todo
+rubyEncoding   xxx links to Constant
+rubyMagicComment xxx links to SpecialComment
+rubySpaceError xxx links to rubyError
+rubyComment    xxx links to Comment
+rubyMultilineComment xxx cleared
+rubyDocumentation xxx links to Comment
+rubyUselessLineContinuation xxx cleared
+rubyDotOperator xxx cleared
+rubyKeywordAsMethod xxx cleared
+rubyBangPredicateMethod xxx cleared
+rubyDefinedOperator xxx links to rubyOperator
+rubyDataDirective xxx links to Delimiter
+rubyData       xxx links to Comment
+rubyFunction   xxx links to Function
+rubyIdentifier xxx links to Identifier
+rubyPredefinedIdentifier xxx links to rubyIdentifier
+rubyOperator   xxx links to Operator
+rubyError      xxx links to Error
+vimPythonRegion xxx cleared
+pythonStatement xxx links to Statement
+pythonFunction xxx links to Function
+pythonConditional xxx links to Conditional
+pythonRepeat   xxx links to Repeat
+pythonOperator xxx links to Operator
+pythonException xxx links to Exception
+pythonInclude  xxx links to Include
+pythonAsync    xxx links to Statement
+pythonDecorator xxx links to Define
+pythonDecoratorName xxx links to Function
+pythonDoctestValue xxx links to Define
+pythonMatrixMultiply xxx cleared
+pythonTodo     xxx links to Todo
+pythonComment  xxx links to Comment
+pythonQuotes   xxx links to String
+pythonEscape   xxx links to Special
+pythonString   xxx links to String
+pythonTripleQuotes xxx links to pythonQuotes
+pythonSpaceError xxx cleared
+pythonDoctest  xxx links to Special
+pythonRawString xxx links to String
+pythonNumber   xxx links to Number
+pythonBuiltin  xxx links to Function
+pythonAttribute xxx cleared
+pythonExceptions xxx links to Structure
+pythonSync     xxx cleared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vbConditional  xxx links to Conditional
+vbOperator     xxx links to Operator
+vbBoolean      xxx links to Boolean
+vbConst        xxx links to Constant
+vbRepeat       xxx links to Repeat
+vbEvents       xxx links to Special
+vbFunction     xxx links to Identifier
+vbMethods      xxx links to PreProc
+vbStatement    xxx links to Statement
+vbKeyword      xxx links to Statement
+vbTodo         xxx links to Todo
+vbTypes        xxx links to Type
+vbDefine       xxx links to Constant
+vbNumber       xxx links to Number
+vbFloat        xxx links to Float
+vbString       xxx links to String
+vbComment      xxx links to Comment
+vbLineNumber   xxx links to Comment
+vbTypeSpecifier xxx links to Type
+vbError        xxx links to Error
+vbIdentifier   xxx links to Identifier
+
+
+
+Noise          xxx cleared
+cssLength      xxx cleared
+cssString      xxx cleared
+
+
+
+
+markdownValid  xxx cleared
+markdownLineStart xxx cleared
+markdownH1     xxx links to htmlH1
+markdownH2     xxx links to htmlH2
+markdownH3     xxx links to htmlH3
+markdownH4     xxx links to htmlH4
+markdownH5     xxx links to htmlH5
+markdownH6     xxx links to htmlH6
+markdownBlockquote xxx links to Comment
+markdownListMarker xxx links to htmlTagName
+markdownOrderedListMarker xxx links to markdownListMarker
+markdownCodeBlock xxx cleared
+markdownRule   xxx links to PreProc
+markdownLineBreak xxx cleared
+markdownLinkText xxx links to htmlLink
+markdownItalic xxx links to htmlItalic
+markdownBold   xxx links to htmlBold
+markdownCode   xxx cleared
+markdownEscape xxx links to Special
+markdownError  xxx links to Error
+markdownHeadingRule xxx links to markdownRule
+markdownAutomaticLink xxx links to markdownUrl
+markdownH1Delimiter xxx links to markdownHeadingDelimiter
+markdownH2Delimiter xxx links to markdownHeadingDelimiter
+markdownH3Delimiter xxx links to markdownHeadingDelimiter
+markdownH4Delimiter xxx links to markdownHeadingDelimiter
+markdownH5Delimiter xxx links to markdownHeadingDelimiter
+markdownH6Delimiter xxx links to markdownHeadingDelimiter
+markdownLinkDelimiter xxx cleared
+markdownUrl    xxx links to Float
+markdownIdDeclaration xxx links to Typedef
+markdownUrlTitle xxx links to String
+markdownUrlDelimiter xxx links to htmlTag
+markdownUrlTitleDelimiter xxx links to Delimiter
+markdownLinkTextDelimiter xxx cleared
+markdownLink   xxx cleared
+markdownId     xxx links to Type
+markdownIdDelimiter xxx links to markdownLinkDelimiter
+markdownItalicDelimiter xxx links to markdownItalic
+markdownBoldDelimiter xxx links to markdownBold
+markdownBoldItalicDelimiter xxx links to markdownBoldItalic
+markdownBoldItalic xxx links to htmlBoldItalic
+markdownCodeDelimiter xxx links to Delimiter
+markdownFootnote xxx links to Typedef
+markdownFootnoteDefinition xxx links to Typedef
+markdownHeadingDelimiter xxx links to Delimiter
+
+
+
+
+
+
+Type           xxx term=underline ctermfg=10 gui=bold guifg=#60ff60
+Underlined     xxx term=underline cterm=underline ctermfg=9 gui=underline guifg=#80a0ff
+Ignore         xxx ctermfg=0 guifg=bg
+Error          xxx term=reverse ctermfg=15 ctermbg=12 guifg=White guibg=Red
+Todo           xxx term=standout ctermfg=0 ctermbg=14 guifg=Blue guibg=Yellow
+String         xxx links to Constant
+Character      xxx links to Constant
+Number         xxx links to Constant
+Boolean        xxx links to Constant
+Float          xxx links to Number
+Function       xxx links to Identifier
+Conditional    xxx links to Statement
+Repeat         xxx links to Statement
+Label          xxx links to Statement
+Operator       xxx links to Statement
+Keyword        xxx links to Statement
+Exception      xxx links to Statement
+Include        xxx links to PreProc
+Define         xxx links to PreProc
+Macro          xxx links to PreProc
+PreCondit      xxx links to PreProc
+StorageClass   xxx links to Type
+Structure      xxx links to Type
+Typedef        xxx links to Type
+Tag            xxx links to Special
+SpecialChar    xxx links to Special
+Delimiter      xxx links to Special
+SpecialComment xxx links to Special
+Debug          xxx links to Special
+
+
+
+vimTodo        xxx links to Todo
+vimCommand     xxx links to Statement
+vimStdPlugin   xxx cleared
+vimOption      xxx links to PreProc
+vimErrSetting  xxx links to vimError
+vimAutoEvent   xxx links to Type
+vimGroup       xxx links to Type
+vimHLGroup     xxx links to vimGroup
+vimFuncName    xxx links to Function
+vimGlobal      xxx cleared
+vimSubst       xxx links to vimCommand
+vimComment     xxx links to Comment
+vim9Comment    xxx links to Comment
+vimNumber      xxx links to Number
+vimAddress     xxx links to vimMark
+vimAutoCmd     xxx links to vimCommand
+vimEcho        xxx cleared
+vimIsCommand   xxx cleared
+vimExtCmd      xxx cleared
+vimFilter      xxx cleared
+vimLet         xxx links to vimCommand
+vimMap         xxx links to vimCommand
+vimMark        xxx links to Number
+vimSet         xxx cleared
+vimSyntax      xxx links to vimCommand
+vimUserCmd     xxx cleared
+vimCmdSep      xxx cleared
+vimVar         xxx links to Identifier
+vimFBVar       xxx links to vimVar
+vimInsert      xxx links to vimString
+vimBehaveModel xxx links to vimBehave
+vimBehaveError xxx links to vimError
+vimBehave      xxx links to vimCommand
+vimFTCmd       xxx links to vimCommand
+vimFTOption    xxx links to vimSynType
+vimFTError     xxx links to vimError
+vimFiletype    xxx cleared
+vimAugroup     xxx cleared
+vimExecute     xxx cleared
+vimNotFunc     xxx links to vimCommand
+vimFunction    xxx cleared
+vimFunctionError xxx links to vimError
+vimLineComment xxx links to vimComment
+vimSpecFile    xxx links to Identifier
+vimOper        xxx links to Operator
+vimOperParen   xxx cleared
+vimString      xxx links to String
+vimRegister    xxx links to SpecialChar
+vimCmplxRepeat xxx links to SpecialChar
+vimRegion      xxx cleared
+vimSynLine     xxx cleared
+vimNotation    xxx links to Special
+vimCtrlChar    xxx links to SpecialChar
+vimFuncVar     xxx links to Identifier
+vimContinue    xxx links to Special
+vimSetEqual    xxx cleared
+vimAugroupKey  xxx links to vimCommand
+vimAugroupError xxx links to vimError
+vimEnvvar      xxx links to PreProc
+vimFunc        xxx links to vimError
+vimType        xxx links to Type
+vimParenSep    xxx links to Delimiter
+vimoperStar    xxx links to vimOper
+vimSep         xxx links to Delimiter
+vimOperError   xxx links to Error
+vimFuncKey     xxx links to vimCommand
+vimFuncSID     xxx links to Special
+vimAbb         xxx links to vimCommand
+vimEchoHL      xxx links to vimCommand
+vimHighlight   xxx links to vimCommand
+vimLetHereDoc  xxx links to vimString
+vimNorm        xxx links to vimCommand
+vimSearch      xxx links to vimString
+vimUnmap       xxx links to vimMap
+vimUserCommand xxx links to vimCommand
+vimFuncBody    xxx cleared
+vimFuncBlank   xxx cleared
+vimPattern     xxx links to Type
+vimSpecFileMod xxx links to vimSpecFile
+vimEscapeBrace xxx cleared
+vimSetString   xxx links to vimString
+vimSubstRep    xxx cleared
+vimSubstRange  xxx cleared
+vimUserAttrb   xxx links to vimSpecial
+vimUserAttrbError xxx links to Error
+vimComFilter   xxx cleared
+vimUserAttrbKey xxx links to vimOption
+vimUserAttrbCmplt xxx links to vimSpecial
+
+vimUserCmdError xxx links to Error
+vimUserAttrbCmpltFunc xxx links to Special
+vimCommentString xxx links to vimString
+vimPatSepErr   xxx links to vimError
+vimPatSep      xxx links to SpecialChar
+vimPatSepZ     xxx links to vimPatSep
+vimPatSepZone  xxx links to vimString
+vimPatSepR     xxx links to vimPatSep
+vimPatRegion   xxx cleared
+vimNotPatSep   xxx links to vimString
+vimStringEnd   xxx links to vimString
+vimStringCont  xxx links to vimString
+vimSubstTwoBS  xxx links to vimString
+vimSubstSubstr xxx links to SpecialChar
+vimCollection  xxx cleared
+vimSubstPat    xxx cleared
+vimSubst1      xxx links to vimSubst
+vimSubst2      xxx cleared
+vimSubstDelim  xxx links to Delimiter
+vimSubstRep4   xxx cleared
+vimSubstFlagErr xxx links to vimError
+vimCollClass   xxx cleared
+vimCollClassErr xxx links to vimError
+vimSubstFlags  xxx links to Special
+vimMarkNumber  xxx links to vimNumber
+vimPlainMark   xxx links to vimMark
+vimRange       xxx cleared
+vimPlainRegister xxx links to vimRegister
+vimSetMod      xxx links to vimOption
+vimSetSep      xxx links to Statement
+vimLetHereDocStart xxx links to Special
+vimLetHereDocStop xxx links to Special
+vimMapMod      xxx links to vimBracket
+vimMapLhs      xxx cleared
+vimAutoCmdSpace xxx cleared
+vimAutoEventList xxx cleared
+vimAutoCmdSfxList xxx cleared
+vimAutoCmdMod  xxx links to Special
+vimEchoHLNone  xxx links to vimGroup
+vimMapBang     xxx links to vimCommand
+vimMapRhs      xxx cleared
+vimMapModKey   xxx links to vimFuncSID
+vimMapModErr   xxx links to vimError
+vimMapRhsExtend xxx cleared
+vimMenuBang    xxx cleared
+vimMenuPriority xxx cleared
+vimMenuName    xxx links to PreProc
+vimMenuMod     xxx links to vimMapMod
+vimMenuNameMore xxx links to vimMenuName
+vimMenuMap     xxx cleared
+vimMenuRhs     xxx cleared
+vimBracket     xxx links to Delimiter
+vimUserFunc    xxx links to Normal
+vimUsrCmd      xxx cleared
+vimElseIfErr   xxx links to Error
+vimBufnrWarn   xxx links to vimWarn
+vimNormCmds    xxx cleared
+vimGroupSpecial xxx links to Special
+vimGroupList   xxx cleared
+vimSynError    xxx links to Error
+vimSynContains xxx links to vimSynOption
+vimSynKeyContainedin xxx links to vimSynContains
+vimSynNextgroup xxx links to vimSynOption
+vimSynType     xxx links to vimSpecial
+vimAuSyntax    xxx cleared
+vimSynCase     xxx links to Type
+vimSynCaseError xxx links to vimError
+vimClusterName xxx cleared
+vimGroupName   xxx links to vimGroup
+vimGroupAdd    xxx links to vimSynOption
+vimGroupRem    xxx links to vimSynOption
+vimIskList     xxx cleared
+vimIskSep      xxx links to Delimiter
+vimSynKeyOpt   xxx links to vimSynOption
+vimSynKeyRegion xxx cleared
+vimMtchComment xxx links to vimComment
+vimSynMtchOpt  xxx links to vimSynOption
+vimSynRegPat   xxx links to vimString
+vimSynMatchRegion xxx cleared
+vimSynMtchCchar xxx cleared
+vimSynMtchGroup xxx cleared
+vimSynPatRange xxx links to vimString
+vimSynNotPatRange xxx links to vimSynRegPat
+vimSynRegOpt   xxx links to vimSynOption
+vimSynReg      xxx links to Type
+vimSynMtchGrp  xxx links to vimSynOption
+vimSynRegion   xxx cleared
+vimSynPatMod   xxx cleared
+vimSyncC       xxx links to Type
+vimSyncLines   xxx cleared
+vimSyncMatch   xxx cleared
+vimSyncError   xxx links to Error
+vimSyncLinebreak xxx cleared
+vimSyncLinecont xxx cleared
+vimSyncRegion  xxx cleared
+vimSyncGroupName xxx links to vimGroupName
+vimSyncKey     xxx links to Type
+vimSyncGroup   xxx links to vimGroupName
+vimSyncNone    xxx links to Type
+vimHiLink      xxx cleared
+vimHiClear     xxx links to vimHighlight
+vimHiKeyList   xxx cleared
+vimHiCtermError xxx links to vimError
+vimHiBang      xxx cleared
+vimHiGroup     xxx links to vimGroupName
+vimHiAttrib    xxx links to PreProc
+vimFgBgAttrib  xxx links to vimHiAttrib
+vimHiAttribList xxx links to vimError
+vimHiCtermColor xxx cleared
+vimHiFontname  xxx cleared
+vimHiGuiFontname xxx cleared
+vimHiGuiRgb    xxx links to vimNumber
+
+vimHiTerm      xxx links to Type
+vimHiCTerm     xxx links to vimHiTerm
+vimHiStartStop xxx links to vimHiTerm
+vimHiCtermFgBg xxx links to vimHiTerm
+vimHiCtermul   xxx links to vimHiTerm
+vimHiGui       xxx links to vimHiTerm
+vimHiGuiFont   xxx links to vimHiTerm
+vimHiGuiFgBg   xxx links to vimHiTerm
+vimHiKeyError  xxx links to vimError
+vimHiTermcap   xxx cleared
+vimHiNmbr      xxx links to Number
+vimCommentTitle xxx links to PreProc
+vim9LineComment xxx links to vimComment
+vimCommentTitleLeader xxx cleared
+vimSearchDelim xxx links to Statement
+vimLuaRegion   xxx cleared
+
+
+
+luaTodo        xxx links to Todo
+luaComment     xxx links to Comment
+luaInnerComment xxx cleared
+luaParenError  xxx links to Error
+luaSpecial     xxx links to SpecialChar
+luaIfThen      xxx cleared
+luaElseifThen  xxx cleared
+luaElse        xxx links to Conditional
+luaThenEnd     xxx cleared
+luaBlock       xxx cleared
+luaLoopBlock   xxx cleared
+luaIn          xxx links to Operator
+luaStatement   xxx links to Statement
+luaParen       xxx cleared
+luaTable       xxx links to Structure
+luaBraceError  xxx links to Error
+luaTableBlock  xxx cleared
+luaError       xxx links to Error
+luaFunction    xxx links to Function
+luaFunctionBlock xxx cleared
+luaCond        xxx links to Conditional
+luaRepeat      xxx links to Repeat
+luaLabel       xxx links to Label
+luaOperator    xxx links to Operator
+luaConstant    xxx links to Constant
+luaString2     xxx links to String
+luaString      xxx links to String
+luaNumber      xxx links to Number
+luaFunc        xxx links to Identifier
+luaFor         xxx links to Repeat
+
+
+vimScriptDelim xxx links to Comment
+vimPerlRegion  xxx cleared
+
+
+podCmdText     xxx links to String
+podCommand     xxx links to Statement
+podOverIndent  xxx links to Number
+podForKeywd    xxx links to Identifier
+podFormat      xxx links to Identifier
+podVerbatimLine xxx links to PreProc
+podSpecial     xxx links to Identifier
+podEscape      xxx links to String
+podEscape2     xxx links to Number
+podBoldItalic  xxx cleared
+podBoldOpen    xxx cleared
+podBoldAlternativeDelimOpen xxx cleared
+podItalicBold  xxx cleared
+podItalicOpen  xxx cleared
+podItalicAlternativeDelimOpen xxx cleared
+podNoSpaceOpen xxx cleared
+podNoSpaceAlternativeDelimOpen xxx cleared
+podIndexOpen   xxx cleared
+podIndexAlternativeDelimOpen xxx cleared
+podBold        xxx cleared
+podBoldAlternativeDelim xxx cleared
+podItalic      xxx cleared
+podItalicAlternativeDelim xxx cleared
+
+
+perlTodo       xxx links to Todo
+perlPOD        xxx cleared
+perlBraces     xxx cleared
+perlConditional xxx links to Conditional
+perlElseIfError xxx links to Error
+perlRepeat     xxx links to Repeat
+perlOperator   xxx links to Operator
+perlFakeGroup  xxx cleared
+perlControl    xxx links to PreProc
+perlStatementStorage xxx links to perlStatement
+perlStatementControl xxx links to perlStatement
+perlStatementScalar xxx links to perlStatement
+perlStatementRegexp xxx links to perlStatement
+perlStatementNumeric xxx links to perlStatement
+perlStatementList xxx links to perlStatement
+perlStatementHash xxx links to perlStatement
+perlStatementIOfunc xxx links to perlStatement
+perlFiledescStatementNocomma xxx cleared
+perlStatementFiledesc xxx links to perlStatement
+perlFiledescStatementComma xxx cleared
+perlStatementVector xxx links to perlStatement
+perlStatementFiles xxx links to perlStatement
+perlStatementFlow xxx links to perlStatement
+perlStatementInclude xxx links to perlStatement
+perlStatementProc xxx links to perlStatement
+perlStatementSocket xxx links to perlStatement
+perlStatementIPC xxx links to perlStatement
+perlStatementNetwork xxx links to perlStatement
+perlStatementPword xxx links to perlStatement
+perlStatementTime xxx links to perlStatement
+perlStatementMisc xxx links to perlStatement
+perlStatementIndirObj xxx links to perlStatement
+perlStatementIndirObjWrap xxx cleared
+perlLabel      xxx links to Label
+perlVarPlain   xxx links to perlIdentifier
+perlVarNotInMatches xxx links to perlIdentifier
+perlVarSlash   xxx links to perlIdentifier
+perlPackageRef xxx links to perlType
+perlVarMember  xxx cleared
+perlVarSimpleMember xxx links to perlIdentifier
+perlMethod     xxx links to perlIdentifier
+perlPostDeref  xxx links to perlIdentifier
+perlVarPlain2  xxx links to perlIdentifier
+perlFunctionName xxx links to perlIdentifier
+perlVarBlock   xxx cleared
+perlVarBlock2  xxx cleared
+perlShellCommand xxx links to perlString
+perlFloat      xxx links to Float
+perlNumber     xxx links to Number
+perlStringUnexpanded xxx links to perlString
+perlString     xxx links to String
+perlQQ         xxx links to perlString
+perlArrow      xxx links to perlIdentifier
+perlVarSimpleMemberName xxx links to perlString
+perlPackageConst xxx cleared
+perlFiledescRead xxx links to perlIdentifier
+perlFiledescStatement xxx links to perlIdentifier
+perlSpecialString xxx links to perlSpecial
+NONE           xxx cleared
+perlSpecialStringU2 xxx links to perlString
+perlSpecialStringU xxx links to perlSpecial
+perlSpecialMatch xxx links to perlSpecial
+perlNotEmptyLine xxx links to Error
+perlMatchStartEnd xxx links to perlStatement
+perlVStringV   xxx links to perlStringStartEnd
+perlParensSQ   xxx links to perlString
+perlBracketsSQ xxx links to perlString
+perlBracesSQ   xxx links to perlString
+perlAnglesSQ   xxx links to perlString
+perlParensDQ   xxx links to perlString
+perlBracketsDQ xxx links to perlString
+perlBracesDQ   xxx links to perlString
+perlAnglesDQ   xxx links to perlString
+perlMatch      xxx links to perlString
+perlSubstitutionGQQ xxx links to perlString
+perlSubstitutionSQ xxx links to perlString
+perlTranslationGQ xxx links to perlString
+perlStringStartEnd xxx links to perlString
+perlComment    xxx links to Comment
+perlHereDocStart xxx cleared
+perlHereDoc    xxx links to perlString
+perlAutoload   xxx cleared
+perlStatementPackage xxx links to perlStatement
+perlPackageDecl xxx links to perlType
+perlSubError   xxx links to Error
+perlSubAttributesCont xxx links to perlSubAttributes
+perlSubAttributes xxx links to PreProc
+perlSubPrototypeError xxx links to Error
+perlSubPrototype xxx links to Type
+perlSignature  xxx links to Type
+perlSubName    xxx links to Function
+perlFunction   xxx links to Keyword
+perlSharpBang  xxx links to PreProc
+perlFormatName xxx links to perlIdentifier
+perlFormatField xxx links to perlString
+perlFormat     xxx cleared
+perlDATA       xxx links to perlComment
+perlInclude    xxx links to Include
+perlSpecial    xxx links to Special
+perlCharacter  xxx links to Character
+perlType       xxx links to Type
+perlIdentifier xxx links to Identifier
+perlStatement  xxx links to Statement
+perlList       xxx links to perlStatement
+perlMisc       xxx links to perlStatement
+perlStorageClass xxx links to perlType
+perlFunctionPRef xxx links to perlType
+perlSpecialAscii xxx links to perlSpecial
+perlSpecialDollar xxx links to perlSpecial
+perlSync       xxx cleared
+perlSyncPOD    xxx cleared
+
+
+vimRubyRegion  xxx cleared
+rubyConditional xxx links to Conditional
+rubyModuleName xxx links to rubyConstant
+rubyClassName  xxx links to rubyConstant
+rubySymbolDelimiter xxx links to rubySymbol
+rubyParentheses xxx cleared
+rubyEnglishBooleanOperator xxx links to rubyOperator
+rubyBlockParameterList xxx cleared
+rubyInterpolationDelimiter xxx links to Delimiter
+rubyInterpolation xxx cleared
+rubyInstanceVariable xxx links to rubyIdentifier
+rubyClassVariable xxx links to rubyIdentifier
+rubyStringEscape xxx links to Special
+rubyBackslashEscape xxx links to rubyStringEscape
+rubyQuoteEscape xxx links to rubyStringEscape
+rubySpaceEscape xxx links to rubyStringEscape
+rubyParenthesisEscape xxx links to rubyStringEscape
+rubyCurlyBraceEscape xxx links to rubyStringEscape
+rubyAngleBracketEscape xxx links to rubyStringEscape
+rubySquareBracketEscape xxx links to rubyStringEscape
+rubyNestedParentheses xxx cleared
+rubyNestedCurlyBraces xxx cleared
+rubyNestedAngleBrackets xxx cleared
+rubyNestedSquareBrackets xxx cleared
+rubyRegexpSpecial xxx links to Special
+rubyRegexpComment xxx links to Comment
+rubyRegexpParens xxx cleared
+rubyRegexpCharClass xxx links to rubyRegexpSpecial
+rubyRegexpBrackets xxx cleared
+rubyRegexpEscape xxx links to rubyRegexpSpecial
+rubyRegexpIntersection xxx links to rubyRegexpSpecial
+rubyRegexpQuantifier xxx links to rubyRegexpSpecial
+rubyRegexpAnchor xxx links to rubyRegexpSpecial
+rubyRegexpDot  xxx links to rubyRegexpCharClass
+rubyInteger    xxx links to Number
+rubyFloat      xxx links to Float
+rubyConstant   xxx links to Type
+rubyGlobalVariable xxx links to rubyIdentifier
+rubySymbol     xxx links to Constant
+rubyCapitalizedMethod xxx cleared
+rubyPredefinedVariable xxx links to rubyPredefinedIdentifier
+rubyPredefinedConstant xxx links to rubyPredefinedIdentifier
+rubyGlobalVariableError xxx links to rubyError
+rubyRegexpDelimiter xxx links to rubyStringDelimiter
+rubyRegexp     xxx links to rubyString
+rubyPercentRegexpDelimiter xxx links to rubyRegexpDelimiter
+rubyCharacter  xxx links to Character
+rubyStringDelimiter xxx links to Delimiter
+
+rubyString     xxx links to String
+rubyAtEscape   xxx links to rubyStringEscape
+
+
+rubyPercentStringDelimiter xxx links to rubyStringDelimiter
+rubyPercentSymbolDelimiter xxx links to rubySymbolDelimiter
+rubyCaretEscape xxx links to rubyStringEscape
+rubyUnderscoreEscape xxx links to rubyStringEscape
+rubyBackQuoteEscape xxx links to rubyStringEscape
+rubyBangEscape xxx links to rubyStringEscape
+rubyDoubleQuoteEscape xxx links to rubyStringEscape
+rubyHashEscape xxx links to rubyStringEscape
+rubyDollarEscape xxx links to rubyStringEscape
+rubyPercentEscape xxx links to rubyStringEscape
+rubyAmpersandEscape xxx links to rubyStringEscape
+rubyAsterixEscape xxx links to rubyStringEscape
+rubyPlusEscape xxx links to rubyStringEscape
+rubyCommaEscape xxx links to rubyStringEscape
+rubyDashEscape xxx links to rubyStringEscape
+rubyPeriodEscape xxx links to rubyStringEscape
+rubyForwardSlashEscape xxx links to rubyStringEscape
+rubyColonEscape xxx links to rubyStringEscape
+rubySemicolonEscape xxx links to rubyStringEscape
+rubyBarEscape  xxx links to rubyStringEscape
+rubyEqualsEscape xxx links to rubyStringEscape
+rubyTildeEscape xxx links to rubyStringEscape
+rubyQuestionMarkEscape xxx links to rubyStringEscape
+rubyHeredocDelimiter xxx links to rubyStringDelimiter
+rubyHeredocStart xxx cleared
+rubyAliasDeclaration2 xxx cleared
+rubyAliasDeclaration xxx cleared
+rubyBoolean    xxx links to Boolean
+rubyPseudoVariable xxx links to Constant
+rubyMethodDeclaration xxx cleared
+rubyScopeOperator xxx cleared
+rubySuperClassOperator xxx cleared
+rubyClassDeclaration xxx cleared
+rubyModuleDeclaration xxx cleared
+rubyMethodName xxx links to rubyFunction
+rubyControl    xxx links to Statement
+rubyKeyword    xxx links to Keyword
+rubyBeginEnd   xxx links to Statement
+
+rubyDefine     xxx links to Define
+rubyEigenClassOperator xxx cleared
+rubyClass      xxx links to rubyDefine
+rubyModule     xxx links to rubyDefine
+rubyMethodBlock xxx cleared
+rubyClassBlock xxx cleared
+rubyModuleBlock xxx cleared
+rubyLineContinuation xxx cleared
+rubyConditionalModifier xxx links to rubyConditional
+rubyRepeatModifier xxx links to rubyRepeat
+rubyRescueModifier xxx links to rubyExceptionHandler
+rubyDoBlock    xxx cleared
+rubyCurlyBlockDelimiter xxx cleared
+rubyCurlyBlock xxx cleared
+rubyArrayDelimiter xxx cleared
+rubyArrayLiteral xxx cleared
+rubyBlockExpression xxx cleared
+rubyCaseExpression xxx cleared
+rubyConditionalExpression xxx cleared
+rubyExceptionHandler xxx links to rubyConditional
+rubyExceptionHandler2 xxx links to rubyDefine
+rubyRepeat     xxx links to Repeat
+rubyOptionalDo xxx links to rubyRepeat
+rubyOptionalDoLine xxx cleared
+rubyRepeatExpression xxx cleared
+rubyAccess     xxx links to rubyMacro
+rubyAttribute  xxx links to rubyMacro
+rubyEval       xxx links to Statement
+rubyException  xxx links to Exception
+rubyInclude    xxx links to Include
+rubyMacro      xxx links to Macro
+rubySharpBang  xxx links to PreProc
+rubyTodo       xxx links to Todo
+rubyEncoding   xxx links to Constant
+rubyMagicComment xxx links to SpecialComment
+rubySpaceError xxx links to rubyError
+rubyComment    xxx links to Comment
+rubyMultilineComment xxx cleared
+
+
+rubyDocumentation xxx links to Comment
+rubyUselessLineContinuation xxx cleared
+rubyDotOperator xxx cleared
+rubyKeywordAsMethod xxx cleared
+rubyBangPredicateMethod xxx cleared
+rubyDefinedOperator xxx links to rubyOperator
+rubyDataDirective xxx links to Delimiter
+rubyData       xxx links to Comment
+rubyFunction   xxx links to Function
+rubyIdentifier xxx links to Identifier
+rubyPredefinedIdentifier xxx links to rubyIdentifier
+rubyOperator   xxx links to Operator
+rubyError      xxx links to Error
+vimPythonRegion xxx cleared
+pythonStatement xxx links to Statement
+pythonFunction xxx links to Function
+pythonConditional xxx links to Conditional
+pythonRepeat   xxx links to Repeat
+pythonOperator xxx links to Operator
+pythonException xxx links to Exception
+pythonInclude  xxx links to Include
+pythonAsync    xxx links to Statement
+pythonDecorator xxx links to Define
+pythonDecoratorName xxx links to Function
+pythonDoctestValue xxx links to Define
+pythonMatrixMultiply xxx cleared
+pythonTodo     xxx links to Todo
+pythonComment  xxx links to Comment
+pythonQuotes   xxx links to String
+pythonEscape   xxx links to Special
+pythonString   xxx links to String
+pythonTripleQuotes xxx links to pythonQuotes
+pythonSpaceError xxx cleared
+pythonDoctest  xxx links to Special
+pythonRawString xxx links to String
+pythonNumber   xxx links to Number
+pythonBuiltin  xxx links to Function
+pythonAttribute xxx cleared
+
+
+pythonExceptions xxx links to Structure
+pythonSync     xxx cleared
+vimEmbedError  xxx links to vimError
+vimAugroupSyncA xxx cleared
+vimError       xxx links to Error
+vimKeyCodeError xxx links to vimError
+vimWarn        xxx links to WarningMsg
+vimAuHighlight xxx links to vimHighlight
+vimAutoCmdOpt  xxx links to vimOption
+vimAutoSet     xxx links to vimCommand
+vimCondHL      xxx links to vimCommand
+vimElseif      xxx links to vimCondHL
+vimFold        xxx links to Folded
+vimSynOption   xxx links to Special
+vimHLMod       xxx links to PreProc
+vimKeyCode     xxx links to vimSpecFile
+vimKeyword     xxx links to Statement
+vimSpecial     xxx links to Type
+vimStatement   xxx links to Statement
+htmlError      xxx links to Error
+htmlSpecialChar xxx links to Special
+javaScriptExpression xxx links to javaScript
+
+
+
+
+
+
+javaScript     xxx links to Special
+
+cssStyle       xxx cleared
+javaScriptCommentTodo xxx links to Todo
+javaScriptLineComment xxx links to Comment
+javaScriptCommentSkip xxx cleared
+javaScriptComment xxx links to Comment
+javaScriptSpecial xxx links to Special
+javaScriptStringD xxx links to String
+
+
+javaScriptStringS xxx links to String
+javaScriptEmbed xxx links to Special
+javaScriptStringT xxx links to String
+javaScriptSpecialCharacter xxx links to javaScriptSpecial
+javaScriptNumber xxx links to javaScriptValue
+javaScriptRegexpString xxx links to String
+javaScriptConditional xxx links to Conditional
+javaScriptRepeat xxx links to Repeat
+javaScriptBranch xxx links to Conditional
+javaScriptOperator xxx links to Operator
+javaScriptType xxx links to Type
+javaScriptStatement xxx links to Statement
+javaScriptBoolean xxx links to Boolean
+javaScriptNull xxx links to Keyword
+javaScriptIdentifier xxx links to Identifier
+javaScriptLabel xxx links to Label
+javaScriptException xxx links to Exception
+javaScriptMessage xxx links to Keyword
+javaScriptGlobal xxx links to Keyword
+javaScriptMember xxx links to Keyword
+javaScriptDeprecated xxx links to Exception
+javaScriptReserved xxx links to Keyword
+javaScriptFunction xxx links to Function
+javaScriptBraces xxx links to Function
+javaScriptParens xxx cleared
+javaScriptCharacter xxx links to Character
+javaScriptValue xxx cleared
+javaScriptError xxx links to Error
+javaScrParenError xxx links to javaScriptError
+javaScriptDebug xxx links to Debug
+javaScriptConstant xxx links to Label
+
+vbConditional  xxx links to Conditional
+vbOperator     xxx links to Operator
+vbBoolean      xxx links to Boolean
+
+
+vbConst        xxx links to Constant
+vbRepeat       xxx links to Repeat
+vbEvents       xxx links to Special
+vbFunction     xxx links to Identifier
+vbMethods      xxx links to PreProc
+vbStatement    xxx links to Statement
+vbKeyword      xxx links to Statement
+vbTodo         xxx links to Todo
+vbTypes        xxx links to Type
+vbDefine       xxx links to Constant
+vbNumber       xxx links to Number
+vbFloat        xxx links to Float
+vbString       xxx links to String
+vbComment      xxx links to Comment
+vbLineNumber   xxx links to Comment
+vbTypeSpecifier xxx links to Type
+vbError        xxx links to Error
+vbIdentifier   xxx links to Identifier
+cssTagName     xxx links to Statement
+cssSelectorOp  xxx links to Special
+cssSelectorOp2 xxx links to Special
+cssUnicodeEscape xxx links to Special
+cssStringQ     xxx links to String
+cssStringQQ    xxx links to String
+cssAttributeSelector xxx links to String
+cssClassNameDot xxx links to Function
+cssClassName   xxx links to Function
+cssIdentifier  xxx links to Function
+cssUnitDecorators xxx links to Number
+cssValueInteger xxx links to Number
+cssValueNumber xxx links to Number
+cssValueLength xxx links to Number
+cssValueAngle  xxx links to Number
+cssValueTime   xxx links to Number
+cssValueFrequency xxx links to Number
+cssColor       xxx links to Constant
+cssImportant   xxx links to Special
+cssCustomProp  xxx links to Special
+
+
+cssFunctionName xxx links to Function
+cssURL         xxx links to String
+cssFunction    xxx links to Constant
+cssFunctionComma xxx links to Function
+cssGradientAttr xxx links to cssAttr
+cssCommonAttr  xxx links to cssAttr
+cssAnimationProp xxx links to cssProp
+cssAnimationAttr xxx links to cssAttr
+cssBackgroundProp xxx links to cssProp
+cssBackgroundAttr xxx links to cssAttr
+cssBorderProp  xxx links to cssProp
+cssBorderAttr  xxx links to cssAttr
+cssBoxProp     xxx links to cssProp
+cssBoxAttr     xxx links to cssAttr
+cssCascadeProp xxx links to cssProp
+cssCascadeAttr xxx links to cssAttr
+cssColorProp   xxx links to cssProp
+cssDimensionProp xxx links to cssProp
+cssFlexibleBoxProp xxx links to cssProp
+cssFlexibleBoxAttr xxx links to cssAttr
+cssFontProp    xxx links to cssProp
+cssFontAttr    xxx links to cssAttr
+cssMultiColumnProp xxx links to cssProp
+cssMultiColumnAttr xxx links to cssAttr
+cssInteractProp xxx links to cssProp
+cssInteractAttr xxx links to cssAttr
+cssGeneratedContentProp xxx links to cssProp
+cssGeneratedContentAttr xxx links to cssAttr
+cssGridProp    xxx links to cssProp
+cssHyerlinkProp xxx links to cssProp
+cssListProp    xxx links to cssProp
+cssListAttr    xxx links to cssAttr
+cssPositioningProp xxx links to cssProp
+cssPositioningAttr xxx links to cssAttr
+cssPrintAttr   xxx links to cssAttr
+cssTableProp   xxx links to cssProp
+cssTableAttr   xxx links to cssAttr
+cssTextProp    xxx links to cssProp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

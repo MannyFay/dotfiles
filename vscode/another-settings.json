@@ -1,0 +1,536 @@
+{
+  //--------------------------------------------------------------------------------
+  // Editor Settings
+
+  "files.autoSave": "afterDelay", // When to auto save files.
+  "files.autoSaveDelay": 1000, // Milliseconds to wait before auto saving.
+  "editor.accessibilitySupport": "off", // Don't use accessibility features VS Code.
+  "editor.renderWhitespace": "trailing", // Show trailing whitespace.
+  "editor.lineHeight": 2, // Line height in editor.
+  "editor.rulers": [80, 120, 150], // Vertical character guides.
+  "editor.tabSize": 2, // Number of spaces per tab.
+  "editor.wordWrap": "on", // Wrap words automatically.
+  "editor.minimap": {
+    // Don't show minimap at right corner.
+    "enabled": false
+  },
+  "editor.lineNumbers": "relative", // Show relative line numbers.
+  "folding": "false", // Disable code folding.
+  "files.insertFinalNewline": true, // Insert an empty line at the bottom of files.
+  "files.trimTrailingWhitespace": true, // Trim trailing whitespace after auto save.
+  "editor.occurrencesHighlight": "off", // Don't highlight other occurrences of word under cursor.
+  "workbench.editor.showTabs": "none", // Don't use tabs.
+
+  // Project Tree:
+  "workbench.tree.indent": 12, // Indentation in px.
+  "workbench.tree.renderIndentGuides": "always", // Always show indent guides.
+
+  // Cursor Settings:
+  "editor.cursorBlinking": "solid", // No blinking cursor.
+  "editor.cursorWidth": 2, // Width in px of the cursor in editor.
+  "terminal.integrated.cursorWidth": 2, // Width in px of the cursor in terminal.
+  "editor.cursorSurroundingLines": 3, // Number of cursor surrounding lines (scroll off).
+  "editor.cursorStyle": "line", // Cursor style.
+  "terminal.integrated.cursorBlinking": false, // No blinking cursor in terminal.
+
+  // Font Settings:
+  "editor.fontSize": 12, // Editor font size.
+  "terminal.integrated.fontSize": 12, // Terminal font size.
+  "debug.console.fontSize": 12, // Debug console font size.
+  "chat.editor.fontSize": 12, // Chat font size.
+  "markdown.preview.fontSize": 12, // Markdown preview font size.
+  "editor.fontFamily": "MesloLGMDZ Nerd Font", // Font family.
+  "fontWeight": "400", // Global font weight.
+  "fontLigatures": false, // Disable ligatures.
+
+  //--------------------------------------------------------------------------------
+  //--- Language Defaults
+
+  // Tailwind CSS:
+  "tailwindCSS.rootFontSize": 16, // Root font size in px like browser default.
+
+  //--------------------------------------------------------------------------------
+  // Color Theme
+
+  "workbench.colorTheme": "Default Dark+", // Set color theme.
+  "workbench.preferredDarkColorTheme": "Default Dark+", // Set color theme for dark mode.
+  "editor.bracketPairColorization.enabled": false, // Disable rainbow colored brackets.
+  "editor.colorDecorators": false, // Disable color squares in front of color code.
+  "editor.tokenColorCustomizations": {
+    // Language defaults.
+    "comments": "#FF0000",
+    "strings": "#CE9178",
+    "keywords": "#569CD6",
+    "numbers": "#A5C25C",
+    "functions": "#E8BF6A",
+    "variables": "#C064C7",
+    "types": "#45C8B0"
+  },
+  "textMateRules": [
+    {
+      // HTML
+      "scope": [
+        "punctuation.definition.tag.begin.html", // Tag begin bracket.
+        "punctuation.definition.tag.end.html" // Tag end bracket.
+      ],
+      "settings": {
+        "foreground": "#606366"
+      }
+    },
+    {
+      // Blade
+      "scope": [
+        "punctuation.definition.comment.begin.blade",
+        "punctuation.definition.comment.end.blade",
+        "comment.block.blade"
+      ],
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": ["entity.other.attribute-name.html"],
+      "settings": {
+        "foreground": "#45C8B0"
+      }
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#191B1C",
+    "titleBar.activeForeground": "#606366",
+    "titleBar.inactiveBackground": "#191B1C",
+    "titleBar.inactiveForeground": "#606366",
+    "titleBar.border": "#191B1C",
+    "commandCenter.foreground": "#606366",
+    "commandCenter.activeForeground": "#569CD6",
+    "commandCenter.background": "#252525",
+    "commandCenter.activeBackground": "#252525",
+    "commandCenter.border": "#252525",
+    "commandCenter.inactiveForeground": "",
+    "commandCenter.inactiveBorder": "#252525",
+    "commandCenter.activeBorder": "#252525",
+    "commandCenter.debuggingBackground": "#287BDE",
+    "breadcrumb.foreground": "#606366",
+    "breadcrumb.background": "#252525",
+    "breadcrumb.focusForeground": "#569CD6",
+    "breadcrumb.activeSelectionForeground": "#569CD6",
+    "breadcrumbPicker.background": "#252525",
+    "editor.background": "#191B1C",
+    "editor.foreground": "#ABABAB",
+    "editor.selectionBackground": "#606366",
+    "editorIndentGuide.background1": "#252525",
+    "editorIndentGuide.background2": "#252525",
+    "editorIndentGuide.background3": "#252525",
+    "editorIndentGuide.background4": "#252525",
+    "editorIndentGuide.background5": "#252525",
+    "editorIndentGuide.background6": "#252525",
+    "editorIndentGuide.activeBackground1": "#606366",
+    "editorIndentGuide.activeBackground2": "#606366",
+    "editorIndentGuide.activeBackground3": "#606366",
+    "editorIndentGuide.activeBackground4": "#606366",
+    "editorIndentGuide.activeBackground5": "#606366",
+    "editorIndentGuide.activeBackground6": "#606366",
+    "editorLineNumber.foreground": "#606366",
+    "editorLineNumber.activeForeground": "#ABABAB",
+    "editorLineNumber.dimmedForeground": "#CE9178",
+    "editor.lineHighlightBackground": "#252525",
+    "editor.lineHighlightBorder": "#252525",
+    "editorCursor.background": "#191B1C",
+    "editorCursor.foreground": "#569CD6",
+    "editorMultiCursor.primary.foreground": "#569CD6",
+    "editorMultiCursor.primary.background": "#191B1C",
+    "editorMultiCursor.secondary.foreground": "#C064C7",
+    "editorMultiCursor.secondarybackground": "#287BDE",
+    "editorRuler.foreground": "#252525",
+    "contrastActiveBorder": "#191B1C",
+    "contrastBorder": "#191B1C",
+    "focusBorder": "#191B1C",
+    "disabledForeground": "#606366",
+    "descriptionForeground": "#ABABAB",
+    "errorForeground": "#FF0000",
+    "icon.foreground": "#606366",
+    "button.background": "#191B1C",
+    "button.foreground": "#569CD6",
+    "button.border": "#569CD6",
+    "button.separator": "#191B1C",
+    "button.hoverBackground": "#191B1C",
+    "button.secondaryForeground": "#569CD6",
+    "button.secondaryBackground": "#191B1C",
+    "button.secondaryHoverBackground": "#ED3276",
+    "toolbar.hoverBackground": "#191B1C",
+    "toolbar.hoverOutline": "#191B1C",
+    "toolbar.activeBackground": "#191B1C",
+    "badge.foreground": "#191B1C",
+    "badge.background": "#606366",
+    "progressBar.background": "#569CD6",
+    "scrollbar.shadow": "#606366",
+    "editorStickyScroll.background": "#252525",
+    "editorStickyScroll.border": "#252525",
+    "editorStickyScroll.shadow": "#252525",
+    "editorStickyScrollHover.background": "#191B1C",
+    "scrollbarSlider.activeBackground": "#191B1C",
+    "scrollbarSlider.background": "#191B1C",
+    "scrollbarSlider.hoverBackground": "#191B1C",
+    "editorOverviewRuler.border": "#191B1C",
+    "editorOverviewRuler.background": "#191B1C",
+    "sideBar.background": "#191B1C",
+    "sideBar.foreground": "#ABABAB",
+    "sideBar.border": "#252525",
+    "sideBar.dropBackground": "#E8BF6A",
+    "sideBarTitle.foreground": "#191B1C",
+    "sideBarSectionHeader.background": "#252525",
+    "sideBarSectionHeader.foreground": "#569CD6",
+    "sideBarSectionHeader.border": "#191B1C",
+    "sideBarActivityBarTop.border": "#C064C7",
+    "tree.indentGuidesStroke": "#252525",
+    "tree.inactiveIndentGuidesStroke": "#252525",
+    "tree.tableColumnsBorder": "#606366",
+    "tree.tableOddRowsBackground": "#252525",
+    "tab.activeBackground": "#191B1C",
+    "tab.unfocusedActiveBackground": "#191B1C",
+    "tab.activeForeground": "#569CD6",
+    "tab.border": "#191B1C",
+    "tab.activeBorder": "#191B1C",
+    "tab.dragAndDropBorder": "#191B1C",
+    "tab.unfocusedActiveBorder": "#191B1C",
+    "tab.activeBorderTop": "#191B1C",
+    "tab.unfocusedActiveBorderTop": "#191B1C",
+    "tab.lastPinnedBorder": "#252525",
+    "tab.inactiveBackground": "#191B1C",
+    "tab.unfocusedInactiveBackground": "#191B1C",
+    "tab.inactiveForeground": "#606366",
+    "tab.unfocusedActiveForeground": "#569CD6",
+    "tab.unfocusedInactiveForeground": "#606366",
+    "tab.hoverBackground": "#191B1C",
+    "tab.unfocusedHoverBackground": "#191B1C",
+    "tab.hoverForeground": "#569CD6",
+    "tab.unfocusedHoverForeground": "#569CD6",
+    "tab.hoverBorder": "#191B1C",
+    "tab.unfocusedHoverBorder": "#191B1C",
+    "tab.activeModifiedBorder": "#191B1C",
+    "tab.inactiveModifiedBorder": "#191B1C",
+    "tab.unfocusedActiveModifiedBorder": "#191B1C",
+    "tab.unfocusedInactiveModifiedBorder": "#191B1C",
+    "editorGroup.border": "#252525",
+    "editorGroup.dropBackground": "#252525",
+    "editorGroup.emptyBackground": "#191B1C",
+    "editorGroup.focusedEmptyBorder": "#DCDCAA",
+    "editorGroup.dropIntoPromptForeground": "#ABABAB",
+    "editorGroup.dropIntoPromptBackground": "#252525",
+    "editorGroup.dropIntoPromptBorder": "#252525",
+    "editorGroupHeader.noTabsBackground": "#191B1C",
+    "editorGroupHeader.tabsBackground": "#191B1C",
+    "editorGroupHeader.tabsBorder": "#191B1C",
+    "editorGroupHeader.border": "#191B1C",
+    "list.activeSelectionBackground": "#252525",
+    "list.activeSelectionForeground": "#ABABAB",
+    "list.activeSelectionIconForeground": "#287BDE",
+    "list.dropBackground": "#252525",
+    "list.focusBackground": "#191B1C",
+    "list.focusForeground": "#569CD6",
+    "list.focusHighlightForeground": "#A5C25C",
+    "list.focusOutline": "#191B1C",
+    "list.focusAndSelectionOutline": "#252525",
+    "list.highlightForeground": "#287BDE",
+    "list.hoverBackground": "#191B1C",
+    "list.hoverForeground": "#ABABAB",
+    "list.inactiveSelectionBackground": "#252525",
+    "list.inactiveSelectionForeground": "#569CD6",
+    "list.inactiveSelectionIconForeground": "#569CD6",
+    "list.inactiveFocusBackground": "#252525",
+    "list.inactiveFocusOutline": "#252525",
+    "list.invalidItemForeground": "#287BDE",
+    "list.errorForeground": "#4FA544",
+    "list.warningForeground": "#CE9178",
+    "list.filterMatchBackground": "#287BDE",
+    "list.filterMatchBorder": "",
+    "list.deemphasizedForeground": "",
+    "list.dropBetweenBackground": "",
+    "activityBar.background": "#191B1C",
+    "activityBar.dropBorder": "#569CD6",
+    "activityBar.foreground": "#569CD6",
+    "activityBar.inactiveForeground": "#606366",
+    "activityBar.border": "#191B1C",
+    "activityBar.activeBorder": "#191B1C",
+    "activityBar.activeBackground": "#191B1C",
+    "activityBar.activeFocusBorder": "#191B1C",
+    "activityBarBadge.background": "#606366",
+    "activityBarBadge.foreground": "#191B1C",
+    "activityBarTop.foreground": "#ED3276",
+    "activityBarTop.activeBorder": "#E8BF6A",
+    "activityBarTop.inactiveForeground": "#45C8B0",
+    "activityBarTop.dropBorder": "#C064C7",
+    "activityBarTop.background": "#ABABAB",
+    "activityBarTop.activeBackground": "#45C8B0",
+    "statusBar.background": "#191B1C",
+    "statusBar.foreground": "#E8BF6A",
+    "statusBar.border": "#191B1C",
+    "statusBar.debuggingBackground": "#191B1C",
+    "statusBar.debuggingForeground": "#E8BF6A",
+    "statusBar.debuggingBorder": "#191B1C",
+    "statusBar.noFolderForeground": "#ABABAB",
+    "statusBar.noFolderBackground": "#191B1C",
+    "statusBar.noFolderBorder": "#191B1C",
+    "statusBar.focusBorder": "#569CD6",
+    "statusBarItem.activeBackground": "#191B1C",
+    "statusBarItem.hoverForeground": "#569CD6",
+    "statusBarItem.hoverBackground": "#191B1C",
+    "statusBarItem.prominentForeground": "#569CD6",
+    "statusBarItem.prominentBackground": "#191B1C",
+    "statusBarItem.prominentHoverForeground": "#569CD6",
+    "statusBarItem.prominentHoverBackground": "#191B1C",
+    "statusBarItem.remoteBackground": "#191B1C",
+    "statusBarItem.remoteForeground": "#606366",
+    "statusBarItem.remoteHoverBackground": "#191B1C",
+    "statusBarItem.remoteHoverForeground": "#569CD6",
+    "statusBarItem.errorBackground": "#E8BF6A",
+    "statusBarItem.errorForeground": "#ED3276",
+    "statusBarItem.errorHoverBackground": "#4FA544",
+    "statusBarItem.errorHoverForeground": "#E8BF6A",
+    "statusBarItem.warningBackground": "#CE9178",
+    "statusBarItem.warningForeground": "#ED3276",
+    "statusBarItem.warningHoverBackground": "#287BDE",
+    "statusBarItem.warningHoverForeground": "#C064C7",
+    "statusBarItem.compactHoverBackground": "#191B1C",
+    "statusBarItem.focusBorder": "#C064C7",
+    "statusBarItem.offlineBackground": "#ED3276",
+    "statusBarItem.offlineForeground": "#E8BF6A",
+    "statusBarItem.offlineHoverForeground": "#4FA544",
+    "statusBarItem.offlineHoverBackground": "#569CD6",
+    "settings.headerForeground": "#ABABAB",
+    "settings.modifiedItemIndicator": "#191B1C",
+    "settings.dropdownBackground": "#252525",
+    "settings.dropdownForeground": "#569CD6",
+    "settings.dropdownBorder": "#252525",
+    "settings.dropdownListBorder": "#252525",
+    "settings.checkboxBackground": "#252525",
+    "settings.checkboxForeground": "#569CD6",
+    "settings.checkboxBorder": "#252525",
+    "settings.rowHoverBackground": "#191B1C",
+    "settings.textInputBackground": "#252525",
+    "settings.textInputForeground": "#569CD6",
+    "settings.textInputBorder": "#252525",
+    "settings.numberInputBackground": "#252525",
+    "settings.numberInputForeground": "#569CD6",
+    "settings.numberInputBorder": "#252525",
+    "settings.focusedRowBackground": "#191B1C",
+    "settings.focusedRowBorder": "#191B1C",
+    "settings.headerBorder": "#191B1C",
+    "settings.sashBorder": "#191B1C",
+    "settings.settingsHeaderHoverForeground": "#569CD6",
+    "welcomePage.background": "#191B1C",
+    "welcomePage.progress.background": "#252525",
+    "welcomePage.progress.foreground": "#569CD6",
+    "welcomePage.tileBackground": "#252525",
+    "welcomePage.tileHoverBackground": "#252525",
+    "welcomePage.tileBorder": "#252525",
+    "walkThrough.embeddedEditorBackground": "#4FA544",
+    "walkthrough.stepTitle.foreground": "#CE9178"
+  },
+
+  //--------------------------------------------------------------------------------
+  //--- Extensions:
+
+  "extensions.autoCheckUpdates": true, // Automatically check for updates.
+  "extensions.autoUpdate": true, // Automatically update extensions.
+
+  // Vim Extension:
+  "extensions.experimental.affinity": {
+    // Improve performance of extension.
+    "vscodevim.vim": 1
+  },
+  "vim.leader": "<space>", // Set <Leader> to space globally (standard is \).
+  "vim.useSystemClipboard": true, // Use clipboard of OS.
+  "vim.statusBarColorControl": true, // -> not working
+  "vim.statusBarColors.normal": ["#191B1C", "#569CD6"],
+  "vim.statusBarColors.insert": ["#191B1C", "#C064C7"],
+  "vim.statusBarColors.visual": ["#191B1C", "#E8BF6A"],
+  "vim.statusBarColors.visualline": ["#191B1C", "#E8BF6A"],
+  "vim.statusBarColors.visualblock": ["#191B1C", "#E8BF6A"],
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": ["#191B1C", "#45C8B0"],
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.surround": true, // Enable surround plugin.
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "/"], // Use <Leader>/ to comment line.
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    },
+    {
+      "before": ["v", "v"], // Use vv to select whole line.
+      "after": ["V"],
+      "silent": true
+    },
+    {
+      "before": ["<Esc>"], // Use esc to quit highlight search.
+      "after": [":nohlsearch<CR>"],
+      "silent": true
+    },
+    {
+      "before": ["n"], // Center the screen after jumping to the next match.
+      "after": ["n", "z", "z", "z", "v"],
+      "silent": true
+    },
+    {
+      "before": ["N"], // Center the screen after jumping to the previous match.
+      "after": ["N", "z", "z", "z", "v"],
+      "silent": true
+    },
+    {
+      "before": ["U"], // Redo last action.
+      "after": ["<C-r>"],
+      "silent": true
+    },
+    {
+      "before": ["<", "<"], // Stay in visual mode after indent width <<.
+      "after": ["<", "g", "v"],
+      "silent": true
+    },
+    {
+      "before": [">", ">"], // Stay in visual mode after indent width >>.
+      "after": [">", "g", "v"],
+      "silent": true
+    },
+    {
+      "before": ["Y"], // Yank to end of line.
+      "after": ["y", "$"],
+      "silent": true
+    },
+    {
+      "before": ["v", "b"], // Use vb for visual block mode.
+      "after": ["<C-v>"],
+      "silent": true
+    },
+    {
+      "before": [",", ","], // Insert a , at the end of line.
+      "after": ["<Esc>", "A", ",", "<Esc>"],
+      "silent": true
+    },
+    {
+      "before": [":", ":"], // Insert a : at the end of line.
+      "after": ["<Esc>", "A", ":", "<Esc>"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "j", "l"], // Join line below with white space.
+      "after": ["J"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "e", "t"], // Explore file tree.
+      "commands": ["workbench.view.explorer"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "t", "h"], // Open terminal in horizontal split.
+      "commands": ["workbench.action.terminal.focus"],
+      "silent": true
+    },
+    {
+      "before": ["|"], // Open file in vertical split. -> not working
+      "commands": ["explorer.openToSide"],
+      "silent": true
+    },
+    {
+      "before": ["L"], // Jump to right split.
+      "commands": ["workbench.action.focusRightGroup"],
+      "silent": true
+    },
+    {
+      "before": ["H"], // Jump to left split.
+      "commands": ["workbench.action.focusLeftGroup"],
+      "silent": true
+    },
+    {
+      "before": [">", ">"], // Indent current line.
+      "commands": ["editor.action.indentLines"],
+      "silent": true
+    },
+    {
+      "before": ["<", "<"], // Unindent current line.
+      "commands": ["editor.action.reindentlines"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "m"], // Harpoon - set mark.
+      "commands": ["vscode-harpoon.addEditor"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "h", "l"], // Harpoon - show list.
+      "commands": ["vscode-harpoon.editorQuickPick"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "f"], // Find files.
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    }
+    //{
+    // "before": ["x"],                      // If delete one char, don't copy it to the clipboard.
+    // "after": ['"_x'],
+    // "silent": true
+    //}
+  ],
+
+  // vim.keymap.set('n', 'x', '"_x')                                         -- If delete one char, don't copy it to the clipboard.
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">>"], // Indent selected lines.
+      "commands": ["editor.action.indentLines"],
+      "silent": true
+    },
+    {
+      "before": ["<<"], // Unindent selected lines.
+      "commands": ["editor.action.reindentlines"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "/"], // Use <Leader>/ to comment line.
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<right>"], // Copilot - accept suggestion. -> not working
+      "commands": ["github.copilot.ghpr.applySuggestion"],
+      "silent": true
+    }
+  ],
+
+  // Material Icon Theme:
+  "a-file-icon-vscode.arrowTheme": "material",
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  "a-file-icon-vscode.activeIconPacks": ["angular", "rails"],
+  "a-file-icon-vscode.folderColor": "#569CD6",
+  "a-file-icon-vscode.foldersAssociations": {},
+  "a-file-icon-vscode.folderTheme": "classic",
+  "a-file-icon-vscode.languagesAssociations": {},
+  "a-file-icon-vscode.opacity": 1,
+  "a-file-icon-vscode.saturation": 1,
+  "a-file-icon-vscode.showReloadMessage": true,
+  "a-file-icon-vscode.showUpdateMessage": false,
+  "a-file-icon-vscode.showWelcomeMessage": true,
+
+  // Copilot:
+  "github.copilot.editor.enableAutoCompletions": true, // Automatically show inline completions.
+
+  // Blade Formatter:
+  "bladeFormatter.format.indentSize": 2, // Indent size for Blade files.
+
+  // Prettier+:
+  "editor.defaultFormatter": "svipas.prettier-plus", // Set Prettier+ as default formatter.
+  "editor.formatOnPaste": true, // Format code on paste.
+  "editor.formatOnSave": true,
+  "blade.format.enable": true, // Format Blade files
+  "bladeFormatter.format.enabled": true,
+  "css.format.enable": true,
+  "css.format.maxPreserveNewLines": 1
+}
+

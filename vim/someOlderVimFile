@@ -1,0 +1,353 @@
+" ~/.vimrc
+
+"-----------------------------------------------------------------------
+"  Vim Plug Plugin Manager
+"-----------------------------------------------------------------------
+
+" Auto install Vim Plug and plugins if not installed:
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+"-----------------------------------------------------------------------
+"  Plugins
+"-----------------------------------------------------------------------
+
+call plug#begin('~/.vim/plugged')
+    " Universal set of Vim defaults:
+    Plug 'tpope/vim-sensible'
+
+    " NERDTree file explorer:
+    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+    " Vim Maximizer to maximize and restore current window:
+    Plug 'szw/vim-maximizer'
+
+    " Surround.vim to surround marked content with specific signs:
+    Plug 'tpope/vim-surround'
+
+    " NERD Commenter to comment in/out content quickly:
+    Plug 'preservim/nerdcommenter'
+
+    " fzf command line fuzzy finder:
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Enable fzf for Vim:
+    Plug 'junegunn/fzf.vim'
+
+    " Set and use .editorconfig file:
+    Plug 'editorconfig/editorconfig-vim'
+
+    " Coc auto completion engine:
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+    " CSS Color name highlighter:
+    Plug 'ap/vim-css-color', {'branch': 'master'}
+
+    Plug 'aklt/plantuml-syntax'
+" Down under it goes next..
+
+
+
+    " PHPStan
+    Plug 'yaegassy/coc-phpstan', {'do': 'yarn install --frozen-lockfile'}
+    " Intelephense
+    Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'yaegassy/coc-tailwindcss3'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+call plug#end()
+"so ~/.vim/plugins/plugins.vim
+" Load plugins from plugins.vim file.
+" To install plugins use: :PlugInstall
+
+"--------------------------------------------
+" Auto Commands
+"--------------------------------------------
+
+"autocmd TextChanged,TextChangedI <buffer> silent write
+" Auto save file everytime something where changed.
+
+" Automatically source .vimrc on safe:
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
+
+
+"-----------------------------------------------------------------------
+" Appereance
+"-----------------------------------------------------------------------
+
+" Set the color scheme of Vim:
+colorscheme mannydark
+
+set termguicolors
+
+" Disable overwriting from VI to Vim:
+set nocompatible
+
+" Display line numbers on the left:
+set number
+
+" Highlight search results:
+set hlsearch
+
+" Search ignores case:
+set ignorecase
+
+" Do not ignore case if the search pattern has uppercase:
+set smartcase
+
+" Turn off all errorbells:
+set noerrorbells
+set belloff=all
+
+" Set the size of tab in spaces:
+set tabstop=4
+set softtabstop=4
+
+" Set the size of tab in spaces in insert mode:
+set shiftwidth=4
+
+" Set indent size, also used by = < >:
+set expandtab
+" Google that again !!!
+
+" Text will not wrap:
+set nowrap
+" Auto write buffer if focus changes:
+set autowriteall
+" Wrap text in Markdown and text files.
+autocmd BufRead,BufNewFile *.md,*.txt setlocal wrap
+
+" Don't create a swap file:
+"set noswapfile
+
+" Enable mouse on all modes:
+set mouse=a
+
+" Use the OS clipboard:
+set clipboard=unnamed,unnamedplus
+
+" Highlight matching braces:
+set showmatch
+
+" Use guifg and guibg color attributes:
+set termguicolors
+
+" Open new horizontal split to the right:
+set splitright
+
+" Open new vertical split below:
+set splitbelow
+
+set list lcs=tab:\|\
+" Here is a space (google that again !!! ).
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+" Make cursor a line in insert mode.
+
+" Keep visual mode after indent with > or <
+vmap < <gv
+vmap > >gv
+
+" Move visual blocks with J and K:
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Remember last editing position:
+augroup vimrc-remember-cursor-position
+  autocmd!
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+augroup END
+
+" Languages for intellisense:
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
+let g:coc_global_extensions = [
+    \ 'coc-blade',
+    \ 'coc-css',
+    \ 'coc-cssmodules',
+    \ 'coc-dash-complete',
+    \ 'coc-diagnostic',
+    \ 'coc-docker',
+    \ 'coc-emmet',
+    \ 'coc-explorer',
+    \ 'coc-fzf-preview',
+    \ 'coc-git',
+    \ 'coc-highlight',
+    \ 'coc-html',
+    \ 'coc-html-css-support',
+    \ 'coc-htmlhint',
+    \ 'coc-json',
+    \ 'coc-ltex',
+    \ 'coc-markdownlint',
+    \ 'coc-phpactor',
+    \ 'coc-phpls',
+    \ 'coc-php-cs-fixer',
+    \ 'coc-prettier',
+    \ 'coc-psalm',
+    \ 'coc-python',
+    \ 'coc-rome',
+    \ 'coc-sh',
+    \ 'coc-stylelintplus',
+    \ 'coc-stylelint',
+    \ 'coc-snippets',
+    \ 'coc-spell-checker',
+    \ 'coc-sql',
+    \ 'coc-sqlfluff',
+    \ 'coc-stylua',
+    \ 'coc-sumneko-lua',
+    \ 'coc-svg',
+    \ 'coc-swagger',
+    \ 'coc-tasks',
+    \ 'coc-translator',
+    \ 'coc-tsserver',
+    \ 'coc-webview',
+    \ 'coc-xml',
+    \ 'coc-yaml',
+    \ 'coc-yank',
+    \]
+
+" Set specific text highlights in case of the file type:
+filetype plugin indent on
+
+" Set linespacings (only MacVim, for terminal do it in terminal preferences):
+set linespace=15
+
+"nor
+"set relativenumber
+" Display the relative line number before and above the actual line.
+" Are both active, they become hybrid.
+
+" Use 256 colors for Terminal Vim:
+"set t_CO=256
+
+" Number of command line history entries:
+set history=1000
+
+" Start to scroll if there is a space of n lines:
+set scrolloff=3
+
+" Show a line with autocomplete opportunities (shift + tab to walk):
+set wildmenu
+
+" Show a column for folding sections on the right hand:
+set foldcolumn=1
+
+" Safe undo steps over reboot:
+set undofile
+
+" Mount undo directory:
+set undodir=$HOME/vimundo/
+
+" Number of safed undo steps:
+set undolevels=1000
+
+" Set font and font size (only MacVim, for terminal do it in terminal preferences):
+:set guifont=MesloLGSNerdFont:h15
+
+"set RltvNmbr
+
+" Set cursor on a line wrap automatically into indent level:
+set autoindent
+
+" Activates Unicode UTF-8 encoding:
+set encoding=utf-8
+
+" Syntax highlighting in case of file type:
+syntax enable
+
+"set tw=72
+" Set text wrap automatically at sign number ...
+" 72 is perfect size for GitLab and GitHub.
+
+" Delete with backspace in insert mode.
+set backspace=indent,eol,start
+
+
+"-----------------------------------------------------------------------
+"-- Key Mappings
+"-----------------------------------------------------------------------
+
+" Set <Leader> to space (standard is \):
+let mapleader = " "
+
+" Clear search highlights ( nh):
+nmap <Leader>nh :nohl<CR>
+
+"----------------------------------
+"-- Terminal Keymaps
+
+" Open terminal in horizontal buffer below ( tb):
+nmap <Leader>tb :split term://zsh<CR>i
+
+" Open terminal in vertical buffer to the next ( tn):
+nmap <Leader>tn :vsplit term://zsh<CR>i
+
+"----------------------------------
+"-- Nert Tree Keymaps
+"use that instead of nerd tree:
+"https://github.com/lambdalisue/fern.vim
+
+" Toggle tree ( tt):
+nmap <Leader>tt :NERDTreeToggle<CR>
+
+" Focus tree ( ee):
+nmap <Leader>ee :NERDTreeFocus<CR>
+
+" Find actual file in tree ( ft):
+nmap <Leader>ft :NERDTreeFind<CR>
+
+" Collapse tree ( ct):
+" Collapse tree, keep paths to buffers ( cb):
+
+
+"----------------------------------
+"-- Window Management Keymaps
+
+" Split buffer vertically (y-axis) ( y):
+nmap <Leader>y <C-w>v
+
+" Split buffer horizontally (x-axis) ( x):
+nmap <Leader>x <C-w>s
+
+" Go to right split ( l):
+nmap <Leader>l <C-w>l
+
+" Go to left split ( h):
+nmap <Leader>h <C-w>h
+
+" Go to split below ( j):
+nmap <Leader>j <C-w>j
+
+" Go to split above ( k):
+nmap <Leader>k <C-w>k
+
+" Equalize width and height for all splits ( es):
+nmap <Leader>es <C-w>=
+
+" Close current split ( cs):
+nmap <Leader>cs :close<CR>
+
+" Open new tab ( ot):
+nmap <Leader>ot :tabnew<CR>
+
+" Exit current tab: ( et):
+nmap <Leader>et :tabclose<CR>
+
+" Go to next tab ( nt):
+nmap <Leader>nt :tabn<CR>
+
+" Go to previous tab ( pt):
+nmap <Leader>pt :tabp<CR>
+
+"nmap <Leader>vrc :tabedit $MYVIMRC<cr>
+" ovrc is open ~/.vimrc file.
+
+
+"----------------------------------
+"-- Fuzzy files Keymaps
+
+nnoremap <C-p> :Files<cr>
+" Use Ctrl-P to open the fuzzy file opener

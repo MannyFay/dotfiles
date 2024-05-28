@@ -378,15 +378,15 @@
 
   // Neovim Extension:
   //"extensions.experimental.affinity": {  // Improve performance of extension.
-    //"asvetliakov.vscode-neovim": 1
+   // "asvetliakov.vscode-neovim": 1
   //},
-  //"vim": {
-    //"neovimPath": "/opt/homebrew/bin/nvim",  // Path to Nvim executable (macOS).
-    //"useSystemClipboard": true
-  //},
-  //"vscode-neovim.neovimInitVimPaths.darwin": "~/dotfiles/vscode/init.vim",  // Path to Nvims init.lua file (macOS).
+  "vim": {
+    "neovimPath": "/opt/homebrew/bin/nvim",  // Path to Nvim executable (macOS).
+    "useSystemClipboard": true
+  },
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",  // Path to Nvims init.lua file (macOS).
 
-  //Vim Extension:
+  // Vim Extension:
   "extensions.experimental.affinity": {  // Improve performance of extension.
     "vscodevim.vim": 1
   },
@@ -507,8 +507,9 @@
       "before": ["<leader>", "/"],                // Use <Leader>/ to comment line.
       "commands": ["editor.action.commentLine"],
       "silent": true
-    }
-  ],
+    },
+
+  ]
 
   // Material Icon Theme:
   "a-file-icon-vscode.arrowTheme": "material",

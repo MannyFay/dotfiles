@@ -2,28 +2,16 @@
 #-----  Repository Specific Configuration
 
 # Personal GitHub:
-[includeIf "gitdir:~/personal/github/*"]
-    path = ~/dotfiles/git/account-config/github
+[includeIf "gitdir:$HOME/personal/github/*"]
+    path = $HOME/personal/github/dotfiles/git/account-config/personal/github
 
 # Personal GitLab:
-[includeIf "gitdir:~/personal/gitlab/*"]
-    path = ~/dotfiles/git/account-config/gitlab
-
-# dotfiles:
-[includeIf "gitdir:~/dotfiles/*"]
-    path = ~/dotfiles/git/account-config/github
-
-# ansible:
-[includeIf "gitdir:~/ansible/*"]
-    path = ~/dotfiles/git/account-config/github
+[includeIf "gitdir:$HOME/personal/gitlab/*"]
+    path = $HOME/personal/github/dotfiles/git/account-config/personal/gitlab
 
 # Work VdS GitHub:
-[includeIf "gitdir:~/work/vds/github/*"]
-    path = ~/dotfiles/git/account-config/work/github
-
-# Work fitcrew GitLab:
-[includeIf "gitdir:~/work/fitcrew/gitlab/*"]
-    path = ~/dotfiles/git/account-config/work/gitlab
+[includeIf "gitdir:$HOME/work/vds/github/*"]
+    path = $HOME/personal/github/dotfiles/git/account-config/work/github
 
 
 
@@ -34,7 +22,7 @@
     ui = auto
 [core]
     editor = nvim
-    excludesfile = ~/.gitignore
+    excludesfile = $HOME/.gitignore
 [diff]
     tool = vimdiff
 [fetch]

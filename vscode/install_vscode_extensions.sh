@@ -1,6 +1,6 @@
 #!/bin/bash
 
-extensions = (
+extensions=(
   "formulahendry.auto-close-tag"
   "formulahendry.auto-rename-tag"
   "ms-vscode.azure-account"

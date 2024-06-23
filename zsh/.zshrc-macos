@@ -131,7 +131,7 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 # Start fuzzy search with ctrl+f:
 bindkey -s ^f "$HOME/personal/github/dotfiles/tmux/tmux-sessionizer.sh\n"
 
-#alias gitalizer='$HOME/personal/github/gitalizer/crawl.sh\n'
+alias gitalizer="$HOME/personal/github/dotfiles/git/gitalizer.sh\n"
 
 # Set the path to use GNU version of command line tools:
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"

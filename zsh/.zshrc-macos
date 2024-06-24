@@ -131,7 +131,7 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 # Start fuzzy search with ctrl+f:
 bindkey -s ^f "$HOME/personal/github/dotfiles/tmux/tmux-sessionizer.sh\n"
 
-alias gitalizer="$HOME/personal/github/dotfiles/git/gitalizer.sh\n"
+alias gitalizer="$HOME/personal/github/dotfiles/git/gitalizer.sh"
 
 # Set the path to use GNU version of command line tools:
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
@@ -144,6 +144,7 @@ PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
 # Set terminal emulator:
 export TERM="alacritty"
+export TERMINFO='/usr/share/terminfo/'
 
 export PATH=/usr/local/opt/krb5/bin:$PATH
 export PATH=/usr/local/opt/krb5/sbin:$PATH

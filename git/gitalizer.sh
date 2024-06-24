@@ -25,3 +25,4 @@ for dir in "${search_directories[@]}"; do
         check_git_repo "$repo_dir"
     done
 done
+

@@ -1,5 +1,25 @@
 #!/bin/bash
 
+#------------------------------------------------------------------------------
+# A little helper to make (by now) fast WIP commits.
+#
+# ---> Don't lose your work ;)    Push it!
+#
+# Please set the correct Git/SSH credentials in your repositories on local disk
+# before using this script.
+#
+# Go down 5 lines to set your directories to search for local Git repositories.
+# -----------------------------------------------------------------------------
+
+# Define directories on your disk to search for Git repositories:
+search_directories=(
+    $HOME/personal/*
+    $HOME/work/*
+)
+
+
+
+# -----------------------------------------------------------------------------
 # Check, if there are uncommitted changes on file system:
 check_git_repo() {
     local repo_dir=$1
@@ -11,13 +31,7 @@ check_git_repo() {
     fi
 }
 
-
 dirty_repos=()
-
-search_directories=(
-    $HOME/personal/*
-    $HOME/work/*
-)
 
 
 # Loop through specified directories and check for Git repositories

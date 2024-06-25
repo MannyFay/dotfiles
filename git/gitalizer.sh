@@ -48,12 +48,12 @@ if [ ${#dirty_repos[@]} -gt 0 ]; then
     printf "\nWhat should I do?\n"
 
     # Option for WIP commit and push all repositories:
-    printf "   0 -> WIP commit and push all repositories\n"
+    printf "   0 -> Set WIP-Commit, then push all repositories\n"
 
     # Display options for each dirty repository:
     for (( i=0; i<${#dirty_repos[@]}; i++ )); do
         repo_name=$(basename "${dirty_repos[i]}")
-        printf "   %d -> Set WIP-commit, then push on repo '%s'\n" "$(( i+1 ))" "$repo_name"
+        printf "   %d -> Set WIP-Commit, then push on repo '%s'\n" "$(( i+1 ))" "$repo_name"
     done
     printf "   q -> Do nothing\n"
 

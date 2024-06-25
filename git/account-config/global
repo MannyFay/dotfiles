@@ -2,16 +2,16 @@
 #-----  Repository Specific Configuration
 
 # Personal GitHub:
-[includeIf "gitdir:$HOME/personal/github/*"]
-    path = $HOME/personal/github/dotfiles/git/account-config/personal/github
+[includeIf "gitdir:~/personal/github/"]
+    path = ~/personal/github/dotfiles/git/account-config/personal/github
 
 # Personal GitLab:
-[includeIf "gitdir:$HOME/personal/gitlab/*"]
-    path = $HOME/personal/github/dotfiles/git/account-config/personal/gitlab
+[includeIf "gitdir:~/personal/gitlab/"]
+    path = ~/personal/github/dotfiles/git/account-config/personal/gitlab
 
 # Work VdS GitHub:
-[includeIf "gitdir:$HOME/work/vds/github/*"]
-    path = $HOME/personal/github/dotfiles/git/account-config/work/github
+[includeIf "gitdir:~/work/vds/github/"]
+    path = ~/personal/github/dotfiles/git/account-config/work/github
 
 
 

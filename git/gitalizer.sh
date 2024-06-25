@@ -55,30 +55,36 @@ if [ ${#dirty_repos[@]} -gt 0 ]; then
         repo_name=$(basename "${dirty_repos[i]}")
         printf "   %d -> Set WIP-Commit, then push on repo '%s'\n" "$(( i+1 ))" "$repo_name"
     done
-    printf "   q -> Do nothing\n"
+    printf "   q -> Quit, do nothing.\n"
 
     # Prompt user for their choice:
     printf "\n"
-    read -p "Choose an option: " choice
+    read -p "Choose option(s) (1 2 q for example): " choices
 
-    case "$choice" in
-        0)
-            printf "Committing 'WIP' in all repositories and pushing...\n"
-            for repo_dir in "${dirty_repos[@]}"; do
-                (cd "$repo_dir" && git add . && git commit -m "WIP" && git push)
-            done
-            ;;
-        [1-${#dirty_repos[@]}])
-            index=$(( choice - 1 ))
-            echo "Committing 'WIP' and push in repo '${dirty_repos[index]}'..."
-            (cd "${dirty_repos[index]}" && git add . && git commit -m "WIP" && git push)
-            ;;
-        q)
-            echo "Exiting without doing anything."
-            ;;
-        *)
-            echo "Invalid option. Exiting."
-            ;;
-    esac
+    # Convert user input into an array of choices
+    choices_arr=($choices)
+
+    # Process each choice:
+    for choice in "${choices_arr[@]}"; do
+        case "$choice" in
+            0)
+                printf "Committing 'WIP' in all repositories and pushing...\n"
+                for repo_dir in "${dirty_repos[@]}"; do
+                    (cd "$repo_dir" && git add . && git commit -m "WIP" && git push)
+                done
+                ;;
+            [1-${#dirty_repos[@]}])
+                index=$(( choice - 1 ))
+                echo "Committing 'WIP' and push in repo '${dirty_repos[index]}'..."
+                (cd "${dirty_repos[index]}" && git add . && git commit -m "WIP" && git push)
+                ;;
+            q)
+                echo "Exiting without doing anything."
+                ;;
+            *)
+                echo "Invalid option: $choice. Skipping."
+                ;;
+        esac
+    done
 fi
 

@@ -143,7 +143,7 @@ PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 . "$HOME/.cargo/env"
 
 # Set terminal emulator:
-export TERM="alacritty"
+export TERM=xterm-256color
 export TERMINFO='/usr/share/terminfo/'
 
 export PATH=/usr/local/opt/krb5/bin:$PATH

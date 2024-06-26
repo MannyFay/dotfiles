@@ -17,6 +17,9 @@ ln -s $HOME/personal/github/dotfiles/zsh/mannydark.zsh-theme $HOME/.oh-my-zsh/th
 
 rm -f $HOME/.oh-my-zsh/themes/mannydark-oneline.zsh-theme
 ln -s $HOME/personal/github/dotfiles/zsh/mannydark-oneline.zsh-theme $HOME/.oh-my-zsh/themes/mannydark-oneline.zsh-theme
+
+rm -f $HOME/.oh-my-zsh/themes/mannydark-downunder.zsh-theme
+ln -s $HOME/personal/github/dotfiles/zsh/mannydark-downunder.zsh-theme $HOME/.oh-my-zsh/themes/mannydark-downunder.zsh-theme
 ```
 Set the theme in the .zshrc file:
 ```shell

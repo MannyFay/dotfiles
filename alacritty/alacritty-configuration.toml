@@ -1,4 +1,21 @@
 #------------------------------------------------------------------------------
+#----- Alacritty Terminal Emulator Configuration
+#------------------------------------------------------------------------------
+
+# This file has to be symlinked as alacritty.toml to the Alacritty
+# configuration directory.
+#
+# Unix:
+# $HOME/.config/alacritty/alacritty.toml
+# ln -s $HOME/personal/github/dotfiles/alacritty/alacritty-configuration.toml $HOME/.config/alacritty/alacritty.toml
+#
+# Windows (with WSL):
+# APPDATA\Roaming\alacritty\alacritty.toml
+# New-Item -ItemType SymbolicLink -Path "C:\Users\manny\AppData\Roaming\alacritty\alacritty.toml" -Target "\\wsl$\Ubuntu\home\manny\personal\github\dotfiles\alacritty\alacritty-configuration.toml"
+
+
+
+#------------------------------------------------------------------------------
 #--- Appearance
 
 live_config_reload        = true

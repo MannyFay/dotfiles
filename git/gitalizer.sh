@@ -77,6 +77,7 @@ if [ ${#dirty_repos[@]} -gt 0 ]; then
                 index=$(( choice - 1 ))
                 echo "Committing 'WIP' and push in repo '${dirty_repos[index]}'..."
                 (cd "${dirty_repos[index]}" && git add . && git commit -m "WIP" && git push)
+                printf "\n"
                 ;;
             q)
                 echo "Exiting without doing anything."

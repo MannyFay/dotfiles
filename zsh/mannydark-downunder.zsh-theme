@@ -39,7 +39,7 @@ function prompt_char {
 
 PROMPT='%(?, ,${COLOR[red]}FAIL%{$reset_color%}
 )
-${COLOR[orange]}%D{%a, %Y-%m-%d}%{$reset_color%}${COLOR[green]} @ %{$reset_color%}${COLOR[orange]}%D{%I:%M:%S %p}%{$reset_color%}
+${COLOR[orange]}%D{%a, %Y-%m-%d} ${COLOR[green]}@%{$reset_color%} ${COLOR[orange]}%D{%I:%M:%S %p}%{$reset_color%}
 ${COLOR[blue]}%~%{$reset_color%} $(git_prompt_info)
 ${COLOR[green]}▶%{$reset_color%}%(prompt_char) '
 

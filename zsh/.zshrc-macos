@@ -150,6 +150,7 @@ export PATH=/usr/local/opt/krb5/bin:$PATH
 export PATH=/usr/local/opt/krb5/sbin:$PATH
 export LDFLAGS="-L/usr/local/opt/krb5/lib"
 export CPPFLAGS="-I/usr/local/opt/krb5/include"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 alias sail='./vendor/bin/sail'
 
 # Herd injected PHP binary.

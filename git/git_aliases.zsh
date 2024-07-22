@@ -1,10 +1,11 @@
-# This file has to be sourced in .zsh_aliases file:
-# source ~/dotfiles/git/git_aliases.zsh                   # Git
-
-
 #------------------------------------------------------------------------------
 #  Git ZSH Aliases
 #------------------------------------------------------------------------------
+
+# This file has to be sourced in .zsh_aliases file.
+# Copy this line to do so:
+# source ~/dotfiles/git/git_aliases.zsh                   # Git
+
 
 
 #------------------------------------------------------------------------------
@@ -19,35 +20,17 @@ alias grf='git restore'    # Restore a changed file (add file).
 alias gl="git log --graph --pretty=format:'%C(blue)%h%Creset - %C(magenta)%an%Creset - %C(yellow)%s%Creset - %C(green)%cr, %ad%Creset %C(blue)%d%Creset' --abbrev-commit --raw --date=format:'%a, %Y-%m-%d, %H:%M:%S'"
 
 
-#-----------------------------------------------------------
-#- Branches
 
-# Pull from origin/main:
-alias gpm='git pull origin main'
+#------------------------------------------------------------------------------
+#----- Branches
 
-# Pull from origin/develop:
-alias gpd='git pull origin develop'
-
-# 'Show All' branches inclusively remote repository branches (quit with q):
-alias gbsa='git branch -a'
-
-# 'Show Local' branches (quit with q):
-alias gbsl='git branch'
-
-# 'Checkout Local' branch (add a branch name):
-alias gbcl='git checkout'
-
-# 'Checkout Remote' branch (add remoteName/branchName):
-alias gbcr='git checkout --track'
-
-# Check out new branch (add name):
-alias gbcn='git checkout -b'
-
-# Delete branch locally (add a branch name):
-alias gbdl='git checkout main && git branch -D'
-
-# Delete branch on remote repository (add remote branch-name):
-alias gbdr='git push --delete origin'
+alias gbsa='git branch -a'                       # 'Show All' branches inclusively remote repository branches (quit with q).
+alias gbsl='git branch'                          # 'Show Local' branches (quit with q).
+alias gbcl='git checkout'                        # 'Checkout Local' branch (add a branch name).
+alias gbcr='git checkout --track'                # 'Checkout Remote' branch (add remoteName/branchName).
+alias gbcn='git checkout -b'                     # Check out new branch (add name).
+alias gbdl='git checkout main && git branch -D'  # Delete branch locally (add a branch name).
+alias gbdr='git push --delete origin'            # Delete branch on remote repository (add remote branch-name).
 
 
 
@@ -56,11 +39,6 @@ alias gbdr='git push --delete origin'
 
 alias gisf='git add'                 # Stage file (add file or path).
 alias gisp='git add -p'              # Stage parts of file (add file):
-# y (yes): Stage this hunk to be included in the next commit.
-# n (no): Do not stage this hunk; leave it as is in the working directory.
-# s (split): Split this hunk into smaller parts, allowing you to stage only specific lines or changes within the hunk.
-# e (edit): Manually edit this hunk to remove or modify lines before staging.
-# ? (help): Show the available options and their meanings.
 alias gisa='git add .'               # Stage all files.
 alias giuf='git restore --staged'    # Unstage file (add file or path).
 alias giup='git restore -p'          # Unstage parts of file (add file).
@@ -83,43 +61,43 @@ alias gisacupdate='git add . && git commit -m "Update"'   # Stage all files and 
 
 
 
-#-----------------------------------------------------------
-#- Comparing
+#------------------------------------------------------------------------------
+#----- Comparing
 
-# Compare files (add file):
-alias gdf='git diff'
-
-
-
-#-----------------------------------------------------------
-#- Pushing/Pulling
-
-# Pull actual branch from remote repository:
-alias gpl='git pull'
-
-# Fetch actual branch from remote repository:
-alias gpf='git fetch'
-
-# Pull actual branch from remote repository, than push:
-alias gpp='git pull && git push'
-
-# Push actual branch to remote repository:
-alias gps='git push'
-
-# Revert last push (add commit hash):
-alias gpr='git revert'
-
-# Stage all files, commit with 'WIP' status and push:
-# alias ggo='git add . && git commit -m "WIP" && git pull && git push'
-alias ggo='git add . && git commit -m "WIP" && git push'
+alias gdf='git diff'  # Compare files (add file).
 
 
 
-#-----------------------------------------------------------
-#- Stashing
+#------------------------------------------------------------------------------
+#----- Fetching
 
-# Stash changes:
-alias gsc='git stash'
+alias gf='git fetch'          # Fetch actual branch from remote repository.
+alias gfo='git fetch origin'  # Fetch origin.
 
-# Pop stashed changes:
-alias gsp='git stash pop'
+
+
+#------------------------------------------------------------------------------
+#----- Pulling
+
+alias gpm='git pull origin main'     # Pull from origin/main.
+alias gpd='git pull origin develop'  # Pull from origin/develop.
+alias gpull='git pull && git fetch'  # Pull actual branch from remote repository.
+
+
+
+#------------------------------------------------------------------------------
+#----- Pushing
+
+alias gpp='git pull && git push'                          # Pull actual branch from remote repository, than push.
+alias gpush='git push'                                    # Push actual branch to remote repository.
+alias gpr='git revert'                                    # Revert last push (add commit hash).
+alias ggo='git add . && git commit -m "WIP" && git push'  # Stage all files, commit with 'WIP' status and push.
+
+
+
+#------------------------------------------------------------------------------
+#----- Stashing
+
+alias gsc='git stash'      # Stash changes.
+alias gsp='git stash pop'  # Pop stashed changes.
+

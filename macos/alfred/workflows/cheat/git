@@ -1,29 +1,33 @@
-# List commands (git)
+#------------------------------------------------------------------------------
+#  Alfred Git Cheat Sheet
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+#----- Working Tree
+
+# List Git commands (git)
 glc
 
-# Show status in worktree (git status)
+# Show status of worktree (git status)
 gs
 
 # Clone remote repository (git clone <remote-url>)
-gc
+gc <url>
 
 # Restore all changed files in working tree (git restore .)
 gra
 
 # Restore a changed file in working tree (git restore <file>)
-grf
+grf <file>
 
 # Show commit history (git log)
 gl
 
 
-#----- Branches -----------------------
 
-# Pull Git main branch from origin/main (git pull origin main)
-gpm
-
-# Pull Git develop branch from origin/develop (git pull origin develop)
-gpd
+#------------------------------------------------------------------------------
+#----- Branching
 
 # Show all Git branches inclusively remote repository (quit with q) (git branch -a)
 gbsa
@@ -32,29 +36,33 @@ gbsa
 gbsl
 
 # Checkout a local Git branch (git checkout <branch>)
-gbcl
+gbcl <branch>
 
 # Checkout a Git branch from remote repository (git checkout --track <remote/branch>)
-gbcr
+gbcr <remote/branch>
 
 # Checkout a new local Git branch (git checkout -b <branch>)
-gbcn
+gbcn <branch>
 
 # Delete Git branch locally (git restore . && git checkout develop && git branch -D)
-gbdl
+gbdl <branch>
 
 # Delete Git branch on remote repository (git push --delete <remote/branch>)
-gbdr
+gbdr <remote/branch>
 
 
 
-#----- Index ------------------------
+#------------------------------------------------------------------------------
+#----- Indexing
 
 # Stage file(s) into index (git add <file(s)>)
-gisf
+gisf <file(s)>
 
 # Stage parts of file into index (git add -p <file>)
-gisp
+gisp <file>
+
+# Stage all changed files to index (git add .)
+gisa
 
 # Unstage file in Git index (git restore --staged <file(s)>)
 giuf
@@ -62,15 +70,13 @@ giuf
 # Unstage parts of file in Git index (git restore -p <file>)
 giup
 
-# Stage all changed files to index (git add .)
-gisa
-
 # Unstage all files in Git index (git restore --staged .)
 giua
 
 
 
-#----- Commit ----------------------
+#------------------------------------------------------------------------------
+#----- Committing
 
 # Set initial commit (git commit --allow-empty -m "INITIAL COMMIT")
 gci
@@ -101,27 +107,50 @@ gisacupdate
 
 
 
-#----- Compare ---------------------
+#------------------------------------------------------------------------------
+#----- Comparing
 
-# Compare files watched by Git (git diff <file>)
+# Show differences of file between working tree and index (git diff <file>)
 gdf
 
+# Show differences between working tree and index for all files
+gitalizer
 
 
 
-#----- Pushing/Pulling -------------
+#------------------------------------------------------------------------------
+#----- Fetching
 
-# Pull actual Git branch from remote repository (git pull)
-gpl
+# Fetch actual branch from remote repository (git fetch)
+gf
 
-# Fetch actual Git branch from remote repository (git fetch)
-gpf
+# Fetch all branches from remote repository (git fetch --all)
+gfo
 
-# Pull actual Git branch from remote repository, than push (git pull && git push)
+
+
+#------------------------------------------------------------------------------
+#----- Pulling
+
+# Pull main branch from origin/main (git pull origin main)
+gpm
+
+# Pull develop branch from origin/develop (git pull origin develop)
+gpd
+
+# Pull and fetch actual branch from remote repository
+gpull
+
+
+
+#------------------------------------------------------------------------------
+#----- Pushing
+
+# Pull actual branch from remote repository, then push
 gpp
 
-# Push actual Git branch to remote repository (git push)
-gps
+# Push actual branch to remote repository (git push)
+gpush
 
 # Revert last push to Git remote repository (git revert <hash>)
 gpr
@@ -131,7 +160,8 @@ ggo
 
 
 
-#----- Stash ---------------------
+#------------------------------------------------------------------------------
+#----- Stashing
 
 # Stash changes on actual Git branch (git stash)
 gsc

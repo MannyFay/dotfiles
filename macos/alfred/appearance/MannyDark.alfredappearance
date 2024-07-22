@@ -1,0 +1,65 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 13,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#ABABABFF",
+        "font" : "Menlo",
+        "color" : "#ABABABFF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#ABABABFF",
+        "font" : "Menlo",
+        "color" : "#ABABABFF"
+      },
+      "backgroundSelected" : "#242424FF",
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#569CD6FF",
+        "font" : "Menlo",
+        "color" : "#569CD6FF"
+      },
+      "iconPaddingHorizontal" : 12,
+      "roundness" : 0,
+      "paddingVertical" : 8,
+      "iconSize" : 46
+    },
+    "search" : {
+      "backgroundSelected" : "#144863FF",
+      "paddingHorizontal" : 13,
+      "spacing" : 0,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "Menlo",
+        "color" : "#ABABABFF"
+      },
+      "background" : "#191B1CFF",
+      "roundness" : 0,
+      "paddingVertical" : 9
+    },
+    "window" : {
+      "color" : "#191B1CFF",
+      "paddingHorizontal" : 0,
+      "width" : 1024,
+      "borderPadding" : 0,
+      "borderColor" : "#0000003F",
+      "blur" : 0,
+      "roundness" : 5,
+      "paddingVertical" : 1
+    },
+    "credit" : "Manny Fay",
+    "visualEffectMode" : 2,
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#1D6488FF",
+      "thickness" : 0
+    },
+    "name" : "MannyDark"
+  }
+}

@@ -1,57 +1,38 @@
-# ~/.config/dotfiles/docker/docker_aliases.zsh
-
-
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 #  Docker ZSH Aliases
-#-----------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 
-# List Docker commands:
-alias dlc='docker'
+# This file has to be sourced in .zsh_aliases file.
+# Copy this line to do so:
+# source ~/personal/github/dotfiles/git/docker_aliases.zsh                   # Docker aliases
 
 
-
-#-----------------------------------------------------------
-#- Container
-
-# List all containers (running and stopped):
-alias dcla='docker container ps -a -s'
-
-# Create new container (add your options):
-alias dcc='docker container run'
-
-# Inspect container settings in JSON format (add name/id):
-alias dci='docker inspect'
-
-# Show log file of container (add name/id):
-alias dcl='docker logs -f'
+alias dlc='docker'  # List Docker commands.
 
 
 
-#-----------------------------------------------------------
-#- Images
+#------------------------------------------------------------------------------
+#----- Container
 
-# List all images on disk
-alias dil='docker images'
-
-
-
-#-----------------------------------------------------------
-#- Networks
-
-# List all networks:
-alias dnla='docker network ls'
-
-# Remove a network (add id or name):
-alias dnrm='docker network rm'
+alias dcla='docker container ps -a -s'  # List all containers (running and stopped).
+alias dcc='docker container run'        # Create new container (add your options).
+alias dci='docker inspect'              # Inspect container settings in JSON format (add name/id).
+alias dcl='docker logs -f'              # Show log file of container (add name/id).
 
 
 
+#------------------------------------------------------------------------------
+#----- Images
+
+alias dil='docker images'  # List all images on disk.
 
 
 
+#------------------------------------------------------------------------------
+#----- Networks
 
-
-
+alias dnla='docker network ls'  # List all networks.
+alias dnrm='docker network rm'  # Remove a network (add id or name).
 
 
 

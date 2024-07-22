@@ -4,7 +4,7 @@
 
 # This file has to be sourced in .zsh_aliases file.
 # Copy this line to do so:
-# source ~/dotfiles/git/git_aliases.zsh                   # Git
+# source ~/personal/github/dotfiles/git/git_aliases.zsh                   # Git
 
 
 

@@ -9,5 +9,5 @@
 #------------------------------------------------------------------------------
 #----- Yarn
 
-alias yip='yarn'   # Install packages.
-alias yd='yarn dev' # Run development server.
+alias yip='yarn'     # Install packages.
+alias yd='yarn dev'  # Run development server.

@@ -90,13 +90,25 @@ export VISUAL='nvim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+
+
+#------------------------------------------------------------------------------
+#----- Oh My Zsh
+
 # Load oh-my-zsh on ZSH start up:
 source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Load tool based alias files:
+
+
+#------------------------------------------------------------------------------
+#----- Aliases
+
 source $HOME/personal/github/dotfiles/zsh/.zsh_aliases
+
+
+
 
 # Set Java runtime path:
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home

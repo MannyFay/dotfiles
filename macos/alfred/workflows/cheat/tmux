@@ -1,8 +1,47 @@
-# Tmux - Start Tmux.
-tmux
+#------------------------------------------------------------------------------
+#  Alfred tmux Cheat Sheet
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+#----- General
+
+
+# Start Tmux.
+ts
 
 # Tmux - Exit Tmux.
-tmux detach (LM RP RLedge)
+tq (LM RP RLedge)
+
+# Tmux - Reload Tmux configuration.
+tsc (<p>r) (LM RI-TE)
+
+# Tmux: List Tmux keys
+tlk
+
+
+
+#------------------------------------------------------------------------------
+#----- Sessions
+
+# Tmux Session: List all sessions (Tmux has to be started)
+tls (tmux ls)
+
+# Tmux Session: Go back into session <session-name>
+tns <session-name> (tmux attach -t <session-name>)
+
+# Tmux Session: Start new Tmux session with name <session-name>
+tns <session-name> (tmux new -s <session-name>)
+
+
+
+# Tmux - Name session.
+<p>$ (RM LT2)
+
+
+
+
+
+
 
 # Tmux - Kill window.
 <p>& (RM LL)
@@ -13,8 +52,8 @@ ctrt + b
 # Tmux - New window.
 <p>c (LM RL)
 
-# Tmux - Name session.
-<p>$ (RM LT2)
+
+
 
 # Tmux - Name window.
 <p>, (LM RT2)
@@ -67,8 +106,6 @@ fzf (LM RT1) (RM LT1)
 # Tmux - Exit copy mode.
 ctrl c (LI2->)
 
-# Tmux - Reload Tmux configuration.
-<p>r (LM RI-TE)
 
 
 
@@ -79,15 +116,6 @@ ctrl c (LI2->)
 #----- Sessions --------------------------------------------------------------
 
 
-# Tmux Session: Start new Tmux session with name <session-name>
-tmux new -s <session-name>
-
-
-# Tmux Session: List all sessions (Tmux has to be started)
-tmux ls
-
-# Tmux Session: Go back into session <session-name>
-tmux attach -t <session-name>
 
 # Tmux Session: Choose a created session
 <prefix> s
@@ -214,5 +242,3 @@ tmns
 # Tmux: Source .tmux.conf file
 tmsc
 
-# Tmux: List Tmux keys
-tmlk

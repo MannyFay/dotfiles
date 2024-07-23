@@ -1,21 +1,26 @@
+#------------------------------------------------------------------------------
+#  ZSH-Aliases
+#------------------------------------------------------------------------------
+
+# This file has to be sourced in .zsh_aliases file.
+# Copy this line to do so:
+# source ~/personal/github/dotfiles/nodejs/tmux_aliases.zsh                   # tmux
+
+
 
 #------------------------------------------------------------------------------
-#  Service Specific Aliases
-#------------------------------------------------------------------------------
+#----- Service Specific Aliases
 
 source $HOME/personal/github/dotfiles/docker/docker_aliases.zsh             # Docker
 source $HOME/personal/github/dotfiles/git/git_aliases.zsh                   # Git
 source $HOME/personal/github/dotfiles/macos/homebrew/homebrew_aliases.zsh   # Homebrew
 source $HOME/personal/github/dotfiles/laravel/laravel_aliases.zsh           # Laravel
+source $HOME/personal/github/dotfiles/nodejs/nodejs_aliases.zsh             # Node.js
 source $HOME/personal/github/dotfiles/ssh/ssh_aliases.zsh                   # SSH
 source $HOME/personal/github/dotfiles/tmux/tmux_aliases.zsh                 # tmux
 source $HOME/personal/github/dotfiles/macos/yabai/yabai_aliases.zsh         # Yabai
 
 
-
-#------------------------------------------------------------------------------
-#  ZSH-Aliases
-#------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
 #----- Moving

@@ -46,11 +46,7 @@
 
 
 
-  //--------------------------------------------------------------------------------
-  //--- Language Defaults
 
-  // Tailwind CSS:
-  "tailwindCSS.rootFontSize": 16,  // Root font size in px like browser default.
 
 
 
@@ -538,6 +534,46 @@
   "todo-tree.ripgrep.ripgrepArgs": "--max-columns=1000 --no-config ",            // Aditional arguments to pass to RipGrep.
   "todo-tree.ripgrep.ripgrepMaxBuffer": 500,                                     // Size of buffer (kb) for RipGrep output.
   "todo-tree.ripgrep.usePatternFile": true,                                      // Use RipGreps default pattern file.
+
+
+  //----------------------------------------------------------------------------
+  // Tailwind CSS IntelliSense Extension
+  // https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+  "tailwindcss-intellisense.trace.server": "off",        // Don't trace communication between VS Code and Tailwind CSS language server.
+  "tailwindCSS.classAttributes": [                       // HTML attributes for providing completions.
+    "class",
+    "className",
+    "ngClass",
+    "class:list"
+  ],
+  "tailwindCSS.codeActions": true,                       // Enable code actions.
+  "tailwindCSS.colorDecorators": true,                   // Render inline color decorations.
+  "tailwindCSS.emmetCompletions": true,                  // Enable emmet completions.
+  "tailwindCSS.experimental.classRegex": [],             // Class regex.
+  "tailwindCSS.experimental.configFile": null,           // Manually specify config file (null is default tailwind config file).
+  "tailwindCSS.files.exclude": [                         // Exclude from intellisense.
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**",
+    "**/.svn/**"
+  ],
+  "tailwindCSS.hovers": true,                             // Provide information by hovering.
+  "tailwindCSS.includeLanguages": {},                     // Included languages.
+  "tailwindCSS.inspectPort": null,                        // Specify port for Node.js inspector agent for LS.
+  "tailwindCSS.lint.cssConflict": "warning",              // Warn if there are same classes on one element.
+  "tailwindCSS.lint.invalidApply": "error",               // Error out if using unsupported @apply directive.
+  "tailwindCSS.lint.invalidConfigPath": "error",          // Error out if config path is invalid.
+  "tailwindCSS.lint.invalidScreen": "error",              // Error out if unknown screen name is used with @screen.
+  "tailwindCSS.lint.invalidTailwindDirective": "error",   // Error out if unknown value is used with @tailwind.
+  "tailwindCSS.lint.invalidVariant": "error",             // Error out if unknown variant is used with @variant.
+  "tailwindCSS.lint.recommendedVariantOrder": "warning",  // Warn if class variants are not in the recommended order.
+  "tailwindCSS.rootFontSize": 16,                         // Root font size used in browsers.
+  "tailwindCSS.showPixelEquivalents": true,               // Show px equivalents for rem values.
+  "tailwindCSS.suggestions": true,                        // Enable autocomplete suggestions.
+  "tailwindCSS.validate": true,                           // Enable linting (rules can be set in tailwindcss.lint.* file).
+
+
 
 
 

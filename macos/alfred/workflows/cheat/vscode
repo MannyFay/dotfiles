@@ -1,25 +1,25 @@
 #------------------------------------------------------------------------------
-#  Alfred Node.js Cheat Sheet
+#  Alfred VS Code Cheat Sheet
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
-#----- npm
+#----- Editor Controls
 
-# Run development environment (npm run dev)
-nrd
+# Reload VS Code
+<L>rc
 
-# Install packages (npm install).
-ni
-
-# Install packages as dev dependencies (npm install --save-dev).
-nid
 
 
 #------------------------------------------------------------------------------
-#----- Yarn
+#----- Project Manager
 
-# Install all project packages with Yarn package manager
-yip
+# Add project to list
+<L>pa
 
-# Run Yarn development server
-yd
+# Open project list
+<L>pl
+
+# Edit project list
+<L>pe
+
+

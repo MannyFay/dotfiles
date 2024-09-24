@@ -16,6 +16,7 @@ source $HOME/personal/github/dotfiles/git/git_aliases.zsh                   # Gi
 source $HOME/personal/github/dotfiles/macos/homebrew/homebrew_aliases.zsh   # Homebrew
 source $HOME/personal/github/dotfiles/laravel/laravel_aliases.zsh           # Laravel
 source $HOME/personal/github/dotfiles/nodejs/nodejs_aliases.zsh             # Node.js
+source $HOME/personal/github/dotfiles/orm/prisma/prisma_aliases.zsh         # Prisma
 source $HOME/personal/github/dotfiles/ssh/ssh_aliases.zsh                   # SSH
 source $HOME/personal/github/dotfiles/tmux/tmux_aliases.zsh                 # tmux
 source $HOME/personal/github/dotfiles/macos/yabai/yabai_aliases.zsh         # Yabai

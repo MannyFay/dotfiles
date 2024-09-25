@@ -1,13 +1,14 @@
 {
-  //--------------------------------------------------------------------------------
-  // Editor Settings
+  //----------------------------------------------------------------------------
+  //--- Editor Settings
+  //----------------------------------------------------------------------------
 
   "files.autoSave": "afterDelay",               // When to auto save files.
   "files.autoSaveDelay": 1000,                  // Milliseconds to wait before auto saving.
   "editor.accessibilitySupport": "off",         // Don't use accessibility features VS Code.
   "editor.renderWhitespace": "trailing",        // Show trailing whitespace.
   "editor.lineHeight": 2,                       // Line height in editor.
-  "editor.rulers": [80,120,150],                // Vertical character guides.
+  "editor.rulers": [80,120,150],                // Vertical character guide lines.
   "editor.tabSize": 2,                          // Number of spaces per tab.
   "editor.wordWrap": "on",                      // Wrap words automatically.
   "editor.minimap": {                           // Don't show minimap at right corner.
@@ -44,15 +45,9 @@
 
 
 
-
-
-
-
-
-
-
-  //--------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   // Color Theme
+  //----------------------------------------------------------------------------
 
   "workbench.colorTheme": "Default Dark+",                // Set color theme.
   "workbench.preferredDarkColorTheme": "Default Dark+",   // Set color theme for dark mode.
@@ -121,7 +116,9 @@
     "breadcrumb.activeSelectionForeground": "#569CD6",
     "breadcrumbPicker.background": "#252525",
 
-    // Editor:
+    //--------------------------------------------------------------------------
+    // Editor
+
     "editor.background": "#191B1C",           // Background of editor.
     "editor.foreground": "#ABABAB",           // Foreground of editor.
     "editor.selectionBackground": "#606366",  // Background of selected text.
@@ -139,7 +136,7 @@
     "editorIndentGuide.activeBackground6": "#606366",
     "editorLineNumber.foreground": "#606366",          // Line numbers.
     "editorLineNumber.activeForeground": "#ABABAB",    // Active line number.
-    "editorLineNumber.dimmedForeground": "#CE9178",
+    "editorLineNumber.dimmedForeground": "#569CD6",
     "editor.lineHighlightBackground": "#252525",       // Background of cursor line.
     "editor.lineHighlightBorder": "#252525",           // Border of cursor line.
     "editorCursor.background": "#191B1C",
@@ -158,7 +155,12 @@
     "disabledForeground": "#606366",
     "descriptionForeground": "#ABABAB",
 
-    "errorForeground": "#FF0000",       // Error messages??
+    "editorError.foreground": "#FF0000",       // Underlines of errors.
+    "editorWarning.foreground": "#E8BF6A",            // Underlines of warnings.
+    "editorInfo.foreground": "#569CD6",               // Underlines of infos.
+    "editorHint.foreground": "#4FA544",       // Underline of hints.
+
+
 
     // Window:
     "icon.foreground": "#606366",       // Icons like tree arrows, settings buttons, etc.
@@ -266,7 +268,7 @@
     "list.inactiveFocusOutline": "#252525",
     "list.invalidItemForeground": "#287BDE",
     "list.errorForeground": "#4FA544",
-    "list.warningForeground": "#CE9178",
+    "list.warningForeground": "#ED3276",
     "list.filterMatchBackground": "#287BDE",
     "list.filterMatchBorder": "",
     "list.deemphasizedForeground": "",
@@ -290,7 +292,10 @@
     "activityBarTop.background": "#ABABAB",
     "activityBarTop.activeBackground": "#45C8B0",
 
-    // Status Line:
+
+    //--------------------------------------------------------------------------
+    // Status Bar (very bottom bar of window)
+
     "statusBar.background": "#191B1C",
     "statusBar.foreground": "#606366",
     "statusBar.border": "#191B1C",
@@ -312,14 +317,17 @@
     "statusBarItem.remoteForeground": "#606366",
     "statusBarItem.remoteHoverBackground": "#191B1C",
     "statusBarItem.remoteHoverForeground": "#569CD6",
-    "statusBarItem.errorBackground": "#E8BF6A",
-    "statusBarItem.errorForeground": "#ED3276",
-    "statusBarItem.errorHoverBackground": "#4FA544",
-    "statusBarItem.errorHoverForeground": "#E8BF6A",
-    "statusBarItem.warningBackground": "#CE9178",
-    "statusBarItem.warningForeground": "#ED3276",
-    "statusBarItem.warningHoverBackground": "#287BDE",
-    "statusBarItem.warningHoverForeground": "#C064C7",
+    //--- Errors:
+    "statusBarItem.errorBackground": "#191B1C",         // Background of error icon.
+    "statusBarItem.errorForeground": "#FF0000",         // Error icon.
+    "statusBarItem.errorHoverBackground": "#191B1C",    // Hover background of error icon.
+    "statusBarItem.errorHoverForeground": "#FF0000",    // Hover error icon.
+    //--- Warnings:
+    "statusBarItem.warningBackground": "#191B1C",       // Backround of warning icon.
+    "statusBarItem.warningForeground": "#E8BF6A",       // Warning icon.
+    "statusBarItem.warningHoverBackground": "#191B1C",  // Hover background of warning icon.
+    "statusBarItem.warningHoverForeground": "#E8BF6A",  // Hover warning icon.
+
     "statusBarItem.compactHoverBackground": "#191B1C",
     "statusBarItem.focusBorder": "#C064C7",
     "statusBarItem.offlineBackground": "#ED3276",
@@ -365,8 +373,40 @@
     "gitDecoration.deletedResourceForeground": "#606366",
     "gitDecoration.untrackedResourceForeground": "#FF0000",
     "gitDecoration.ignoredResourceForeground": "#606366",
-    "gitDecoration.conflictingResourceForeground": "#E8BF6A"
+    "gitDecoration.conflictingResourceForeground": "#E8BF6A",
 
+    // Error Lens Extension
+    "errorLens.errorBackground": "#FF000015",
+    "errorLens.errorMessageBackground": "#287BDE",
+    "errorLens.errorRangeBackground": "#ED3276",
+    "errorLens.errorBackgroundLight": "#45C8B0",
+    "errorLens.errorForeground": "#FF0000",
+    "errorLens.errorForegroundLight": "#A5C25C",
+    "errorLens.warningBackground": "#E8BF6A15",
+    "errorLens.warningMessageBackground": "",
+    "errorLens.warningRangeBackground": "",
+    "errorLens.warningBackgroundLight": "",
+    "errorLens.warningForeground": "#E8BF6A",
+    "errorLens.warningForegroundLight": "#45C8B0",
+    "errorLens.infoBackground": "#569CD615",
+    "errorLens.infoMessageBackground": "",
+    "errorLens.infoRangeBackground": "",
+    "errorLens.infoBackgroundLight": "",
+    "errorLens.infoForeground": "#569CD6",
+    "errorLens.infoForegroundLight": "",
+    "errorLens.hintBackground": "#4FA54415",
+    "errorLens.hintMessageBackground": "",
+    "errorLens.hintRangeBackground": "",
+    "errorLens.hintBackgroundLight": "",
+    "errorLens.hintForeground": "#4FA544",
+    "errorLens.hintForegroundLight": "",
+    "errorLens.statusBarIconErrorForeground": "#FF0000",
+    "errorLens.statusBarIconWarningForeground": "#E8BF6A",
+    "errorLens.statusBarErrorForeground": "#FF0000",
+    "errorLens.statusBarWarningForeground": "#E8BF6A",
+    "errorLens.statusBarInfoForeground": "",
+    "errorLens.statusBarHintForeground": "",
+    "errorLens.messageBackgroundMode": ""
 
   },
 
@@ -378,6 +418,88 @@
 
   "extensions.autoCheckUpdates": true,    // Automatically check for updates.
   "extensions.autoUpdate": true,          // Automatically update extensions.
+
+
+  //----------------------------------------------------------------------------
+  // Auto Barrel Extension
+  // https://marketplace.visualstudio.com/items?itemName=imgildev.vscode-auto-barrel
+
+
+  //----------------------------------------------------------------------------
+  // Auto Close Tag Extension
+  // https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
+
+  "auto-close-tag.activationOnLanguage": [                 // Languages to enable auto close tag.
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ],
+  "auto-close-tag.disableOnLanguage": [],                  // Languages to disable auto close tag.
+  "auto-close-tag.enableAutoCloseSelfClosingTag": true,    // Enable auto close self closing tags.
+  "auto-close-tag.enableAutoCloseTag": true,               // Enable auto close tags.
+  "auto-close-tag.excludedTags": [                         // Tags to exclude from auto close.
+    "area",
+    "base",
+    "br",
+    "col",
+    "command",
+    "embed",
+    "hr",
+    "img",
+    "input",
+    "keygen",
+    "link",
+    "meta",
+    "param",
+    "source",
+    "track",
+    "wbr"
+  ],
+  "auto-close-tag.fullMode": false,                        // Don't enable both, VS Code and Sublime Text mode.
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,  // Insert space before self closing tags.
+  "auto-close-tag.SublimeText3Mode": true,                 // Auto close tag if </ is typed.
+
+
+
+
+
+  //----------------------------------------------------------------------------
+  // Auto Import Extension
+  // https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
+
+  "autoimport.autoComplete": true,                   // Enable automatic import.
+  "autoimport.doubleQuotes": false,                  // Use single quotes for imports.
+  "autoimport.filesToScan": "**/*.{js,jsx,ts,tsx}",  // Files to scan for imports.
+  "autoimport.showNotifications": false,             // Don't show notifications of automatic imports.
+  "autoimport.spaceBetweenBraces": true,             // Add space between braces in imports.
+  "autoimport.useSemiColon": true,                   // Use semicolon at the end of imports.
+
+
+  //----------------------------------------------------------------------------
+  // Auto Rename Tag Extension
+  // https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+
+  "auto-rename-tag.activationOnLanguage": [  // Enable for all languages.
+    "*"
+  ],
+
+
 
 
   //----------------------------------------------------------------------------
@@ -574,18 +696,198 @@
   "tailwindCSS.validate": true,                           // Enable linting (rules can be set in tailwindcss.lint.* file).
 
 
+  //----------------------------------------------------------------------------
+  // Error Lens Extension
+  // https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
+
+  "errorLens.alignMessage": {          // Alignment for messages.
+    "start": 0,
+    "end": 0,
+    "minimumMargin": 0
+  },
+  "errorLens.borderRadius": "0.2em",   // Border radius of message background.
+  "errorLens.codeLensEnabled": false,  // Don't display a message lens above the the mistake.
+  "errorLens.codeLensLength": {        // Number of possible chars in message lens.
+    "min": 0,
+    "max": 200
+  },
+  "errorLens.codeLensOnClick": "showQuickFix",         // Click behavior on lens.
+  "errorLens.codeLensTemplate": "$severity $message",  // Display method of text in lens.
+  "errorLens.decorations": {
+    "errorRange": {},
+    "warningRange": {},
+    "infoRange": {},
+    "hintRange": {}
+  },
+  "errorLens.delay": 0,                               // (milliseconds) Is handled by delayMode.
+  "errorLens.delayMode": "new",                       // Decorations appear if document is changed.
+  "errorLens.disableLineComments": {
+    "eslint": "// eslint-disable-next-line $code",
+    "Stylelint": "/* stylelint-disable-next-line $code */"
+  },
+  "errorLens.editorHoverPartsEnabled": {
+    "messageEnabled": false,
+    "sourceCodeEnabled": false,
+    "buttonsEnabled": false
+  },
+  "errorLens.enabled": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info",
+    "hint"
+  ],
+  "errorLens.enabledInMergeConflict": true,          // Show linting in merge conflicts.
+  "errorLens.enableOnDiffView": false,               // Don't show linting in diff views.
+  "errorLens.errorGutterIconColor": "#FF0000",       // Error icon color left of the line numbers.
+  "errorLens.errorGutterIconPath": "",               // To specify own error icon.
+  "errorLens.exclude": [],                           // Messages that should not be highlighted (regex).
+  "errorLens.excludeBySource": [],                   // Sources for linting that should be excluded.
+  "errorLens.excludePatterns": [],                   // Exclude files by glob pattern (["**/*.{ts,js}"]).
+  "errorLens.excludeWorkspaces": [],                 // Excluded workspaces by file path.
+  "errorLens.followCursor": "allLines",              // Highlight all problems in a file.
+  "errorLens.followCursorMore": 0,                   // Turn of adding line numbers to top and bottom of problems.
+  "errorLens.fontFamily": "",                        // Use editor font-family for messages.
+  "errorLens.fontSize": "",                          // Use editor font-size for messages.
+  "errorLens.fontStyleItalic": false,                // Don't make message font italic.
+  "errorLens.fontWeight": "normal",                  // Use regular editor font-weight for messages.
+  "errorLens.gutterEmoji": {                         // Icons if 'gutterIconSet' is setted on 'emoji'.
+    "error": "",
+    "warning": "",
+    "info": "",
+    "hint": ""
+  },
+  "errorLens.gutterIconsEnabled": true,              // Enable icons on the left of the line numbers.
+  "errorLens.gutterIconSet": "defaultOutline",           // Gutter icon style.
+  "errorLens.gutterIconsFollowCursorOverride": true, // Show gutter icons for all problems.
+  "errorLens.gutterIconSize": "100%",                // Size of gutter icons.
+  "errorLens.hintGutterIconColor": "#4FA544",        // Hint icon color left of the line numbers.
+  "errorLens.hintGutterIconPath": "",                // To specify own hint icon.
+  "errorLens.ignoreUntitled": false,                 // Don't ignore untitled files for linting.
+  "errorLens.infoGutterIconColor": "#569CD6",        // Info icon color left of the line numbers.
+  "errorLens.infoGutterIconPath": "",                // To specify own info icon.
+  "errorLens.light": {},                             // Colors for light mode of editor.
+  "errorLens.lintFilePaths": {                       // File paths where linters can be found.
+    "eslint": [
+      "**/*.eslintrc.{js,cjs,yaml,yml,json}",
+      "**/*package.json"
+    ],
+    "Stylelint": [
+      "**/*.stylelintrc",
+      "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+      "**/*stylelint.config.{cjs,js}",
+      "**/*package.json"
+    ]
+  },
+  "errorLens.margin": "4ch",                         // Distance between the last word and message (CSS).
+  "errorLens.messageBackgroundMode": "line",         // Message background of whole line.
+  "errorLens.messageEnabled": true,                  // Show inline messages.
+  "errorLens.messageMaxChars": 500,                  // Maximum message lenght in chars.
+  "errorLens.messageTemplate": "$message",           // Template for messages.
+  "errorLens.multilineMessage": {                    // EXPERIMENTAL! Multiline message settings.
+    "decorationMaxNumberOfLines": 6,
+    "preferFittingMessageMultiplier": 2,
+    "maxColumnForCalculation": 130,
+    "preferSameLineMultiplier": 1,
+    "highlightProblemLine": "line",
+    "alignStart": 0,
+    "alignEnd": 0,
+    "margin": 4,
+    "padding": 1,
+    "borderRadius": "",
+    "useFixedPosition": false
+  },
+  "errorLens.onSave": false,                          // Update not only on save.
+  "errorLens.onSaveTimeout": 500,                     // (milliseconds) delay for displaying messages after save.
+  "errorLens.onSaveUpdateOnActiveEditorChange": true, // Update messages if file gets saved.
+  "errorLens.padding": "",                            // Padding of inline messages ("" = editor default).
+  "errorLens.problemRangeDecorationEnabled": false,   // Highlight the entire problem range.
+  "errorLens.removeLinebreaks": true,                 // Display messages in one line.
+  "errorLens.replace": [],                            // To transform message text.
+  "errorLens.replaceLinebreaksSymbol": "⏎",           // Symbol to replace line breaks.
+  "errorLens.respectUpstreamEnabled": {               // Take account of global VS Code problems visibility setting.
+    "enabled": true,
+    "inlineMessage": true,
+    "gutter": true,
+    "statusBar": true
+  },
+  "errorLens.scrollbarHackEnabled": false,            // Don't prevent showing horizontal scrollbar because of messages.
+  "errorLens.searchForProblemQuery": "https://google.com/?q=$message", // Use Google for searching messages.
+  "errorLens.selectProblemType": "closestProblem",                     // Which problem to select if selecting problem by command.
+  "errorLens.severityText": [                                          // Icons used in lens.
+    "⛔",
+    "⚠",
+    "ℹ",
+    "🍏"
+  ],
+  "errorLens.statusBarColorsEnabled": true,                            // Enable status bar colors.
+  "errorLens.statusBarCommand": "goToProblem",                         // Behavior if clicked on problem in status bar.
+  "errorLens.statusBarIconsAlignment": "left",                         // Alignment of icons in status bar.
+  "errorLens.statusBarIconsAtZero": "removeBackground",                // Setting in status bar if there are no problems.
+  "errorLens.statusBarIconsEnabled": true,                             // Show icons in status bar.
+  "errorLens.statusBarIconsPriority": -9000,                           // Icon position (more left, more right) in status bar.
+  "errorLens.statusBarIconsTargetProblems": "all",                     // Show all problems in status bar.
+  "errorLens.statusBarIconsUseBackground": true,                       // Show icon background in status bar.
+  "errorLens.statusBarMessageAlignment": "left",                       // Message alignment in status bar.
+  "errorLens.statusBarMessageEnabled": false,                          // Don't show messages in status bar.
+  "errorLens.statusBarMessagePriority": -10000,                        // Message position (more left, more right) in status bar.
+  "errorLens.statusBarMessageTemplate": "",                            // Status bar message template.
+  "errorLens.statusBarMessageType": "activeLine",                      // Message type in status bar.
+  "errorLens.warningGutterIconColor": "#E8BF6A",                       // Warning icon color left of the line numbers.
+  "errorLens.warningGutterIconPath": "",                               // To specify an own warning icon.
 
 
 
 
+  //----------------------------------------------------------------------------
+  // Highlight Matching Tag Extension
+  // https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag
+
+  "highlight-matching-tag.customEmptyElements": [],  // Custom elements in addition to default HTML empty elements.
+  "highlight-matching-tag.enabled": true,               // Enable highlighting and status bar.
+  "highlight-matching-tag.highlightFromAttributes": true, // Highlight from attributes as source.
+  "highlight-matching-tag.highlightFromContent": false,    // Don't highlight from content as source.
+  "highlight-matching-tag.highlightFromName": true,        // Highlight from tag name as source.
+  "highlight-matching-tag.highlightSelfClosing": false,    // Don't highlight self closing tags.
+  "highlight-matching-tag.noDefaultEmptyElements": false,  // Don't highlight default HTML empty elements.
+  "highlight-matching-tag.showPath": false,                // Don't show tag's path in status bar.
+  "highlight-matching-tag.showRuler": true,                // Show highlighted tag pair in ruler selection.
+  "highlight-matching-tag.styles": {                       // Highlighting of matching tags.
+    "opening": {
+      "name": {
+        "underline": "#ABABAB"
+      }
+    },
+    "closing": {
+      "name": {
+        "underline": "#ABABAB"
+      }
+    }
+  },
 
 
 
+  //----------------------------------------------------------------------------
+  // Color Highlight Extension
+  // https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight
 
-
-
-
-
+  "color-highlight.enable": true,                    // Enable Color Highlighting extension.
+  "color-highlight.hslWithNoFunctionLanguages": [    // Languages that should -- what?!?
+    "*"
+  ],
+  "color-highlight.languages": [                     // Languages that should be highlighted.
+    "*"
+  ],
+  "color-highlight.markerType": "background",        // Type of marker.
+  "color-highlight.markRuler": false,                // Don't set highlight mark in scrollbar.
+  "color-highlight.matchHslWithNoFunction": false,   // Highlight HSL colors without function.
+  "color-highlight.matchRgbWithNoFunction": false,   // Highlight RGB colors without function.
+  "color-highlight.matchWords": false,               // Don't highlight color words (red, blue, etc.).
+  "color-highlight.rgbWithNoFunctionLanguages": [    // Languages that should -- what?!?
+    "*"
+  ],
+  "color-highlight.sass.includePaths": [],           // Include paths for SASS.
+  "color-highlight.useARGB": false,                  // Use ARGB instead of RGBA.
 
 
 
@@ -633,23 +935,24 @@
   // Colorize
   // https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize
 
-  "colorize.languages": [
-    "javascript",
-    "json"
-  ],
-  "colorize.exclude": [
-    "**/.git",
-    "**/.svn",
-    "**/.hg",
-    "**/CVS",
-    "**/.DS_Store",
-    "**/.git",
-    "**/node_modules",
-    "**/bower_components",
-    "**/tmp",
-    "**/dist",
-    "**/tests"
-  ],
+  // "colorize.languages": [
+  //   "javascript",
+  //   "json"
+  // ],
+  // "colorize.exclude": [
+  //   "**/.git",
+  //   "**/.svn",
+  //   "**/.hg",
+  //   "**/CVS",
+  //   "**/.DS_Store",
+  //   "**/.git",
+  //   "**/node_modules",
+  //   "**/bower_components",
+  //   "**/tmp",
+  //   "**/dist",
+  //   "**/tests"
+  // ],
+
 
 
 

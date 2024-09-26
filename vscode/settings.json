@@ -33,6 +33,7 @@
   "editor.cursorStyle": "line",                 // Cursor style.
   "terminal.integrated.cursorBlinking": false,  // No blinking cursor in terminal.
 
+
   // Font Settings:
   "editor.fontSize": 12,                        // Editor font size.
   "terminal.integrated.fontSize": 12,           // Terminal font size.
@@ -660,7 +661,7 @@
   "errorLens.codeLensOnClick": "showQuickFix",         // Click behavior on lens.
   "errorLens.codeLensTemplate": "$severity $message",  // Display method of text in lens.
   "errorLens.decorations": {
-    "errorRange": {},
+    "errorRange": {},                                  // Colors for error messages.
     "warningRange": {},
     "infoRange": {},
     "hintRange": {}
@@ -853,13 +854,25 @@
   "highlight-matching-tag.showRuler": true,                // Show highlighted tag pair in ruler selection.
   "highlight-matching-tag.styles": {                       // Highlighting of matching tags.
     "opening": {
-      "name": {
-        "underline": "#ABABAB"
+      "full": {
+        "custom": {
+          "borderWidth": "1px",
+          "borderColor": "#606366",
+          "borderStyle": "solid",
+          "borderRadius": "0",
+          "left": "10px"
+        }
       }
     },
     "closing": {
-      "name": {
-        "underline": "#ABABAB"
+      "full": {
+        "custom": {
+          "borderWidth": "1px",
+          "borderColor": "#606366",
+          "borderStyle": "solid",
+          "borderRadius": "0",
+          "left": "10px"
+        }
       }
     }
   },
@@ -1199,6 +1212,14 @@
   "bladeFormatter.format.enabled": true,
   "css.format.enable": true,
   "css.format.maxPreserveNewLines": 1,
+
+
+  //----------------------------------------------------------------------------
+  // Custom CSS and JS Loader Extension
+
+  "vscode_custom_css.imports": ["file:///Volumes/Users/manny/personal/github/dotfiles/vscode/extensions/pretty-ts-errors-hack.css"],
+  // sudo chown -R $(whoami) "$(which code)"
+  // sudo chown -R $(whoami) /opt/homebrew/.vscode
 
 
 

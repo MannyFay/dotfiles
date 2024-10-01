@@ -95,10 +95,52 @@ w
 $
 
 
+#--- Align Plugin -------------------------------------------------------------
+
+# Align text on a specific character (in visual mode).
+aoc
+
+# Align text on two specific characters (in visual mode).
+aocc
+
+# Align text on a string (in visual mode).
+aos
+
+# Align text on pattern (in visual mode).
+aop
+
+# Align paragraph on a string (in visual mode).
+gaw (not a keymap actually)
+
+# Align paragraph to a specific character (in visual mode).
+gaa (not a keymap actually)
 
 
+#--- Todo Comments Plugin -----------------------------------------------------
+
+# Jump to next todo comment.
+tcn
+
+# Jump to previous todo comment.
+tcp
 
 
+#--- Git Signs Plugin ---------------------------------------------------------
+
+# Preview hunk (the part before the change).
+<L>gh
+
+# Toggle blame information for current line.
+<L>glb
+
+
+#--- Fugitive Plugin ----------------------------------------------------------
+
+# Open blame buffer.
+<L>gb
+
+# Open status buffer.
+<L>gs
 
 
 #-------------------------------------

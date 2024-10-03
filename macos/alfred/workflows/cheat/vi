@@ -58,8 +58,85 @@ K
 # Nvim - Jump to the left buffer.
 H
 
-# Nvim - Maximize buffer.
+
+
+#--- Maximizer Plugin ---------------------------------------------------------
+
+# Maximize/minimize buffer.
 <L>m
+
+
+
+#--- Harpoon Plugin -----------------------------------------------------------
+
+# Find Harpoon marks in Telescope.
+<L>fm
+
+# Jump to Harpoon mark 1.
+<L>h1
+
+# Jump to Harpoon mark 2.
+<L>h2
+
+# Jump to Harpoon mark 3.
+<L>h3
+
+# Jump to Harpoon mark 4.
+<L>h4
+
+# Jump to Harpoon mark 5.
+<L>h5
+
+# Jump to Harpoon mark 6.
+<L>h6
+
+# Jump to Harpoon mark 7.
+<L>h7
+
+# Jump to Harpoon mark 8.
+<L>h8
+
+# Jump to Harpoon mark 9.
+<L>h9
+
+# Jump to previous Harpoon mark.
+<L>hp
+
+# Jump to next Harpoon mark.
+<L>hn
+
+# Mark a file and add it to the Harpoon list.
+<L>hm
+
+# Show Harpoon marks in floating window.
+<L>hl
+
+# Open in Harpoon marked file in vertical split.
+|
+
+# Delete item from Harpoon list.
+dd -> ZZ
+
+# Navigate up in Harpoon list.
+k
+
+# Navigate down in Harpoon list.
+j
+
+# Open file in Harpoon list in actual buffer.
+enter
+
+
+
+#--- Editor Settings ----------------------------------------------------------
+
+# Add word under cursor to spelling file.
+zg
+
+
+
+
+
 
 # Nvim - Save and close buffer.
 ZZ
@@ -125,6 +202,7 @@ tcn
 tcp
 
 
+
 #--- Git Signs Plugin ---------------------------------------------------------
 
 # Preview hunk (the part before the change).
@@ -141,6 +219,35 @@ tcp
 
 # Open status buffer.
 <L>gs
+
+
+
+#--- Copilot Plugin -----------------------------------------------------------
+
+# Accept suggestion.
+right
+
+# Accept word suggestion.
+<L>cw
+
+# Accept line suggestion.
+<L>cl
+
+# Show next suggestion.
+down
+
+# Show previous suggestion.
+up
+
+# Dismiss suggestion.
+left
+
+
+#--- Copilot Chat Plugin ------------------------------------------------------
+
+# Open Copilot Chat.
+<L>cc
+
 
 
 #-------------------------------------

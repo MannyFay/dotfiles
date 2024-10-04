@@ -128,6 +128,61 @@ enter
 
 
 
+#--- Trouble Plugin -----------------------------------------------------------
+
+# Open Trouble and show all diagnostics/linter messages.
+<L>td
+
+
+
+#--- Workspace Diagnostics Plugin ---------------------------------------------
+
+# Run workspace diagnostics through whole project.
+<L>wd
+
+
+#--- Neogit Plugin ------------------------------------------------------------
+
+# Close Neogit buffer.
+q
+
+# Open/close fold in Neogit buffer.
+tab
+
+# Stage in Neogit buffer.
+s
+
+# Unstage in Neogit buffer.
+u
+
+# Discard changes in Neogit buffer.
+x
+
+# Commit in Neogit buffer.
+c
+
+
+
+#--- Laravel Plugin -----------------------------------------------------------
+
+# Open Laravel artisan commands.
+<L>la
+
+# Open Laravel routes.
+<L>lr
+
+# Open Laravel related files.
+<L>lm
+
+
+
+#--- Telescope-Undo Plugin ----------------------------------------------------
+
+# Open undo tree in a new buffer.
+<L>u
+
+
+
 #--- Editor Settings ----------------------------------------------------------
 
 # Add word under cursor to spelling file.
@@ -211,11 +266,11 @@ tcp
 # Toggle blame information for current line.
 <L>glb
 
-
-#--- Fugitive Plugin ----------------------------------------------------------
-
 # Open blame buffer.
 <L>gb
+
+
+#--- Neogit Plugin ------------------------------------------------------------
 
 # Open status buffer.
 <L>gs

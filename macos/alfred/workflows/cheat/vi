@@ -16,14 +16,6 @@ zt
 # Nvim - Scroll half page down.
 <C>d
 
-# Nvim - Toggle file tree.
-<L>tt
-
-# Nvim - Explore file tree.
-<L>et
-
-# Nvim - Show file in file tree.
-<L>sft
 
 # Nvim - Split buffer horizontally.
 <L>-
@@ -258,6 +250,13 @@ tcp
 
 
 
+#--- Fugitive Plugin ---------------------------------------------------------
+
+# Open Git blame buffer.
+<L>gb
+
+
+
 #--- Git Signs Plugin ---------------------------------------------------------
 
 # Preview hunk (the part before the change).
@@ -266,14 +265,27 @@ tcp
 # Toggle blame information for current line.
 <L>glb
 
-# Open blame buffer.
-<L>gb
 
 
 #--- Neogit Plugin ------------------------------------------------------------
 
 # Open status buffer.
 <L>gs
+
+# Open Git log buffer.
+ll
+
+# Open Git commit buffer.
+<L>gc
+
+# Open Git pull buffer.
+<L>gP
+
+# Open Git push buffer.
+<L>gp
+
+# Open branches view in Telescope.
+<L>gB
 
 
 
@@ -305,70 +317,88 @@ left
 
 
 
-#-------------------------------------
+#--- Nvim-Tree Plugin ---------------------------------------------------------
 
-# Tree: Close node
-q n
+# Toggle file tree  (Nvim-Tree).
+<L>tt
 
-# Tree: Rename file/directory
+# Explore file tree (Nvim-Tree).
+<L>et
+
+# Show file in file tree (Nvim-Tree).
+<L>sft
+
+# Close node in file tree (Nvim-Tree).
+cn
+
+# Rename file/directory in file tree (Nvim-Tree).
 r
 
-# Tree: Show file info
+# Show file information in file tree (Nvim-Tree).
 i
 
-# Tree: Open file/directory
+# Open file/directory in active buffer (Nvim-Tree).
 enter
 
-# Nvim Tree: Open in vertical split
-v
+# Open in vertical split (Nvim-Tree).
+|
 
-# Nvim Tree: Open in horizontal split
-h
+# Open in vertical split but stay in tree (Nvim-Tree).
+o
 
-# Nvim Tree: Yank name of file/directory
+# Open in horizontal split (Nvim-Tree).
+-
+
+# Yank name of file/directory (Nvim-Tree).
 y
 
-# Nvim Tree: Yank path of file/directory
+# Yank path of file/directory (Nvim-Tree).
 Y
 
-# Nvim Tree: Copy file/directory
+# Yank absolute path of file/directory (Nvim-Tree).
+a
+
+# Copy file/directory (Nvim-Tree).
 c
 
-# Nvim Tree: Cut file/directory
+# Cut file/directory (Nvim-Tree).
 x
 
-# Nvim Tree: Paste
+# Paste file/directory (Nvim-Tree).
 p
 
-# Nvim Tree: Go to parent node
+# Go to parent node (Nvim-Tree).
 P
 
-# Nvim Tree: New file/directory
-n
+# New file/directory (Nvim-Tree).
+ni
 
-# Nvim Tree: Delete file/directory
+# Delete file/directory (Nvim-Tree).
 d
 
-# Nvim Tree: Move file/directory into bin
+# Move file/directory into bin (Nvim-Tree).
 B
 
-# Nvim Tree: Collapse node
+# Collapse all nodes (Nvim-Tree).
 C
 
-# Nvim Tree: Expand node
+# Expand all nodes (Nvim-Tree).
 E
 
-# Nvim Tree: To the top sibling
-T S
+# To the top sibling (Nvim-Tree).
+TS
 
-# Nvim Tree: To the bottom sibling
-B S
+# To the bottom sibling (Nvim-Tree).
+BS
 
-# Nvim Tree: To previous sibling
+# To previous sibling (Nvim-Tree).
 K
 
-# Nvim Tree: To next sibling
+# To next sibling (Nvim-Tree).
 J
+
+
+
 
 
 # Nvim Splits: Open Terminal in vertical split

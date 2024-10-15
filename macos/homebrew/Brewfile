@@ -55,6 +55,7 @@ brew 'zsh-syntax-highlighting'
 #------------------------------------------------------------------------------
 #----- Casks
 
+cask 'nikitabobko/tap/aerospace'
 cask 'alacritty'
 cask 'aldente'
 cask 'alfred'
@@ -77,7 +78,7 @@ cask 'microsoft-teams'
 cask 'nordpass'
 cask 'nordvpn'
 cask 'opera'
-cask 'polypane'
+#cask 'polypane'
 cask 'qlcolorcode'
 cask 'qlimagesize'
 cask 'qlmarkdown'

@@ -1,4 +1,10 @@
-# This file has to be symlinked to ~.
+#------------------------------------------------------------------------------
+#--- Yabai Tiling Window Manager Configuration
+#--- https://github.com/koekeishiya/yabai
+#------------------------------------------------------------------------------
+
+# This file has to be symlinked to:
+# ~/
 
 #-----------------------------------------------------------------------------
 #   Yabai Commands

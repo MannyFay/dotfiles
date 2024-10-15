@@ -10,6 +10,6 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Delete ~/.tmate.conf:
 rm -rf $HOME/.tmate.conf
 
-# Create symlink to ~/.tmux.conf:
-ln -s ~/.config/dotfiles/tmate/.tmate.conf $HOME/.tmate.conf
+# Create symlink to ~/.tmate.conf:
+ln -s $HOME/personal/github/dotfiles/tmate/.tmate.conf
 

@@ -31,7 +31,7 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -70,27 +70,25 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 # Plugins (too many plugins slow down shell startup):
 # Maybe worth: web-search, laravel5, artisan, composer, docker, docker-compose
 plugins=(
-  #zsh-autosuggestions
-  #zsh-syntax-highlighting
-  npm
-  vi-mode
-  git
+    #zsh-autosuggestions
+    #zsh-syntax-highlighting
+    npm
+    vi-mode
+    git
 )
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+    export EDITOR='vim'
 else
-  export EDITOR='nvim'
+    export EDITOR='nvim'
 fi
 export VISUAL='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-
 
 #------------------------------------------------------------------------------
 #----- Oh My Zsh
@@ -100,15 +98,10 @@ source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-
 #------------------------------------------------------------------------------
 #----- Aliases
 
 source $HOME/personal/github/dotfiles/zsh/.zsh_aliases
-
-
-
 
 # Set Java runtime path:
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
@@ -128,6 +121,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
 # [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
 source $(brew --prefix nvm)/nvm.sh
+export NODE_OPTIONS="--max-old-space-size=8192"
 
 # Set path to Composer:
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"

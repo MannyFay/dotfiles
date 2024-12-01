@@ -63,3 +63,7 @@ cmd o
 
 # OS - Area screenshot.
 cmd shift 4 (LP-1 RTL)
+
+
+# Remove all downloads in current directory.
+find . -type f -exec brctl evict '{}' \;

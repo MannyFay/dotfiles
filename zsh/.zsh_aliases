@@ -6,68 +6,63 @@
 # Copy this line to do so:
 # source ~/personal/github/dotfiles/nodejs/tmux_aliases.zsh                   # tmux
 
-
-
 #------------------------------------------------------------------------------
 #----- Service Specific Aliases
 
-source $HOME/personal/github/dotfiles/docker/docker_aliases.zsh             # Docker
-source $HOME/personal/github/dotfiles/git/git_aliases.zsh                   # Git
-source $HOME/personal/github/dotfiles/macos/homebrew/homebrew_aliases.zsh   # Homebrew
-source $HOME/personal/github/dotfiles/laravel/laravel_aliases.zsh           # Laravel
-source $HOME/personal/github/dotfiles/nodejs/nodejs_aliases.zsh             # Node.js
-source $HOME/personal/github/dotfiles/orm/prisma/prisma_aliases.zsh         # Prisma
-source $HOME/personal/github/dotfiles/ssh/ssh_aliases.zsh                   # SSH
-source $HOME/personal/github/dotfiles/tmux/tmux_aliases.zsh                 # tmux
-source $HOME/personal/github/dotfiles/macos/yabai/yabai_aliases.zsh         # Yabai
-
-
+source $HOME/personal/github/dotfiles/docker/docker_aliases.zsh           # Docker
+source $HOME/personal/github/dotfiles/git/git_aliases.zsh                 # Git
+source $HOME/personal/github/dotfiles/macos/homebrew/homebrew_aliases.zsh # Homebrew
+source $HOME/personal/github/dotfiles/laravel/laravel_aliases.zsh         # Laravel
+source $HOME/personal/github/dotfiles/macos/macos_aliases.zsh             # macOS
+source $HOME/personal/github/dotfiles/nodejs/nodejs_aliases.zsh           # Node.js
+source $HOME/personal/github/dotfiles/orm/prisma/prisma_aliases.zsh       # Prisma
+source $HOME/personal/github/dotfiles/ssh/ssh_aliases.zsh                 # SSH
+source $HOME/personal/github/dotfiles/tmux/tmux_aliases.zsh               # tmux
+source $HOME/personal/github/dotfiles/macos/yabai/yabai_aliases.zsh       # Yabai
 
 #------------------------------------------------------------------------------
 #----- Moving
 
 # Jump up in directory structure:
-alias ..='cd ..'
-alias 2..='cd ../..'
-alias 3..='cd ../../..'
-alias 4..='cd ../../../..'
-alias 5..='cd ../../../../..'
-alias 6..='cd ../../../../../..'
-alias 7..='cd ../../../../../../..'
-alias 8..='cd ../../../../../../../..'
-alias 9..='cd ../../../../../../../../..'
+alias ..="cd .."
+alias 2..="cd ../.."
+alias 3..="cd ../../.."
+alias 4..="cd ../../../.."
+alias 5..="cd ../../../../.."
+alias 6..="cd ../../../../../.."
+alias 7..="cd ../../../../../../.."
+alias 8..="cd ../../../../../../../.."
+alias 9..="cd ../../../../../../../../.."
 
-alias ansible='cd $HOME/personal/github/ansible'                                                                                           # Go to ansible directory.
-alias dotfiles='cd $HOME/personal/github/dotfiles'                                                                                         # Go to dotfiles directory.
-alias pnvim='cd $HOME/personal/github/pnvim'                                                                                               # Go to nvim directory.
-alias mannydark='cd $HOME/personal/github/mannydark.nvim'                                                                                  # Go to mannydark directory.
-alias notes="cd $HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/notebook"                                                     # Go to notebook directory.
-alias config='cd $HOME/.config'                                                                                                            # Go to config directory.
+alias ansible="cd $HOME/personal/github/ansible"                                       # Go to ansible directory.
+alias dotfiles="cd $HOME/personal/github/dotfiles"                                     # Go to dotfiles directory.
+alias pnvim="cd $HOME/personal/github/pnvim"                                           # Go to nvim directory.
+alias mannydark="cd $HOME/personal/github/mannydark.nvim"                              # Go to mannydark directory.
+alias notes="cd $HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/notebook" # Go to notebook directory.
+alias config="cd $HOME/.config"                                                        # Go to config directory.
 
-alias personal='cd $HOME/personal'                                                                                                         # Go to personal directory.
-
-
+alias personal="cd $HOME/personal" # Go to personal directory.
 
 #------------------------------------------------------------------------------
 #----- Shell interactions
 
 # Note: Do never overwrite cat command. That leads to errors.
 
-
-alias shells='batcat /etc/shells'                                                                                                          # List all installed shells.
-alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"                                                       # FZF with preview.
-alias o='nvim -o `fzf`'                                                                                                                    # FZF and open in nvim.
-alias e='exit'                                                                                                                             # Exit for lazy people.
-alias c='clear'                                                                                                                            # Clear for lazy people.
-alias l='eza -alHiUm'                                                                                                                      # list all files in current directory.
-alias show='batcat -n'                                                                                                                     # Use bat and show line numbers.
-alias vim='nvim'                                                                                                                           # Start nvim instead of vim.
-alias vi='nvim'                                                                                                                            # Start nvim instead of vi.
-alias v='nvim'                                                                                                                             # For super lazy people.
+alias shells="batcat /etc/shells"                                                    # List all installed shells.
+alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'" # FZF with preview.
+alias o="nvim -o $(fzf)"                                                             # FZF and open in nvim.
+alias e="exit"                                                                       # Exit for lazy people.
+alias c="clear"                                                                      # Clear for lazy people.
+alias l="eza -alHiUm"                                                                # list all files in current directory.
+alias show="batcat -n"                                                               # Use bat and show line numbers.
+alias vim="nvim"                                                                     # Start nvim instead of vim.
+alias vi="nvim"                                                                      # Start nvim instead of vi.
+alias v="nvim"                                                                       # For super lazy people.
 # Not working by now -> alias rm='shred -n 100'                                                                                                                    # Shred files instead of deleting them (secure delete).
-alias update='sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt -f install -y && sudo apt clean'   # Update and upgrade.
-alias mac='ifconfig | grep ether | cut -d" " -f10'                                                                                         # Show machine's MAC address.
-alias locate='mlocate -ei'                                                                                                                 # Use mlocate instead of locate on only existing files by a case insensitive search.
-alias which='which -a'                                                                                                                     # Show all executables, not just one.
+alias update="sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt autoremove -y && sudo apt -f install -y && sudo apt clean" # Update and upgrade.
+alias mac="ifconfig | grep ether | cut -d" " -f10"                                                                                       # Show machine's MAC address.
+alias locate="mlocate -ei"                                                                                                               # Use mlocate instead of locate on only existing files by a case insensitive search.
+alias which="which -a"                                                                                                                   # Show all executables, not just one.
 #alias find=''
-alias grep='grep -iv "^$'                                                                                                                  # Use the case insensitive search for grep command and don't display empty lines.
+alias grep="grep -iv "^$" # Use the case insensitive search for grep command and don't display empty lines.
+

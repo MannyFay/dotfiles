@@ -2,10 +2,11 @@
 #  Alfred Node.js Cheat Sheet
 #------------------------------------------------------------------------------
 
+
 #------------------------------------------------------------------------------
 #----- npm
 
-# Run development environment (npm run dev)
+# Run development environment (npm run dev).
 nrd
 
 # Install packages (npm install).
@@ -18,8 +19,26 @@ nid
 #------------------------------------------------------------------------------
 #----- Yarn
 
-# Install all project packages with Yarn package manager
-yip
+# Install all project packages with Yarn package manager.
+yi
 
-# Run Yarn development server
+# Run Yarn development server.
 yd
+
+# Lint the code in the current directory.
+yl
+
+# Lint the code in the current directory and fix the issues.
+ylfa
+
+# Lint the code of a file by adding its name.
+ylf
+
+# Build the project.
+yb
+
+# Run TypeScript compiler.
+ytsc
+
+# Lint the code of a file by adding its name and fix the issues.
+ylff

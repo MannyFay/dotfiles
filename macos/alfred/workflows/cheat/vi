@@ -652,44 +652,11 @@ ctrl <L>
 # Repeat last command.
 .
 
-# Surround word or selection with ( ).
-((
-
-# Surround word or selection with { }.
-{{
-
-# Surround word or selection with [ ].
-[[
-
-# Surround word or selection with " ".
-""
-
-# Surround word or selection with ' '.
-''
-
-# Surround word or selection with ` `.
-``
-
-# Surround word or selection with < >.
-<>
 
 # Yank (copy) till end of line.
 Y
 
-# Surround word or selection with a tag.
-swt
 
-# Change surrounding tag.
-cst
-
-# Delete surrounding tag.
-dst
-
-# Delete surroundings.
-ds<closing-sign>
-
-# Change surrounding characters.
-cs<old-sign><new-sign>
 
 # Quit auto completion.
 <C>q
@@ -704,3 +671,20 @@ tab
 ->
 
 :wa
+
+
+#------------------------------------------------------------------------------
+
+# Start tmux sessionizer.
+ctrl + f
+
+# Set Harpoon mark.
+<L>hm
+
+# Show Harpoon marks list.
+<L>hl
+
+
+
+
+

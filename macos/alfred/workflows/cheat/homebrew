@@ -1,3 +1,7 @@
+#------------------------------------------------------------------------------
+#  Alfred Homebrew Cheat Sheet
+#------------------------------------------------------------------------------
+
 # Homebrew: Check version of Homebrew
 brew -v
 
@@ -7,8 +11,6 @@ brew help
 # Homebrew: List all packages that can be installed
 brew search
 
-# Homebrew: Show number of packages that can be installed
-brew search \| wc -l
 
 # Homebrew: Search if a specific package is available
 brew search <package-your-searching-for>

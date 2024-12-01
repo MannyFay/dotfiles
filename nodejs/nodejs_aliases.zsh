@@ -16,9 +16,11 @@ alias nid='npm install --save-dev' # Install packages as devDependencies.
 #------------------------------------------------------------------------------
 #----- Yarn
 
-alias yip='yarn install'         # Install packages.
+alias yi='yarn install'          # Install packages.
 alias yd='yarn dev'              # Run development server.
-alias yla='yarn eslint .'        # Lint the code in the current directory.
+alias yl='yarn eslint .'         # Lint the code in the current directory.
 alias ylfa='yarn eslint --fix .' # Lint the code in the current directory and fix the issues.
-alias yl='yarn eslint'           # Lint the code of a file by adding its name.
+alias ylf='yarn lint'            # Lint the code of a file by adding its name.
+alias yb='yarn build'            # Build the project.
+alias ytsc='yarn tsc --noEmit'   # Run TypeScript compiler.
 alias ylff='yarn eslint --fix'   # Lint the code of a file by adding its name and fix the issues.

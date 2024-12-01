@@ -1,0 +1,425 @@
+#------------------------------------------------------------------------------
+#  Alfred Cheat Workflow Cheat Sheet
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+#----- nvim
+
+# nvim: Rename word in current line.
+:s/<word>/<new-word>/g
+
+# nvim: Rename word in current file.
+:%s/<word>/<new-word>/gc
+
+# nvim: Rename word across the whole project.
+:cdo s/<word>/<new-word>/gc
+
+# nvim: Change surrounding characters.
+cs<old-sign><new-sign>
+
+# nvim: Surround word or selection with a tag.
+swt
+
+# nvim: Change surrounding tag.
+cst
+
+# nvim: Delete surrounding tag.
+dst
+
+# nvim: Delete surroundings.
+ds<closing-sign>
+
+# nvim: Surround word or selection with ( ).
+((
+
+# nvim: Surround word or selection with { }.
+{{
+
+# nvim: Surround word or selection with [ ].
+[[
+
+# nvim: Surround word or selection with " ".
+""
+
+# nvim: Surround word or selection with ' '.
+''
+
+# nvim: Surround word or selection with ` `.
+``
+
+# nvim: Surround word or selection with < >.
+<>
+
+
+
+#------------------------------------------------------------------------------
+#----- npm
+
+# npm: Run development environment (npm run dev).
+nrd
+
+# npm: Install packages (npm install).
+ni
+
+# npm: Install packages as dev dependencies (npm install --save-dev).
+nid
+
+
+
+#------------------------------------------------------------------------------
+#----- Yarn
+
+# yarn: Install all project packages with Yarn package manager.
+yi
+
+# yarn: Run Yarn development server.
+yd
+
+# yarn: Lint the code in the current directory.
+yl
+
+# yarn: Lint the code in the current directory and fix the issues.
+ylfa
+
+# yarn: Lint the code of a file by adding its name.
+ylf
+
+# yarn: Build the project.
+yb
+
+# yarn: Run TypeScript compiler.
+ytsc
+
+# yarn: Lint the code of a file by adding its name and fix the issues.
+ylff
+
+
+
+#------------------------------------------------------------------------------
+#----- tmux
+
+# tmux: Start tmux.
+ts
+
+# tmux: Exit tmux.
+tq (LM RP RLedge)
+
+# tmux: Reload tmux configuration.
+tsc (<p>r) (LM RI-TE)
+
+# tmux: List tmux keys
+tlk
+
+# tmux: List all sessions (Tmux has to be started)
+tls (tmux ls)
+
+# tmux: Go back into session <session-name>
+tns <session-name> (tmux attach -t <session-name>)
+
+# tmux: Start new Tmux session with name <session-name>
+tns <session-name> (tmux new -s <session-name>)
+
+# tmux: Name session.
+<p>$ (RM LT2)
+
+# tmux: Start tmux sessionizer.
+ctrl + f
+
+# tmux: Kill window.
+<p>& (RM LL)
+
+# tmux: tmux prefix.
+ctrt + b
+
+# tmux: New window.
+<p>c (LM RL)
+
+# tmux: Name window.
+<p>, (LM RT2)
+
+# tmux: Push window to the left.
+ctrl shift <- (RM LT3)
+
+# tmux: Push window to the right.
+ctrl shift -> (LM RT3)
+
+# tmux: Jump to window 1.
+<p>1 (RM LP+1)
+
+# tmux: Jump to window 2.
+<p>2 (RM LR+1)
+
+# tmux: Jump to window 3.
+<p>3 (RM LM+1)
+
+# tmux: Jump to window 4.
+<p>4 (RM LI+1)
+
+# tmux: Jump to window 5.
+<p>5 (RM LI+1->)
+
+# tmux: Jump to window 6.
+<p>6 (LM RI+1<-)
+
+# tmux: Jump to window 7.
+<p>7 (LM RI+1)
+
+# tmux: Jump to window 8.
+<p>8 (LM RM+1)
+
+# tmux: Jump to window 9.
+<p>9 (LM RR+1)
+
+# tmux: Jump to window 10.
+<p>0 (LM RP+1)
+
+# tmux: FZF fuzzy finder.
+fzf (LM RT1) (RM LT1)
+
+# tmux: Enter command mode.
+<p>: (RM LI-1->)
+
+# tmux: Start copy mode.
+<p>[ (RM LI->)
+
+# tmux: Exit copy mode.
+ctrl c (LI2->)
+
+# tmux: Choose a existing session.
+<prefix> s
+
+# tmux: Navigate session list up.
+k
+
+# tmux: Navigate session list down.
+j
+
+# tmux: Open selected session.
+enter
+
+# tmux: Kill a specific session.
+<prefix> :kill-session -t <session-name>
+
+# tmux: Open vertical pane.
+<prefix> y
+
+# tmux: Open horizontal pane.
+<prefix> x
+
+# tmux: Close pane.
+exit
+
+# tmux: Go to left pane.
+<prefix> H
+
+# tmux: Go to right pane.
+<prefix> L
+
+# tmux: Go to pane below.
+<prefix> J
+
+# tmux: Go to pane above.
+<prefix> K
+
+# tmux: Maxi/Minimize pane.
+<prefix> m
+
+# tmux: Create new window.
+<prefix> c
+
+# tmux: Quit actual window.
+<prefix> q
+
+# tmux: Go to window <number>.
+<prefix> <number>
+
+# tmux: Go to next window.
+<prefix> n
+
+# tmux: Go to previous window.
+<prefix> p
+
+# tmux: Rename actual window.
+<prefix> r
+
+# tmux: List all windows.
+<prefix> w
+
+# tmux: Swap window position.
+swap-window -s <start-index> -t <target-index>
+
+# tmux: Scroll down in copy mode.
+shift j
+
+# tmux: Scroll up in copy mode.
+shift k
+
+# tmux: Go up half a page in copy mode.
+ctrl u
+
+# tmux: Go down half a page in copy mode.
+ctrl d
+
+# tmux: Go up a full page in copy mode.
+ctrl b
+
+# tmux: Go down a full page in copy mode.
+ctrl f
+
+# tmux: Enter visual mode in copy mode.
+v
+
+# tmux: Yank in copy mode.
+y
+
+# tmux: Install plugins.
+<prefix> I
+
+
+
+#------------------------------------------------------------------------------
+#----- Homebrew
+
+# Homebrew: Install a formulae.
+brew install <package>
+
+# Homebrew: Uninstall package.
+brew uninstall <package>
+
+# Homebrew: Update Homebrew and fetch new packages.
+brew update
+
+# Homebrew: Upgrade packages to latest version.
+brew upgrade
+
+# Homebrew: Run Homebrew diagnostic for checking issues.
+brew doctor
+
+# Homebrew: List all installed packages.
+brew list
+
+# Homebrew: Show information of a package.
+brew info <package>
+
+# Homebrew: Search for a package in the Homebrew repository.
+brew search <package>
+
+# Homebrew: List outdated packages.
+brew outdated
+
+# Homebrew: Remove old versions of installed packages.
+brew cleanup
+
+# Homebrew: Commands for GUI apps and larger software.
+Hombrew Casks
+
+# Homebrew: Show homepage of an app (cask).
+brew home --cask <app>
+
+# Homebrew: Install an app (cask).
+brew install --cask <app>
+
+# Homebrew: Uninstall an app (cask).
+brew uninstall --cask <app>
+
+# Homebrew: List all installed apps (casks).
+brew list --cask
+
+# Homebrew: Show information about an app (cask).
+brew info --cask <app>
+
+# Homebrew: Upgrade apps (cask) to their latest version.
+brew upgrade --cask
+
+# Homebrew: Taps are repositories you can add (install them after adding with 'brew install').
+Homebrew Taps
+
+# Homebrew: Add a repository (tap) (install it after tapping).
+brew tap <repository>
+
+# Homebrew: Remove a repository (tap) from Homebrew.
+brew untap <repository>
+
+# Homebrew: List all added repositories (taps).
+brew tap
+
+# Homebrew: Services are background services managed by the deamon manager (launchctl on macOS, systemctl on Linux) like databases.
+Homebrew Services
+
+# Homebrew: List all installed services.
+brew services list
+
+# Homebrew: Start a service.
+brew services start <service>
+
+# Homebrew: Stop a service.
+brew services stop <service>
+
+# Homebrew: Restart a service.
+brew services restart <service>
+
+# Homebrew: Show Homebrew configuration information.
+brew config
+
+# Homebrew: Show the log of a package.
+brew log <package>
+
+# Homebrew: Show Homebrew's usage analytics settings.
+brew analytics
+
+# Homebrew: List all packages that can be installed.
+brew search
+
+# Homebrew: Check version of Homebrew.
+brew -v
+
+# Homebrew: Show help documentation.
+brew help
+
+# Homebrew: Prevent a package from being upgraded.
+brew pin <package>
+
+# Homebrew: Allow pinned package to be upgraded.
+brew unpin <package>
+
+# Homebrew: Show dependencies of a package.
+brew deps <package>
+
+# Homebrew: Install the latest development version of a package.
+brew install <package> --HEAD
+
+# Homebrew: MAS is a CLI to manage apps of macOS AppStore.
+Homebrew MAS (Mac App Store)
+
+# Homebrew: Install MAS-CLI (login to macOS AppStore before).
+brew install mas
+
+# Homebrew: Search for an AppStore application and show its ID.
+mas search "<app>"
+
+# Homebrew: Install macOS App.
+mas install <id>
+
+# Homebrew: List all installed macOS apps.
+mas list
+
+# Homebrew: Upgrade all macOS apps.
+mas upgrade
+
+# Homebrew: Upgrade a macOS app.
+mas upgrade <id>
+
+# Homebrew: Reinstall a macOS app.
+mas install <id>
+
+# Homebrew: Sign out of macOS AppStore.
+mas signout
+
+# Homebrew: Show the currently logged-in macOS AppStore account.
+mas account
+
+# Homebrew: Show outdated macOS apps.
+mas outdated
+
+
+

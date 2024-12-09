@@ -50,6 +50,24 @@ ds<closing-sign>
 # nvim: Surround word or selection with < >.
 <>
 
+# nvim: Grow buffer vertically.
+<L>gv
+
+# nvim: Shrink buffer vertically.
+<L>sv
+
+# nvim: Grow buffer horizontally.
+<L>gh
+
+# nvim: Shrink buffer horizontally.
+<L>sh
+
+# nvim: Maximize buffer horizontally.
+<L>m
+
+# nvim: Equalize width and height for all buffers.
+<L>=
+
 
 
 #------------------------------------------------------------------------------
@@ -422,4 +440,51 @@ mas account
 mas outdated
 
 
+
+#------------------------------------------------------------------------------
+#----- Alfred
+
+# Alfred: Open Alfred.
+cmd space (MK1: right launcher)
+
+# Alfred: Start screen saver.
+screensaver
+
+# Alfred: Log out of system.
+logout
+
+# Alfred: Activate sleep mode.
+sleep
+
+# Alfred: Activate display sleep.
+sleepdisplays
+
+# Alfred: Lock device.
+lock (LP-1 RP-RLedge)
+
+# Alfred: Restart device.
+restart
+
+# Alfred: Shut down device.
+shutdown
+
+# Alfred: Toggle Do Not Disturb mode.
+(LP-1 RI-LTedge)
+
+# Alfred: Toggle keyboard layer indicator LEDs.
+(LP-1 RI-RTedge)
+
+# Alfred: Toggle keyboard layer RGB LEDs.
+(LP-1 RP-2)
+
+# Alfred: Switch keyboard language.
+fn-key ctrl-space (LP-1 RI1<-)
+
+
+
+#------------------------------------------------------------------------------
+#----- Homerow
+
+# Homerow: Start Homerow.
+cmd+shift+space (MK1: left launcher)
 

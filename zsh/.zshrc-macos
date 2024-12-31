@@ -151,11 +151,21 @@ alias gitalizer="$HOME/personal/github/dotfiles/git/gitalizer.sh"
 # Set the path to use GNU version of command line tools:
 PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 
+
+#------------------------------------------------------------------------------
+# fzf
+
 # Source fzf:
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+
+
 
 # Source Rust:
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # Set terminal emulator:
 export TERM=xterm-256color

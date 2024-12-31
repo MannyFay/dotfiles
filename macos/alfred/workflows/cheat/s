@@ -3,6 +3,36 @@
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
+#----- fzf
+
+# fzf: Start fuzzy search.
+f <enter>
+
+# fzf: Show files/directories in current directory.
+<ctrl+t>
+
+# fzf: Show files/directories in current directory and open with nvim.
+nvim <ctrl+t>
+
+# fzf: Show/change into directories in current directory.
+cd **<tab>
+
+# fzf: Navigate up in results list.
+<ctrl+k>
+
+# fzf: Navigate down in results list.
+<ctrl+j>
+
+# fzf: Show recently used IP addresses and host names.
+ssh **<tab>
+
+# fzf: Kill a specific process.
+kill -9 **<tab>
+
+
+
+
+#------------------------------------------------------------------------------
 #----- nvim
 
 # nvim: Rename word in current line.

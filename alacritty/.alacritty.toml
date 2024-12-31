@@ -14,126 +14,123 @@
 # New-Item -ItemType SymbolicLink -Path "C:\Users\manny\AppData\Roaming\alacritty\alacritty.toml" -Target "\\wsl$\Ubuntu\home\manny\personal\github\dotfiles\alacritty\alacritty-configuration.toml"
 
 
-
 #------------------------------------------------------------------------------
 #--- Appearance
 
-live_config_reload        = true
+live_config_reload = true
 
 [bell]
-animation                 = "EaseOutExpo"
-duration                  = 0                    # 0 = disabled.
-color                     = "#FF0000"
-command                   = "None"
+animation = "EaseOutExpo"
+duration = 0              # 0 = disabled.
+color = "#FF0000"
+command = "None"
 
 [cursor]
-blink_interval            = 0
-blink_timeout             = 0
-unfocused_hollow          = true                 # Show cursor as empty box when unfocused.
-thickness                 = 0.0
+blink_interval = 0
+blink_timeout = 0
+unfocused_hollow = true # Show cursor as empty box when unfocused.
+thickness = 0.0
 
 [cursor.vi_mode_style]
-shape                     = "Block"
-blinking                  = "Never"
+shape = "Block"
+blinking = "Never"
 
 [cursor.style]
-shape                     = "Block"
-blinking                  = "Never"
+shape = "Block"
+blinking = "Never"
 
 [debug]
-persistent_logging        = false
-render_timer              = false
+persistent_logging = false
+render_timer = false
 
 [env]
-TERM                      = "xterm-256color"
+TERM = "xterm-256color"
 
 [mouse]
-hide_when_typing          = true
+hide_when_typing = true
 
 [scrolling]
-history                   = 10000
-multiplier                = 1
+history = 10000
+multiplier = 1
 
 [selection]
-save_to_clipboard         = true
-semantic_escape_chars     = ",│`|:\"' ()[]{}<>"
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal]
-osc52                     = "CopyPaste"          # Use system clipboard for copy/paste on remote hosts.
+osc52 = "CopyPaste" # Use system clipboard for copy/paste on remote hosts.
 
 [window]
-decorations               = "full"               # Display borders and title bar.
-dynamic_padding           = false                # Do not add padding automatically.
-startup_mode              = "Maximized"
-blur                      = false
-opacity                   = 1.0
-title                     = "Terminal"
-dynamic_title             = true                 # Change title based on current directory.
+decorations = "full"               # Display borders and title bar.
+dynamic_padding = false            # Do not add padding automatically.
+startup_mode = "Maximized"
+blur = false
+opacity = 1.0
+title = "Terminal"
+dynamic_title = true               # Change title based on current directory.
 decorations_theme_variant = "dark"
 
 [window.dimensions]
-columns                   = 0
-lines                     = 0
+columns = 0
+lines = 0
 
 [window.padding]
-x                         = 4
-y                         = 2
-
+x = 4
+y = 2
 
 
 #------------------------------------------------------------------------------
 #--- Fonts
 
 [font.normal]
-family                    = "MesloLGMDZ Nerd Font"
-style                     = "Regular"
+family = "MesloLGMDZ Nerd Font"
+style = "Regular"
 
 [font.bold]
-family                    = "MesloLGMDZ Nerd Font"
-style                     = "Bold"
+family = "MesloLGMDZ Nerd Font"
+style = "Bold"
 
 [font.italic]
-family                    = "MesloLGMDZ Nerd Font"
-style                     = "Italic"
+family = "MesloLGMDZ Nerd Font"
+style = "Italic"
 
 [font.bold_italic]
-family                    = "MesloLGMDZ Nerd Font"
-style                     = "Bold Italic"
+family = "MesloLGMDZ Nerd Font"
+style = "Bold Italic"
 
 [font]
-builtin_box_drawing       = true
-size                      = 14                       # Font size.
+builtin_box_drawing = true
+size = 14                  # Font size.
 
 [font.glyph_offset]
-x                         = 0
-y                         = 6                        # Vertical letter positioning in a line.
+x = 0
+y = 6 # Vertical letter positioning in a line.
 
 [font.offset]
-x                         = 0                        # Letter spacing
-y                         = 10                       # Line height
-
+x = 0  # Letter spacing
+y = 10 # Line height
 
 
 #------------------------------------------------------------------------------
 #--- Colors
 
 [colors]
-transparent_background_colors     = false
+transparent_background_colors = false
 draw_bold_text_with_bright_colors = false
 
 [colors.primary]
-background        = "#191B1C"
-foreground        = "#ABABAB"
+background = "#191B1C"
+foreground = "#ABABAB"
 bright_foreground = "#ABABAB"
-dim_foreground    = "#ABABAB"
+dim_foreground = "#ABABAB"
 
 [colors.cursor]
 cursor = "#569CD6"
-text   = "#191B1C"
+text = "#191B1C"
 
 [colors.vi_mode_cursor]
 cursor = "#569CD6"
-text   = "#191B1C"
+text = "#191B1C"
 
 [colors.search.matches]
 background = "#ED3276"
@@ -161,42 +158,37 @@ foreground = "#4FA544"
 
 [colors.selection]
 background = "#ABABAB"
-text       = "#191B1C"
+text = "#191B1C"
 
 [colors.normal]
-black   = "#191B1C"
-red     = "#FF0000"
-green   = "#4FA544"
-yellow  = "#E8BF6A"
-blue    = "#569CD6"
+black = "#191B1C"
+red = "#FF0000"
+green = "#4FA544"
+yellow = "#E8BF6A"
+blue = "#569CD6"
 magenta = "#C064C7"
-cyan    = "#45C8B0"
-white   = "#ABABAB"
+cyan = "#45C8B0"
+white = "#ABABAB"
 
 [colors.bright]
-black   = "#606366"
-red     = "#FF0000"
-green   = "#4FA544"
-yellow  = "#E8BF6A"
-blue    = "#569CD6"
+black = "#606366"
+red = "#FF0000"
+green = "#4FA544"
+yellow = "#E8BF6A"
+blue = "#569CD6"
 magenta = "#C064C7"
-cyan    = "#45C8B0"
-white   = "#ABABAB"
+cyan = "#45C8B0"
+white = "#ABABAB"
 
 [colors.dim]
-black   = "#191B1C"
-red     = "#FF0000"
-green   = "#4FA544"
-yellow  = "#E8BF6A"
-blue    = "#569CD6"
+black = "#191B1C"
+red = "#FF0000"
+green = "#4FA544"
+yellow = "#E8BF6A"
+blue = "#569CD6"
 magenta = "#C064C7"
-cyan    = "#45C8B0"
-white   = "#ABABAB"
-
-
-
-
-
+cyan = "#45C8B0"
+white = "#ABABAB"
 
 
 #------------------------------------------------------------------------------

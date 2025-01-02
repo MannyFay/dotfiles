@@ -161,12 +161,8 @@ source $DOTFILES/cli-tools/ssh/ssh_aliases.zsh
 
 # tmux
 source $DOTFILES/cli-tools/tmux/tmux_aliases.zsh
-# Start fuzzy search with ctrl+f:
-# bindkey -s ^f "$HOME/personal/github/dotfiles/tmux/tmux_sessionizer.sh\n"
-# Start tmux on shell startup:
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
+# Start tmux-sessionizer with ctrl+f:
+bindkey -s ^f "$DOTFILES/cli-tools/tmux/scripts/tmux_sessionizer.sh\n"
 
 #------------------------------------------------------------------------------
 # Dev-Tools Setup

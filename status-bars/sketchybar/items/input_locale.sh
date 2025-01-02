@@ -1,15 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
+#------------------------------------------------------------------------------
+# SketchyBar Input Locale Item Setup
+#------------------------------------------------------------------------------
 
 input_locale=(
-    # label.width=18
-    # label.align=right
-    # padding_right=0
-    # padding_left=0
-    script="$PLUGIN_DIR/input_locale.sh"
     icon=󰤃
-    # icon.align=left
     icon.padding_right=9
     icon.padding_left=5
+    script="$PLUGIN_DIR/input_locale.sh"
     update_freq=1
 )
 

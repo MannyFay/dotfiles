@@ -15,15 +15,20 @@
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
 after-login-command = []
 
+
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
-
+# https://nikitabobko.github.io/AeroSpace/goodness#show-aerospace-workspaces-in-sketchybar
+after-startup-command = ['exec-and-forget sketchybar']
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
 
 
 #------------------------------------------------------------------------------
-#--- Appearance
+# Settings
 
 # Start AeroSpace at login:
 start-at-login = true
@@ -67,16 +72,18 @@ automatically-unhide-macos-hidden-apps = false
 preset = 'qwerty'
 
 
-#--- Window Gaps:
+#------------------------------------------------------------------------------
+# Window Gaps:
 # See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 0
 inner.vertical   = 0
 outer.left       = 0
-outer.bottom     = 0
+outer.bottom     = 15
 outer.top        = 0
 outer.right      = 0
 
+# gaps.outer.top = 10
 
 
 #------------------------------------------------------------------------------

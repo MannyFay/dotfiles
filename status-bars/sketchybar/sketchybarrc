@@ -1,37 +1,45 @@
-# This is a demo config to showcase some of the most important commands.
-# It is meant to be changed and configured, as it is intentionally kept sparse.
-# For a (much) more advanced configuration example see my dotfiles:
-# https://github.com/FelixKratz/dotfiles
+#!/usr/bin/env sh
+
+#------------------------------------------------------------------------------
+# SketchyBar Configuration File
+#------------------------------------------------------------------------------
+
+# $CONFIG_DIR is the absolute path to SketchyBar's configuration directory:
+# $HOME/.config/sketchybar/
+
+# Make color palette available for this file:
 source "$CONFIG_DIR/color_palette.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
+
 PADDING=3
 
-##### Bar Appearance #####
-# Configuring the general appearance of the bar.
-# These are only some of the options available. For all options see:
-# https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+sketchybar --bar position=bottom \
+                 height=15 \
+                 blur_radius=100 \
+                 color=0xff000000 \
+                 corner_radius=0 \
+                 padding_left=0 \
+                 padding_right=0 \
+                 notch_width=0 \
+                 notch_offset=0 \
+                 display=all \
+                 topmost=window
 
-# sketchybar --bar position=bottom height=15 blur_radius=100 color=0xff000000 corner_radius=0 padding_left=0 padding_right=0 border_color=0xff252525 border_width=1
-sketchybar --bar position=bottom height=15 blur_radius=100 color=0xff000000 corner_radius=0 padding_left=0 padding_right=0 notch_width=0 notch_offset=0 display=all topmost=window
-
-##### Changing Defaults #####
-# We now change some default values, which are applied to all further items.
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
 
 defaults=(
   # padding_left=0
   # padding_right=0
   icon.color=$WHITE
-  icon.font="Hack Nerd Font:Bold:12.0"
+  # icon.font="Hack Nerd Font:Bold:12.0"
+  icon.font="MesloLGMDZ Nerd Font Mono:Bold:12.0"
+  # icon.font="MesloLGMDZ Nerd Font Mono:Bold:20.0"
   # icon.padding_left=$PADDING
   # icon.padding_right=$PADDING
   label.color=$WHITE
-  label.font="Hack Nerd Font:Bold:12.0"
+  # label.font="Hack Nerd Font:Bold:12.0"
+  label.font="MesloLGMDZ Nerd Font Mono:Bold:12.0"
   # label.padding_left=$PADDING
   # label.padding_right=$PADDING
   ignore_association=on
@@ -46,16 +54,17 @@ sketchybar --default "${defaults[@]}"
 #------------------------------------------------------------------------------
 #----- Left Items
 
-source "$ITEM_DIR/space.sh"
+source "$ITEM_DIR/aerospace.sh"
+# source "$ITEM_DIR/space.sh"
 
 
 
 #------------------------------------------------------------------------------
 #----- Right Items
 
+source "$ITEM_DIR/clock.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/input_locale.sh"
-source "$ITEM_DIR/clock.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/memory.sh"
 source "$ITEM_DIR/cpu.sh"
@@ -67,4 +76,19 @@ source "$ITEM_DIR/wifi.sh"
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
 
-ACTIVE="$(yabai -m query --displays --display | jq ".index")"
+# ACTIVE="$(yabai -m query --displays --display | jq ".index")"
+
+# sketchybar --add event aerospace_workspace_change
+
+# for sid in $(aerospace list-workspaces --all); do
+#     sketchybar --add item space.$sid left \
+#         --subscribe space.$sid aerospace_workspace_change \
+#         --set space.$sid \
+#         background.color=0xff4FA544 \
+#         background.corner_radius=0 \
+#         background.height=20 \
+#         background.drawing=off \
+#         label="$sid" \
+#         click_script="aerospace workspace $sid" \
+#         script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+# done

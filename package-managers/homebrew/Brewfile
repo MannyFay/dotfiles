@@ -47,7 +47,7 @@ brew 'tree'
 brew 'vue-cli'
 brew 'wget'
 brew 'yarn'
-brew 'koekeishiya/formulae/yabai'
+# brew 'koekeishiya/formulae/yabai'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 

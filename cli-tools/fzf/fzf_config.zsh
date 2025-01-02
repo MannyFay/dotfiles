@@ -48,5 +48,5 @@ gray_dark="#252525"
 green="#4FA544"
 cyan="#2CF9ED"
 
-export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${blue},fg+:${fg},bg+:${gray_dark},hl+:${blue},info:${blue},prompt:${green},pointer:${blue},marker:${cyan},spinner:${blue},header:${cyan}"
+export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${blue},fg+:${fg},bg+:${gray_dark},hl+:${blue},info:${blue},prompt:${green},pointer:${blue},marker:${cyan},spinner:${blue},header:${blue}"
 # export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"

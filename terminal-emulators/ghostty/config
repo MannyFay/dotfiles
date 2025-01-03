@@ -4,16 +4,16 @@
 
 # Reload config file: cmd + shift + ,
 
+
+#------------------------------------------------------------------------------
+# Font Settings
+
 font-size = 14
 font-family = "MesloLGMDZ Nerd Font Mono Regular"
 font-style = regular
 font-family-bold = MesloLGMDZ Nerd Font Mono Bold
 font-family-italic = MesloLGMDZ Nerd Font Mono Italic
 font-family-bold-italic = MesloLGMDZ Nerd Font Mono Bold Italic
-
-gtk-titlebar = true
-
-
 
 font-style-bold = default
 font-style-italic = default
@@ -24,6 +24,9 @@ font-synthetic-style = bold,italic,bold-italic
 font-feature = -calt
 font-feature = -dlig
 font-feature = -liga
+
+gtk-titlebar = true
+
 
 font-variation =
 font-variation-bold =

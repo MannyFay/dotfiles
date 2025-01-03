@@ -1,13 +1,7 @@
 #!/usr/bin/env sh
 
 #------------------------------------------------------------------------------
-# SketchyBar Memory Item Setup
+# SketchyBar Separator Plugin Setup
 #------------------------------------------------------------------------------
 
-memory=(
-  script="$PLUGIN_DIR/memory.sh"
-  update_freq=1
-)
-
-sketchybar --add item memory right     \
-           --set memory "${memory[@]}"
+sketchybar --set $NAME

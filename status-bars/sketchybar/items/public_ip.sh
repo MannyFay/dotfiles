@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
+#------------------------------------------------------------------------------
+# SketchyBar Public IP Item Setup
+#------------------------------------------------------------------------------
 
 public_ip=(
-    icon=󰤃
-    icon.padding_right=10
-    icon.padding_left=5
-    script="$PLUGIN_DIR/public_ip.sh"
-    update_freq=900
+  script="$PLUGIN_DIR/public_ip.sh"
+  update_freq=900
 )
 
-sketchybar --add item public_ip right \
+sketchybar --add item public_ip right        \
            --set public_ip "${public_ip[@]}"
-

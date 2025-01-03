@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
+#------------------------------------------------------------------------------
+# SketchyBar Workspaces Item Setup (Yabai WM)
+#------------------------------------------------------------------------------
 
 source "$CONFIG_DIR/color_palette.sh"
 
@@ -22,10 +26,9 @@ do
     # click_script="yabai -m space --focus $sid"
     # click_script='sketchybar --trigger space_change'
   )
-  sketchybar --add space space."$sid" left \
-             --set space."$sid" "${space[@]}" \
+  sketchybar --add space space."$sid" left        \
+             --set space."$sid" "${space[@]}"     \
              --subscribe space.$sid mouse.clicked
 
 done
-
 

@@ -13,6 +13,10 @@ source "$CONFIG_DIR/color_palette.sh"
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
+
+#------------------------------------------------------------------------------
+# Settings
+
 PADDING=3
 
 sketchybar --bar position=bottom \
@@ -27,68 +31,53 @@ sketchybar --bar position=bottom \
                  display=all \
                  topmost=window
 
-
 defaults=(
-  # padding_left=0
-  # padding_right=0
   icon.color=$WHITE
-  # icon.font="Hack Nerd Font:Bold:12.0"
   icon.font="MesloLGMDZ Nerd Font Mono:Bold:12.0"
-  # icon.font="MesloLGMDZ Nerd Font Mono:Bold:20.0"
-  # icon.padding_left=$PADDING
-  # icon.padding_right=$PADDING
   label.color=$WHITE
-  # label.font="Hack Nerd Font:Bold:12.0"
   label.font="MesloLGMDZ Nerd Font Mono:Bold:12.0"
-  # label.padding_left=$PADDING
-  # label.padding_right=$PADDING
   ignore_association=on
-  # associated_display=on
-  # highlight=on
-  # display=all
 )
 sketchybar --default "${defaults[@]}"
 
+
+#------------------------------------------------------------------------------
+# Yabai WM Setup
+# ACTIVE="$(yabai -m query --displays --display | jq ".index")"
 
 
 #------------------------------------------------------------------------------
 #----- Left Items
 
 source "$ITEM_DIR/aerospace.sh"
-# source "$ITEM_DIR/space.sh"
-
+# source "$ITEM_DIR/space.sh" (Yabai WM)
 
 
 #------------------------------------------------------------------------------
-#----- Right Items
+# Right Items
 
 source "$ITEM_DIR/clock.sh"
+source "$ITEM_DIR/separator.sh" "separator_1"
 source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/separator.sh" "separator_2"
 source "$ITEM_DIR/input_locale.sh"
+source "$ITEM_DIR/separator.sh" "separator_3"
 source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/separator.sh" "separator_4"
 source "$ITEM_DIR/memory.sh"
+source "$ITEM_DIR/separator.sh" "separator_5"
 source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/separator.sh" "separator_6"
 source "$ITEM_DIR/public_ip.sh"
+source "$ITEM_DIR/separator.sh" "separator_7"
 source "$ITEM_DIR/ethernet.sh"
+source "$ITEM_DIR/separator.sh" "separator_8"
 source "$ITEM_DIR/wifi.sh"
 
 
-##### Force all scripts to run the first time (never do this in a script) #####
+#------------------------------------------------------------------------------
+# SketchyBar Start Up
+
+# Force all scripts to run the first time (never do this in a script):
 sketchybar --update
 
-# ACTIVE="$(yabai -m query --displays --display | jq ".index")"
-
-# sketchybar --add event aerospace_workspace_change
-
-# for sid in $(aerospace list-workspaces --all); do
-#     sketchybar --add item space.$sid left \
-#         --subscribe space.$sid aerospace_workspace_change \
-#         --set space.$sid \
-#         background.color=0xff4FA544 \
-#         background.corner_radius=0 \
-#         background.height=20 \
-#         background.drawing=off \
-#         label="$sid" \
-#         click_script="aerospace workspace $sid" \
-#         script="$CONFIG_DIR/plugins/aerospace.sh $sid"
-# done

@@ -48,7 +48,7 @@ alias e='exit'                                                                  
 alias c='clear'                                                                      # Clear for lazy people.
 # alias l='eza -alHiUm'                                                                # list all files in current directory.
 # alias l='eza --all --long --links --inode --created --modified'
-alias l='eza --color=always --icons=always --header --grid --all --long --links --inode --created --modified --git --git-repos'
+alias l='eza --color=always --icons=always --header --grid --all --long --links --inode --created --modified --git --git-repos --time-style="+%Y/%m/%d %H:%M"'
 alias show='batcat -n' # Use bat and show line numbers.
 alias vim='nvim'       # Start nvim instead of vim.
 alias vi='nvim'        # Start nvim instead of vi.

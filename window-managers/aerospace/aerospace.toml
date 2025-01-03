@@ -7,6 +7,8 @@
 # This configuration file has to be symlinked to:
 # ~/.config/aerospace/aerospace.toml
 
+# Activate Settings > Desktop & Dock > Mission Control > Group windows by application
+
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
@@ -52,14 +54,13 @@ default-root-container-layout = 'tiles'
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
 #               tall monitor (anything higher than wide) gets vertical orientation
-default-root-container-orientation = 'auto'
+default-root-container-orientation = 'vertical'
 
-# Mouse follows focus when focused monitor changes
-# Drop it from your config, if you don't like this behavior
-# See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
-# See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
-# Fallback value (if you omit the key): on-focused-monitor-changed = []
+# Mouse follows focus when focused monitor changes:
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+# Mouse follows focus when focused window changes:
+on-focus-changed = "move-mouse window-lazy-center"
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -125,7 +126,7 @@ outer.right      = 0
 
 
 #------------------------------------------------------------------------------
-#--- Window Management
+# Window Management
 
 #--- Change window focus:
 alt-cmd-h = 'focus left'
@@ -144,7 +145,18 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+#------------------------------------------------------------------------------
+# Workspace Management
+
+# Move between focused and previously focused workspace back and forth:
+# See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
+alt-tab = 'workspace-back-and-forth'
+
+# Move workspace to another monitor:
+# See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+# Jumping between workspaces:
 alt-ctrl-cmd-1 = 'workspace 1'
 alt-ctrl-cmd-2 = 'workspace 2'
 alt-ctrl-cmd-3 = 'workspace 3'
@@ -154,6 +166,7 @@ alt-ctrl-cmd-6 = 'workspace 6'
 alt-ctrl-cmd-7 = 'workspace 7'
 alt-ctrl-cmd-8 = 'workspace 8'
 alt-ctrl-cmd-9 = 'workspace 9'
+alt-ctrl-cmd-0 = 'workspace 10'
 
 # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 # alt-b = 'workspace B'
@@ -163,14 +176,14 @@ alt-ctrl-cmd-9 = 'workspace 9'
 # alt-f = 'workspace F'
 # alt-g = 'workspace G'
 # alt-i = 'workspace I'
-# alt-m = 'workspace M'
+alt-m = 'workspace M'
 # alt-n = 'workspace N'
 # alt-o = 'workspace O'
 # alt-p = 'workspace P'
 # alt-q = 'workspace Q'
 # alt-r = 'workspace R'
 # alt-s = 'workspace S'
-# alt-t = 'workspace T'
+alt-t = 'workspace T'
 # alt-u = 'workspace U'
 # alt-v = 'workspace V'
 # alt-w = 'workspace W'
@@ -211,10 +224,6 @@ alt-ctrl-cmd-9 = 'workspace 9'
 # alt-shift-y = 'move-node-to-workspace Y'
 # alt-shift-z = 'move-node-to-workspace Z'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-# alt-tab = 'workspace-back-and-forth'
-# See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # alt-shift-semicolon = 'mode service'
@@ -233,4 +242,63 @@ alt-ctrl-cmd-9 = 'workspace 9'
 # alt-shift-j = ['join-with down', 'mode main']
 # alt-shift-k = ['join-with up', 'mode main']
 # alt-shift-l = ['join-with right', 'mode main']
+
+
+#------------------------------------------------------------------------------
+# App Specific Workspace Mounts
+
+# Nordpass:
+[[on-window-detected]]
+if.app-id = 'com.nordsec.nordpass'
+run = "move-node-to-workspace 1"
+
+# Finder
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = "move-node-to-workspace 2"
+
+# Mail
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = "move-node-to-workspace 3"
+
+# Reminders
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = "move-node-to-workspace 4"
+
+# Calendar
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = "move-node-to-workspace 5"
+
+# Notes
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = "move-node-to-workspace 6"
+
+# Apple Music
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = "move-node-to-workspace M"
+
+# Terminal
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = "move-node-to-workspace T"
+
+# Safari
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace S"
+
+# Chrome
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = "move-node-to-workspace C"
+
+# Firefox Developer Edition
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefoxdeveloperedition'
+run = "move-node-to-workspace F"
 

@@ -64,6 +64,121 @@ your-command<ctrl+r>
 # SketchyBar: Reload configuration.
 sketchybar --reload
 
+# SketchyBar: Start in verbose mode.
+sketchybar
+
+# SketchyBar: Start in detached mode.
+brew services start sketchybar
+
+
+#------------------------------------------------------------------------------
+# Window Manager
+
+# wm: Minimize window.
+hold p + `
+
+# wm: To workspace 1.
+hold p + 1
+
+# wm: To workspace 2.
+hold p + 2
+
+# wm: To workspace 3.
+hold p + 3
+
+# wm: To workspace 4.
+hold p + 4
+
+# wm: To workspace 5.
+hold p + 5
+
+# wm: To workspace 6.
+hold p + 6
+
+# wm: To workspace 7.
+hold q + 7
+
+# wm: To workspace 8.
+hold q + 8
+
+# wm: To workspace 9.
+hold q + 9
+
+# wm: To workspace 10.
+hold q + 0
+
+# wm: Grow window.
+hold q + thumb low
+
+# wm: Shrink window.
+hold p + thumb low
+
+# wm: Swap window to the left.
+hold p + left thumb middle
+
+# wm: Swap window to the right.
+hold q + right thumb middle
+
+# wm: Swap window up.
+hold q + right thumb top
+
+# wm: Swap window down.
+hold p + left thumb top
+
+# wm: Focus left window.
+hold p + h
+
+# wm: Focus right window.
+hold p + l
+
+# wm: Focus window below.
+hold p + j
+
+# wm: Focus window above.
+hold p + k
+
+# wm: List IDs of apps.
+aerospace list-apps
+
+# wm: Jump to Nordpass.
+hold p + 1  |  alt + ctrl + cmd + 1
+
+# wm: Jump to Finder.
+hold p + 2  |  alt + ctrl + cmd + 2
+
+# wm: Jump to Mail.
+hold p + 3  |  alt + ctrl + cmd + 3
+
+# wm: Jump to Reminders.
+hold p + 4  |  alt + ctrl + cmd + 4
+
+# wm: Jump to Calendar.
+hold p + 5  |  alt + ctrl + cmd + 5
+
+# wm: Jump to Notes.
+hold p + 6  |  alt + ctrl + cmd + 6
+
+# wm: Jump to Apple Music.
+hold q + m  |  alt + m
+
+# wm: Jump to Terminal.
+hold p + t  |  alt + t
+
+# wm: Jump to Safari browser.
+hold p + s  |  alt + s
+
+# wm: Jump to Chrome browser.
+hold p + c  |  alt + c
+
+# wm: Jump to Firefox Developer Edition browser.
+hold p + f  |  alt + f
+
+# wm: Move workspace to another monitor.
+hold q + right launcher  |  alt + shift + tab
+
+# wm: Move between focused and previously focused workspace back and fourth.
+hold p + left launcher  |  alt+tab
+
 
 #------------------------------------------------------------------------------
 #----- nvim

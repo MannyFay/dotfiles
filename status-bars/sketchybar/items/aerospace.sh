@@ -12,14 +12,19 @@ for sid in $(aerospace list-workspaces --all); do
   sketchybar --add item space.$sid left \
     --subscribe space.$sid aerospace_workspace_change \
     --set space.$sid \
-    icon.padding_left=2 \
-    icon.padding_right=2 \
-    icon.highlight_color=$BLACK \
+    icon.padding_left=0 \
+    icon.padding_right=0 \
+    icon.align=center \
     background.color=0xff569CD6 \
     background.corner_radius=0 \
     background.height=20 \
+    background.width=2 \
     background.drawing=off \
     label="$sid" \
+    label.align=left \
+    label.padding_left=4 \
+    label.padding_right=5 \
+    label.color=0xffABABAB \
     click_script="aerospace workspace $sid" \
     script="$PLUGIN_DIR/aerospace.sh $sid"
 done

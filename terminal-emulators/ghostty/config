@@ -96,9 +96,32 @@ minimum-contrast = 0
 
 
 #------------------------------------------------------------------------------
-#  Color Scheme
-#  https://www.ditig.com/publications/256-colors-cheat-sheet
+# Color Scheme
+# https://www.ditig.com/publications/256-colors-cheat-sheet
 #------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------
+# MannyDark Color Palette
+
+# black      = #191B1C
+# blue       = #569CD6
+# blueLink   = #287BDE
+# gray       = #606366
+# grayDark   = #252525
+# green      = #4FA544
+# greenLight = #A5C25C
+# orange     = #E8BF6A
+# orangeDark = #3E372A
+# pink       = #ED3276
+# purple     = #C064C7
+# red        = #FF0000
+# redDark    = #553939
+# redLight   = #CE9178
+# turquoise  = #45C8B0
+# white      = #ABABAB
+# yellow     = #DCDCAA
+
 
 #------------------------------------------------------------------------------
 #  Xterm System Colors
@@ -107,46 +130,38 @@ minimum-contrast = 0
 palette = 0=#191B1C
 # Red:
 palette = 1=#FF0000
+# palette = 1=#ABABAB
 # Green:
 palette = 2=#4FA544
 # Yellow:
 palette = 3=#E8BF6A
 # Blue:
 palette = 4=#569CD6
+
+
+# Corrected Colors:
 # Magenta:
 palette = 5=#C064C7
 # Cyan:
-palette = 6=#45C8B0
+palette = 6=#569CD6
+# White:
+palette = 7=#ABABAB
+# Gray:
+palette = 8=#606366
 
-# palette = 7=#606366
-palette = 7=#FF0000
-palette = 8=#252525
+
+
+
+
 palette = 9=#FF0000
 palette = 10=#4FA544
 palette = 11=#E8BF6A
 palette = 12=#569CD6
 palette = 13=#C064C7
 palette = 14=#45C8B0
-# White:
+# White <---- not true! white is 7!:
 palette = 15=#ABABAB
 
-  # black      = '#191B1C',
-  # blue       = '#569CD6',
-  # blueLink   = '#287BDE',
-  # gray       = '#606366',
-  # grayDark   = '#252525',
-  # green      = '#4FA544',
-  # greenLight = '#A5C25C',
-  # orange     = '#E8BF6A',
-  # orangeDark = '#3E372A',
-  # pink       = '#ED3276',
-  # purple     = '#C064C7',
-  # red        = '#FF0000',
-  # redDark    = '#553939',
-  # redLight   = '#CE9178',
-  # turquoise  = '#45C8B0',
-  # white      = '#ABABAB',
-  # yellow     = '#DCDCAA',
 
 
 #------------------------------------------------------------------------------

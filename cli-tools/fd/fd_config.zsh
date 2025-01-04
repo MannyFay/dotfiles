@@ -5,7 +5,6 @@
 # https://github.com/sharkdp/fd
 # Source this file into your .zshrc file.
 
-
 #------------------------------------------------------------------------------
 # Settings
 
@@ -23,4 +22,3 @@ _fzf_compgen_dir() {
     # fd --type=d --hidden --exclude .git . "$1"
     fd --type=d --hidden --no-ignore . "$1"
 }
-

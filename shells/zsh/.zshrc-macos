@@ -145,6 +145,10 @@ PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 # bat
 source $DOTFILES/cli-tools/bat/bat_config.zsh
 
+# eza
+source $DOTFILES/cli-tools/eza/eza_config.zsh
+source $DOTFILES/cli-tools/eza/eza_aliases.zsh
+
 # fd
 source $DOTFILES/cli-tools/fd/fd_config.zsh
 

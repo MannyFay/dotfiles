@@ -1,3 +1,177 @@
 ---
 
+# -----------------------------------------------------------------------------
+# eza Color Theme
 # https://github.com/eza-community/eza/blob/main/man/eza_colors-explanation.5.md
+# -----------------------------------------------------------------------------
+
+
+header:
+  foreground: Blue
+  is_underline: true
+
+inode:
+  foreground: Green
+
+# not working:
+filekinds:
+  normal:
+    foreground: White
+  directory:
+    foreground: Blue
+  symlink:
+    foreground: Magenta
+  pipe:
+    foreground: Green
+  block_device:
+    foreground: Green
+  char_device:
+    foreground: Green
+  socket:
+    foreground: Green
+  special:
+    foreground: Green
+  executable:
+    foreground: Green
+  mount_point:
+    foreground: Green
+
+perms:
+  user_read:
+    foreground: White
+  user_write:
+    foreground: White
+  user_executable_file:
+    foreground: White
+  user_execute_other:
+    foreground: White
+  group_read:
+    foreground: White
+  group_write:
+    foreground: White
+  group_execute:
+    foreground: White
+  other_read:
+    foreground: White
+  other_write:
+    foreground: White
+  other_execute:
+    foreground: White
+  special_user_file:
+    foreground: White
+  special_other:
+    foreground: White
+  attribute:
+    foreground: White
+
+date:
+  foreground: Yellow
+
+punctuation:
+  foreground: Gray
+blocks:
+  foreground: Green
+octal:
+  foreground: Green
+flags:
+  foreground: Yellow
+control_char:
+  foreground: Blue
+broken_symlink:
+  foreground: Red
+broken_path_overlay:
+  foreground: Red
+
+file_type:
+  image:
+    foreground: White
+  video:
+    foreground: White
+  music:
+    foreground: White
+  crypto:
+    foreground: White
+  document:
+    foreground: White
+  compressed:
+    foreground: White
+  temp:
+    foreground: White
+  compiled:
+    foreground: White
+  build:
+    foreground: White
+  source:
+    foreground: White
+
+git:
+  new:
+    foreground: Red
+  modified:
+    foreground: Red
+  deleted:
+    foreground: Red
+  renamed:
+    foreground: Red
+  ignored:
+    foreground: Gray
+  conflicted:
+    foreground: Red
+
+git_repo:
+  branch_main:
+    foreground: Magenta
+  branch_other:
+    foreground: Magenta
+  git_clean:
+    foreground: Magenta
+  git_dirty:
+    foreground: Magenta
+
+links:
+  normal:
+    foreground: Green
+  multi_link_file:
+    foreground: Green
+size:
+  major:
+    foreground: Yellow
+  minor:
+    foreground: Yellow
+  number_byte:
+    foreground: Yellow
+  number_kilo:
+    foreground: Yellow
+  number_mega:
+    foreground: Yellow
+  number_giga:
+    foreground: Yellow
+  number_huge:
+    foreground: Yellow
+  unit_byte:
+    foreground: Yellow
+  unit_kilo:
+    foreground: Yellow
+  unit_mega:
+    foreground: Yellow
+  unit_giga:
+    foreground: Yellow
+  unit_huge:
+    foreground: Yellow
+
+users:
+  user_you:
+    foreground: Magenta
+  user_root:
+    foreground: Magenta
+  user_other:
+    foreground: Magenta
+  group_yours:
+    foreground: Magenta
+  group_other:
+    foreground: Magenta
+  group_root:
+    foreground: Magenta
+
+filenames:
+  .gitignore: { filename: {foreground: White}}

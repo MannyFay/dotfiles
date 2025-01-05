@@ -10,3 +10,4 @@ Finish setting up theme for bat.
 add to ansible:
 brew install delta
 brew install tldr
+brew install thefuck

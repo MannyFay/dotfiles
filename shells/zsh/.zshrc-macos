@@ -162,6 +162,9 @@ source $DOTFILES/cli-tools/git/git_aliases.zsh
 # SSH
 source $DOTFILES/cli-tools/ssh/ssh_aliases.zsh
 
+# thefuck
+source $DOTFILES/cli-tools/thefuck/thefuck_config.zsh
+
 # tmate
 
 # tmux

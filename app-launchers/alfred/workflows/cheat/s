@@ -37,6 +37,19 @@ fuck
 
 
 #------------------------------------------------------------------------------
+# zoxide
+
+# zoxide: Switch into a directory already visited with zoxide.
+z <directory>
+
+# zoxide: Switch into a not already visited directory with zoxide.
+z <path/to/directory>
+
+# zoxide: Use fzf to open directory if there are directories with the same name.
+z <directory> <tab>
+
+
+#------------------------------------------------------------------------------
 # fzf
 
 # fzf: Exit fzf interface.

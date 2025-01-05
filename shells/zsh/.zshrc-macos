@@ -172,6 +172,9 @@ source $DOTFILES/cli-tools/tmux/tmux_aliases.zsh
 # Start tmux-sessionizer with ctrl+f:
 bindkey -s ^f "$DOTFILES/cli-tools/tmux/scripts/tmux_sessionizer.sh\n"
 
+# zoxide
+source $DOTFILES/cli-tools/zoxide/zoxide_config.zsh
+
 #------------------------------------------------------------------------------
 # Dev-Tools Setup
 

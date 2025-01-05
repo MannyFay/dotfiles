@@ -11,3 +11,4 @@ add to ansible:
 brew install delta
 brew install tldr
 brew install thefuck
+brew install zoxide

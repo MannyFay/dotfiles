@@ -12,6 +12,7 @@ for sid in $(aerospace list-workspaces --all); do
   sketchybar --add item space.$sid left \
     --subscribe space.$sid aerospace_workspace_change \
     --set space.$sid \
+    y_offset=1 \
     icon.padding_left=0 \
     icon.padding_right=0 \
     icon.align=center \

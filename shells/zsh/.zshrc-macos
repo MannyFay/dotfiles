@@ -154,6 +154,7 @@ source $DOTFILES/cli-tools/fd/fd_config.zsh
 
 # fzf
 source $DOTFILES/cli-tools/fzf/fzf_config.zsh
+source $DOTFILES/cli-tools/fzf/fzf_aliases.zsh
 
 # Git
 source $DOTFILES/cli-tools/git/git_aliases.zsh

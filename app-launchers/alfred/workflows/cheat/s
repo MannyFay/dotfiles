@@ -23,13 +23,16 @@ lc
 
 
 #------------------------------------------------------------------------------
-#----- fzf
+# fzf
+
+# fzf: Exit fzf interface.
+ctrl + c  |  esc
 
 # fzf: Start fuzzy search.
 f <enter>
 
 # fzf: Show files/directories in current directory.
-<ctrl+t>
+ctrl + t
 
 # fzf: Show files/directories in current directory and open with nvim.
 nvim <ctrl+t>
@@ -38,10 +41,10 @@ nvim <ctrl+t>
 cd **<tab>
 
 # fzf: Navigate up in results list.
-<ctrl+k>
+ctrl + k
 
 # fzf: Navigate down in results list.
-<ctrl+j>
+ctrl + j
 
 # fzf: Show recently used IP addresses and host names.
 ssh **<tab>

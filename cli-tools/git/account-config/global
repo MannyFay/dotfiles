@@ -20,22 +20,43 @@
 
 [color]
     ui = auto
+
 [core]
+    pager = delta
     editor = nvim
     excludesfile = $HOME/.gitignore
+
 [diff]
-    tool = vimdiff
+    # tool = vimdiff
+    colorMoved = default
+
 [fetch]
     prune = true
+
 [help]
     autocorrect = 10
-[pull]
-    rebase = false
+
 [init]
     defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[pull]
+    rebase = false
+
 [push]
     default = current
+
 [rerere]
     enabled = true
+
 [safe]
     directory = /var/www/html

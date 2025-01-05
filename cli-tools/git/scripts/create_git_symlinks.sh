@@ -1,22 +1,17 @@
 #!/usr/bin/env sh
 
 #-----------------------------------------------------------------------------
-#  Git Configs
+#  Git Symlinking
 #-----------------------------------------------------------------------------
 
 # Set path to dotfiles:
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-
-
-# Delete ~/.gitconfig:
+# Delete old configs:
 rm -rf $HOME/.gitconfig
-# Delete ~/.gitignore:
 rm -rf $HOME/.gitignore
 
-# Create symlink to ~/.config/dotfiles/git/config-files/global:
-ln -s $DOTFILES/cli-tools/git/config-files/global $HOME/.gitconfig
-
-# Create symlink to ~/.config/dotfiles/git/gitignore:
+# Create symlinks to dotfiles:
+ln -s $DOTFILES/cli-tools/git/account-config/global $HOME/.gitconfig
 ln -s $DOTFILES/cli-tools/git/gitignore $HOME/.gitignore
 

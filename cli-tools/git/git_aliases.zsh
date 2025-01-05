@@ -6,7 +6,7 @@
 # Copy this line to do so:
 # source ~/personal/github/dotfiles/git/git_aliases.zsh                   # Git
 
-alias gitalizer="$DOTFILES/cli-tools/git/gitalizer.sh"
+alias gitalizer="$DOTFILES/cli-tools/git/scripts/gitalizer.sh"
 
 #------------------------------------------------------------------------------
 #----- Working Tree

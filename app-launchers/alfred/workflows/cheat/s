@@ -3,6 +3,221 @@
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
+# Git
+
+# Git: File is modified but not staged.
+M flag
+
+# Git: Check device for changes.
+gitalizer
+
+# Git: List Git commands.
+glc  |  git
+
+# Git: Show status of working tree.
+gs  |  git status
+
+# Git: Clone a repository.
+gc <url>  |  git clone <url>
+
+# Git: Reset all changed files to state of last commit.
+gra  |  git restore .
+
+# Git: Reset a file to state of last commit.
+grf <file>  |  git restore <file>
+
+# Git: Show commit history.
+gh  |  git log
+
+# Git: Show all branches (local and remote).
+gbsa  |  git branch -a
+
+# Git: Show local branches.
+gbsl  |  git branch
+
+# Git: Checkout local branch.
+gbcl <branch>  |  git checkout <branch>
+
+# Git: Checkout remote branch.
+gbcr <branch>  |  git checkout --track <branch>
+
+# Git: Create new branch and checkout.
+gbcn <branch>  |  git checkout -b <branch>
+
+# Git: Delete local branch.
+gbdl <branch>  |  git branch -D <branch>
+
+# Git: Delete locally deleted branch on remote too.
+gbdr <branch>  |  git push origin --delete <branch>
+
+# Git: Delete branch everywhere, locally and on remote.
+gbde
+
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+
+
+
+#------------------------------------------------------------------------------
+# Lazygit
+
+# Lazygit: Start lazygit.
+lg  |  lazygit
+
+# Lazygit: Jump one pane down.
+tab
+
+# Lazygit: Jump one pane up.
+shift + tab
+
+# Lazygit: Jump to pane 1
+1
+
+# Lazygit: Jump to pane 2
+2
+
+# Lazygit: Jump to pane 3
+3
+
+# Lazygit: Jump to pane 4
+4
+
+# Lazygit: Jump to pane 5
+5
+
+# Lazygit: Jump pane tab forwards.
+]
+
+# Lazygit: Jump pane tab backwards.
+[
+
+# Lazygit: Exit lazygit.
+ctrl + c
+
+# Lazygit: Navigate pane entries down.
+j  |  down
+
+# Lazygit: Navigate pane entries up.
+k  |  up
+
+# Lazygit: Scroll up in pane.
+page up
+
+# Lazygit: Scroll down in pane.
+page down
+
+# Lazygit: Display key bindings for actual pane.
+?
+
+# Lazygit: Search in key bindings buffer.
+/<search-term>
+
+# Lazygit: Close floating window.
+esc
+
+# Lazygit: Stage file (pane 2, files tab).
+space
+
+# Lazygit: Unstage file (pane 2, files tab).
+space
+
+# Lazygit: Stage all files (pane 2, files tab).
+a
+
+# Lazygit: Enter hunk stage mode (pane 2, files tab).
+enter
+
+# Lazygit: Stage line in hunk stage buffer.
+space
+
+# Lazygit: Unstage line in hunk stage buffer.
+space
+
+# Lazygit: Jump between hunk stage buffers.
+tab
+
+# Lazygit: Leave hunk stage mode.
+esc
+
+# Lazygit: Commit changes.
+c
+
+# Lazygit: Push changes.
+P
+
+# Lazygit: Checkout existing branch (pane 3).
+space
+
+# Lazygit: Create new branch (pane 3).
+n
+
+# Lazygit: Rename branch (pane 3).
+R
+
+# Lazygit: Merge a branch into actual branch (pane 3).
+M
+
+# Lazygit:
+# Lazygit:
+# Lazygit:
+
+
+#------------------------------------------------------------------------------
+# Browser
+
+# Browser: Jump to tab 1.
+hold y + 1
+
+# Browser: Jump to tab 2.
+hold y + 2
+
+# Browser: Jump to tab 3.
+hold y + 3
+
+# Browser: Jump to tab 4.
+hold y + 4
+
+# Browser: Jump to tab 5.
+hold y + 5
+
+# Browser: Jump to tab 6.
+hold y + 6
+
+# Browser: Jump to tab 7.
+hold t + 7
+
+# Browser: Jump to tab 8.
+hold t + 8
+
+# Browser: Kill tab.
+hold y|t esc
+
+# Browser: New tab.
+right launcher
+
+# Browser: Page forward.
+hold t + right thumb middle
+
+# Browser: Page backwards.
+hold y + left thumb middle
+
+# Browser: Jump to the next tab.
+hold t + right thumb top
+
+# Browser: Jump to the previous tab.
+hold y + left thumb top
+
+# Browser: Search on webpage.
+hold y + left thumb bottom  |  cmd|ctrl + f
+
+# Browser: Jump into search-/address-bar.
+hold t + right thumb bottom
+
+
+#------------------------------------------------------------------------------
 # bat
 
 # bat: Reload bat config.

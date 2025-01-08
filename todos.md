@@ -12,3 +12,4 @@ brew install delta
 brew install tldr
 brew install thefuck
 brew install zoxide
+brew install jesseduffield/lazygit/lazygit

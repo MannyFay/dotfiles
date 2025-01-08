@@ -27,10 +27,12 @@ alias gbsl='git branch'                         # 'Show Local' branches (quit wi
 alias gbcl='git checkout'                       # 'Checkout Local' branch (add a branch name).
 alias gbcr='git checkout --track'               # 'Checkout Remote' branch (add remoteName/branchName).
 alias gbcn='git checkout -b'                    # Check out new branch (add name).
-alias gbdl='git checkout main && git branch -D' # Delete branch locally (add a branch name).
+alias gbdl='git add . && git commit -m "WIP" && git checkout main && git branch -D' # Delete branch locally (add a branch name).
 alias gbdr='git push --delete origin'           # Delete branch on remote repository (add remote branch-name).
+# Create script for this:
+# alias gbde='git add . && git commit -m "WIP" && git checkout main && git branch -D && git push --delete origin' # Delete branch locally and on remote repository (add a branch name).
 
-#------------------------------------------------------------------------------
+# #------------------------------------------------------------------------------
 #----- Index
 
 alias gisf='git add'                # Stage file (add file or path).

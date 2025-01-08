@@ -159,6 +159,9 @@ source $DOTFILES/cli-tools/fzf/fzf_aliases.zsh
 # Git
 source $DOTFILES/cli-tools/git/git_aliases.zsh
 
+# Lazygit
+source $DOTFILES/cli-tools/lazygit/lazygit_aliases.zsh
+
 # SSH
 source $DOTFILES/cli-tools/ssh/ssh_aliases.zsh
 

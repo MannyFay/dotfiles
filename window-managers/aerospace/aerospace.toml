@@ -171,24 +171,24 @@ alt-ctrl-cmd-0 = 'workspace 10'
 # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 # alt-b = 'workspace B'
 # Jump to Chrome browser:
-alt-c = 'workspace C'
+alt-ctrl-cmd-c = 'workspace C'
 # alt-d = 'workspace D'
 # alt-e = 'workspace E'
 # Jump to Firefox Developer Edition browser:
-alt-f = 'workspace F'
+alt-ctrl-cmd-f = 'workspace F'
 # alt-g = 'workspace G'
 # alt-i = 'workspace I'
 # Jump to Apple Music:
-alt-m = 'workspace M'
+alt-ctrl-cmd-m = 'workspace M'
 # alt-n = 'workspace N'
 # alt-o = 'workspace O'
 # alt-p = 'workspace P'
 # alt-q = 'workspace Q'
 # alt-r = 'workspace R'
 # Jump to Safari browser:
-alt-s = 'workspace S'
+alt-ctrl-cmd-s = 'workspace S'
 # Jump to Terminal:
-alt-t = 'workspace T'
+alt-ctrl-cmd-t = 'workspace T'
 # alt-u = 'workspace U'
 # alt-v = 'workspace V'
 # alt-w = 'workspace W'

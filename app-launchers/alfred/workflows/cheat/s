@@ -20,14 +20,14 @@ gs  |  git status
 # Git: Clone a repository.
 gc <url>  |  git clone <url>
 
-# Git: Reset all changed files to state of last commit.
+# Git: Reset all changed files in working tree to the state of last commit.
 gra  |  git restore .
 
-# Git: Reset a file to state of last commit.
+# Git: Reset a changed file to in working tree to the state of last commit.
 grf <file>  |  git restore <file>
 
 # Git: Show commit history.
-gh  |  git log
+gl  |  git log
 
 # Git: Show all branches (local and remote).
 gbsa  |  git branch -a
@@ -39,7 +39,7 @@ gbsl  |  git branch
 gbcl <branch>  |  git checkout <branch>
 
 # Git: Checkout remote branch.
-gbcr <branch>  |  git checkout --track <branch>
+gbcr <remote/branch>  |  git checkout --track <remote/branch>
 
 # Git: Create new branch and checkout.
 gbcn <branch>  |  git checkout -b <branch>
@@ -51,14 +51,41 @@ gbdl <branch>  |  git branch -D <branch>
 gbdr <branch>  |  git push origin --delete <branch>
 
 # Git: Delete branch everywhere, locally and on remote.
-gbde
+gbde (WIP: In Aliases)
+
+# Git: Stage file(s) into index.
+gisf <file(s)>  |  git add <file(s)>
+
+# Git: Stage parts of file into index.
+gisp <file>  |  git add -p <file>
+
+# Git: Stage all changed files to index.
+gisa  |  git add .
+
+# Git: Unstage file from index.
+giuf <file>  |  git restore --staged <file>
+
+# Git: Unstage parts of file from index.
+giup  |  git restore -p
 
 # Git:
 # Git:
 # Git:
 # Git:
 # Git:
-
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
+# Git:
 
 
 #------------------------------------------------------------------------------

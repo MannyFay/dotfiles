@@ -4,7 +4,7 @@
 
 
 #------------------------------------------------------------------------------
-#----- Sail
+# Sail
 
 alias sail='./vendor/bin/sail'       # Use 'sail' instead of './vendor/bin/sail'.
 alias sud='./vendor/bin/sail up -d'  # Start Sail in detached mode.
@@ -13,9 +13,8 @@ alias sd='./vendor/bin/sail down'    # Stop Sail.
 alias st="./vendor/bin/sail test"    # Run tests.
 
 
-
 #------------------------------------------------------------------------------
-#----- Sail Composer
+# Sail Composer
 
 # Start Composer update:
 alias scu='./vendor/bin/sail composer update'
@@ -24,36 +23,28 @@ alias scu='./vendor/bin/sail composer update'
 alias svp='./vendor/bin/sail vendor:publish --force'
 
 
-alias smfs='sail migrate:fresh --seed'
-# Refresh database with project seeders.
-
-alias scda='sail composer dump-autoload'
-
-alias scu='sail composer update'
+# Run Composer dump-autoload:
+alias scda='./vendor/bin/sail composer dump-autoload'
 
 
 #------------------------------------------------------------------------------
-#----- Sail Artisan
+# Sail Artisan
 
-alias salc='./vendor/bin/sail artisan'  # Show artisan commands.
-alias samctrl='sail artisan make:controller'
-alias samview='sail artisan make:view'
+# List artisan commands:
+alias salc='./vendor/bin/sail artisan'
+
+# Refresh database with project seeders:
+alias smfs='./vendor/bin/sail artisan migrate:fresh --seed'
+
+# Create new controller:
+alias samctrl='./vendor/bin/sail artisan make:controller'
+
+# Create new model:
+alias samview='./vendor/bin/sail artisan make:view'
+
+# Create new migration:
 alias sammigration='.vendor/bin/sail artisan make:migration'
-alias samfseed='./vendor/bin/sail artisan migrate:fresh --seed'
 
+# Create new seeder:
+alias samseeder='./vendor/bin/sail artisan make:seeder'
 
-
-# alias l,lc='php artisan'
-# List commands.
-
-
-# alias l,seeddb='php artisan db:seed'
-# Seed database with records.
-
-
-# alias l,st='php artisan tinker'
-# Start Tinker CLI.
-
-
-# laravel clockwork browser plugin anschauen!
-# table plus sql oberfläche!

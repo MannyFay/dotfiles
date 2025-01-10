@@ -876,12 +876,280 @@ mas account
 mas outdated
 
 
+#------------------------------------------------------------------------------
+# Laravel
+
+# Laravel: Start Sail Docker environment.
+su  |  sail up  |  ./vendor/bin/sail up
+
+# Laravel: Start Sail Docker environment in detached mode.
+sud  |  sail up -d  |  ./vendor/bin/sail up -d
+
+# Laravel: Stop Sail Docker environment.
+sd  |  sail down  |  ./vendor/bin/sail down
+
+# Laravel: Run Tests.
+st  |  sail test  |  ./vendor/bin/sail test
+
+# Laravel: Start Composer update.
+scu  |  sail composer update  |  ./vendor/bin/sail composer update
+
+# Laravel: Publish blueprints from vendor directory.
+svp  |  sail vendor:publish --force  |  ./vendor/bin/sail vendor:publish --force
+
+# Laravel: Migrate database fresh and seed it.
+smfs  |  sail migrate:fresh --seed  |  ./vendor/bin/sail migrate:fresh --seed
+
+# Laravel: Run Composer dump-autoload.
+scds  |  sail composer dump-autoload  |  ./vendor/bin/sail composer dump-autoload
+
+# Laravel: List Artisan commands.
+salc  |  sail artisan  |  ./vendor/bin/sail artisan
+
+# Laravel: Create a new controller file.
+samctrl <name>  |  sail artisan make:controller <name>  |  ./vendor/bin/sail artisan make:controller <name>
+
+# Laravel: Create a new view file.
+samview <name>  |  sail artisan make:view <name>  |  ./vendor/bin/sail artisan make:view <name>
+
+# Laravel: Create a new migration file.
+sammigration <name>  |  sail artisan make:migration <name>  |  ./vendor/bin/sail artisan make:migration <name>
+
+# Laravel: Create a new seeder file.
+samseeder <name>  |  sail artisan make:seeder <name>  |  ./vendor/bin/sail artisan make:seeder <name>
+
+
 
 #------------------------------------------------------------------------------
-#----- Alfred
+# Alfred
 
 # Alfred: Open Alfred.
-cmd space (MK1: right launcher)
+right launcher  |  cmd space
+
+# Alfred: Show actual date and time.
+now
+
+# Alfred: Show cheat sheet.
+cs <search-term>
+
+# Alfred: Kill a specific process.
+kill <process-name>
+
+# Alfred: Set a timer.
+timer <time><unit>
+
+# Alfred: List all running timers.
+timers
+
+# Alfred: Choose audio output device.
+audioout
+
+# Alfred: Choose audio input device.
+audioin
+
+# Alfred: Convert a number.
+conv <number> <unit>
+
+# Alfred: Check network quality.
+netquality
+
+# Alfred: Load Ansible documentation.
+ansible <search-term>
+
+# Alfred: Load Bash documentation.
+bash <search-term>
+
+# Alfred: Load C++ documentation.
+cpp <search-term>
+
+# Alfred: Load Composer documentation.
+composer <search-term>
+
+# Alfred: Load CSS documentation.
+css <search-term>
+
+# Alfred: Load Docker documentation.
+docker <search-term>
+
+# Alfred: Load ESlint documentation.
+eslint <search-term>
+
+# Alfred: Load Git documentation.
+git <search-term>
+
+# Alfred: Load Homebrew documentation.
+homebrew <search-term>
+
+# Alfred: Load HTML documentation.
+html <search-term>
+
+# Alfred: Load HTTP documentation.
+http <search-term>
+
+# Alfred: Load JavaScript documentation.
+js <search-term>
+
+# Alfred: Load Jest documentation.
+jest <search-term>
+
+# Alfred: Load JQ documentation.
+jq <search-term>
+
+# Alfred: Load Laravel documentation.
+laravel <search-term>
+
+# Alfred: Load Lodash documentation.
+_ <search-term>
+
+# Alfred: Load Lua documentation.
+lua <search-term>
+
+# Alfred: Load Markdown documentation.
+md <search-term>
+
+# Alfred: Load Next.js documentation.
+nextjs <search-term>
+
+# Alfred: Load Node.js documentation.
+node <search-term>
+
+# Alfred: Load npm documentation.
+npm <search-term>
+
+# Alfred: Load PHP documentation.
+php <search-term>
+
+# Alfred: Load PHPUnit documentation.
+phpunit <search-term>
+
+# Alfred: Load Prettier documentation.
+prettier <search-term>
+
+# Alfred: Load React documentation.
+react <search-term>
+
+# Alfred: Load Sass/SCSS documentation.
+scss <search-term>
+
+# Alfred: Load Tailwind CSS documentation.
+tailwindcss <search-term>
+
+# Alfred: Load TypeScript documentation.
+ts <search-term>
+
+# Alfred: Load Vite documentation.
+vite <search-term>
+
+# Alfred: Load DOM documentation.
+dom <search-term>
+
+# Alfred: Load Yarn documentation.
+yarn
+
+# Alfred: Load clipboard history.
+paste
+
+# Alfred: Start Color Picker.
+picker
+
+# Alfred: Connect Apple AirPods Pro to device.
+apc
+
+# Alfred: Search for bluetooth devices.
+btd
+
+# Alfred: Turn on/off bluetooth.
+btt
+
+# Alfred: Track audio with Shazam.
+shazam
+
+# Alfred: Search disk with fzf.
+fzf <search-term>
+
+# Alfred: Show fzf search history.
+fzf-history
+
+# Alfred: Edit fzf search history.
+fzf-edit-history
+
+# Alfred: Search in Next.js documentation.
+njs <search-term>
+
+# Alfred: Start Lorem Ipsum generator.
+lipsum <number>
+
+# Alfred: Navigate results list up.
+hold w + k  |  up
+
+# Alfred: Navigate results list down.
+hold w + j  |  down
+
+# Alfred: Search in Apple Contacts.
+dc <search-term>
+
+# Alfred: Mute the actual microphone device.
+micmute
+
+# Alfred: Un-mute the actual microphone device.
+micunmute
+
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+# Alfred: .
+
+# Start/stop playing on Apple Music.
+hold z + j  |  Alfred: mpp
+
+# Start/stop playing actual source.
+hold z + j  |  FN Key
+
+# Increase volume.
+hold z + k  |  FN Key
+
+# Decrease volume.
+hold z + ,  |  FN Key
+
+# Next track.
+hold z + l  |  FN Key
+
+# Previous track.
+hold z + .  |  FN Key
+
+# Increase brightness.
+hold z + ;  |  FN Key
+
+# Decrease brightness.
+hold z + /  |  FN Key
+
+# Create area screenshot.
+hold z + right launcher  |  cmd shift 4
+
+# Change keyboard layout.
+hold z + h  |  Globe key
+
+# Start/stop Cursor Pro.
+hold z + u
+
+# Start/stop Presentify.
+hold z + i
+
+# Start/stop Mirror Magnet.
+hold z + o
+
+# Start/stop Keystroke Pro.
+hold z + p
+
+# Lock device.
+hold z + esc  |  Alfred: lock
+
 
 # Alfred: Start screen saver.
 screensaver

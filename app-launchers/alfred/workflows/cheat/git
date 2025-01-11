@@ -7,22 +7,22 @@
 #----- Working Tree
 
 # List Git commands (git)
-# glc
+glc
 
 # Show status of worktree (git status)
-# gs
+gs
 
 # Clone remote repository (git clone <remote-url>)
-# gc <url>
+gc <url>
 
 # Restore all changed files in working tree (git restore .)
-# gra
+gra
 
 # Restore a changed file in working tree (git restore <file>)
-# grf <file>
+grf <file>
 
 # Show commit history (git log)
-# gl
+gl
 
 
 
@@ -30,45 +30,50 @@
 #----- Branching
 
 # Show all Git branches inclusively remote repository (quit with q) (git branch -a)
-# gbsa
+gbsa
 
 # Show local branches (quit with q) (git branch)
-# gbsl
+gbsl
 
 # Checkout a local Git branch (git checkout <branch>)
-# gbcl <branch>
+gbcl <branch>
 
 # Checkout a Git branch from remote repository (git checkout --track <remote/branch>)
-# gbcr <remote/branch>
+gbcr <remote/branch>
 
 # Checkout a new local Git branch (git checkout -b <branch>)
-# gbcn <branch>
+gbcn <branch>
 
 # Delete Git branch locally (git restore . && git checkout develop && git branch -D)
-# gbdl <branch>
+gbdl <branch>
 
 # Delete Git branch on remote repository (git push --delete <remote/branch>)
-# gbdr <remote/branch>
+gbdr <remote/branch>
 
+# Checkout develop branch (git checkout develop)
+gcd
+
+# Checkout main branch (git checkout main)
+gcm
 
 
 #------------------------------------------------------------------------------
 #----- Indexing
 
 # Stage file(s) into index (git add <file(s)>)
-# gisf <file(s)>
+gisf <file(s)>
 
 # Stage parts of file into index (git add -p <file>)
-# gisp <file>
+gisp <file>
 
 # Stage all changed files to index (git add .)
-# gisa
+gisa
 
 # Unstage file in Git index (git restore --staged <file(s)>)
-# giuf
+giuf
 
 # Unstage parts of file in Git index (git restore -p <file>)
-# giup
+giup
 
 # Unstage all files in Git index (git restore --staged .)
 giua

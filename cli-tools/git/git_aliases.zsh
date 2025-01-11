@@ -31,6 +31,8 @@ alias gbdl='git add . && git commit -m "WIP" && git checkout main && git branch 
 alias gbdr='git push origin --delete'           # Delete branch on remote repository (add remote branch-name).
 # Create script for this:
 # alias gbde='git add . && git commit -m "WIP" && git checkout main && git branch -D && git push --delete origin' # Delete branch locally and on remote repository (add a branch name).
+alias gbcd='git checkout develop'               # Checkout develop branch.
+alias gbcm='git checkout main'                  # Checkout main branch.
 
 # #------------------------------------------------------------------------------
 #----- Index
@@ -64,7 +66,7 @@ alias gdf='git diff' # Compare files (add file).
 #----- Fetching
 
 alias gf='git fetch'         # Fetch actual branch from remote repository.
-alias gfo='git fetch origin' # Fetch origin.
+alias gfo='git fetch origin' # Fetch actual branch from origin remote.
 
 #------------------------------------------------------------------------------
 #----- Pulling

@@ -53,6 +53,12 @@ gbdr <branch>  |  git push origin --delete <branch>
 # Git: Delete branch everywhere, locally and on remote.
 gbde (WIP: In Aliases)
 
+# Git: Checkout main branch.
+gbcm  |  git checkout main
+
+# Git: Checkout develop branch.
+gbcd  |  git checkout develop
+
 # Git: Stage file(s) into index.
 gisf <file(s)>  |  git add <file(s)>
 
@@ -68,24 +74,72 @@ giuf <file>  |  git restore --staged <file>
 # Git: Unstage parts of file from index.
 giup  |  git restore -p
 
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
-# Git:
+# Git: Unstage all files from index.
+giua  |  git restore --staged .
+
+# Git: Create initial empty commit.
+gci  |  git commit --allow-empty -m "Initial commit"
+
+# Git: Commit changes in index with commit editor.
+gcc  |  git commit
+
+# Git: Commit changes in index with short message.
+gcm <message>  |  git commit -m <message>
+
+# Git: Create a WIP commit.
+gcwip  |  git commit -m "WIP"
+
+# Git: Change last file/commit message (before push).
+gccl  |  git commit --amend
+
+# Git:  Revert last commit (before push).
+gcrl  |  git reset --soft HEAD~1
+
+# Git: Stage all files to index and commit with short message.
+gisacm <message>  |  git add . && git commit -m <message>
+
+# Git: Stage all files to index and commit with WIP message.
+gisacwip  |  git add . && git commit -m "WIP"
+
+# Git: Stage all files to index and commit with 'Update' message.
+gisacupdate  |  git add . && git commit -m "Update"
+
+# Git: Compare files how they differ.
+gdf <file>  |  git diff <file>
+
+# Git: Fetch actual branch from actual remote.
+gf  |  git fetch
+
+# Git: Fetch actual branch from origin remote.
+gfo  |  git fetch origin
+
+# Git: Pull changes from origin/main.
+gpm  |  git pull origin main
+
+# Git: Pull changes from origin/develop.
+gpd  |  git pull origin develop
+
+# Git: Pull changes from actual branch and fetch.
+gpull  |  git pull && git fetch
+
+# Git: Pull actual branch from remote, then push it.
+gpp  |  git pull && git push
+
+# Git: Push actual branch to remote.
+gpush  |  git push
+
+# Git: Revert last push (add commit hash).
+gpr <commit-hash>  |  git revert <commit-hash>
+
+# Git: Stage all files, commit with 'WIP' and push to remote.
+ggo  |  git add . && git commit -m "WIP" && git push
+
+# Git: Stash changes.
+gsc  |  git stash
+
+# Git: Pop stashed changes.
+gsp  |  git stash pop
+
 
 
 #------------------------------------------------------------------------------
@@ -139,7 +193,7 @@ page down
 # Lazygit: Display key bindings for actual pane.
 ?
 
-# Lazygit: Search in key bindings buffer.
+# Lazygit: Search in key bindings buffer and panels.
 /<search-term>
 
 # Lazygit: Close floating window.
@@ -187,6 +241,33 @@ R
 # Lazygit: Merge a branch into actual branch (pane 3).
 M
 
+# Lazygit: View conflicts if Lazygit pop up's one.
+enter
+
+# Lazygit: Enter the merge conflict resolution tool (pane 1).
+enter (on file with conflict)
+
+# Lazygit: Navigate up in conflict resolution tool by hunks.
+k  |  up
+
+# Lazygit: Navigate down in conflict resolution tool by hunks.
+j  |  down
+
+# Lazygit: Select all hunks in conflict resolution tool.
+b
+
+# Lazygit: Select actual hunk in conflict resolution tool to resolve conflict.
+space
+
+# Lazygit: Show all commits in actual branch (pane 3).
+enter
+
+# Lazygit: Show changes of a specific commit (pane 4).
+select commit (enter), select file (enter)
+
+# Lazygit:
+# Lazygit:
+# Lazygit:
 # Lazygit:
 # Lazygit:
 # Lazygit:
@@ -531,6 +612,19 @@ ds<closing-sign>
 # nvim: Equalize width and height for all buffers.
 <L>=
 
+# nvim: Center actual line on screen.
+zz
+
+# nvim: Set actual line to bottom of the screen.
+zb
+
+# nvim: Set actual line to top of the screen.
+zt
+
+# nvim: .
+# nvim: .
+# nvim: .
+# nvim: .
 
 
 #------------------------------------------------------------------------------
@@ -964,6 +1058,9 @@ kill <process-name>
 
 # Alfred: Set a timer.
 timer <time><unit>
+
+# Alfred: Set a timer with two time units.
+timer <time1><unit1> <time2><unit2>
 
 # Alfred: List all running timers.
 timers

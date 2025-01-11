@@ -160,6 +160,7 @@ source $DOTFILES/cli-tools/fzf/fzf_aliases.zsh
 source $DOTFILES/cli-tools/git/git_aliases.zsh
 
 # Lazygit
+source $DOTFILES/cli-tools/lazygit/lazygit_config.zsh
 source $DOTFILES/cli-tools/lazygit/lazygit_aliases.zsh
 
 # SSH

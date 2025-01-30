@@ -272,6 +272,21 @@ select commit (enter), select file (enter)
 # Lazygit:
 # Lazygit:
 
+#------------------------------------------------------------------------------
+# Yazi
+
+# Yazi: Start Yazi file browser.
+y  |  yazi
+
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
+# Yazi: .
 
 #------------------------------------------------------------------------------
 # Browser
@@ -548,6 +563,12 @@ hold p + left launcher  |  alt+tab
 
 #------------------------------------------------------------------------------
 #----- nvim
+
+# nvim: Jump to next Todo comment.
+tcn
+
+# Jump to previous Todo comment.
+tcp
 
 # nvim: Rename word in current line.
 :s/<word>/<new-word>/g

@@ -31,6 +31,25 @@
     "key": "down",
     "command": "-selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  }
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-editor.action.pageDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-cursorRight",
+    "when": "textInputFocus"
+  },
+  // Use L to jump from sidebar to editor:
+  {
+    "key": "shift+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+b shift+7",
+    "command": "workbench.action.closePanel"
+  },
 ]
-

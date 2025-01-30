@@ -37,8 +37,6 @@ extensions=(
   "vscodevim.vim"
 )
 
-for extension in "${extensions[@]}"
-do
+for extension in "${extensions[@]}"; do
   code --install-extension $extension
 done
-

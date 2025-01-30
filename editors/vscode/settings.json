@@ -3,7 +3,7 @@
   //--- Editor Settings
   //----------------------------------------------------------------------------
 
-  "files.autoSave": "afterDelay",               // When to auto save files.
+  "files.autoSave": "off",               // When to auto save files.
   "files.autoSaveDelay": 1000,                  // Milliseconds to wait before auto saving.
   "editor.accessibilitySupport": "off",         // Don't use accessibility features VS Code.
   "editor.renderWhitespace": "trailing",        // Show trailing whitespace.
@@ -20,6 +20,8 @@
   "files.trimTrailingWhitespace": true,         // Trim trailing whitespace after auto save.
   "editor.occurrencesHighlight": "off",         // Don't highlight other occurrences of word under cursor.
   "workbench.editor.showTabs": "none",          // Don't use tabs.
+  "workbench.editor.limit.enabled": true,       // Limit number of open buffers in background.
+  "workbench.editor.limit.value": 10,            // Number of open buffers in one editor group (buffer). If i set this to 1, it doesn't allow more buffers than 1!!
 
   // Project Tree:
   "workbench.tree.indent": 12,                    // Indentation in px.
@@ -61,9 +63,67 @@
     "numbers": "#A5C25C",
     "functions": "#E8BF6A",
     "variables": "#C064C7",
-    "types": "#45C8B0"
-  },
+    "types": "#45C8B0",
   "textMateRules": [
+    { // Turquoise: HTML attributes, namespaces, class names etc.:
+      "scope": [
+        // TypeScript:
+        "entity.other.attribute-name.tsx", // HTML attribute name.
+        "meta.type.annotation.tsx",
+      ],
+      "settings": {
+        "foreground": "#45C8B0"
+      }
+    },
+    { // White: Operators, braces etc.:
+      "scope": [
+        // TypeScript:
+        "punctuation.section.embedded.begin.tsx",
+        "punctuation.section.embedded.end.tsx",
+        "keyword.operator.assignment.tsx",
+        "meta.brace.round.tsx",
+        "punctuation.separator.key-value.tsx",
+        "punctuation.definition.tag.begin.tsx",
+        "punctuation.definition.tag.end.tsx",
+        "punctuation.separator.comma.tsx",
+        "punctuation.terminator.statement.tsx",
+        "punctuation.definition.block.tsx",
+        "keyword.operator.logical.tsx",
+        "keyword.operator.comparison.tsx",  // ===, !==, etc.
+        "punctuation.accessor.tsx",         // . operator.
+        "meta.brace.square.tsx",           // Square brackets [].
+        // JSON:
+        "punctuation.definition.dictionary.begin.json.comments",
+        "punctuation.definition.dictionary.end.json.comments",
+        "punctuation.separator.dictionary.pair.json.comments",
+        "punctuation.separator.dictionary.key-value.json.comments", // : sign
+        "punctuation.definition.array.begin.json.comments",
+        "punctuation.definition.array.end.json.comments",
+      ],
+      "settings": {
+        "foreground": "#ABABAB"
+      }
+    },
+    { // Variables, constants etc.:
+      "scope": [
+        "variable.other.readwrite.tsx",
+        "variable.other.constant.object.tsx",
+        "support.type.property-name.json.comments",
+      ],
+      "settings": {
+        "foreground": "#C064C7"
+      }
+    },
+    { // Strings etc.:
+      "scope": [
+        // TypeScript:
+        "punctuation.definition.template-expression.begin.tsx",
+        "punctuation.definition.template-expression.end.tsx",
+      ],
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    }
     { // HTML
       "scope": [
         "punctuation.definition.tag.begin.html",  // Tag begin bracket.
@@ -89,7 +149,26 @@
         "foreground": "#45C8B0"
       }
     }
-  ],
+  ]
+  },
+  "editorBracketHighlight.foreground1": "#FF0000",
+  "editorBracketHighlight.foreground2": "#FF0000",
+  "editorBracketHighlight.foreground3": "#FF0000",
+  "editorBracketHighlight.foreground4": "#FF0000",
+  "editorBracketHighlight.foreground5": "#FF0000",
+  "editorBracketHighlight.foreground6": "#FF0000",
+  "editorBracketPairGuide.activeBackground1": "#FF0000",
+  "editorBracketPairGuide.activeBackground2": "#FF0000",
+  "editorBracketPairGuide.activeBackground3": "#FF0000",
+  "editorBracketPairGuide.activeBackground4": "#FF0000",
+  "editorBracketPairGuide.activeBackground5": "#FF0000",
+  "editorBracketPairGuide.activeBackground6": "#FF0000",
+  "editorBracketPairGuide.background1": "#FF0000",
+  "editorBracketPairGuide.background2": "#FF0000",
+  "editorBracketPairGuide.background3": "#FF0000",
+  "editorBracketPairGuide.background4": "#FF0000",
+  "editorBracketPairGuide.background5": "#FF0000",
+  "editorBracketPairGuide.background6": "#FF0000",
   "workbench.colorCustomizations": {
 
     //--------------------------------------------------------------------------
@@ -110,10 +189,10 @@
     "commandCenter.background": "#252525",        // Background of search bar.
     "commandCenter.activeBackground": "#252525",
     "commandCenter.border": "#252525",
-    "commandCenter.inactiveForeground": "",
+    "commandCenter.inactiveForeground": "#287BDE",
     "commandCenter.inactiveBorder": "#252525",
     "commandCenter.activeBorder": "#252525",
-    "commandCenter.debuggingBackground": "#287BDE",
+    "commandCenter.debuggingBackground": "#287BDE70",
 
     //--------------------------------------------------------------------------
     // Bread Crumbs (under title or tab bar)
@@ -159,11 +238,11 @@
     "editorLineNumber.activeForeground": "#ABABAB",      // Active line number.
     "editorLineNumber.dimmedForeground": "#569CD6",
     "editorGutter.background": "#191B1C",
-    "editorGutter.modifiedBackground": "#ED3276",
+    "editorGutter.modifiedBackground": "#FF0000",
     "editorGutter.addedBackground": "#4FA544",
     "editorGutter.deletedBackground": "#DCDCAA",
-    "editorGutter.commentRangeForeground": "#ED3276",
-    "editorGutter.commentGlyphForeground": "#287BDE",
+    "editorGutter.commentRangeForeground": "#252525",  // Line in gutter if using Live Share.
+    "editorGutter.commentGlyphForeground": "#191B1C",  // + symbol in comment range if using Live Share.
     "editorGutter.commentUnresolvedGlyphForeground": "#DCDCAA",
     "editorGutter.foldingControlForeground": "#45C8B0",
 
@@ -192,7 +271,7 @@
     "button.hoverBackground": "#191B1C",
     "button.secondaryForeground": "#569CD6",
     "button.secondaryBackground": "#191B1C",
-    "button.secondaryHoverBackground": "#ED3276",
+    "button.secondaryHoverBackground": "#191B1C",  // Hover background of secondary buttons.
     "toolbar.hoverBackground": "#191B1C",          // Hover background of tool icons.
     "toolbar.hoverOutline": "#191B1C",             // Hover outline of tool icons.
     "toolbar.activeBackground": "#191B1C",         // Background if tool icon is clicked.
@@ -350,7 +429,7 @@
     "statusBarItem.warningHoverForeground": "#E8BF6A",  // Hover warning icon.
 
     "statusBarItem.compactHoverBackground": "#191B1C",
-    "statusBarItem.focusBorder": "#C064C7",
+    "statusBarItem.focusBorder": "#569CD6",
     "statusBarItem.offlineBackground": "#ED3276",
     "statusBarItem.offlineForeground": "#E8BF6A",
     "statusBarItem.offlineHoverForeground": "#4FA544",
@@ -389,33 +468,41 @@
     "walkThrough.embeddedEditorBackground": "#4FA544",
     "walkthrough.stepTitle.foreground": "#CE9178",
 
+
+    //--------------------------------------------------------------------------
     // Git Colors
+
+    "gitDecoration.addedResourceForeground": "#FF0000",
+    "gitDecoration.renamedResourceForeground": "#FF0000",
+    "gitDecoration.stageModifiedResourceForeground": "#FF0000",
+    "gitDecoration.stageDeletedResourceForeground": "#FF0000",
+    "gitDecoration.submoduleResourceForeground": "#ABABAB",
     "gitDecoration.modifiedResourceForeground": "#FF0000",
-    "gitDecoration.deletedResourceForeground": "#606366",
+    "gitDecoration.deletedResourceForeground": "#FF0000",
     "gitDecoration.untrackedResourceForeground": "#FF0000",
     "gitDecoration.ignoredResourceForeground": "#606366",
     "gitDecoration.conflictingResourceForeground": "#E8BF6A",
 
     // Error Lens Extension
-    "errorLens.errorBackground": "#FF000015",       // Background of line with error.
+    "errorLens.errorBackground": "#191B1C00",       // Background of line with error.
     "errorLens.errorMessageBackground": "#287BDE",
     "errorLens.errorRangeBackground": "#ED3276",
     "errorLens.errorBackgroundLight": "#45C8B0",
     "errorLens.errorForeground": "#FF0000",         // Text of error message.
     "errorLens.errorForegroundLight": "#A5C25C",
-    "errorLens.warningBackground": "#E8BF6A15",    // Background of line with warning.
+    "errorLens.warningBackground": "#191B1C00",    // Background of line with warning.
     "errorLens.warningMessageBackground": "#287BDE",
     "errorLens.warningRangeBackground": "#ED3276",
     "errorLens.warningBackgroundLight": "#A5C25C",
     "errorLens.warningForeground": "#E8BF6A",      // Text of warning message.
     "errorLens.warningForegroundLight": "#45C8B0",
-    "errorLens.infoBackground": "#569CD615",        // Background of line with info.
+    "errorLens.infoBackground": "#191B1C00",        // Background of line with info.
     "errorLens.infoMessageBackground": "#ABABAB",
     "errorLens.infoRangeBackground": "#45C8B0",
     "errorLens.infoBackgroundLight": "#287BDE",
     "errorLens.infoForeground": "#569CD6",        // Text of info message.
     "errorLens.infoForegroundLight": "#ABABAB",
-    "errorLens.hintBackground": "#4FA54415",    // Background of line with hint.
+    "errorLens.hintBackground": "#191B1C00",    // Background of line with hint.
     "errorLens.hintMessageBackground": "#ABABAB",
     "errorLens.hintRangeBackground": "#ED3276",
     "errorLens.hintBackgroundLight": "#45C8B0",
@@ -797,6 +884,95 @@
 
 
   //----------------------------------------------------------------------------
+  // Git Extension
+
+  "git.enabled": true,              // Enable Git extension.
+  "git.allowForcePush": true,  // Allow force push to remote repository.
+  "git.allowNoVerifyCommit": true,  // Allow commits without verification.
+  "git.alwaysShowStagedChangesResourceGroup": false,
+  "git.alwaysSignOff": false,
+  "git.autofetch": "all",  // Fetch all remotes.
+  "git.autofetchPeriod": 180,  // Time till next autofetch in seconds.
+  "git.autorefresh": true,
+  "git.autoRepositoryDetection": true,  // Automatically detect repositories.
+  "git.autoStash": true,  // Automatically stash changes before pull and pop after pulling.
+  "git.blame.editorDecoration.enabled": false,
+  "git.blame.editorDecoration.template": "${subject}, ${authorName} (${authorDateAgo})",
+  "git.blame.statusBarItem.enabled": false,
+  "git.blame.statusBarItem.template": "${authorName} (${authorDateAgo})",
+  "git.branchPrefix": "",  // Prefix for branch names.
+  "git.branchProtection": [],
+  "git.branchProtectionPrompt": "alwaysPrompt",  // Display promt if branch is protected.
+  "git.branchRandomName.dictionary": [  // Dictionary for random branch names.
+    "adjectives",
+    "animals"
+  ],
+  "git.branchRandomName.enable": false, // Enable/disable random branch names.
+  "git.branchSortOrder": "alphabetically",  // Sort branches alphabetically.
+  "git.branchValidationRegex": "",          // Validate branch name patterns with regex.
+  "git.branchWhitespaceChar": "-",           // Character to replace whitespace in branch names.
+  "git.checkoutType": [                    // Localizations for checkouts.
+    "local",
+    "remote",
+    "tags"
+  ],
+  "git.closeDiffOnOperation": false,  // Don't close diff after committing, stashing etc.
+  "git.commandsToLog": [],             // Commands to log in output channel.
+  "git.confirmEmptyCommits": false,    // Don't confirm empty commits.
+  "git.confirmForcePush": false,       // Don't confirm force push.
+  "git.confirmNoVerifyCommit": false,  // Don't confirm no verify commit.
+  "git.confirmSync": false,           // Don't confirm sync.
+  "git.countBadge": "off",           // Don't show count badge.
+  "git.decorations.enabled": true,   // Enable highlightings and decorations.
+  "git.defaultBranchName": "main",   // Default branch name for new repositories.
+  "git.defaultCloneDirectory": null, // Don't set a specific directory for cloning.
+  "git.detectSubmodules": true,       // Automatically detect submodules.
+  "git.detectSubmodulesLimit": 20,  // Limit of submodules to detect.
+  "git.enableCommitSigning": true,  // Enable commit signing with GPG, SSH etc.
+  "git.enableSmartCommit": false,  // Don't commit all changes if index is empty.
+  "git.enableStatusBarSync": false,  // Don't show Git sync settings in status bar.
+  "git.fetchOnPull": false, // Only fetch the current branch on pull.
+  "git.followTagsWhenSync": false, // Do not push all tags when pushing.
+  "git.ignoredRepositories": [],   // List of repositories to ignore.
+  "git.ignoreLegacyWarning": false, // Don't ignore legacy warning.
+  "git.ignoreLimitWarning": false,  // Don't ignore limit warning.
+  "git.ignoreMissingGitWarning": false, // Don't ignore missing Git warning.
+  "git.ignoreRebaseWarning": false, // Don't ignore rebase warning.
+  "git.ignoreSubmodules": false, // Don't ignore changes in submodules.
+  "git.ignoreWindowsGit27Warning": false, // Don't ignore Git 2.7 warning on Windows OS.
+  "git.inputValidation": false,  // Don't show commit message input validation diagnostics.
+  "git.inputValidationLength": 72, // Maximum length of commit message in characters.
+  "git.inputValidationSubjectLength": 50, // Threshold for showing a warning on long commit messages.
+  "git.mergeEditor": false, // Do not open merge editor automatically on conflicts.
+  "git.openAfterClone": "prompt", // Open repository after cloning if no folder is already open.
+  "git.openDiffOnClick": false, // Don't open diff view on click on change.
+  "git.openRepositoryInParentFolders": "never", // Don't open repository in parent folders.
+  "git.optimisticUpdate": true, // Enable optimistic update state of source control.
+  "git.path": null, // For setting a specific path to the Git executable.
+  "git.postCommitCommand": "sync", // Run git pull && git push after succesful commit.
+  "git.promptToSaveFilesBeforeCommit": "always", // Check for unsaved files before commit.
+  "git.promptToSaveFilesBeforeStash": "always", // Check for unsaved files before stashing.
+  "git.pruneOnFetch": false, // Don't prune remote branches on fetch.
+  "git.pullBeforeCheckout": true, // Pull before checking out a branch.
+  "git.pullTags": true, // Fetch all tags when pulling.
+  "git.rebaseWhenSync": false, // Don't rebase when syncing.
+  "git.rememberPostCommitCommand": false, // Don't remember post commit command.
+  "git.replaceTagsWhenPull": false, // Do not automatically replace tags when pulling.
+  "git.repositoryScanIgnoredFolders": [  // List of ignored folders for scanning for .git folder.
+    "node_modules"
+  ],
+  "git.repositoryScanMaxDepth": 1, // Maximum depth of scan for .git from project root.
+  "git.requireGitUserConfig": true, // Require user configuration for Git.
+  "git.scanRepositories": [], // List of paths to search for Git repositories in.
+  "git.showActionButton": {  // Show action buttons in source control view.
+    "commit": true,
+    "publish": true,
+    "sync": true
+  },
+
+
+
+  //----------------------------------------------------------------------------
   // GitHub Actions Extension
 
 
@@ -845,16 +1021,16 @@
 
   "highlight-matching-tag.customEmptyElements": [],        // Custom elements in addition to default HTML empty elements.
   "highlight-matching-tag.enabled": true,                  // Enable highlighting and status bar.
-  "highlight-matching-tag.highlightFromAttributes": true,  // Highlight from attributes as source.
-  "highlight-matching-tag.highlightFromContent": false,    // Don't highlight from content as source.
-  "highlight-matching-tag.highlightFromName": true,        // Highlight from tag name as source.
-  "highlight-matching-tag.highlightSelfClosing": false,    // Don't highlight self closing tags.
+  "highlight-matching-tag.highlightFromAttributes": false,  // Highlight from attributes as source.
+  "highlight-matching-tag.highlightFromContent": true,    // Don't highlight from content as source.
+  "highlight-matching-tag.highlightFromName": false,        // Highlight from tag name as source.
+  "highlight-matching-tag.highlightSelfClosing": true,    // Don't highlight self closing tags.
   "highlight-matching-tag.noDefaultEmptyElements": false,  // Don't highlight default HTML empty elements.
   "highlight-matching-tag.showPath": false,                // Don't show tag's path in status bar.
   "highlight-matching-tag.showRuler": true,                // Show highlighted tag pair in ruler selection.
   "highlight-matching-tag.styles": {                       // Highlighting of matching tags.
     "opening": {
-      "full": {
+      "name": {
         "custom": {
           "borderWidth": "1px",
           "borderColor": "#606366",
@@ -893,15 +1069,15 @@
   "importCost.javascriptExtensions": [              // File extensions to be parsed by JS parser.
     "\\.jsx?$"
   ],
-  "importCost.largePackageDarkColor": "#d44e40",    // Highlighting of large packages in dark mode.
-  "importCost.largePackageLightColor": "#d44e40",   // Highlighting of large packages in light mode.
+  "importCost.largePackageDarkColor": "#FF0000",    // Highlighting of large packages in dark mode.
+  "importCost.largePackageLightColor": "#FF0000",   // Highlighting of large packages in light mode.
   "importCost.margin": 3,                           // Margin between the end of the line and the message.
-  "importCost.mediumPackageDarkColor": "#7cc36e",   // Highlighting of medium packages in dark mode.
-  "importCost.mediumPackageLightColor": "#7cc36e",  // Highlighting of medium packages in light mode.
+  "importCost.mediumPackageDarkColor": "#E8BF6A",   // Highlighting of medium packages in dark mode.
+  "importCost.mediumPackageLightColor": "#E8BF6A",  // Highlighting of medium packages in light mode.
   "importCost.mediumPackageSize": 100,              // Upper size limit (kb) for medium packages.
   "importCost.showCalculatingDecoration": true,     // Show calculating decoration.
-  "importCost.smallPackageDarkColor": "#7cc36e",    // Highlighting of small packages in dark mode.
-  "importCost.smallPackageLightColor": "#7cc36e",   // Highlighting of small packages in light mode.
+  "importCost.smallPackageDarkColor": "#4FA544",    // Highlighting of small packages in dark mode.
+  "importCost.smallPackageLightColor": "#4FA544",   // Highlighting of small packages in light mode.
   "importCost.smallPackageSize": 50,                // Upper size limit (kb) for small packages.
   "importCost.svelteExtensions": [                  // File extensions to be parsed by Svelte parser.
     "\\.svelte$"
@@ -1217,7 +1393,13 @@
   //----------------------------------------------------------------------------
   // Custom CSS and JS Loader Extension
 
-  "vscode_custom_css.imports": ["file:///Volumes/Users/manny/personal/github/dotfiles/vscode/extensions/pretty-ts-errors-hack.css"],
+  "vscode_custom_css.imports": [
+    "file:///Volumes/Users/manny/personal/github/dotfiles/vscode/extensions/pretty-ts-errors-hack.css"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editorconfig.generateAuto": false,
+  "terminal.integrated.env.osx": {},
+  "workbench.startupEditor": "none",
   // sudo chown -R $(whoami) "$(which code)"
   // sudo chown -R $(whoami) /opt/homebrew/.vscode
 
@@ -1269,5 +1451,4 @@
   // "trailing-spaces.syntaxIgnore": [],
   // "trailing-spaces.trimOnSave": false,
 }
-
 

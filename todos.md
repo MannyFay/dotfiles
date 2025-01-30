@@ -16,6 +16,8 @@ brew install jesseduffield/lazygit/lazygit
 brew install blueutil
 Stop Apache on Ubuntu (Don't turn it on again after reboot)!
 
+Add Yazi installation to ansible.
+
 for alfred to connect bluetooth:
 open "x-apple.systempreferences:com.apple.preference.security?Privacy_Bluetooth"
 

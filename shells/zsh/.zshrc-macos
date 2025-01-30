@@ -176,8 +176,12 @@ source $DOTFILES/cli-tools/tmux/tmux_aliases.zsh
 # Start tmux-sessionizer with ctrl+f:
 bindkey -s ^f "$DOTFILES/cli-tools/tmux/scripts/tmux_sessionizer.sh\n"
 
+# Yazi
+source $DOTFILES/cli-tools/yazi/yazi_aliases.zsh
+
 # zoxide
 source $DOTFILES/cli-tools/zoxide/zoxide_config.zsh
+
 
 #------------------------------------------------------------------------------
 # Dev-Tools Setup
@@ -224,3 +228,5 @@ export PATH=/usr/local/opt/krb5/sbin:$PATH
 export LDFLAGS="-L/usr/local/opt/krb5/lib"
 export CPPFLAGS="-I/usr/local/opt/krb5/include"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+PATH=~/.console-ninja/.bin:$PATH

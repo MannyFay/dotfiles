@@ -241,7 +241,7 @@
     "editorGutter.modifiedBackground": "#FF0000",
     "editorGutter.addedBackground": "#4FA544",
     "editorGutter.deletedBackground": "#DCDCAA",
-    "editorGutter.commentRangeForeground": "#252525",  // Line in gutter if using Live Share.
+    "editorGutter.commentRangeForeground": "#569CD6",  // Line in gutter if using Live Share.
     "editorGutter.commentGlyphForeground": "#191B1C",  // + symbol in comment range if using Live Share.
     "editorGutter.commentUnresolvedGlyphForeground": "#DCDCAA",
     "editorGutter.foldingControlForeground": "#45C8B0",
@@ -969,6 +969,32 @@
     "publish": true,
     "sync": true
   },
+  "git.showCommitInput": true,  // Show commit input field in Git panel.
+  "git.showInlineOpenFileAction": true, // Show inline open file action in Git panel.
+  "git.showProgress": true, // Show Git action progress.
+  "git.showPushSuccessNotification": false, // Do not show 'successful push' notification.
+  "git.similarityThreshold": 50, // Changes threshold for similarity detection.
+  "git.smartCommitChanges": "all", // Changes that are automatically staged on smart commit.
+  "git.statusLimit": 10000, // Number of changes that can be parsed by 'git status'.
+  "git.suggestSmartCommit": false, // Don't suggest smart commit.
+  "git.supportCancellation": false, // Don't show cancellation notification.
+  "git.terminalAuthentication": true, // Enable terminal authentication handler.
+  "git.terminalGitEditor": false, // Don't use VS-Code as terminal Git editor.
+  "git.timeline.date": "committed", // Show commit date in timeline.
+  "git.timeline.showAuthor": true, // Show author of commit in timeline.
+  "git.timeline.showUncommitted": false, // Don't show uncommitted changes in timeline.
+  "git.untrackedChanges": "mixed", // All changes (tracked and untracked) are shown.
+  "git.useCommitInputAsStashMessage": false, // Don't use commit message as stash message in Git panel.
+  "git.useEditorAsCommitInput": true, // Use full text editor in commit input at Git panel.
+  "git.useForcePushIfIncludes": true, // Force push uses 'force-if-incluedes' strategy.
+  "git.useForcePushWithLease": true, // Force push uses 'force-with-lease' strategy.
+  "git.useIntegratedAskPass": true, // Use integrated askpass for Git strategies.
+  "git.verboseCommit": false, // Don't show verbose commit messages if full text editor is activated.
+
+
+  //----------------------------------------------------------------------------
+  // GitHub
+
 
 
 
@@ -1383,6 +1409,9 @@
   // Prettier+:
   "editor.defaultFormatter": "svipas.prettier-plus",  // Set Prettier+ as default formatter.
   "editor.formatOnPaste": true,                       // Format code on paste.
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+  },
   "editor.formatOnSave": true,
   "blade.format.enable": true,                         // Format Blade files
   "bladeFormatter.format.enabled": true,
@@ -1428,10 +1457,6 @@
   // ],
 
 
-
-
-
-
   //----------------------------------------------------------------------------
   // Trailing Spaces Extension (VS Code has this built in.)
   // https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
@@ -1450,5 +1475,136 @@
   // "trailing-spaces.showStatusBarMessage": true,
   // "trailing-spaces.syntaxIgnore": [],
   // "trailing-spaces.trimOnSave": false,
+
+
+  //----------------------------------------------------------------------------
+  // TypeScript Extension
+
+  "javascript.autoClosingTags": true, // Enable automatic closing of JSX tags.
+  "javascript.format.enable": true, // Enable default JavaScript formatter.
+  "javascript.format.insertSpaceAfterCommaDelimiter": true, // Insert space after comma.
+  "javascript.format.insertSpaceAfterConstructor": false, // Don't insert space after constructor.
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true, // Insert space after function keyword for anonymous functions.
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // Insert space after keywords in control flow statements.
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true, // Insert space after opening and before closing empty braces.
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // Don't insert space after opening and before closing JSX expression braces {child}.
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false, // Don't insert space after opening and before closing non-empty braces {child}.
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // Don't insert space after opening and before closing non-empty brackets [child].
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false, // Don't insert space after opening and before closing non-empty parenthesis (child).
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false, // Don't insert space after opening and before closing template string braces ${child}.
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": true, // Insert space after semicolon in for statements.
+  "typescript.format.insertSpaceAfterTypeAssertion": false, // Don't insert space after type assertion.
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true, // Insert space before and after binary operators.
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false, // Don't insert space before function parenthesis.
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true, // Place open brace on new line for control blocks.
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true, // Place open brace on new line for functions.
+  "typescript.format.semicolons": "insert", // Insert semicolons on formatting.
+  "javascript.inlayHints.enumMemberValues.enabled": true, // Show enum member values in inlay hints.
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true, // Show function like return types in inlay hints.
+  "javascript.inlayHints.parameterNames.enabled": "all",  // Show parameter names in inlay hints.
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true, // Suppress parameter name inlay hints when argument matches name.
+  "javascript.inlayHints.parameterTypes.enabled": true, // Show parameter types in inlay hints.
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true, // Show property declaration types in inlay hints.
+  "javascript.inlayHints.variableTypes.enabled": true, // Show variable types in inlay hints.
+  "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true, // Suppress variable type inlay hints when type matches name.
+  "javascript.preferences.autoImportFileExcludePatterns": [], // Exclude patterns for auto import.
+  "javascript.preferences.autoImportSpecifierExcludeRegexes": [], // Exclude regexes for auto import.
+  "javascript.preferences.importModuleSpecifier": "relative", // Use relative paths for imports if possible.
+  "javascript.preferences.importModuleSpecifierEnding": "auto", // Select path ending for imports from project settings.
+  "javascript.preferences.jsxAttributeCompletionStyle": "auto", // Select because of context if '= {}' or '= ""' is used.
+  "javascript.preferences.organizeImports": {}, // Organize how imports are ordered.
+  "javascript.preferences.quoteStyle": "single", // Use single quotes for strings.
+  "javascript.preferences.renameMatchingJsxTags": true, // Rename matching JSX tags automatically.
+  "javascript.preferences.useAliasesForRenames": false, // Don't introduce shorthand aliases for renames.
+  "javascript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
+  "javascript.referencesCodeLens.enabled": false, // Don't show references code lens.
+  "javascript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
+  "javascript.suggest.autoImports": true, // Show auto import suggestions.
+  "javascript.suggest.classMemberSnippets.enabled": true, // Enable snippet completion for class members.
+  "javascript.suggest.completeFunctionCalls": true, // Complete function calls with their parameters.
+  "javascript.suggest.completeJSDocs": true, // Complete JSDoc comments.
+  "javascript.suggest.enabled": true, // Enable auto completion suggestions.
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true, // Include automatic completions for optional chains.
+  "javascript.suggest.includeCompletionsForImportStatements": true, // Include completions for import statements.
+  "javascript.suggest.jsdoc.generateReturns": true, // Generate returns in JSDoc comments.
+  "javascript.suggest.names": true, // Include unique names in suggestions.
+  "javascript.suggest.paths": true, // Suggest paths in import statements and require calls.
+  "javascript.suggestionActions.enabled": true, // Enable suggestion actions diagnostics.
+  "javascript.updateImportsOnFileMove.enabled": "always", // Update imports on file move.
+  "javascript.updateImportsOnPaste.enabled": true, // Update imports on paste.
+  "javascript.validate.enable": true, // Enable JavaScript validation.
+  "js/ts.implicitProjectConfig.checkJs": true, // Check JS files (will be overwritten by project settings).
+  "js/ts.implicitProjectConfig.experimentalDecorators": false, // Don't use experimental decorators.
+  "js/ts.implicitProjectConfig.module": "ESNext", // Use ESNext modules.
+  "js/ts.implicitProjectConfig.strictFunctionTypes": true, // Use strict function types.
+  "js/ts.implicitProjectConfig.strictNullChecks": true, // Use strict null checks.
+  "js/ts.implicitProjectConfig.target": "ES2022", // Set target JavaScript version.
+  "typescript.autoClosingTags": true, // Enable automatic closing of JSX tags.
+  "typescript.check.npmIsInstalled": true, // Check if npm is installed.
+  "typescript.disableAutomaticTypeAcquisition": false, // Fetch types to improve IntelliSense.
+  "typescript.enablePromptUseWorkspaceTsdk": false, // Don't prompt to use workspace TypeScript version.
+  "typescript.experimental.expandableHover": false, // Don't expand on hover automatically.
+  "typescript.format.enable": true, // Enable default TypeScript formatter.
+  "typescript.format.indentSwitchCase": true, // Use indentation for switch cases.
+  "typescript.format.insertSpaceAfterCommaDelimiter": true, // Insert space after comma.
+  "typescript.format.insertSpaceAfterConstructor": false, // Don't insert space after constructor.
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true, // Insert space after function keyword for anonymous functions.
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // Insert space after keywords in control flow statements.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false, // Insert no space after opening and before closing empty braces.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // Don't insert space after opening and before closing JSX expression braces {child}.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false, // Don't insert space after opening and before closing non-empty braces {child}.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // Don't insert space after opening and before closing non-empty brackets [child].
+  "typescript.implementationsCodeLens.enabled": false,
+  "typescript.implementationsCodeLens.showOnInterfaceMethods": false,
+  "typescript.inlayHints.enumMemberValues.enabled": false,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+  "typescript.locale": "auto", // Set locale for linter output on system locale.
+  "typescript.npm": "", // Path to specific npm executable.
+  "typescript.preferences.autoImportFileExcludePatterns": [], // Exclude patterns for auto import.
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": [], // Exclude auto imports with regex.
+  "typescript.preferences.importModuleSpecifier": "shortest", // Use shortest path for imports.
+  "typescript.preferences.importModuleSpecifierEnding": "auto", // Select path ending for imports from project settings.
+  "typescript.preferences.includePackageJsonAutoImports": "on", // Search in package.json for available imports too.
+  "typescript.preferences.jsxAttributeCompletionStyle": "auto", // Select because of context if '= {}' or '= ""' is used.
+  "typescript.preferences.organizeImports": {}, // Organize how imports are ordered.
+  "typescript.preferences.preferTypeOnlyAutoImports": true, // Use 'type' keyword for auto imports if possible.
+  "typescript.preferences.quoteStyle": "single", // Use single quotes for strings.
+  "typescript.preferences.renameMatchingJsxTags": true, // Rename matching JSX tags automatically.
+  "typescript.preferences.useAliasesForRenames": false, // Don't introduce shorthand aliases for renames.
+  "typescript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
+  "typescript.referencesCodeLens.enabled": false, // Don't show references code lens.
+  "typescript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
+  "typescript.reportStyleChecksAsWarnings": true, // Report style checks as warnings.
+  "typescript.suggest.autoImports": true, // Show auto import suggestions.
+  "typescript.suggest.classMemberSnippets.enabled": true, // Enable snippet completion for class members.
+  "typescript.suggest.completeFunctionCalls": false, // Don't complete function calls with their parameters.
+  "typescript.suggest.completeJSDocs": true, // Complete JSDoc comments.
+  "typescript.suggest.enabled": true, // Enable auto completion suggestions.
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true, // Include automatic completions for optional chains.
+  "typescript.suggest.includeCompletionsForImportStatements": true, // Include completions for import statements.
+  "typescript.suggest.jsdoc.generateReturns": true, // Generate returns in JSDoc comments.
+  "typescript.suggest.objectLiteralMethodSnippets.enabled": true, // Enable snippet completion for object literal methods.
+  "typescript.suggest.paths": true, // Suggest paths in import statements and require calls.
+  "typescript.suggestionActions.enabled": true, // Enable suggestion actions diagnostics.
+  "typescript.surveys.enabled": true, // Enable surveys.
+  "typescript.tsc.autoDetect": "on", // Turn on auto detection for TS-Compiler tasks.
+  "typescript.tsdk": "", // Path to specific TypeScript Compiler.
+  "typescript.tsserver.enableRegionDiagnostics": true, // Enable language region based diagnostics.
+
+
+
+
+
+
+
+
+
+
 }
 

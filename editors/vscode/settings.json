@@ -1596,6 +1596,18 @@
   "typescript.tsc.autoDetect": "on", // Turn on auto detection for TS-Compiler tasks.
   "typescript.tsdk": "", // Path to specific TypeScript Compiler.
   "typescript.tsserver.enableRegionDiagnostics": true, // Enable language region based diagnostics.
+  "typescript.tsserver.enableTracing": false, // Use trace logging for TypeScript server to see performance issues.
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true, // Enables project wide error diagnostics.
+  "typescript.tsserver.log": "off", // Turn off logging for TypeScript server.
+  "typescript.tsserver.maxTsServerMemory": 3072, // Set maximum memory for TypeScript server (MB).
+  "typescript.tsserver.nodePath": "", // Path to specific Node.js executable.
+  "typescript.tsserver.pluginPaths": [], // Path to specific TypeScript server plugins.
+  "typescript.tsserver.useSyntaxServer": "auto", // Use syntax server for TypeScript server to do more quickly folding etc.
+  "typescript.tsserver.watchOptions": "vscode", // Use VS Code watch options for TypeScript server.
+  "typescript.tsserver.web.projectWideIntellisense.enabled": true, // Enable project wide IntelliSense in VS-Code web.
+  "typescript.tsserver.web.projectWideIntellisense.suppressSemanticErrors": false, // Don't suppress semantic errors in project wide IntelliSense in VS-Code web
+
+
 
 
 

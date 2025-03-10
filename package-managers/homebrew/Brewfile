@@ -47,6 +47,7 @@ brew 'tree'
 brew 'vue-cli'
 brew 'wget'
 brew 'yarn'
+brew 'yazi'
 # brew 'koekeishiya/formulae/yabai'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
@@ -56,29 +57,44 @@ brew 'zsh-syntax-highlighting'
 #------------------------------------------------------------------------------
 #----- Casks
 
-cask 'nikitabobko/tap/aerospace'
-cask 'alacritty'
+# cask 'nikitabobko/tap/aerospace'
+# cask 'alacritty'
 cask 'aldente'
 cask 'alfred'
+cask 'android-file-transfer'
 cask 'apparency'
+cask 'balenaetcher'
 cask 'bartender'
-cask 'displaylink'
+cask 'chatgpt'
+# cask 'displaylink'
+cask 'elgato-control-center'
+cask 'elgato-stream-deck'
+cask 'elgato-wave-link'
 cask 'figma'
 cask 'firefox'
 cask 'firefox-developer-edition'
 cask 'font-meslo-lg-nerd-font'
 cask 'font-space-mono-nerd-font'
 cask 'font-hack-nerd-font'
+cask 'fujitsu-scansnap-home'
+cask 'ghostty'
 cask 'google-chrome'
+cask 'herd'
+cask 'homerow'
 cask 'istat-menus'
 cask 'karabiner-elements'
 cask 'logi-options-plus'
 cask 'macpass'
+cask 'macx-dvd-ripper-pro'
 cask 'microsoft-edge'
 cask 'microsoft-teams'
 cask 'nordpass'
 cask 'nordvpn'
+cask 'numi'
+cask 'obsbot-center'
+cask 'obsidian'
 cask 'opera'
+cask 'pdf-expert'
 #cask 'polypane'
 cask 'qlcolorcode'
 cask 'qlimagesize'
@@ -88,21 +104,41 @@ cask 'qlvideo'
 cask 'quicklook-json'
 cask 'quicklookase'
 cask 'raycast'
+cask 'sidequest'
+cask 'sony-ps-remote-play'
 cask 'suspicious-package'
+cask 'tableplus'
 cask 'visual-studio-code'
+cask 'whatsapp'
 
 
 
 #------------------------------------------------------------------------------
 #----- Mac App Store
 
-mas 'Cleaner One Pro - Disk Clean',   id: 1133028347
-mas 'Dato',                           id: 1470584107
 mas 'Ad Block One',                   id: 1491889901
+mas 'Apple Books',                    id: 364709193
+mas 'Apple Configurator',             id: 1037126344
+mas 'Cleaner One Pro - Disk Clean',   id: 1133028347
+mas 'System Color Picker',            id: 1545870783
+mas 'Dato',                           id: 1470584107
+mas 'Ebook Converter',                id: 491796471
+mas 'GarageBand',                     id: 682658836
+mas 'Goodnotes 6',                    id: 1444383602
+mas 'iMovie',                         id: 408981434
+mas 'Keynote',                        id: 409183694
+mas 'Microsoft Outlook',              id: 985367838
 mas 'Numbers',                        id: 409203825
 mas 'Pages',                          id: 409201541
+mas 'Pixelmator Pro',                 id: 1289583905
 mas 'Theine',                         id: 955848755
 mas 'Keystroke Pro',                  id: 1572206224
 mas 'Cursor Pro',                     id: 1447043133
 mas 'Mirror Magnet',                  id: 1563698880
 mas 'Presentify - Screen Annotation', id: 1507246666
+
+
+
+
+
+

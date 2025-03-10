@@ -110,6 +110,7 @@ cask 'suspicious-package'
 cask 'tableplus'
 cask 'visual-studio-code'
 cask 'whatsapp'
+cask 'windows-app'
 
 
 

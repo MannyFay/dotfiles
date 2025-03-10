@@ -562,7 +562,7 @@ hold p + left launcher  |  alt+tab
 
 
 #------------------------------------------------------------------------------
-#----- nvim
+#----- nvim (and partially VS-Code)
 
 # nvim: Jump to next Todo comment.
 tcn
@@ -594,25 +594,25 @@ dst
 # nvim: Delete surroundings.
 ds<closing-sign>
 
-# nvim: Surround word or selection with ( ).
+# nvim & code: Surround word or selection with ( ).
 ((
 
-# nvim: Surround word or selection with { }.
+# nvim & code: Surround word or selection with { }.
 {{
 
-# nvim: Surround word or selection with [ ].
+# nvim & code: Surround word or selection with [ ].
 [[
 
-# nvim: Surround word or selection with " ".
+# nvim & code: Surround word or selection with " ".
 ""
 
-# nvim: Surround word or selection with ' '.
+# nvim & code: Surround word or selection with ' '.
 ''
 
-# nvim: Surround word or selection with ` `.
+# nvim & code: Surround word or selection with ` `.
 ``
 
-# nvim: Surround word or selection with < >.
+# nvim & code: Surround word or selection with < >.
 <>
 
 # nvim: Grow buffer vertically.
@@ -633,19 +633,35 @@ ds<closing-sign>
 # nvim: Equalize width and height for all buffers.
 <L>=
 
-# nvim: Center actual line on screen.
+# nvim & code: Center actual line on screen.
 zz
 
-# nvim: Set actual line to bottom of the screen.
+# nvim & code: Set actual line to bottom of the screen.
 zb
 
-# nvim: Set actual line to top of the screen.
+# nvim & code: Set actual line to top of the screen.
 zt
 
+# nvim & code: Open terminal pane.
+<L>th
+
+# nvim: Set a mark in a file at cursor position.
+m<letter>
+
+# nvim: Jump to a mark in a file.
+`<letterYou'veSet>
+
 # nvim: .
-# nvim: .
-# nvim: .
-# nvim: .
+
+
+#------------------------------------------------------------------------------
+# VS Code
+
+# vs code: Close terminal pane.
+hold e + esc  | ctrl b + &
+
+# vs code: Close active terminal tab.
+hold e + esc  | ctrl b + & + y
 
 
 #------------------------------------------------------------------------------
@@ -692,7 +708,7 @@ ylff
 
 
 #------------------------------------------------------------------------------
-#----- tmux
+#----- tmux (and partially VS Code)
 
 # tmux: Start tmux.
 ts
@@ -728,10 +744,10 @@ ctrl + f
 ctrt + b
 
 # tmux: New window.
-<p>c (LM RL)
+hold e + right launcher  |  <p>c
 
 # tmux: Name window.
-<p>, (LM RT2)
+hold e + right thumb middle  |  <p>,
 
 # tmux: Push window to the left.
 ctrl shift <- (RM LT3)
@@ -739,35 +755,35 @@ ctrl shift <- (RM LT3)
 # tmux: Push window to the right.
 ctrl shift -> (LM RT3)
 
-# tmux: Jump to window 1.
-<p>1 (RM LP+1)
+# tmux & vs code: Jump to terminal window 1.
+hold i + 1  |  <p>1
 
-# tmux: Jump to window 2.
-<p>2 (RM LR+1)
+# tmux & vs code: Jump to terminal window 2.
+hold i + 2  |  <p>2
 
-# tmux: Jump to window 3.
-<p>3 (RM LM+1)
+# tmux & vs code: Jump to terminal window 3.
+hold i + 3  |  <p>3
 
-# tmux: Jump to window 4.
-<p>4 (RM LI+1)
+# tmux & vs code: Jump to terminal window 4.
+hold i + 4  |  <p>4
 
-# tmux: Jump to window 5.
-<p>5 (RM LI+1->)
+# tmux & vs code: Jump to terminal window 5.
+hold i + 5  |  <p>5
 
-# tmux: Jump to window 6.
-<p>6 (LM RI+1<-)
+# tmux & vs code: Jump to terminal window 6.
+hold i + 6  |  <p>6
 
-# tmux: Jump to window 7.
-<p>7 (LM RI+1)
+# tmux & vs code: Jump to terminal window 7.
+hold e + 7  |  <p>7
 
-# tmux: Jump to window 8.
-<p>8 (LM RM+1)
+# tmux & vs code: Jump to terminal window 8.
+hold e + 8  |  <p>8
 
-# tmux: Jump to window 9.
-<p>9 (LM RR+1)
+# tmux & vs code: Jump to terminal window 9.
+hold e + 9  |  <p>9
 
 # tmux: Jump to window 10.
-<p>0 (LM RP+1)
+hold e + 0  |  <p>0
 
 # tmux: FZF fuzzy finder.
 fzf (LM RT1) (RM LT1)

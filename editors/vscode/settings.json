@@ -10,7 +10,7 @@
   "editor.lineHeight": 2,                       // Line height in editor.
   "editor.rulers": [80,120,150],                // Vertical character guide lines.
   "editor.tabSize": 2,                          // Number of spaces per tab.
-  "editor.wordWrap": "on",                      // Wrap words automatically.
+  "editor.wordWrap": "off",                     // Wrap words automatically if buffer shrinks.
   "editor.minimap": {                           // Don't show minimap at right corner.
     "enabled": false
   },
@@ -46,6 +46,11 @@
   "fontWeight": "400",                          // Global font weight.
   "fontLigatures": false,                       // Disable ligatures.
 
+  //----------------------------------------------------------------------------
+  // Integrated Terminal
+
+  "terminal.integrated.tabs.hideCondition": "never", // Always show terminal tabs.
+  "terminal.integrated.tabs.location": "left", // Show terminal tabs on left side (top/bottom is not possible).
 
 
   //----------------------------------------------------------------------------
@@ -65,11 +70,13 @@
     "variables": "#C064C7",
     "types": "#45C8B0",
   "textMateRules": [
-    { // Turquoise: HTML attributes, namespaces, class names etc.:
+    { //--- Turquoise: HTML attributes, namespaces, class names etc.:
       "scope": [
         // TypeScript:
         "entity.other.attribute-name.tsx", // HTML attribute name.
         "meta.type.annotation.tsx",
+        // HTML:
+        "entity.other.attribute-name.html" // Attribute names.
       ],
       "settings": {
         "foreground": "#45C8B0"
@@ -78,6 +85,8 @@
     { // White: Operators, braces etc.:
       "scope": [
         // TypeScript:
+        "punctuation.definition.parameters.begin.tsx", // ( bracket.
+        "punctuation.definition.parameters.end.tsx",  // ) bracket.
         "punctuation.section.embedded.begin.tsx",
         "punctuation.section.embedded.end.tsx",
         "keyword.operator.assignment.tsx",
@@ -92,6 +101,10 @@
         "keyword.operator.comparison.tsx",  // ===, !==, etc.
         "punctuation.accessor.tsx",         // . operator.
         "meta.brace.square.tsx",           // Square brackets [].
+        "keyword.operator.ternary.tsx",  // Ternary operator characters.
+        "storage.type.function.arrow.tsx", // => in functions.
+        "keyword.operator.optional.tsx", // ? in type declarations.
+        "keyword.operator.type.annotation.tsx", // : in type declarations.
         // JSON:
         "punctuation.definition.dictionary.begin.json.comments",
         "punctuation.definition.dictionary.end.json.comments",
@@ -104,11 +117,12 @@
         "foreground": "#ABABAB"
       }
     },
-    { // Variables, constants etc.:
+    { //-- Purple: Variables, constants etc.:
       "scope": [
         "variable.other.readwrite.tsx",
         "variable.other.constant.object.tsx",
         "support.type.property-name.json.comments",
+        "entity.name.type.tsx",
       ],
       "settings": {
         "foreground": "#C064C7"
@@ -123,7 +137,7 @@
       "settings": {
         "foreground": "#CE9178"
       }
-    }
+    },
     { // HTML
       "scope": [
         "punctuation.definition.tag.begin.html",  // Tag begin bracket.
@@ -141,12 +155,14 @@
       "settings": {
         "foreground": "#FF0000"
       }
-    }, {
+    }, { //--- Blue: Keywords, classes, functions etc.:
       "scope": [
-        "entity.other.attribute-name.html"
+        // TypeScript:
+        "support.type.primitive.tsx",
+        "support.type.builtin.tsx" // Types/keywords.
       ],
       "settings": {
-        "foreground": "#45C8B0"
+        "foreground": "#569CD6"
       }
     }
   ]
@@ -185,13 +201,13 @@
     // Search bar and it's menu in title bar
 
     "commandCenter.foreground": "#606366",        // Foreground of search bar.
-    "commandCenter.activeForeground": "#569CD6",  // Foreground of search bar on hover.
+    "commandCenter.activeForeground": "#FF0000",  // Foreground of search bar on hover.
     "commandCenter.background": "#252525",        // Background of search bar.
-    "commandCenter.activeBackground": "#252525",
+    "commandCenter.activeBackground": "#FF0000",
+    "commandCenter.activeBorder": "#FF0000",
     "commandCenter.border": "#252525",
     "commandCenter.inactiveForeground": "#287BDE",
     "commandCenter.inactiveBorder": "#252525",
-    "commandCenter.activeBorder": "#252525",
     "commandCenter.debuggingBackground": "#287BDE70",
 
     //--------------------------------------------------------------------------
@@ -822,7 +838,7 @@
     "decorationMaxNumberOfLines": 6,
     "preferFittingMessageMultiplier": 2,
     "maxColumnForCalculation": 130,
-    "preferSameLineMultiplier": 1,
+    // "preferSameLineMultiplier": 1,
     "highlightProblemLine": "line",
     "alignStart": 0,
     "alignEnd": 0,
@@ -993,13 +1009,21 @@
 
 
   //----------------------------------------------------------------------------
-  // GitHub
+  // GitHub Extension
 
-
+  "github.branchProtection": true, // Scan for branch protection settings on remote.
+  "github.gitAuthentication": true, // Enable GitHub authentication for Git commands.
+  "github.gitProtocol": "ssh", // Use SSH for cloning repositories.
 
 
   //----------------------------------------------------------------------------
   // GitHub Actions Extension
+
+  "github-actions.remote-name": "origin", // Remote for GitHub Actions.
+  "github-actions.use-enterprise": false, // Disable/enable GitHub Enterprise for Actions.
+  "github-actions.workflows.pinned.refresh.enabled": false, // Don't refresh pinned workflows (costs rate limit!).
+  "github-actions.workflows.pinned.refresh.interval": 30, // Time to wait between refreshes in seconds.
+  "github-actions.workflows.pinned.workflows": [], // List of pinned workflows and their paths for item in status bar.
 
 
   //----------------------------------------------------------------------------
@@ -1007,7 +1031,7 @@
 
   "github.copilot.advanced": {},                        // Advanced settings.
   "github.copilot.editor.enableAutoCompletions": true,  // Show inline completion suggestions.
-  "github.copilot.enable": {                            // Enable/disable specific languages.
+  "github.copilot.enable": {                            // Disable/enable specific languages.
     "*": true,
     "plaintext": true,
     "markdown": true,
@@ -1015,11 +1039,9 @@
   },
 
 
-
-
-
   //----------------------------------------------------------------------------
   // GitHub Copilot Chat Extension
+
 
 
   //----------------------------------------------------------------------------
@@ -1031,6 +1053,51 @@
 
   //----------------------------------------------------------------------------
   // GitLens - Git supercharged Extension
+
+  "gitlens.showWhatsNewAfterUpgrades": false,  // Disable/enable showing 'What's new' notification after upgrades.
+  "gitlens.outputLevel": "warn", // check
+  "gitlens.defaultGravatarsStyle": "robohash", // check
+  "gitlens.proxy": null, // check
+  "gitlens.plusFeatures.enabled": false, // Don't show possible features of paid pro subscription.
+  "gitlens.virtualRepositories.enabled": true, // check
+  // Inline Blame:
+  "gitlens.currentLine.enabled": true,
+  "gitlens.currentLine.pullRequests.enabled": true,
+  "gitlens.currentLine.format": "${author, }${agoOrDate}${' via  'pullRequest}${ • message|50?}",
+  "gitlens.currentLine.uncommittedChangesFormat": "", // check
+  "gitlens.currentLine.fontFamily": "",
+  "gitlens.currentLine.fontSize": 0,
+  "gitlens.currentLine.fontStyle": "normal",
+  "gitlens.currentLine.fontWeight": "normal",
+  "gitlens.currentLine.scrollable": true, // Line blame is scrollable if it is to big for the screen.
+  "gitlens.currentLine.dateFormat": null,
+  // Git CodeLens:
+  "gitlens.codeLens.enabled": false, // Disable/enable code lens.
+  "gitlens.codeLens.authors.enabled": false, // Disable/enable authors code lens.
+  "gitlens.codeLens.authors.command": "gitlens.toggleFileBlame", // Command to run if authors code lens is clicked.
+  "gitlens.codeLens.recentChange.enabled": false, // Disable/enable rescent changes code lens.
+  "gitlens.codeLens.recentChange.command": "gitlens.showQuickCommitFileDetails", // Command to run if recent changes code lens is clicked.
+  "gitlens.codeLens.scopes": [ // Specifies where Git code lens will be sowed in document.
+    "document",
+    "containers"
+  ],
+  "gitlens.codeLens.symbolScopes": [], // check.
+  "gitlens.codeLens.includeSingleLineSymbols": false,
+  "gitlens.strings.codeLens.unsavedChanges.recentChangeAndAuthors": "$(ellipsis)",
+  "gitlens.strings.codeLens.unsavedChanges.recentChangeOnly": "$(ellipsis)",
+  "gitlens.strings.codeLens.unsavedChanges.authorsOnly": "$(ellipsis)",
+  "gitlens.codeLens.dateFormat": null,
+  // Status Bar Blame:
+  "gitlens.statusBar.enabled": false, // Disable/enable status bar blame item.
+  "gitlens.statusBar.pullRequests.enabled": false, // Disable/enable pull requests in status bar.
+  "gitlens.statusBar.format": "${author}, ${agoOrDate}${' via  'pullRequest}",
+  "gitlens.statusBar.alignment": "right",
+  "gitlens.statusBar.command": "gitlens.showQuickCommitDetails", // Command that runs if status bar blame is clicked.
+
+
+
+
+
 
 
   //----------------------------------------------------------------------------
@@ -1202,7 +1269,158 @@
   "material-icon-theme.saturation": 1,
 
 
+
+
   //----------------------------------------------------------------------------
+  // Tailwind CSS IntelliSense Extension
+  // https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+  "tailwindcss-intellisense.trace.server": "off",        // Don't trace communication between VS Code and Tailwind CSS language server.
+  "tailwindCSS.classAttributes": [                       // HTML attributes for providing completions.
+    "class",
+    "className",
+    "ngClass",
+    "class:list"
+  ],
+  "tailwindCSS.codeActions": true,                       // Enable code actions.
+  "tailwindCSS.colorDecorators": true,                   // Render inline color decorations.
+  "tailwindCSS.emmetCompletions": true,                  // Enable emmet completions.
+  "tailwindCSS.experimental.classRegex": [],             // Class regex.
+  "tailwindCSS.experimental.configFile": null,           // Manually specify config file (null is default tailwind config file).
+  "tailwindCSS.files.exclude": [                         // Exclude from intellisense.
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**",
+    "**/.svn/**"
+  ],
+  "tailwindCSS.hovers": true,                             // Provide information by hovering.
+  "tailwindCSS.includeLanguages": {},                     // Included languages.
+  "tailwindCSS.inspectPort": null,                        // Specify port for Node.js inspector agent for LS.
+  "tailwindCSS.lint.cssConflict": "warning",              // Warn if there are same classes on one element.
+  "tailwindCSS.lint.invalidApply": "error",               // Error out if using unsupported @apply directive.
+  "tailwindCSS.lint.invalidConfigPath": "error",          // Error out if config path is invalid.
+  "tailwindCSS.lint.invalidScreen": "error",              // Error out if unknown screen name is used with @screen.
+  "tailwindCSS.lint.invalidTailwindDirective": "error",   // Error out if unknown value is used with @tailwind.
+  "tailwindCSS.lint.invalidVariant": "error",             // Error out if unknown variant is used with @variant.
+  "tailwindCSS.lint.recommendedVariantOrder": "warning",  // Warn if class variants are not in the recommended order.
+  "tailwindCSS.rootFontSize": 16,                         // Root font size used in browsers.
+  "tailwindCSS.showPixelEquivalents": true,               // Show px equivalents for rem values.
+  "tailwindCSS.suggestions": true,                        // Enable autocomplete suggestions.
+  "tailwindCSS.validate": true,                           // Enable linting (rules can be set in tailwindcss.lint.* file).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //----------------------------------------------------------------------------
+  // Atom Material Icon Theme Extension
+  // https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode
+
+  // "a-file-icon-vscode.arrowTheme": "material",
+  // "workbench.iconTheme": "a-file-icon-vscode",
+  // "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+  // "a-file-icon-vscode.activeIconPacks": [
+  //   "angular",
+  //   "rails"
+  // ],
+  // "a-file-icon-vscode.folderColor": "#569CD6",
+  // "a-file-icon-vscode.foldersAssociations": {},
+  // "a-file-icon-vscode.folderTheme": "classic",
+  // "a-file-icon-vscode.languagesAssociations": {},
+  // "a-file-icon-vscode.opacity": 1,
+  // "a-file-icon-vscode.saturation": 1,
+  // "a-file-icon-vscode.showReloadMessage": true,
+  // "a-file-icon-vscode.showUpdateMessage": false,
+  // "a-file-icon-vscode.showWelcomeMessage": true,
+
+
+
+
+  // Blade Formatter:
+  "bladeFormatter.format.indentSize": 2,  // Indent size for Blade files.
+
+  // Prettier+:
+  // "editor.defaultFormatter": "svipas.prettier-plus",  // Set Prettier+ as default formatter.
+  "editor.formatOnPaste": true,                       // Format code on paste.
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+  },
+  "editor.formatOnSave": true,
+  "blade.format.enable": true,                         // Format Blade files
+  "bladeFormatter.format.enabled": true,
+  "css.format.enable": true,
+  "css.format.maxPreserveNewLines": 1,
+
+
+  //----------------------------------------------------------------------------
+  // Custom CSS and JS Loader Extension
+
+  "vscode_custom_css.imports": [
+    "file:///Volumes/Users/manny/personal/github/dotfiles/vscode/extensions/pretty-ts-errors-hack.css"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editorconfig.generateAuto": false,
+  "terminal.integrated.env.osx": {},
+  "workbench.startupEditor": "none",
+  // sudo chown -R $(whoami) "$(which code)"
+  // sudo chown -R $(whoami) /opt/homebrew/.vscode
+
+
+
+  //----------------------------------------------------------------------------
+  // Colorize
+  // https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize
+
+  // "colorize.languages": [
+  //   "javascript",
+  //   "json"
+  // ],
+  // "colorize.exclude": [
+  //   "**/.git",
+  //   "**/.svn",
+  //   "**/.hg",
+  //   "**/CVS",
+  //   "**/.DS_Store",
+  //   "**/.git",
+  //   "**/node_modules",
+  //   "**/bower_components",
+  //   "**/tmp",
+  //   "**/dist",
+  //   "**/tests"
+  // ],
+
+
+  //----------------------------------------------------------------------------
+  // Trailing Spaces Extension (VS Code has this built in.)
+  // https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
+
+  // "trailing-spaces.backgroundColor": "#FF0000",
+  // "trailing-spaces.borderColor": "#191B1C",
+  // "trailing-spaces.deleteModifiedLinesOnly": false,  // Remove WS only in the last edited lines.
+  // "trailing-spaces.highlightCurrentLine": true,
+  // "trailing-spaces.includeEmptyLines": true,
+  // "trailing-spaces.liveMatching": true,
+  // "trailing-spaces.logLevel": "warn",
+  // "trailing-spaces.regexp": "[ \t]+",
+  // "trailing-spaces.schemeIgnore": [
+  //   "output"
+  // ],
+  // "trailing-spaces.showStatusBarMessage": true,
+  // "trailing-spaces.syntaxIgnore": [],
+  // "trailing-spaces.trimOnSave": false,
+
+
+    //----------------------------------------------------------------------------
   // Todo Tree Extension
   // https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
 
@@ -1329,158 +1547,12 @@
 
 
   //----------------------------------------------------------------------------
-  // Tailwind CSS IntelliSense Extension
-  // https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
-
-  "tailwindcss-intellisense.trace.server": "off",        // Don't trace communication between VS Code and Tailwind CSS language server.
-  "tailwindCSS.classAttributes": [                       // HTML attributes for providing completions.
-    "class",
-    "className",
-    "ngClass",
-    "class:list"
-  ],
-  "tailwindCSS.codeActions": true,                       // Enable code actions.
-  "tailwindCSS.colorDecorators": true,                   // Render inline color decorations.
-  "tailwindCSS.emmetCompletions": true,                  // Enable emmet completions.
-  "tailwindCSS.experimental.classRegex": [],             // Class regex.
-  "tailwindCSS.experimental.configFile": null,           // Manually specify config file (null is default tailwind config file).
-  "tailwindCSS.files.exclude": [                         // Exclude from intellisense.
-    "**/.git/**",
-    "**/node_modules/**",
-    "**/.hg/**",
-    "**/.svn/**"
-  ],
-  "tailwindCSS.hovers": true,                             // Provide information by hovering.
-  "tailwindCSS.includeLanguages": {},                     // Included languages.
-  "tailwindCSS.inspectPort": null,                        // Specify port for Node.js inspector agent for LS.
-  "tailwindCSS.lint.cssConflict": "warning",              // Warn if there are same classes on one element.
-  "tailwindCSS.lint.invalidApply": "error",               // Error out if using unsupported @apply directive.
-  "tailwindCSS.lint.invalidConfigPath": "error",          // Error out if config path is invalid.
-  "tailwindCSS.lint.invalidScreen": "error",              // Error out if unknown screen name is used with @screen.
-  "tailwindCSS.lint.invalidTailwindDirective": "error",   // Error out if unknown value is used with @tailwind.
-  "tailwindCSS.lint.invalidVariant": "error",             // Error out if unknown variant is used with @variant.
-  "tailwindCSS.lint.recommendedVariantOrder": "warning",  // Warn if class variants are not in the recommended order.
-  "tailwindCSS.rootFontSize": 16,                         // Root font size used in browsers.
-  "tailwindCSS.showPixelEquivalents": true,               // Show px equivalents for rem values.
-  "tailwindCSS.suggestions": true,                        // Enable autocomplete suggestions.
-  "tailwindCSS.validate": true,                           // Enable linting (rules can be set in tailwindcss.lint.* file).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //----------------------------------------------------------------------------
-  // Atom Material Icon Theme Extension
-  // https://marketplace.visualstudio.com/items?itemName=AtomMaterial.a-file-icon-vscode
-
-  // "a-file-icon-vscode.arrowTheme": "material",
-  // "workbench.iconTheme": "a-file-icon-vscode",
-  // "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
-  // "a-file-icon-vscode.activeIconPacks": [
-  //   "angular",
-  //   "rails"
-  // ],
-  // "a-file-icon-vscode.folderColor": "#569CD6",
-  // "a-file-icon-vscode.foldersAssociations": {},
-  // "a-file-icon-vscode.folderTheme": "classic",
-  // "a-file-icon-vscode.languagesAssociations": {},
-  // "a-file-icon-vscode.opacity": 1,
-  // "a-file-icon-vscode.saturation": 1,
-  // "a-file-icon-vscode.showReloadMessage": true,
-  // "a-file-icon-vscode.showUpdateMessage": false,
-  // "a-file-icon-vscode.showWelcomeMessage": true,
-
-
-
-
-  // Blade Formatter:
-  "bladeFormatter.format.indentSize": 2,  // Indent size for Blade files.
-
-  // Prettier+:
-  "editor.defaultFormatter": "svipas.prettier-plus",  // Set Prettier+ as default formatter.
-  "editor.formatOnPaste": true,                       // Format code on paste.
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always",
-  },
-  "editor.formatOnSave": true,
-  "blade.format.enable": true,                         // Format Blade files
-  "bladeFormatter.format.enabled": true,
-  "css.format.enable": true,
-  "css.format.maxPreserveNewLines": 1,
-
-
-  //----------------------------------------------------------------------------
-  // Custom CSS and JS Loader Extension
-
-  "vscode_custom_css.imports": [
-    "file:///Volumes/Users/manny/personal/github/dotfiles/vscode/extensions/pretty-ts-errors-hack.css"
-  ],
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editorconfig.generateAuto": false,
-  "terminal.integrated.env.osx": {},
-  "workbench.startupEditor": "none",
-  // sudo chown -R $(whoami) "$(which code)"
-  // sudo chown -R $(whoami) /opt/homebrew/.vscode
-
-
-
-  //----------------------------------------------------------------------------
-  // Colorize
-  // https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize
-
-  // "colorize.languages": [
-  //   "javascript",
-  //   "json"
-  // ],
-  // "colorize.exclude": [
-  //   "**/.git",
-  //   "**/.svn",
-  //   "**/.hg",
-  //   "**/CVS",
-  //   "**/.DS_Store",
-  //   "**/.git",
-  //   "**/node_modules",
-  //   "**/bower_components",
-  //   "**/tmp",
-  //   "**/dist",
-  //   "**/tests"
-  // ],
-
-
-  //----------------------------------------------------------------------------
-  // Trailing Spaces Extension (VS Code has this built in.)
-  // https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
-
-  // "trailing-spaces.backgroundColor": "#FF0000",
-  // "trailing-spaces.borderColor": "#191B1C",
-  // "trailing-spaces.deleteModifiedLinesOnly": false,  // Remove WS only in the last edited lines.
-  // "trailing-spaces.highlightCurrentLine": true,
-  // "trailing-spaces.includeEmptyLines": true,
-  // "trailing-spaces.liveMatching": true,
-  // "trailing-spaces.logLevel": "warn",
-  // "trailing-spaces.regexp": "[ \t]+",
-  // "trailing-spaces.schemeIgnore": [
-  //   "output"
-  // ],
-  // "trailing-spaces.showStatusBarMessage": true,
-  // "trailing-spaces.syntaxIgnore": [],
-  // "trailing-spaces.trimOnSave": false,
-
-
-  //----------------------------------------------------------------------------
-  // TypeScript Extension
+  // TypeScript Extension (includes JavaScript and TypeScript)
 
   "javascript.autoClosingTags": true, // Enable automatic closing of JSX tags.
+  "typescript.autoClosingTags": true, // Enable automatic closing of JSX tags.
+
+  // Formatting (JavaScript):
   "javascript.format.enable": true, // Enable default JavaScript formatter.
   "javascript.format.insertSpaceAfterCommaDelimiter": true, // Insert space after comma.
   "javascript.format.insertSpaceAfterConstructor": false, // Don't insert space after constructor.
@@ -1496,17 +1568,40 @@
   "typescript.format.insertSpaceAfterTypeAssertion": false, // Don't insert space after type assertion.
   "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true, // Insert space before and after binary operators.
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false, // Don't insert space before function parenthesis.
-  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true, // Place open brace on new line for control blocks.
-  "typescript.format.placeOpenBraceOnNewLineForFunctions": true, // Place open brace on new line for functions.
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false, // Place open brace on new line for control blocks.
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": false, // Place open brace on new line for functions.
   "typescript.format.semicolons": "insert", // Insert semicolons on formatting.
+  // Formatting (TypeScript):
+  "typescript.format.enable": true, // Enable default TypeScript formatter.
+  "typescript.format.indentSwitchCase": true, // Use indentation for switch cases.
+  "typescript.format.insertSpaceAfterCommaDelimiter": true, // Insert space after comma.
+  "typescript.format.insertSpaceAfterConstructor": false, // Don't insert space after constructor.
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true, // Insert space after function keyword for anonymous functions.
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // Insert space after keywords in control flow statements.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true, // Insert no space after opening and before closing empty braces.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // Don't insert space after opening and before closing JSX expression braces {child}.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true, // Don't insert space after opening and before closing non-empty braces {child}.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // Don't insert space after opening and before closing non-empty brackets [child].
+  // Inlay Hint Settings (JavaScript):
   "javascript.inlayHints.enumMemberValues.enabled": true, // Show enum member values in inlay hints.
-  "javascript.inlayHints.functionLikeReturnTypes.enabled": true, // Show function like return types in inlay hints.
-  "javascript.inlayHints.parameterNames.enabled": "all",  // Show parameter names in inlay hints.
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false, // Show function like return types in inlay hints.
+  "javascript.inlayHints.parameterNames.enabled": "none",  // Show parameter names in inlay hints.
   "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true, // Suppress parameter name inlay hints when argument matches name.
-  "javascript.inlayHints.parameterTypes.enabled": true, // Show parameter types in inlay hints.
-  "javascript.inlayHints.propertyDeclarationTypes.enabled": true, // Show property declaration types in inlay hints.
+  "javascript.inlayHints.parameterTypes.enabled": false, // Show parameter types in inlay hints.
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false, // Show property declaration types in inlay hints.
   "javascript.inlayHints.variableTypes.enabled": true, // Show variable types in inlay hints.
   "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true, // Suppress variable type inlay hints when type matches name.
+  // Inlay Hint Settings (TypeScript):
+  "typescript.inlayHints.enumMemberValues.enabled": true, // Show enum member values in inlay hints.
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false, // Show function like return types in inlay hints.
+  "typescript.inlayHints.parameterNames.enabled": "none", // Show parameter names in inlay hints.
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true, // Suppress parameter name inlay hints when argument matches name.
+  "typescript.inlayHints.parameterTypes.enabled": false, // Show parameter types in inlay hints.
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false, // Show property declaration types in inlay hints.
+  "typescript.inlayHints.variableTypes.enabled": true, // Show variable types in inlay hints.
+  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true, // Suppress variable type inlay hints when type matches name.
+
+  // Preferences (JavaScript):
   "javascript.preferences.autoImportFileExcludePatterns": [], // Exclude patterns for auto import.
   "javascript.preferences.autoImportSpecifierExcludeRegexes": [], // Exclude regexes for auto import.
   "javascript.preferences.importModuleSpecifier": "relative", // Use relative paths for imports if possible.
@@ -1516,59 +1611,10 @@
   "javascript.preferences.quoteStyle": "single", // Use single quotes for strings.
   "javascript.preferences.renameMatchingJsxTags": true, // Rename matching JSX tags automatically.
   "javascript.preferences.useAliasesForRenames": false, // Don't introduce shorthand aliases for renames.
-  "javascript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
-  "javascript.referencesCodeLens.enabled": false, // Don't show references code lens.
-  "javascript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
-  "javascript.suggest.autoImports": true, // Show auto import suggestions.
-  "javascript.suggest.classMemberSnippets.enabled": true, // Enable snippet completion for class members.
-  "javascript.suggest.completeFunctionCalls": true, // Complete function calls with their parameters.
-  "javascript.suggest.completeJSDocs": true, // Complete JSDoc comments.
-  "javascript.suggest.enabled": true, // Enable auto completion suggestions.
-  "javascript.suggest.includeAutomaticOptionalChainCompletions": true, // Include automatic completions for optional chains.
-  "javascript.suggest.includeCompletionsForImportStatements": true, // Include completions for import statements.
-  "javascript.suggest.jsdoc.generateReturns": true, // Generate returns in JSDoc comments.
-  "javascript.suggest.names": true, // Include unique names in suggestions.
-  "javascript.suggest.paths": true, // Suggest paths in import statements and require calls.
-  "javascript.suggestionActions.enabled": true, // Enable suggestion actions diagnostics.
-  "javascript.updateImportsOnFileMove.enabled": "always", // Update imports on file move.
-  "javascript.updateImportsOnPaste.enabled": true, // Update imports on paste.
-  "javascript.validate.enable": true, // Enable JavaScript validation.
-  "js/ts.implicitProjectConfig.checkJs": true, // Check JS files (will be overwritten by project settings).
-  "js/ts.implicitProjectConfig.experimentalDecorators": false, // Don't use experimental decorators.
-  "js/ts.implicitProjectConfig.module": "ESNext", // Use ESNext modules.
-  "js/ts.implicitProjectConfig.strictFunctionTypes": true, // Use strict function types.
-  "js/ts.implicitProjectConfig.strictNullChecks": true, // Use strict null checks.
-  "js/ts.implicitProjectConfig.target": "ES2022", // Set target JavaScript version.
-  "typescript.autoClosingTags": true, // Enable automatic closing of JSX tags.
-  "typescript.check.npmIsInstalled": true, // Check if npm is installed.
-  "typescript.disableAutomaticTypeAcquisition": false, // Fetch types to improve IntelliSense.
-  "typescript.enablePromptUseWorkspaceTsdk": false, // Don't prompt to use workspace TypeScript version.
-  "typescript.experimental.expandableHover": false, // Don't expand on hover automatically.
-  "typescript.format.enable": true, // Enable default TypeScript formatter.
-  "typescript.format.indentSwitchCase": true, // Use indentation for switch cases.
-  "typescript.format.insertSpaceAfterCommaDelimiter": true, // Insert space after comma.
-  "typescript.format.insertSpaceAfterConstructor": false, // Don't insert space after constructor.
-  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true, // Insert space after function keyword for anonymous functions.
-  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true, // Insert space after keywords in control flow statements.
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false, // Insert no space after opening and before closing empty braces.
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false, // Don't insert space after opening and before closing JSX expression braces {child}.
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false, // Don't insert space after opening and before closing non-empty braces {child}.
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false, // Don't insert space after opening and before closing non-empty brackets [child].
-  "typescript.implementationsCodeLens.enabled": false,
-  "typescript.implementationsCodeLens.showOnInterfaceMethods": false,
-  "typescript.inlayHints.enumMemberValues.enabled": false,
-  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
-  "typescript.inlayHints.parameterNames.enabled": "none",
-  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
-  "typescript.inlayHints.parameterTypes.enabled": false,
-  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
-  "typescript.inlayHints.variableTypes.enabled": false,
-  "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
-  "typescript.locale": "auto", // Set locale for linter output on system locale.
-  "typescript.npm": "", // Path to specific npm executable.
+  // Preferences (TypeScript):
   "typescript.preferences.autoImportFileExcludePatterns": [], // Exclude patterns for auto import.
   "typescript.preferences.autoImportSpecifierExcludeRegexes": [], // Exclude auto imports with regex.
-  "typescript.preferences.importModuleSpecifier": "shortest", // Use shortest path for imports.
+  "typescript.preferences.importModuleSpecifier": "relative", // Use shortest path for imports.
   "typescript.preferences.importModuleSpecifierEnding": "auto", // Select path ending for imports from project settings.
   "typescript.preferences.includePackageJsonAutoImports": "on", // Search in package.json for available imports too.
   "typescript.preferences.jsxAttributeCompletionStyle": "auto", // Select because of context if '= {}' or '= ""' is used.
@@ -1577,24 +1623,67 @@
   "typescript.preferences.quoteStyle": "single", // Use single quotes for strings.
   "typescript.preferences.renameMatchingJsxTags": true, // Rename matching JSX tags automatically.
   "typescript.preferences.useAliasesForRenames": false, // Don't introduce shorthand aliases for renames.
-  "typescript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
-  "typescript.referencesCodeLens.enabled": false, // Don't show references code lens.
-  "typescript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
-  "typescript.reportStyleChecksAsWarnings": true, // Report style checks as warnings.
+
+  // Suggestion Settings (JavaScript):
+  "javascript.suggest.enabled": true, // Enable auto completion suggestions.
+  "javascript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
+  "javascript.referencesCodeLens.enabled": false, // Don't show references code lens.
+  "javascript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
+  "javascript.suggest.autoImports": true, // Show auto import suggestions.
+  "javascript.suggest.classMemberSnippets.enabled": true, // Enable snippet completion for class members.
+  "javascript.suggest.completeFunctionCalls": true, // Complete function calls with their parameters.
+  "javascript.suggest.completeJSDocs": true, // Complete JSDoc comments.
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true, // Include automatic completions for optional chains.
+  "javascript.suggest.includeCompletionsForImportStatements": true, // Include completions for import statements.
+  "javascript.suggest.jsdoc.generateReturns": true, // Generate returns in JSDoc comments.
+  "javascript.suggest.names": true, // Include unique names in suggestions.
+  "javascript.suggest.paths": true, // Suggest paths in import statements and require calls.
+  "javascript.suggestionActions.enabled": true, // Enable suggestion actions diagnostics.
+
+  // Suggestion Settings (TypeScript):
+  "typescript.suggest.enabled": true, // Enable auto completion suggestions.
   "typescript.suggest.autoImports": true, // Show auto import suggestions.
   "typescript.suggest.classMemberSnippets.enabled": true, // Enable snippet completion for class members.
-  "typescript.suggest.completeFunctionCalls": false, // Don't complete function calls with their parameters.
+  "typescript.suggest.completeFunctionCalls": true, // Don't complete function calls with their parameters.
   "typescript.suggest.completeJSDocs": true, // Complete JSDoc comments.
-  "typescript.suggest.enabled": true, // Enable auto completion suggestions.
   "typescript.suggest.includeAutomaticOptionalChainCompletions": true, // Include automatic completions for optional chains.
   "typescript.suggest.includeCompletionsForImportStatements": true, // Include completions for import statements.
   "typescript.suggest.jsdoc.generateReturns": true, // Generate returns in JSDoc comments.
   "typescript.suggest.objectLiteralMethodSnippets.enabled": true, // Enable snippet completion for object literal methods.
   "typescript.suggest.paths": true, // Suggest paths in import statements and require calls.
+
+
+  "javascript.updateImportsOnFileMove.enabled": "always", // Update imports on file move.
+  "javascript.updateImportsOnPaste.enabled": true, // Update imports on paste.
+  "typescript.updateImportsOnPaste.enabled": true, // Update import paths on pasting import statements.
+
+
+
+  "javascript.validate.enable": true, // Enable JavaScript validation.
+  "js/ts.implicitProjectConfig.checkJs": true, // Check JS files (will be overwritten by project settings).
+  "js/ts.implicitProjectConfig.experimentalDecorators": false, // Don't use experimental decorators.
+  "js/ts.implicitProjectConfig.module": "ESNext", // Use ESNext modules.
+  "js/ts.implicitProjectConfig.strictFunctionTypes": true, // Use strict function types.
+  "js/ts.implicitProjectConfig.strictNullChecks": true, // Use strict null checks.
+  "js/ts.implicitProjectConfig.target": "ES2022", // Set target JavaScript version.
+  "typescript.check.npmIsInstalled": true, // Check if npm is installed.
+  "typescript.disableAutomaticTypeAcquisition": false, // Fetch types to improve IntelliSense.
+  "typescript.enablePromptUseWorkspaceTsdk": false, // Don't prompt to use workspace TypeScript version.
+  "typescript.experimental.expandableHover": false, // Don't expand on hover automatically.
+  "typescript.implementationsCodeLens.enabled": false,
+  "typescript.implementationsCodeLens.showOnInterfaceMethods": false,
+  "typescript.locale": "auto", // Set locale for linter output on system locale.
+  "typescript.npm": "", // Path to specific npm executable.
+  "typescript.preferGoToSourceDefinition": false, // Jump to type definition instead of source definition.
+  "typescript.referencesCodeLens.enabled": false, // Don't show references code lens.
+  "typescript.referencesCodeLens.showOnAllFunctions": false, // Don't show references code lens on all functions.
+  "typescript.reportStyleChecksAsWarnings": true, // Report style checks as warnings.
   "typescript.suggestionActions.enabled": true, // Enable suggestion actions diagnostics.
   "typescript.surveys.enabled": true, // Enable surveys.
   "typescript.tsc.autoDetect": "on", // Turn on auto detection for TS-Compiler tasks.
   "typescript.tsdk": "", // Path to specific TypeScript Compiler.
+
+  // TypeScript Server Setup:
   "typescript.tsserver.enableRegionDiagnostics": true, // Enable language region based diagnostics.
   "typescript.tsserver.enableTracing": false, // Use trace logging for TypeScript server to see performance issues.
   "typescript.tsserver.experimental.enableProjectDiagnostics": true, // Enables project wide error diagnostics.
@@ -1606,10 +1695,36 @@
   "typescript.tsserver.watchOptions": "vscode", // Use VS Code watch options for TypeScript server.
   "typescript.tsserver.web.projectWideIntellisense.enabled": true, // Enable project wide IntelliSense in VS-Code web.
   "typescript.tsserver.web.projectWideIntellisense.suppressSemanticErrors": false, // Don't suppress semantic errors in project wide IntelliSense in VS-Code web
+  "typescript.tsserver.web.typeAcquisition.enabled": true, // Enables IntelliSense for packages on the web.
+  "typescript.validate.enable": true, // Enable/Disable TypeScript validation.
+  "typescript.workspaceSymbols.excludeLibrarySymbols": true, // Exclude symbols that come from library files.
+  "typescript.workspaceSymbols.scope": "currentProject", // Files/workspaces that are be searched by 'Go to symbol'.
 
 
+  //----------------------------------------------------------------------------
+  // TypeScript Importer Configuration Extension
+
+  "tsimporter.disabled": false, // Plugin is turned on if set to false.
+  "tsimporter.doubleQuotes": false, // Prefer single quotes.
+  "tsimporter.emitSemicolon": true, // Add ; if there is none.
+  "tsimporter.filesToExclude": [], // Exclude files by glob from watch and scan.
+  "tsimporter.filesToScan": [ // Files to scan by glob pattern.
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.vue"
+  ],
+  "tsimporter.lowImportance": false, // Import emmidiately, not at last on build time.
+  "tsimporter.noStatusBar": true, // Disable statusbar item,
+  "tsimporter.preferRelative": true, // Prefer relative imports if possible.
+  "tsimporter.removeFileExtensions": ".d.ts,.ts,.tsx", // File extensions to remove from import statements.
+  "tsimporter.showNotifications": false, // (true disables the extension) don't show notifications.
+  "tsimporter.spaceBetweenBraces": true, // Add space on imports '{ foo }'.
+  "tsimporter.tsconfigName": "tsconfig.json",
+  "console-ninja.featureSet": "Community", // TS-Configuration to search for.
 
 
+  //----------------------------------------------------------------------------
+  // Vercel Extension
 
 
 

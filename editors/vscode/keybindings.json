@@ -48,8 +48,93 @@
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "sideBarFocus"
   },
+  // Close panel under editor:
   {
     "key": "ctrl+b shift+7",
     "command": "workbench.action.closePanel"
+  },
+  // Open new terminal if in terminal pane:
+  {
+    "key": "ctrl+b c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  // { // Kill terminal tab:
+  //   "key": "ctrl+b shift+7 y",
+  //   "command": "workbench.action.terminal.killActiveTab",
+  //   "when": "terminalFocus"
+  // },
+  // cmd+opt+up/down = resize horizontal pane size
+  { // Jump to next terminal pane:
+    // "key": "ctrl+b,1",
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  { // Jump to previous terminal pane:
+    // "key": "ctrl+b,2",
+    "key": "ctrl+pageup",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // Rename active terminal tab:
+  {
+    "key": "ctrl+b ,",
+    "commnand": "workbench.action.terminal.renameActiveTab",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 1:
+  {
+    "key": "ctrl+b 1",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 2:
+  {
+    "key": "ctrl+b 2",
+    "command": "workbench.action.terminal.focusAtIndex2",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 3:
+  {
+    "key": "ctrl+b 3",
+    "command": "workbench.action.terminal.focusAtIndex3",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 4:
+  {
+    "key": "ctrl+b 4",
+    "command": "workbench.action.terminal.focusAtIndex4",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 5:
+  {
+    "key": "ctrl+b 5",
+    "command": "workbench.action.terminal.focusAtIndex5",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 6:
+  {
+    "key": "ctrl+b 6",
+    "command": "workbench.action.terminal.focusAtIndex6",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 7:
+  {
+    "key": "ctrl+b 7",
+    "command": "workbench.action.terminal.focusAtIndex7",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 8:
+  {
+    "key": "ctrl+b 8",
+    "command": "workbench.action.terminal.focusAtIndex8",
+    "when": "terminalFocus"
+  },
+  // Jump to terminal tab 9:
+  {
+    "key": "ctrl+b 9",
+    "command": "workbench.action.terminal.focusAtIndex9",
+    "when": "terminalFocus"
   },
 ]

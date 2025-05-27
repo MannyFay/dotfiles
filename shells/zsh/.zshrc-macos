@@ -113,22 +113,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 export DENO_INSTALL="/home/manny/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-# Set Node.js paths:
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loads nvm.
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # Loads nvm bash_completion.
-#--
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/opt/homebrew/Cellar/nvm/0.39.7/nvm.sh" ] && \. "/opt/homebrew/Cellar/nvm/0.39.7/nvm.sh"
-# [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-# [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-# [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-# source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 # Set Google Chrome as default browser:
@@ -167,7 +156,7 @@ source $DOTFILES/cli-tools/lazygit/lazygit_aliases.zsh
 source $DOTFILES/cli-tools/ssh/ssh_aliases.zsh
 
 # thefuck
-source $DOTFILES/cli-tools/thefuck/thefuck_config.zsh
+# source $DOTFILES/cli-tools/thefuck/thefuck_config.zsh
 
 # tmate
 
@@ -177,11 +166,10 @@ source $DOTFILES/cli-tools/tmux/tmux_aliases.zsh
 bindkey -s ^f "$DOTFILES/cli-tools/tmux/scripts/tmux_sessionizer.sh\n"
 
 # Yazi
-source $DOTFILES/cli-tools/yazi/yazi_aliases.zsh
+# source $DOTFILES/cli-tools/yazi/yazi_aliases.zsh
 
 # zoxide
-source $DOTFILES/cli-tools/zoxide/zoxide_config.zsh
-
+# source $DOTFILES/cli-tools/zoxide/zoxide_config.zsh
 
 #------------------------------------------------------------------------------
 # Dev-Tools Setup
@@ -230,3 +218,4 @@ export CPPFLAGS="-I/usr/local/opt/krb5/include"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 PATH=~/.console-ninja/.bin:$PATH
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

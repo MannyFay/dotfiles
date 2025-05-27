@@ -651,8 +651,8 @@ m<letter>
 # nvim: Jump to a mark in a file.
 `<letterYou'veSet>
 
-# nvim: .
-
+# nvim: Indent the whole file.
+<L><L>==
 
 #------------------------------------------------------------------------------
 # VS Code

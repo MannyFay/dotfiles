@@ -24,3 +24,6 @@ open "x-apple.systempreferences:com.apple.preference.security?Privacy_Bluetooth"
 nvim:
 add keybindings:
 - quickly turn off/on relative line numbers
+
+
+add bartender configuration to dotfiles

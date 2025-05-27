@@ -23,9 +23,11 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 # https://nikitabobko.github.io/AeroSpace/goodness#show-aerospace-workspaces-in-sketchybar
 after-startup-command = ['exec-and-forget sketchybar']
-# Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# Notify Sketchybar about workspace change:
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 
@@ -54,7 +56,7 @@ default-root-container-layout = 'tiles'
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
 #               tall monitor (anything higher than wide) gets vertical orientation
-default-root-container-orientation = 'vertical'
+default-root-container-orientation = 'horizontal'
 
 # Mouse follows focus when focused monitor changes:
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
@@ -252,58 +254,2355 @@ alt-ctrl-cmd-t = 'workspace T'
 #------------------------------------------------------------------------------
 # App Specific Workspace Mounts
 
+# In 'run' array are actually only
+  # 'layout tiling',
+  # 'fullscreen',
+  # 'move-node-to-workspace 4',
+# allowed. 'move-node-to-workspace x' has to be the last command in the array.
+
+# Command to list monitors with their IDs:
+# aerospace list-monitors --json
+
+
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Manny Home Desk
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+# 481
+
+# [workspace-to-monitor-force-assignment]
+#     # Built-in Retina Display:
+#     1 = '3'
+#     2 = '3'
+#     3 = '3'
+#     4 = '3'
+#     5 = '3'
+#     6 = '3'
+#     7 = '3'
+#     8 = '3'
+#     9 = '3'
+#     10 = '3'
+#     11 = '3'
+#     12 = '3'
+#     13 = '3'
+#     14 = '3'
+#     15 = '3'
+#     16 = '3'
+#     17 = '3'
+#     18 = '3'
+#     19 = '3'
+#     20 = '3'
+#     21 = '3'
+#     22 = '3'
+#     23 = '3'
+#     24 = '3'
+#     25 = '3'
+#     # Sidecar Display (AirPlay):
+#     50 = '4'
+#     51 = '4'
+#     52 = '4'
+#     53 = '4'
+#     54 = '4'
+#     55 = '4'
+#     56 = '4'
+#     57 = '4'
+#     58 = '4'
+#     # Bottom Display:
+#     # "monitor-name" : "C49RG9x (1)",
+#     # "monitor-id" : 2
+#     a = '2'
+#     b = '2'
+#     c = '2'
+#     d = '2'
+#     e = '2'
+#     f = '2'
+#     g = '2'
+#     # Top Display:
+#     # "monitor-name" : "C49RG9x (2)",
+#     # "monitor-id" : 1
+#     A = '1'
+#     B = '1'
+#     C = '1'
+#     D = '1'
+
+
+# #----------------------------------------
+# # Built-In Display
+
+# # System Preferences & OBSBOT Center:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.systempreferences'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 1',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.obsbot.OBSBOT_Center'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 1',
+# ]
+
+# # Nordpass:
+# [[on-window-detected]]
+# if.app-id = 'com.nordsec.nordpass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 2'
+# ]
+
+# # MacPass:
+# [[on-window-detected]]
+# if.app-id = 'com.hicknhacksoftware.MacPass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 3',
+# ]
+
+# # Cleaner One Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.trendmicro.DrCleanerProPlus'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 4',
+# ]
+
+# # Elgato Wave Link:
+# [[on-window-detected]]
+# if.app-id = 'com.elgato.WaveLink'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 5',
+# ]
+
+# # Logi Options+:
+# [[on-window-detected]]
+# if.app-id = 'com.elgato.WaveLink'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 6',
+# ]
+
+# # Home:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Home'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 7',
+# ]
+
+# # Music:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Music'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 8',
+# ]
+
+# # Podcasts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.podcasts'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 9',
+# ]
+
+# # iPhone Mirroring:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.ScreenContinuity'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 10',
+# ]
+
+# # Docker:
+# [[on-window-detected]]
+# if.app-id = 'com.docker.docker'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 11',
+# ]
+
+# # Windows App:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.rdc.macos'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 12',
+# ]
+
+# # ChatGPT:
+# [[on-window-detected]]
+# if.app-id = 'com.openai.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 13',
+# ]
+
+# # Safari:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 14',
+# ]
+
+# # Google Chrome:
+# [[on-window-detected]]
+# if.app-id = 'com.google.Chrome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 15',
+# ]
+
+# # Firefox:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefox'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 16',
+# ]
+
+# # Firefox Developer Edition:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefoxdeveloperedition'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 17',
+# ]
+
+# # Microsoft Edge:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.edgemac'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 18',
+# ]
+
+# # Opera:
+# [[on-window-detected]]
+# if.app-id = 'com.operasoftware.Opera'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 19',
+# ]
+
+# # Text Edit:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TextEdit'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 20',
+# ]
+
+# # Numi:
+# [[on-window-detected]]
+# if.app-id = 'com.dmitrynikolaev.numi'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 21',
+# ]
+
+# # ScanSnap Home:
+# [[on-window-detected]]
+# if.app-id = 'com.fujitsu.pfu.ScanSnapHome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 22',
+# ]
+
+# # Goodnotes:
+# [[on-window-detected]]
+# if.app-id = 'com.goodnotesapp.x'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 23',
+# ]
+
+# # MacX DVD Ripper Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.macxdvd.macxvideoconverterpro'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 24',
+# ]
+
+# # Preview:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Preview'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 25',
+# ]
+
+
+# #----------------------------------------
+# # Tablet Display
+
+# # Contacts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.AddressBook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 50',
+# ]
+
+# # Mail:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.mail'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 51',
+# ]
+
+# # Facetime:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.FaceTime'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 52',
+# ]
+
+# # Messages:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.MobileSMS'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 53',
+# ]
+
+# # Teams:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 54',
+# ]
+
+# # WhatsApp:
+# [[on-window-detected]]
+# if.app-id = 'net.whatsapp.WhatsApp'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 55',
+# ]
+
+# # Google Chat:
+# [[on-window-detected]]
+# if.app-id = 'com.google.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 56',
+# ]
+
+# # Signal:
+# [[on-window-detected]]
+# if.app-id = 'org.whispersystems.signal-desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 57',
+# ]
+
+# # Telegram:
+# [[on-window-detected]]
+# if.app-id = 'com.tdesktop.Telegram'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 58',
+# ]
+
+
+# #----------------------------------------
+# # Bottom Display
+
+# # Maps:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Maps'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace a',
+# ]
+
+# # TV:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TV'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace b',
+# ]
+
+# # PS Remote Play:
+# [[on-window-detected]]
+# if.app-id = 'com.playstation.RemotePlay'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace c',
+# ]
+
+# # Ghostty:
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace d',
+# ]
+
+# # VS Code:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace e',
+# ]
+
+# # Finder, Reminders, Notes:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.finder'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.apple.reminders'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Notes'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+
+# #----------------------------------------
+# # Top Display
+
+# # Calendar & Outlook:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.iCal'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace A',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.Outlook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace A',
+# ]
+
+# # Figma & Responsively App:
+# [[on-window-detected]]
+# if.app-id = 'com.figma.Desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace B',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'app.responsively'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace B',
+# ]
+
+
+
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Manny Home Desk Without Tablet
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+# 476
+
+[workspace-to-monitor-force-assignment]
+    # Built-in Retina Display:
+    1 = '3'
+    2 = '3'
+    3 = '3'
+    4 = '3'
+    5 = '3'
+    6 = '3'
+    7 = '3'
+    8 = '3'
+    9 = '3'
+    10 = '3'
+    11 = '3'
+    12 = '3'
+    13 = '3'
+    14 = '3'
+    15 = '3'
+    16 = '3'
+    17 = '3'
+    18 = '3'
+    19 = '3'
+    20 = '3'
+    21 = '3'
+    22 = '3'
+    23 = '3'
+    24 = '3'
+    25 = '3'
+    26 = '3'
+    27 = '3'
+    28 = '3'
+    29 = '3'
+    30 = '3'
+    31 = '3'
+    32 = '3'
+    33 = '3'
+    34 = '3'
+    # Bottom Display:
+    # "monitor-name" : "C49RG9x (1)",
+    # "monitor-id" : 2
+    a = '2'
+    b = '2'
+    c = '2'
+    d = '2'
+    e = '2'
+    f = '2'
+    g = '2'
+    # Top Display:
+    # "monitor-name" : "C49RG9x (2)",
+    # "monitor-id" : 1
+    A = '1'
+    B = '1'
+    C = '1'
+    D = '1'
+
+
+#----------------------------------------
+# Built-In Display
+
+# System Preferences & OBSBOT Center:
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 1',
+]
+[[on-window-detected]]
+if.app-id = 'com.obsbot.OBSBOT_Center'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 1',
+]
+
 # Nordpass:
 [[on-window-detected]]
 if.app-id = 'com.nordsec.nordpass'
-run = "move-node-to-workspace 1"
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 2'
+]
 
-# Finder
+# MacPass:
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = "move-node-to-workspace 2"
+if.app-id = 'com.hicknhacksoftware.MacPass'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 3',
+]
 
-# Mail
+# Cleaner One Pro:
 [[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = "move-node-to-workspace 3"
+if.app-id = 'com.trendmicro.DrCleanerProPlus'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 4',
+]
 
-# Reminders
+# Elgato Wave Link:
 [[on-window-detected]]
-if.app-id = 'com.apple.reminders'
-run = "move-node-to-workspace 4"
+if.app-id = 'com.elgato.WaveLink'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 5',
+]
 
-# Calendar
+# Logi Options+:
 [[on-window-detected]]
-if.app-id = 'com.apple.iCal'
-run = "move-node-to-workspace 5"
+if.app-id = 'com.elgato.WaveLink'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 6',
+]
 
-# Notes
+# Home:
 [[on-window-detected]]
-if.app-id = 'com.apple.Notes'
-run = "move-node-to-workspace 6"
+if.app-id = 'com.apple.Home'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 7',
+]
 
-# Apple Music
+# Music:
 [[on-window-detected]]
 if.app-id = 'com.apple.Music'
-run = "move-node-to-workspace M"
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 8',
+]
 
-# Terminal
+# Podcasts:
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = "move-node-to-workspace T"
+if.app-id = 'com.apple.podcasts'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 9',
+]
 
-# Safari
+# iPhone Mirroring:
+[[on-window-detected]]
+if.app-id = 'com.apple.ScreenContinuity'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 10',
+]
+
+# Docker:
+[[on-window-detected]]
+if.app-id = 'com.docker.docker'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 11',
+]
+
+# Windows App:
+[[on-window-detected]]
+if.app-id = 'com.microsoft.rdc.macos'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 12',
+]
+
+# ChatGPT:
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 13',
+]
+
+# Safari:
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = "move-node-to-workspace S"
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 14',
+]
 
-# Chrome
+# Google Chrome:
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace C"
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 15',
+]
 
-# Firefox Developer Edition
+# Firefox:
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 16',
+]
+
+# Firefox Developer Edition:
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefoxdeveloperedition'
-run = "move-node-to-workspace F"
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 17',
+]
+
+# Microsoft Edge:
+[[on-window-detected]]
+if.app-id = 'com.microsoft.edgemac'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 18',
+]
+
+# Opera:
+[[on-window-detected]]
+if.app-id = 'com.operasoftware.Opera'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 19',
+]
+
+# Text Edit:
+[[on-window-detected]]
+if.app-id = 'com.apple.TextEdit'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 20',
+]
+
+# Numi:
+[[on-window-detected]]
+if.app-id = 'com.dmitrynikolaev.numi'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 21',
+]
+
+# ScanSnap Home:
+[[on-window-detected]]
+if.app-id = 'com.fujitsu.pfu.ScanSnapHome'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 22',
+]
+
+# Goodnotes:
+[[on-window-detected]]
+if.app-id = 'com.goodnotesapp.x'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 23',
+]
+
+# MacX DVD Ripper Pro:
+[[on-window-detected]]
+if.app-id = 'com.macxdvd.macxvideoconverterpro'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 24',
+]
+
+# Preview:
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 25',
+]
+
+# Contacts:
+[[on-window-detected]]
+if.app-id = 'com.apple.AddressBook'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 26',
+]
+
+# Mail:
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 27',
+]
+
+# Facetime:
+[[on-window-detected]]
+if.app-id = 'com.apple.FaceTime'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 28',
+]
+
+# Messages:
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 29',
+]
+
+# Teams:
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 30',
+]
+
+# WhatsApp:
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 31',
+]
+
+# Google Chat:
+[[on-window-detected]]
+if.app-id = 'com.google.chat'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 32',
+]
+
+# Signal:
+[[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 33',
+]
+
+# Telegram:
+[[on-window-detected]]
+if.app-id = 'com.tdesktop.Telegram'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace 34',
+]
+
+
+#----------------------------------------
+# Bottom Display
+
+# Maps:
+[[on-window-detected]]
+if.app-id = 'com.apple.Maps'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace a',
+]
+
+# TV:
+[[on-window-detected]]
+if.app-id = 'com.apple.TV'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace b',
+]
+
+# PS Remote Play:
+[[on-window-detected]]
+if.app-id = 'com.playstation.RemotePlay'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace c',
+]
+
+# Ghostty:
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace d',
+]
+
+# VS Code:
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace e',
+]
+
+# Finder, Reminders, Notes:
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace f',
+]
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace f',
+]
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace f',
+]
+
+#----------------------------------------
+# Top Display
+
+# Calendar & Outlook:
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace A',
+]
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace A',
+]
+
+# Figma & Responsively App:
+[[on-window-detected]]
+if.app-id = 'com.figma.Desktop'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace B',
+]
+[[on-window-detected]]
+if.app-id = 'app.responsively'
+check-further-callbacks = true
+run = [
+  'layout tiling',
+  'move-node-to-workspace B',
+]
+
+
+
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Laptop
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+# 455
+
+# [workspace-to-monitor-force-assignment]
+#     # Built-in Retina Display:
+#     1 = '1'
+#     2 = '1'
+#     3 = '1'
+#     4 = '1'
+#     5 = '1'
+#     6 = '1'
+#     7 = '1'
+#     8 = '1'
+#     9 = '1'
+#     10 = '1'
+#     11 = '1'
+#     12 = '1'
+#     13 = '1'
+#     14 = '1'
+#     15 = '1'
+#     16 = '1'
+#     17 = '1'
+#     18 = '1'
+#     19 = '1'
+#     20 = '1'
+#     21 = '1'
+#     22 = '1'
+#     23 = '1'
+#     24 = '1'
+#     25 = '1'
+#     26 = '1'
+#     27 = '1'
+#     28 = '1'
+#     29 = '1'
+#     30 = '1'
+#     31 = '1'
+#     32 = '1'
+#     33 = '1'
+#     34 = '1'
+#     35 = '1'
+#     36 = '1'
+#     37 = '1'
+#     38 = '1'
+#     39 = '1'
+#     40 = '1'
+#     41 = '1'
+#     42 = '1'
+#     43 = '1'
+#     44 = '1'
+#     45 = '1'
+
+
+# #----------------------------------------
+# # Built-In Display
+
+# # System Preferences:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.systempreferences'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 1',
+# ]
+
+# # Nordpass:
+# [[on-window-detected]]
+# if.app-id = 'com.nordsec.nordpass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 2'
+# ]
+
+# # MacPass:
+# [[on-window-detected]]
+# if.app-id = 'com.hicknhacksoftware.MacPass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 3',
+# ]
+
+# # Cleaner One Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.trendmicro.DrCleanerProPlus'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 4',
+# ]
+
+# # Logi Options+:
+# [[on-window-detected]]
+# if.app-id = 'com.elgato.WaveLink'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 5',
+# ]
+
+# # Home:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Home'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 6',
+# ]
+
+# # Music:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Music'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 7',
+# ]
+
+# # Podcasts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.podcasts'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 8',
+# ]
+
+# # TV:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TV'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 9',
+# ]
+
+# # PS Remote Play:
+# [[on-window-detected]]
+# if.app-id = 'com.playstation.RemotePlay'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 10',
+# ]
+
+# # iPhone Mirroring:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.ScreenContinuity'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 11',
+# ]
+
+# # Docker:
+# [[on-window-detected]]
+# if.app-id = 'com.docker.docker'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 12',
+# ]
+
+# # Windows App:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.rdc.macos'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 13',
+# ]
+
+# # ChatGPT:
+# [[on-window-detected]]
+# if.app-id = 'com.openai.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 14',
+# ]
+
+# # Ghostty:
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 15',
+# ]
+
+# # VS Code:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 16',
+# ]
+
+# # Figma:
+# [[on-window-detected]]
+# if.app-id = 'com.figma.Desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 17',
+# ]
+
+# # Responsively App:
+# [[on-window-detected]]
+# if.app-id = 'app.responsively'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 18',
+# ]
+
+# # Safari:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 19',
+# ]
+
+# # Google Chrome:
+# [[on-window-detected]]
+# if.app-id = 'com.google.Chrome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 20',
+# ]
+
+# # Firefox:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefox'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 21',
+# ]
+
+# # Firefox Developer Edition:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefoxdeveloperedition'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 22',
+# ]
+
+# # Microsoft Edge:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.edgemac'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 23',
+# ]
+
+# # Opera:
+# [[on-window-detected]]
+# if.app-id = 'com.operasoftware.Opera'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 24',
+# ]
+
+# # Text Edit:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TextEdit'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 25',
+# ]
+
+# # Goodnotes:
+# [[on-window-detected]]
+# if.app-id = 'com.goodnotesapp.x'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 26',
+# ]
+
+# # Numi:
+# [[on-window-detected]]
+# if.app-id = 'com.dmitrynikolaev.numi'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 27',
+# ]
+
+# # ScanSnap Home:
+# [[on-window-detected]]
+# if.app-id = 'com.fujitsu.pfu.ScanSnapHome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 28',
+# ]
+
+# # MacX DVD Ripper Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.macxdvd.macxvideoconverterpro'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 29',
+# ]
+
+# # Finder:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.finder'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 30',
+# ]
+
+# # Preview:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Preview'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 31',
+# ]
+
+# # Maps:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Maps'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 32',
+# ]
+
+# # Contacts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.AddressBook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 33',
+# ]
+
+# # Mail:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.mail'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 34',
+# ]
+
+# # Facetime:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.FaceTime'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 35',
+# ]
+
+# # Messages:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.MobileSMS'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 36',
+# ]
+
+# # Teams:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 37',
+# ]
+
+# # Outlook:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.Outlook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 38',
+# ]
+
+# # WhatsApp:
+# [[on-window-detected]]
+# if.app-id = 'net.whatsapp.WhatsApp'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 39',
+# ]
+
+# # Google Chat:
+# [[on-window-detected]]
+# if.app-id = 'com.google.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 40',
+# ]
+
+# # Signal:
+# [[on-window-detected]]
+# if.app-id = 'org.whispersystems.signal-desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 41',
+# ]
+
+# # Telegram:
+# [[on-window-detected]]
+# if.app-id = 'com.tdesktop.Telegram'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 42',
+# ]
+
+# # Calendar:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.iCal'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 43',
+# ]
+
+# # Reminders:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.reminders'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 44',
+# ]
+
+# # Notes:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Notes'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 45',
+# ]
+
+
+
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Laptop & Tablet
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+# 450
+
+# [workspace-to-monitor-force-assignment]
+#     # Built-in Retina Display:
+#     1 = '1'
+#     2 = '1'
+#     3 = '1'
+#     4 = '1'
+#     5 = '1'
+#     6 = '1'
+#     7 = '1'
+#     8 = '1'
+#     9 = '1'
+#     10 = '1'
+#     11 = '1'
+#     12 = '1'
+#     13 = '1'
+#     14 = '1'
+#     15 = '1'
+#     16 = '1'
+#     17 = '1'
+#     18 = '1'
+#     19 = '1'
+#     20 = '1'
+#     21 = '1'
+#     22 = '1'
+#     # Sidecar Display (AirPlay):
+#     50 = '2'
+#     51 = '2'
+#     52 = '2'
+#     53 = '2'
+#     54 = '2'
+#     55 = '2'
+#     56 = '2'
+#     57 = '2'
+#     58 = '2'
+#     59 = '2'
+#     60 = '2'
+#     61 = '2'
+#     62 = '2'
+#     63 = '2'
+#     64 = '2'
+#     65 = '2'
+#     66 = '2'
+#     67 = '2'
+#     68 = '2'
+#     69 = '2'
+#     70 = '2'
+#     71 = '2'
+
+
+# #----------------------------------------
+# # Built-In Display
+
+# # System Preferences:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.systempreferences'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 1',
+# ]
+
+# # Nordpass:
+# [[on-window-detected]]
+# if.app-id = 'com.nordsec.nordpass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 2'
+# ]
+
+# # MacPass:
+# [[on-window-detected]]
+# if.app-id = 'com.hicknhacksoftware.MacPass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 3',
+# ]
+
+# # Cleaner One Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.trendmicro.DrCleanerProPlus'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 4',
+# ]
+
+# # Home:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Home'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 5',
+# ]
+
+# # Music:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Music'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 6',
+# ]
+
+# # Podcasts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.podcasts'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 7',
+# ]
+
+# # iPhone Mirroring:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.ScreenContinuity'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 8',
+# ]
+
+# # Docker:
+# [[on-window-detected]]
+# if.app-id = 'com.docker.docker'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 9',
+# ]
+
+# # Windows App:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.rdc.macos'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 10',
+# ]
+
+# # Text Edit:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TextEdit'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 11',
+# ]
+
+# # Numi:
+# [[on-window-detected]]
+# if.app-id = 'com.dmitrynikolaev.numi'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 12',
+# ]
+
+# # ScanSnap Home:
+# [[on-window-detected]]
+# if.app-id = 'com.fujitsu.pfu.ScanSnapHome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 13',
+# ]
+
+# # Goodnotes:
+# [[on-window-detected]]
+# if.app-id = 'com.goodnotesapp.x'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 14',
+# ]
+
+# # MacX DVD Ripper Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.macxdvd.macxvideoconverterpro'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 15',
+# ]
+
+# # TV:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TV'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 16',
+# ]
+
+# # PS Remote Play:
+# [[on-window-detected]]
+# if.app-id = 'com.playstation.RemotePlay'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 17',
+# ]
+
+# # Ghostty:
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 18',
+# ]
+
+# # VS Code:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 19',
+# ]
+
+# # Finder:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.finder'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 20',
+# ]
+
+# # Calendar:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.iCal'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 21',
+# ]
+
+# # Figma:
+# [[on-window-detected]]
+# if.app-id = 'com.figma.Desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 22',
+# ]
+
+
+# #----------------------------------------
+# # Tablet Display
+
+# # Contacts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.AddressBook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 50',
+# ]
+
+# # Mail:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.mail'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 51',
+# ]
+
+# # Messages:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.MobileSMS'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 52',
+# ]
+
+# # Facetime:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.FaceTime'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 53',
+# ]
+
+# # Teams:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 54',
+# ]
+
+# # Outlook:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.Outlook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 55',
+# ]
+
+# # WhatsApp:
+# [[on-window-detected]]
+# if.app-id = 'net.whatsapp.WhatsApp'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 56',
+# ]
+
+# # Chat:
+# [[on-window-detected]]
+# if.app-id = 'com.google.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 57',
+# ]
+
+# # Signal:
+# [[on-window-detected]]
+# if.app-id = 'org.whispersystems.signal-desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 58',
+# ]
+
+# # Telegram:
+# [[on-window-detected]]
+# if.app-id = 'com.tdesktop.Telegram'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 59',
+# ]
+
+# # ChatGPT:
+# [[on-window-detected]]
+# if.app-id = 'com.openai.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 60',
+# ]
+
+# # Responsively App:
+# [[on-window-detected]]
+# if.app-id = 'app.responsively'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 61',
+# ]
+
+# # Safari:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 62',
+# ]
+
+# # Google Chrome:
+# [[on-window-detected]]
+# if.app-id = 'com.google.Chrome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 63',
+# ]
+
+# # Firefox:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefox'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 64',
+# ]
+
+# # Firefox Developer Edition:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefoxdeveloperedition'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 65',
+# ]
+
+# # Microsoft Edge:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.edgemac'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 66',
+# ]
+
+# # Opera:
+# [[on-window-detected]]
+# if.app-id = 'com.operasoftware.Opera'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 67',
+# ]
+
+# # Preview:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Preview'
+# check-further-callbacks = true
+# run = [
+#   'layout floating',
+#   'move-node-to-workspace 68',
+# ]
+
+# # Reminders:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.reminders'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 69',
+# ]
+
+# # Notes:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Notes'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 70',
+# ]
+
+# # Maps:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Maps'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 71',
+# ]
+
+
+
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#----- Office
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+
+# 479
+
+# [workspace-to-monitor-force-assignment]
+#     # Built-in Retina Display:
+#     1 = '3'
+#     2 = '3'
+#     3 = '3'
+#     4 = '3'
+#     5 = '3'
+#     6 = '3'
+#     7 = '3'
+#     8 = '3'
+#     9 = '3'
+#     10 = '3'
+#     11 = '3'
+#     12 = '3'
+#     13 = '3'
+#     14 = '3'
+#     15 = '3'
+#     16 = '3'
+#     17 = '3'
+#     18 = '3'
+#     19 = '3'
+#     20 = '3'
+#     21 = '3'
+#     22 = '3'
+#     23 = '3'
+#     24 = '3'
+#     25 = '3'
+#     # Sidecar Display (AirPlay):
+#     50 = '4'
+#     51 = '4'
+#     52 = '4'
+#     53 = '4'
+#     54 = '4'
+#     55 = '4'
+#     56 = '4'
+#     57 = '4'
+#     # Right Display:
+#     # "monitor-name" : "C49RG9x (1)",
+#     # "monitor-id" : 2
+#     a = '2'
+#     b = '2'
+#     c = '2'
+#     d = '2'
+#     e = '2'
+#     f = '2'
+#     g = '2'
+#     # Left Display:
+#     # "monitor-name" : "C49RG9x (2)",
+#     # "monitor-id" : 1
+#     A = '1'
+#     B = '1'
+#     C = '1'
+#     D = '1'
+
+
+# #----------------------------------------
+# # Built-In Display
+
+# # System Preferences:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.systempreferences'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 1',
+# ]
+
+# # Nordpass:
+# [[on-window-detected]]
+# if.app-id = 'com.nordsec.nordpass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 2'
+# ]
+
+# # MacPass:
+# [[on-window-detected]]
+# if.app-id = 'com.hicknhacksoftware.MacPass'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 3',
+# ]
+
+# # Cleaner One Pro:
+# [[on-window-detected]]
+# if.app-id = 'com.trendmicro.DrCleanerProPlus'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 4',
+# ]
+
+# # Logi Options+:
+# [[on-window-detected]]
+# if.app-id = 'com.elgato.WaveLink'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 6',
+# ]
+
+# # Music:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Music'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 8',
+# ]
+
+# # Podcasts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.podcasts'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 9',
+# ]
+
+# # iPhone Mirroring:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.ScreenContinuity'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 10',
+# ]
+
+# # Docker:
+# [[on-window-detected]]
+# if.app-id = 'com.docker.docker'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 11',
+# ]
+
+# # Windows App:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.rdc.macos'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 12',
+# ]
+
+# # ChatGPT:
+# [[on-window-detected]]
+# if.app-id = 'com.openai.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 13',
+# ]
+
+# # Safari:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 14',
+# ]
+
+# # Google Chrome:
+# [[on-window-detected]]
+# if.app-id = 'com.google.Chrome'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 15',
+# ]
+
+# # Firefox:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefox'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 16',
+# ]
+
+# # Firefox Developer Edition:
+# [[on-window-detected]]
+# if.app-id = 'org.mozilla.firefoxdeveloperedition'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 17',
+# ]
+
+# # Microsoft Edge:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.edgemac'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 18',
+# ]
+
+# # Opera:
+# [[on-window-detected]]
+# if.app-id = 'com.operasoftware.Opera'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 19',
+# ]
+
+# # Text Edit:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.TextEdit'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 20',
+# ]
+
+# # Numi:
+# [[on-window-detected]]
+# if.app-id = 'com.dmitrynikolaev.numi'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 21',
+# ]
+
+# # Goodnotes:
+# [[on-window-detected]]
+# if.app-id = 'com.goodnotesapp.x'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 23',
+# ]
+
+# # Preview:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Preview'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 25',
+# ]
+
+
+# #----------------------------------------
+# # Tablet Display
+
+# # Contacts:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.AddressBook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 50',
+# ]
+
+# # Mail:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.mail'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 51',
+# ]
+
+# # Messages:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.MobileSMS'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 52',
+# ]
+
+# # Facetime:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.FaceTime'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 35',
+# ]
+
+# # Teams:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 53',
+# ]
+
+# # WhatsApp:
+# [[on-window-detected]]
+# if.app-id = 'net.whatsapp.WhatsApp'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 54',
+# ]
+
+# # Google Chat:
+# [[on-window-detected]]
+# if.app-id = 'com.google.chat'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 55',
+# ]
+
+# # Signal:
+# [[on-window-detected]]
+# if.app-id = 'org.whispersystems.signal-desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 56',
+# ]
+
+# # Telegram:
+# [[on-window-detected]]
+# if.app-id = 'com.tdesktop.Telegram'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace 57',
+# ]
+
+
+# #----------------------------------------
+# # Front Display
+
+# # Maps:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Maps'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace a',
+# ]
+
+# # Ghostty:
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace d',
+# ]
+
+# # VS Code:
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace e',
+# ]
+
+# # Calendar & Outlook:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.iCal'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace A',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.Outlook'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace A',
+# ]
+
+
+# #----------------------------------------
+# # Left Display
+
+# # Finder:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.finder'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+
+# # Reminders & Notes:
+# [[on-window-detected]]
+# if.app-id = 'com.apple.reminders'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Notes'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace f',
+# ]
+
+# # Figma & Responsively App:
+# [[on-window-detected]]
+# if.app-id = 'com.figma.Desktop'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace B',
+# ]
+# [[on-window-detected]]
+# if.app-id = 'app.responsively'
+# check-further-callbacks = true
+# run = [
+#   'layout tiling',
+#   'move-node-to-workspace B',
+# ]
 

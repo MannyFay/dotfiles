@@ -10,6 +10,7 @@
 #----- Service Specific Aliases
 
 source $HOME/personal/github/dotfiles/macos/macos_aliases.zsh # macOS
+source ~/personal/github/dotfiles/package-managers/npm/npm_aliases.zsh # npm
 # source $HOME/personal/github/dotfiles/orm/prisma/prisma_aliases.zsh # Prisma
 # source $HOME/personal/github/dotfiles/macos/yabai/yabai_aliases.zsh       # Yabai
 

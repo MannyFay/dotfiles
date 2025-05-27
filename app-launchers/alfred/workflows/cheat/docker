@@ -41,3 +41,6 @@ dnla
 # Remove a Docker network (docker network rm <name/id>)
 dnrm
 
+
+# log into a container.
+docker exec -it <container-id-or-name> /bin/sh

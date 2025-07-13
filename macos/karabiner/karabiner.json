@@ -23,7 +23,7 @@
         },
         "rules": [
           {
-            "description": "Tap 'e' for 'e', Hold 'e' for 'Ctrl+B'",
+            "description": "Hold e + space = cmd + f",
             "manipulators": [
               {
                 "type": "basic",
@@ -37,8 +37,58 @@
                 ],
                 "to_if_held_down": [
                   {
-                    "key_code": "b",
-                    "modifiers": ["left_control"]
+                    "key_code": "left_gui"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": ["left_gui"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": ["left_gui"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hold i + space = cmd + f",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "i"
+                },
+                "to": [
+                  {
+                    "key_code": "i"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "left_gui"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": ["left_gui"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": ["left_gui"]
                   }
                 ]
               }
